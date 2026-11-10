@@ -1,0 +1,4 @@
+openeo
+numpy
+rio_cogeo
+shapely
