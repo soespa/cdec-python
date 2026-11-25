@@ -1,35 +1,53 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling>=1.27"]  # 1.27 understands the SPDX license expression below
 build-backend = "hatchling.build"
 
 [project]
 name = "cdec"
 dynamic = ["version"]
-description = ''
+description = "Download Earth observation rasters (NDVI, EVI, true colour, DEM, land cover, ...) from the Copernicus Data Space openEO backend."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = "MIT"
-keywords = []
+keywords = ["earth observation", "remote sensing", "sentinel-2", "copernicus", "openeo", "ndvi", "teaching"]
 authors = [
   { name = "Soeren Sparmann", email = "sparmann@mail.uni-paderborn.de" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: GIS",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: Implementation :: CPython",
-  "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  "openeo>=0.37",  # 0.37 added Shapely geometries / GeoJSON files as spatial_extent
+  "numpy",
+  "rasterio",
+  "matplotlib>=3.5",  # plotting; 3.5 added layout="constrained"
+  "rio-cogeo",
+  "shapely",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7",
+]
+docs = [
+  "sphinx>=7",
+  "furo",
+]
 
 [project.urls]
-Documentation = "https://github.com/unknown/cdec#readme"
-Issues = "https://github.com/unknown/cdec/issues"
-Source = "https://github.com/unknown/cdec"
+Documentation = "https://github.com/soespa/cdec-python#readme"
+Issues = "https://github.com/soespa/cdec-python/issues"
+Source = "https://github.com/soespa/cdec-python"
 
 [tool.hatch.version]
 path = "src/cdec/__about__.py"
@@ -41,6 +59,7 @@ dependencies = [
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
+test-live = "pytest --live {args:tests}"
 test-cov = "coverage run -m pytest {args:tests}"
 cov-report = [
   "- coverage combine",
@@ -51,8 +70,13 @@ cov = [
   "cov-report",
 ]
 
+[tool.hatch.envs.docs]
+features = ["docs"]
+[tool.hatch.envs.docs.scripts]
+build = "python docs/_scripts/build_docs.py"
+
 [[tool.hatch.envs.all.matrix]]
-python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+python = ["3.10", "3.11", "3.12", "3.13"]
 
 [tool.hatch.envs.types]
 dependencies = [
@@ -60,6 +84,13 @@ dependencies = [
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/cdec tests}"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]  # lets pytest import `cdec` even before `pip install -e .`
+markers = [
+  "live: really downloads data from the Copernicus Data Space (needs a login, run with --live)",
+]
 
 [tool.coverage.run]
 source_pkgs = ["cdec", "tests"]

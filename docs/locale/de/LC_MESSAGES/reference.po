@@ -1,0 +1,1920 @@
+# German translation of the CDEC documentation.
+# Copyright (C) 2026, Soeren Sparmann
+# This file is distributed under the same license as the CDEC package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDEC 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-23 17:15+0100\n"
+"PO-Revision-Date: 2026-11-23 16:30+0000\n"
+"Last-Translator: Soeren Sparmann\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../reference/arguments.rst:2
+msgid "Arguments"
+msgstr "Argumente"
+
+#: ../../reference/arguments.rst:5
+msgid "The three standard arguments"
+msgstr "Die drei Standardargumente"
+
+#: ../../reference/arguments.rst:7
+msgid ""
+"Every download function starts with ``file_path, spatial_extent, "
+"temporal_extent``."
+msgstr ""
+"Jede Download-Funktion beginnt mit ``file_path, spatial_extent, "
+"temporal_extent``."
+
+#: ../../reference/arguments.rst:9
+msgid "``file_path``"
+msgstr "``file_path``"
+
+#: ../../reference/arguments.rst:10
+msgid ""
+"Where to write the file: a string or a :class:`~pathlib.Path`. Missing "
+"folders are created."
+msgstr ""
+"Wohin die Datei geschrieben wird: ein String oder ein "
+":class:`~pathlib.Path`. Fehlende Ordner werden angelegt."
+
+#: ../../reference/arguments.rst:12
+msgid "``SpatialExtent``"
+msgstr "``SpatialExtent``"
+
+#: ../../reference/arguments.rst:13
+#, python-brace-format
+msgid ""
+"The area: an openEO bounding-box dictionary such as ``{\"west\": 8.7, "
+"\"south\": 53.0, \"east\": 8.9, \"north\": 53.1}`` (degrees, WGS 84), a "
+"Shapely geometry, or the path to a GeoJSON file (:doc:`/howto/choose-"
+"area`)."
+msgstr ""
+"Das Gebiet: ein openEO-Bounding-Box-Dictionary wie ``{\"west\": 8.7, "
+"\"south\": 53.0, \"east\": 8.9, \"north\": 53.1}`` (Grad, WGS 84), eine "
+"Shapely-Geometrie oder der Pfad zu einer GeoJSON-Datei (:doc:`/howto"
+"/choose-area`)."
+
+#: ../../reference/arguments.rst:17
+msgid "``TemporalExtent``"
+msgstr "``TemporalExtent``"
+
+#: ../../reference/arguments.rst:18
+msgid ""
+"The period: ``[start, end]`` as text (``\"2024-06-01\"``) or "
+":class:`~datetime.date`. The end date itself is *not* included, so "
+"``[\"2024-06-01\", \"2024-07-01\"]`` covers all of June (:doc:`/howto"
+"/choose-period`). The elevation and land cover functions do not need it."
+msgstr ""
+"Der Zeitraum: ``[start, end]`` als Text (``\"2024-06-01\"``) oder "
+":class:`~datetime.date`. Das Enddatum selbst ist *nicht* enthalten, daher"
+" umfasst ``[\"2024-06-01\", \"2024-07-01\"]`` den ganzen Juni "
+"(:doc:`/howto/choose-period`). Die Funktionen für Höhe und Landbedeckung "
+"brauchen es nicht."
+
+#: ../../reference/arguments.rst:23
+msgid "Options of some data types"
+msgstr "Optionen einiger Datentypen"
+
+#: ../../reference/arguments.rst:29
+msgid "Argument"
+msgstr "Argument"
+
+#: ../../reference/arguments.rst:30
+msgid "Used by"
+msgstr "Verwendet von"
+
+#: ../../reference/arguments.rst:31 ../../reference/plotting.rst:17
+msgid "Meaning"
+msgstr "Bedeutung"
+
+#: ../../reference/arguments.rst:32
+msgid "``max_cloud_cover``"
+msgstr "``max_cloud_cover``"
+
+#: ../../reference/arguments.rst:33
+msgid ""
+"NDVI, EVI, NDWI, NDMI, NDSI, true colour, false colour (urban, infrared, "
+"SWIR), scene classification"
+msgstr ""
+"NDVI, EVI, NDWI, NDMI, NDSI, Echtfarben, Falschfarben (Stadtansicht, "
+"Infrarot, SWIR), Szenenklassifikation"
+
+#: ../../reference/arguments.rst:34
+msgid ""
+"scenes with more cloud cover (percent) are not used; default 20, but 100 "
+"for the scene classification, which shows the clouds"
+msgstr ""
+"Szenen mit mehr Wolkenbedeckung (in Prozent) werden nicht verwendet; "
+"Standard 20, bei der Szenenklassifikation aber 100, weil sie die Wolken "
+"zeigt"
+
+#: ../../reference/arguments.rst:36
+msgid "``scl_classes``"
+msgstr "``scl_classes``"
+
+#: ../../reference/arguments.rst:37
+msgid ""
+"NDVI, EVI, NDWI, NDMI, NDSI, true colour, false colour (urban, infrared, "
+"SWIR)"
+msgstr ""
+"NDVI, EVI, NDWI, NDMI, NDSI, Echtfarben, Falschfarben (Stadtansicht, "
+"Infrarot, SWIR)"
+
+#: ../../reference/arguments.rst:38
+msgid "SCL classes to keep; ``None`` switches pixel masking off (:doc:`scl`)"
+msgstr ""
+"SCL-Klassen, die behalten werden; ``None`` schaltet die Pixelmaskierung "
+"aus (:doc:`scl`)"
+
+#: ../../reference/arguments.rst:39
+msgid "``enhance_color``"
+msgstr "``enhance_color``"
+
+#: ../../reference/arguments.rst:40
+msgid "true colour"
+msgstr "Echtfarben"
+
+#: ../../reference/arguments.rst:41 ../../reference/arguments.rst:44
+msgid "``True``: 8-bit picture; ``False``: reflectance"
+msgstr "``True``: 8-Bit-Bild; ``False``: Reflektanz"
+
+#: ../../reference/arguments.rst:42
+msgid "``enhance_contrast``"
+msgstr "``enhance_contrast``"
+
+#: ../../reference/arguments.rst:43
+msgid "false colour (urban, infrared, SWIR)"
+msgstr "Falschfarben (Stadtansicht, Infrarot, SWIR)"
+
+#: ../../reference/arguments.rst:45
+msgid "``depth``"
+msgstr "``depth``"
+
+#: ../../reference/arguments.rst:46
+msgid "soil water index"
+msgstr "Bodenwasserindex"
+
+#: ../../reference/arguments.rst:47
+msgid "characteristic time length *T* in days (2, 5, 10, 15, 20, 40, 60, 100)"
+msgstr "charakteristische Zeitlänge *T* in Tagen (2, 5, 10, 15, 20, 40, 60, 100)"
+
+#: ../../reference/arguments.rst:50
+msgid "Technical options"
+msgstr "Technische Optionen"
+
+#: ../../reference/arguments.rst:52
+msgid ""
+"These three are accepted by every download function and must be written "
+"with their names (:doc:`/howto/output-file`)."
+msgstr ""
+"Diese drei akzeptiert jede Download-Funktion, und sie müssen mit ihrem "
+"Namen geschrieben werden (:doc:`/howto/output-file`)."
+
+#: ../../reference/arguments.rst:55
+msgid "``create_cog``"
+msgstr "``create_cog``"
+
+#: ../../reference/arguments.rst:56
+msgid ""
+"``True`` (default): write a Cloud Optimized GeoTIFF; ``False``: a plain "
+"GeoTIFF."
+msgstr ""
+"``True`` (Standard): ein Cloud Optimized GeoTIFF schreiben; ``False``: "
+"ein einfaches GeoTIFF."
+
+#: ../../reference/arguments.rst:58
+msgid "``overview_resampling``"
+msgstr "``overview_resampling``"
+
+#: ../../reference/arguments.rst:59
+msgid ""
+"How the overview levels of a Cloud Optimized GeoTIFF are calculated. "
+"Default ``\"average\"`` (``\"nearest\"`` for land cover and the scene "
+"classification). One of ``\"nearest\"``, ``\"bilinear\"``, ``\"cubic\"``,"
+" ``\"cubic_spline\"``, ``\"lanczos\"``, ``\"average\"``, ``\"mode\"``, "
+"``\"gauss\"`` or ``\"rms\"``."
+msgstr ""
+"Wie die Übersichtsstufen eines Cloud Optimized GeoTIFF berechnet werden. "
+"Standard ``\"average\"`` (``\"nearest\"`` für die Landbedeckung und die "
+"Szenenklassifikation). Eines von ``\"nearest\"``, ``\"bilinear\"``, "
+"``\"cubic\"``, ``\"cubic_spline\"``, ``\"lanczos\"``, ``\"average\"``, "
+"``\"mode\"``, ``\"gauss\"`` oder ``\"rms\"``."
+
+#: ../../reference/arguments.rst:63
+msgid "``verbose``"
+msgstr "``verbose``"
+
+#: ../../reference/arguments.rst:64
+msgid "``True`` (default): print a summary of the finished file."
+msgstr "``True`` (Standard): eine Zusammenfassung der fertigen Datei ausgeben."
+
+#: ../../reference/data-sources.rst:2
+msgid "Data sources and credits"
+msgstr "Datenquellen und Quellenangaben"
+
+#: ../../reference/data-sources.rst:4
+msgid ""
+"All data comes from the `Copernicus Data Space "
+"<https://dataspace.copernicus.eu/>`_ through its openEO backend. "
+"Copernicus data is free and open, but you have to name the source when "
+"you publish a picture or a result (a map in a report, a poster, a paper)."
+" Check the licence of the collection on the Data Space before you "
+"publish. The usual wording is:"
+msgstr ""
+"Alle Daten stammen vom `Copernicus Data Space "
+"<https://dataspace.copernicus.eu/>`_ über sein openEO-Backend. "
+"Copernicus-Daten sind frei und offen, aber du musst die Quelle nennen, "
+"wenn du ein Bild oder ein Ergebnis veröffentlichst (eine Karte in einem "
+"Bericht, ein Poster, eine Publikation). Prüfe die Lizenz der Collection "
+"im Data Space, bevor du veröffentlichst. Die übliche Formulierung lautet:"
+
+#: ../../reference/data-sources.rst:13 ../../reference/functions.rst:14
+msgid "Data type"
+msgstr "Datentyp"
+
+#: ../../reference/data-sources.rst:14
+msgid "Acknowledgement"
+msgstr "Quellenangabe"
+
+#: ../../reference/data-sources.rst:15
+msgid ""
+"Sentinel-2 (:doc:`/data/ndvi`, :doc:`/data/evi`, :doc:`/data/ndwi`, "
+":doc:`/data/ndmi`, :doc:`/data/ndsi`, :doc:`/data/true-color`, "
+":doc:`/data/false-color-urban`, :doc:`/data/false-color-infrared`, "
+":doc:`/data/false-color-swir`, :doc:`/data/scene-classification`)"
+msgstr ""
+"Sentinel-2 (:doc:`/data/ndvi`, :doc:`/data/evi`, :doc:`/data/ndwi`, "
+":doc:`/data/ndmi`, :doc:`/data/ndsi`, :doc:`/data/true-color`, "
+":doc:`/data/false-color-urban`, :doc:`/data/false-color-infrared`, "
+":doc:`/data/false-color-swir`, :doc:`/data/scene-classification`)"
+
+#: ../../reference/data-sources.rst:18 ../../reference/data-sources.rst:20
+msgid "Contains modified Copernicus Sentinel data (year of the data)"
+msgstr "Contains modified Copernicus Sentinel data (year of the data)"
+
+#: ../../reference/data-sources.rst:19
+msgid "Sentinel-3 (:doc:`/data/land-surface-temperature`)"
+msgstr "Sentinel-3 (:doc:`/data/land-surface-temperature`)"
+
+#: ../../reference/data-sources.rst:21
+msgid "ESA WorldCover (:doc:`/data/land-cover`)"
+msgstr "ESA WorldCover (:doc:`/data/land-cover`)"
+
+#: ../../reference/data-sources.rst:22
+msgid ""
+"© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel "
+"data (2021) processed by ESA WorldCover consortium (licence: CC BY 4.0)"
+msgstr ""
+"© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel "
+"data (2021) processed by ESA WorldCover consortium (licence: CC BY 4.0)"
+
+#: ../../reference/data-sources.rst:24
+msgid "Soil water index (:doc:`/data/soil-water-index`)"
+msgstr "Bodenwasserindex (:doc:`/data/soil-water-index`)"
+
+#: ../../reference/data-sources.rst:25
+msgid ""
+"Generated using European Union's Copernicus Land Monitoring Service "
+"information"
+msgstr ""
+"Generated using European Union's Copernicus Land Monitoring Service "
+"information"
+
+#: ../../reference/data-sources.rst:26
+msgid ""
+"Copernicus DEM (:doc:`/data/elevation`), Landsat mosaic (:doc:`/data"
+"/landsat-ndvi`)"
+msgstr ""
+"Copernicus DEM (:doc:`/data/elevation`), Landsat-Mosaik (:doc:`/data"
+"/landsat-ndvi`)"
+
+#: ../../reference/data-sources.rst:27
+msgid "see the description of the collection on the Copernicus Data Space"
+msgstr "siehe die Beschreibung der Collection im Copernicus Data Space"
+
+#: ../../reference/data-sources.rst:29
+msgid ""
+"\"Modified\" is right because the package averages, masks and enhances "
+"the data. The pictures in this documentation show Bremen, made with the "
+"functions of this package."
+msgstr ""
+"„Modified“ stimmt, weil das Paket die Daten mittelt, maskiert und "
+"verbessert. Die Bilder in dieser Dokumentation zeigen Bremen und wurden "
+"mit den Funktionen dieses Pakets erstellt."
+
+#: ../../reference/files.rst:2
+msgid "Helpers for files"
+msgstr "Hilfsfunktionen für Dateien"
+
+#: ../../reference/files.rst:5
+msgid "Describing a file"
+msgstr "Eine Datei beschreiben"
+
+#: ../../reference/files.rst:7
+msgid ""
+"The download functions print this summary after a download "
+"(:doc:`/howto/check-a-file`)."
+msgstr ""
+"Die Download-Funktionen geben diese Zusammenfassung nach einem Download "
+"aus (:doc:`/howto/check-a-file`)."
+
+#: cdec.eo.summary.summarize_raster:1 of
+msgid "Return a short text about a raster file, ready to be printed."
+msgstr "Gibt einen kurzen Text über eine Rasterdatei zurück, bereit zum Ausgeben."
+
+#: ../../reference/files.rst ../../reference/internals.rst
+#: ../../reference/plotting.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: cdec.eo.summary.summarize_raster:3 of
+msgid "The GeoTIFF to describe."
+msgstr "Das GeoTIFF, das beschrieben werden soll."
+
+#: cdec.eo.summary.summarize_raster:4 of
+msgid "Title line, e.g. ``\"NDVI from Sentinel-2 L2A (mean of the period)\"``."
+msgstr "Titelzeile, z. B. ``\"NDVI from Sentinel-2 L2A (mean of the period)\"``."
+
+#: cdec.eo.summary.summarize_raster:5 of
+msgid "What the values mean, e.g. ``\"Kelvin\"``. Skipped if empty."
+msgstr ""
+"Was die Werte bedeuten, z. B. ``\"Kelvin\"``. Wird übersprungen, wenn "
+"leer."
+
+#: cdec.eo.summary.summarize_raster:6 of
+msgid "More lines (label -> text), printed below the lines read from the file."
+msgstr ""
+"Weitere Zeilen (Bezeichnung -> Text), die unter den aus der Datei "
+"gelesenen Zeilen ausgegeben werden."
+
+#: ../../reference/files.rst ../../reference/plotting.rst
+msgid "Returns"
+msgstr "Rückgabe"
+
+#: cdec.eo.summary.summarize_raster:8 of
+msgid "The summary, one line per entry. ``print`` it."
+msgstr "Die Zusammenfassung, eine Zeile je Eintrag. Gib sie mit ``print`` aus."
+
+#: ../../reference/files.rst ../../reference/plotting.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ../../reference/files.rst:12
+msgid "Colour enhancement"
+msgstr "Farbverbesserung"
+
+#: ../../reference/files.rst:14
+msgid ""
+"The true-colour download and the false-colour downloads call these when "
+"``enhance_color=True`` or ``enhance_contrast=True`` (:doc:`/explanation"
+"/colours-and-values`). They are not exported by the ``cdec`` package; "
+"import them from ``cdec.eo.postprocessing``. The ``..._raster`` functions"
+" rewrite a file *in place*."
+msgstr ""
+"Der Download des Echtfarbenbildes und die Falschfarben-Downloads rufen "
+"diese auf, wenn ``enhance_color=True`` oder ``enhance_contrast=True`` ist"
+" (:doc:`/explanation/colours-and-values`). Sie werden vom Paket ``cdec`` "
+"nicht exportiert; importiere sie aus ``cdec.eo.postprocessing``. Die "
+"``..._raster``-Funktionen schreiben eine Datei *an Ort und Stelle* neu."
+
+#: cdec.eo.postprocessing.enhance_color:1 of
+msgid "Apply the Sentinel-2 true-color enhancement to RGB reflectance data."
+msgstr "Wendet die Sentinel-2-Echtfarben-Verbesserung auf RGB-Reflektanzdaten an."
+
+#: cdec.eo.postprocessing.enhance_color:3 of
+msgid ""
+"Array with shape ``(3, height, width)`` containing red, green, and blue "
+"reflectance values."
+msgstr ""
+"Array der Form ``(3, height, width)`` mit Reflektanzwerten für Rot, Grün "
+"und Blau."
+
+#: cdec.eo.postprocessing.enhance_color:6 of
+msgid "The enhanced image as 8-bit values (0 to 255), same shape as ``data``."
+msgstr ""
+"Das verbesserte Bild als 8-Bit-Werte (0 bis 255), gleiche Form wie "
+"``data``."
+
+#: ../../reference/files.rst
+msgid "Raises"
+msgstr "Löst aus"
+
+#: cdec.eo.postprocessing.enhance_color:9 of
+msgid "If ``data`` does not have the shape ``(3, height, width)``."
+msgstr "Wenn ``data`` nicht die Form ``(3, height, width)`` hat."
+
+#: cdec.eo.postprocessing.enhance_contrast:1 of
+msgid "Stretch reflectance contrast while compressing bright highlights."
+msgstr "Streckt den Reflektanzkontrast und komprimiert dabei helle Lichter."
+
+#: cdec.eo.postprocessing.enhance_contrast:3 of
+msgid ""
+"This is a NumPy approximation of Sentinel Hub's "
+"HighlightCompressVisualizer. Input values are reflectance, typically in "
+"the range 0..1. The result contains display intensities in the range "
+"0..1. The default stretch uses 0..0.4, as in the Sentinel-2 false-colour "
+"urban visualization."
+msgstr ""
+"Das ist eine NumPy-Näherung des HighlightCompressVisualizer von Sentinel "
+"Hub. Eingabewerte sind Reflektanzen, typischerweise im Bereich 0..1. Das "
+"Ergebnis enthält Anzeigeintensitäten im Bereich 0..1. Die "
+"Standardstreckung verwendet 0..0,4, wie in der Falschfarben-"
+"Stadtdarstellung von Sentinel-2."
+
+#: cdec.eo.postprocessing.enhance_contrast:8 of
+msgid ""
+"The stretch is fixed: it depends only on ``min_val`` and ``max_val``, "
+"never on the values in ``data``, so the same reflectance always gives the"
+" same intensity."
+msgstr ""
+"Die Streckung ist fest: Sie hängt nur von ``min_val`` und ``max_val`` ab,"
+" nie von den Werten in ``data``, sodass dieselbe Reflektanz immer "
+"dieselbe Intensität ergibt."
+
+#: cdec.eo.postprocessing.enhance_contrast:12 of
+msgid "Array of reflectance values, any shape."
+msgstr "Array mit Reflektanzwerten, beliebige Form."
+
+#: cdec.eo.postprocessing.enhance_contrast:13 of
+msgid "Reflectance that is displayed as black (0)."
+msgstr "Reflektanz, die als Schwarz (0) angezeigt wird."
+
+#: cdec.eo.postprocessing.enhance_contrast:14 of
+msgid ""
+"Reflectance at the top of the linear stretch, displayed at about 93 % "
+"brightness. Brighter values are compressed instead of clipped; a "
+"reflectance of ``2 * max_val - min_val`` and above is white (1)."
+msgstr ""
+"Reflektanz am oberen Ende der linearen Streckung, angezeigt bei etwa 93 %"
+" Helligkeit. Hellere Werte werden komprimiert statt abgeschnitten; eine "
+"Reflektanz von ``2 * max_val - min_val`` und mehr ist weiß (1)."
+
+#: cdec.eo.postprocessing.enhance_contrast:18 of
+msgid "Display intensities from 0 to 1, same shape as ``data``."
+msgstr "Anzeigeintensitäten von 0 bis 1, gleiche Form wie ``data``."
+
+#: cdec.eo.postprocessing.enhance_contrast:21 of
+msgid ""
+"If ``max_val`` is not greater than ``min_val``, or if one of them is     "
+"not finite."
+msgstr ""
+"Wenn ``max_val`` nicht größer als ``min_val`` ist oder einer von beiden "
+"nicht endlich ist."
+
+#: cdec.eo.postprocessing.enhance_color_raster:1 of
+msgid ""
+"Rewrite a red/green/blue reflectance GeoTIFF in place as enhanced 8-bit "
+"RGB."
+msgstr ""
+"Schreibt ein Rot/Grün/Blau-Reflektanz-GeoTIFF an Ort und Stelle als "
+"verbessertes 8-Bit-RGB um."
+
+#: cdec.eo.postprocessing.enhance_color_raster:3 of
+msgid ""
+"Uses :func:`enhance_color`. The bands must be ordered red, green, blue. "
+"Pixels without data stay without data (black, with a mask stored inside "
+"the file)."
+msgstr ""
+"Verwendet :func:`enhance_color`. Die Bänder müssen in der Reihenfolge "
+"Rot, Grün, Blau vorliegen. Pixel ohne Daten bleiben ohne Daten (schwarz, "
+"mit einer in der Datei gespeicherten Maske)."
+
+#: cdec.eo.postprocessing.enhance_color_raster:7 of
+msgid ""
+"This changes the file itself and the original reflectance values are "
+"lost. Normally you do not call it yourself: ``download_true_color_image``"
+" does it for you when ``enhance_color=True``."
+msgstr ""
+"Das ändert die Datei selbst, und die ursprünglichen Reflektanzwerte gehen"
+" verloren. Normalerweise rufst du sie nicht selbst auf: "
+"``download_true_color_image`` erledigt das für dich, wenn "
+"``enhance_color=True`` ist."
+
+#: cdec.eo.postprocessing.enhance_color_raster:11 of
+msgid ""
+"Three-band GeoTIFF with red, green and blue reflectance. It is "
+"overwritten with an 8-bit RGB GeoTIFF."
+msgstr ""
+"GeoTIFF mit drei Bändern mit Rot-, Grün- und Blau-Reflektanz. Es wird mit"
+" einem 8-Bit-RGB-GeoTIFF überschrieben."
+
+#: cdec.eo.postprocessing.enhance_color_raster:14
+#: cdec.eo.postprocessing.enhance_contrast_raster:15 of
+msgid "If the file does not have exactly three bands."
+msgstr "Wenn die Datei nicht genau drei Bänder hat."
+
+#: cdec.eo.postprocessing.enhance_contrast_raster:1 of
+msgid ""
+"Rewrite a three-band reflectance GeoTIFF in place as contrast-enhanced "
+"8-bit RGB."
+msgstr ""
+"Schreibt ein dreibändiges Reflektanz-GeoTIFF an Ort und Stelle als "
+"kontrastverbessertes 8-Bit-RGB um."
+
+#: cdec.eo.postprocessing.enhance_contrast_raster:3 of
+msgid ""
+"Uses :func:`enhance_contrast`. The bands must already be ordered as the "
+"intended red, green and blue display channels. Pixels without data stay "
+"without data (black, with a mask stored inside the file)."
+msgstr ""
+"Verwendet :func:`enhance_contrast`. Die Bänder müssen bereits in der "
+"Reihenfolge der vorgesehenen Anzeigekanäle Rot, Grün und Blau vorliegen. "
+"Pixel ohne Daten bleiben ohne Daten (schwarz, mit einer in der Datei "
+"gespeicherten Maske)."
+
+#: cdec.eo.postprocessing.enhance_contrast_raster:7 of
+msgid ""
+"This changes the file itself and the original reflectance values are "
+"lost. Normally you do not call it yourself: "
+"``download_false_color_urban`` does it for you when "
+"``enhance_contrast=True``."
+msgstr ""
+"Das ändert die Datei selbst, und die ursprünglichen Reflektanzwerte gehen"
+" verloren. Normalerweise rufst du sie nicht selbst auf: "
+"``download_false_color_urban`` erledigt das für dich, wenn "
+"``enhance_contrast=True`` ist."
+
+#: cdec.eo.postprocessing.enhance_contrast_raster:11 of
+msgid ""
+"Three-band GeoTIFF with reflectance in the order of the display channels "
+"(red, green, blue). It is overwritten with an 8-bit RGB GeoTIFF."
+msgstr ""
+"GeoTIFF mit drei Bändern mit Reflektanz in der Reihenfolge der "
+"Anzeigekanäle (Rot, Grün, Blau). Es wird mit einem 8-Bit-RGB-GeoTIFF "
+"überschrieben."
+
+#: ../../reference/functions.rst:2
+msgid "All functions"
+msgstr "Alle Funktionen"
+
+#: ../../reference/functions.rst:5
+msgid "Download and plot functions"
+msgstr "Download- und Plot-Funktionen"
+
+#: ../../reference/functions.rst:7
+msgid ""
+"Every function has a long name and a short alias. Both names call the "
+"same function. Click a name to open its documentation on the page of the "
+"data type."
+msgstr ""
+"Jede Funktion hat einen langen Namen und einen kurzen Alias. Beide Namen "
+"rufen dieselbe Funktion auf. Klicke auf einen Namen, um seine "
+"Dokumentation auf der Seite des Datentyps zu öffnen."
+
+#: ../../reference/functions.rst:15
+msgid "Download (long name)"
+msgstr "Download (langer Name)"
+
+#: ../../reference/functions.rst:16
+msgid "Download (alias)"
+msgstr "Download (Alias)"
+
+#: ../../reference/functions.rst:17
+msgid "Plot (long name)"
+msgstr "Plot (langer Name)"
+
+#: ../../reference/functions.rst:18
+msgid "Plot (alias)"
+msgstr "Plot (Alias)"
+
+#: ../../reference/functions.rst:19
+msgid ":doc:`/data/ndvi`"
+msgstr ":doc:`/data/ndvi`"
+
+#: ../../reference/functions.rst:20
+msgid ":func:`~cdec.download_normalized_difference_vegetation_index`"
+msgstr ":func:`~cdec.download_normalized_difference_vegetation_index`"
+
+#: ../../reference/functions.rst:21
+msgid "``download_ndvi``"
+msgstr "``download_ndvi``"
+
+#: ../../reference/functions.rst:22
+msgid ":func:`~cdec.plot_normalized_difference_vegetation_index`"
+msgstr ":func:`~cdec.plot_normalized_difference_vegetation_index`"
+
+#: ../../reference/functions.rst:23
+msgid "``plot_ndvi``"
+msgstr "``plot_ndvi``"
+
+#: ../../reference/functions.rst:24
+msgid ":doc:`/data/evi`"
+msgstr ":doc:`/data/evi`"
+
+#: ../../reference/functions.rst:25
+msgid ":func:`~cdec.download_enhanced_vegetation_index`"
+msgstr ":func:`~cdec.download_enhanced_vegetation_index`"
+
+#: ../../reference/functions.rst:26
+msgid "``download_evi``"
+msgstr "``download_evi``"
+
+#: ../../reference/functions.rst:27
+msgid ":func:`~cdec.plot_enhanced_vegetation_index`"
+msgstr ":func:`~cdec.plot_enhanced_vegetation_index`"
+
+#: ../../reference/functions.rst:28
+msgid "``plot_evi``"
+msgstr "``plot_evi``"
+
+#: ../../reference/functions.rst:29
+msgid ":doc:`/data/landsat-ndvi`"
+msgstr ":doc:`/data/landsat-ndvi`"
+
+#: ../../reference/functions.rst:30
+msgid ":func:`~cdec.download_landsat_ndvi`"
+msgstr ":func:`~cdec.download_landsat_ndvi`"
+
+#: ../../reference/functions.rst:31
+msgid "``download_landsat``"
+msgstr "``download_landsat``"
+
+#: ../../reference/functions.rst:32
+msgid ":func:`~cdec.plot_landsat_ndvi`"
+msgstr ":func:`~cdec.plot_landsat_ndvi`"
+
+#: ../../reference/functions.rst:33
+msgid "``plot_landsat``"
+msgstr "``plot_landsat``"
+
+#: ../../reference/functions.rst:34
+msgid ":doc:`/data/ndwi`"
+msgstr ":doc:`/data/ndwi`"
+
+#: ../../reference/functions.rst:35
+msgid ":func:`~cdec.download_normalized_difference_water_index`"
+msgstr ":func:`~cdec.download_normalized_difference_water_index`"
+
+#: ../../reference/functions.rst:36
+msgid "``download_ndwi``"
+msgstr "``download_ndwi``"
+
+#: ../../reference/functions.rst:37
+msgid ":func:`~cdec.plot_normalized_difference_water_index`"
+msgstr ":func:`~cdec.plot_normalized_difference_water_index`"
+
+#: ../../reference/functions.rst:38
+msgid "``plot_ndwi``"
+msgstr "``plot_ndwi``"
+
+#: ../../reference/functions.rst:39
+msgid ":doc:`/data/ndmi`"
+msgstr ":doc:`/data/ndmi`"
+
+#: ../../reference/functions.rst:40
+msgid ":func:`~cdec.download_normalized_difference_moisture_index`"
+msgstr ":func:`~cdec.download_normalized_difference_moisture_index`"
+
+#: ../../reference/functions.rst:41
+msgid "``download_ndmi``"
+msgstr "``download_ndmi``"
+
+#: ../../reference/functions.rst:42
+msgid ":func:`~cdec.plot_normalized_difference_moisture_index`"
+msgstr ":func:`~cdec.plot_normalized_difference_moisture_index`"
+
+#: ../../reference/functions.rst:43
+msgid "``plot_ndmi``"
+msgstr "``plot_ndmi``"
+
+#: ../../reference/functions.rst:44
+msgid ":doc:`/data/ndsi`"
+msgstr ":doc:`/data/ndsi`"
+
+#: ../../reference/functions.rst:45
+msgid ":func:`~cdec.download_normalized_difference_snow_index`"
+msgstr ":func:`~cdec.download_normalized_difference_snow_index`"
+
+#: ../../reference/functions.rst:46
+msgid "``download_ndsi``"
+msgstr "``download_ndsi``"
+
+#: ../../reference/functions.rst:47
+msgid ":func:`~cdec.plot_normalized_difference_snow_index`"
+msgstr ":func:`~cdec.plot_normalized_difference_snow_index`"
+
+#: ../../reference/functions.rst:48
+msgid "``plot_ndsi``"
+msgstr "``plot_ndsi``"
+
+#: ../../reference/functions.rst:49
+msgid ":doc:`/data/true-color`"
+msgstr ":doc:`/data/true-color`"
+
+#: ../../reference/functions.rst:50
+msgid ":func:`~cdec.download_true_color_image`"
+msgstr ":func:`~cdec.download_true_color_image`"
+
+#: ../../reference/functions.rst:51
+msgid "``download_tci``"
+msgstr "``download_tci``"
+
+#: ../../reference/functions.rst:52
+msgid ":func:`~cdec.plot_true_color_image`"
+msgstr ":func:`~cdec.plot_true_color_image`"
+
+#: ../../reference/functions.rst:53
+msgid "``plot_tci``"
+msgstr "``plot_tci``"
+
+#: ../../reference/functions.rst:54
+msgid ":doc:`/data/false-color-urban`"
+msgstr ":doc:`/data/false-color-urban`"
+
+#: ../../reference/functions.rst:55
+msgid ":func:`~cdec.download_false_color_urban`"
+msgstr ":func:`~cdec.download_false_color_urban`"
+
+#: ../../reference/functions.rst:56
+msgid "``download_urban``"
+msgstr "``download_urban``"
+
+#: ../../reference/functions.rst:57
+msgid ":func:`~cdec.plot_false_color_urban`"
+msgstr ":func:`~cdec.plot_false_color_urban`"
+
+#: ../../reference/functions.rst:58
+msgid "``plot_urban``"
+msgstr "``plot_urban``"
+
+#: ../../reference/functions.rst:59
+msgid ":doc:`/data/false-color-infrared`"
+msgstr ":doc:`/data/false-color-infrared`"
+
+#: ../../reference/functions.rst:60
+msgid ":func:`~cdec.download_false_color_infrared`"
+msgstr ":func:`~cdec.download_false_color_infrared`"
+
+#: ../../reference/functions.rst:61
+msgid "``download_infrared``"
+msgstr "``download_infrared``"
+
+#: ../../reference/functions.rst:62
+msgid ":func:`~cdec.plot_false_color_infrared`"
+msgstr ":func:`~cdec.plot_false_color_infrared`"
+
+#: ../../reference/functions.rst:63
+msgid "``plot_infrared``"
+msgstr "``plot_infrared``"
+
+#: ../../reference/functions.rst:64
+msgid ":doc:`/data/false-color-swir`"
+msgstr ":doc:`/data/false-color-swir`"
+
+#: ../../reference/functions.rst:65
+msgid ":func:`~cdec.download_false_color_swir`"
+msgstr ":func:`~cdec.download_false_color_swir`"
+
+#: ../../reference/functions.rst:66
+msgid "``download_swir``"
+msgstr "``download_swir``"
+
+#: ../../reference/functions.rst:67
+msgid ":func:`~cdec.plot_false_color_swir`"
+msgstr ":func:`~cdec.plot_false_color_swir`"
+
+#: ../../reference/functions.rst:68
+msgid "``plot_swir``"
+msgstr "``plot_swir``"
+
+#: ../../reference/functions.rst:69
+msgid ":doc:`/data/land-surface-temperature`"
+msgstr ":doc:`/data/land-surface-temperature`"
+
+#: ../../reference/functions.rst:70
+msgid ":func:`~cdec.download_land_surface_temperature`"
+msgstr ":func:`~cdec.download_land_surface_temperature`"
+
+#: ../../reference/functions.rst:71
+msgid "``download_lst``"
+msgstr "``download_lst``"
+
+#: ../../reference/functions.rst:72
+msgid ":func:`~cdec.plot_land_surface_temperature`"
+msgstr ":func:`~cdec.plot_land_surface_temperature`"
+
+#: ../../reference/functions.rst:73
+msgid "``plot_lst``"
+msgstr "``plot_lst``"
+
+#: ../../reference/functions.rst:74
+msgid ":doc:`/data/soil-water-index`"
+msgstr ":doc:`/data/soil-water-index`"
+
+#: ../../reference/functions.rst:75
+msgid ":func:`~cdec.download_soil_water_index`"
+msgstr ":func:`~cdec.download_soil_water_index`"
+
+#: ../../reference/functions.rst:76
+msgid "``download_swi``"
+msgstr "``download_swi``"
+
+#: ../../reference/functions.rst:77
+msgid ":func:`~cdec.plot_soil_water_index`"
+msgstr ":func:`~cdec.plot_soil_water_index`"
+
+#: ../../reference/functions.rst:78
+msgid "``plot_swi``"
+msgstr "``plot_swi``"
+
+#: ../../reference/functions.rst:79
+msgid ":doc:`/data/elevation`"
+msgstr ":doc:`/data/elevation`"
+
+#: ../../reference/functions.rst:80
+msgid ":func:`~cdec.download_digital_elevation_model`"
+msgstr ":func:`~cdec.download_digital_elevation_model`"
+
+#: ../../reference/functions.rst:81
+msgid "``download_dem``"
+msgstr "``download_dem``"
+
+#: ../../reference/functions.rst:82
+msgid ":func:`~cdec.plot_digital_elevation_model`"
+msgstr ":func:`~cdec.plot_digital_elevation_model`"
+
+#: ../../reference/functions.rst:83
+msgid "``plot_dem``"
+msgstr "``plot_dem``"
+
+#: ../../reference/functions.rst:84 ../../reference/functions.rst:136
+msgid ":doc:`/data/land-cover`"
+msgstr ":doc:`/data/land-cover`"
+
+#: ../../reference/functions.rst:85
+msgid ":func:`~cdec.download_land_cover`"
+msgstr ":func:`~cdec.download_land_cover`"
+
+#: ../../reference/functions.rst:86 ../../reference/functions.rst:88
+msgid "(none)"
+msgstr "(keine)"
+
+#: ../../reference/functions.rst:87
+msgid ":func:`~cdec.plot_land_cover`"
+msgstr ":func:`~cdec.plot_land_cover`"
+
+#: ../../reference/functions.rst:89
+msgid ":doc:`/data/scene-classification`"
+msgstr ":doc:`/data/scene-classification`"
+
+#: ../../reference/functions.rst:90
+msgid ":func:`~cdec.download_scene_classification_map`"
+msgstr ":func:`~cdec.download_scene_classification_map`"
+
+#: ../../reference/functions.rst:91
+msgid "``download_scl``"
+msgstr "``download_scl``"
+
+#: ../../reference/functions.rst:92
+msgid ":func:`~cdec.plot_scene_classification_map`"
+msgstr ":func:`~cdec.plot_scene_classification_map`"
+
+#: ../../reference/functions.rst:93
+msgid "``plot_scl``"
+msgstr "``plot_scl``"
+
+#: ../../reference/functions.rst:96
+msgid "Other functions"
+msgstr "Weitere Funktionen"
+
+#: ../../reference/functions.rst:102
+msgid "Function"
+msgstr "Funktion"
+
+#: ../../reference/functions.rst:103
+msgid "What it does"
+msgstr "Was sie macht"
+
+#: ../../reference/functions.rst:104 ../../reference/functions.rst:127
+msgid "Page"
+msgstr "Seite"
+
+#: ../../reference/functions.rst:105
+msgid ":func:`~cdec.plot_raster`"
+msgstr ":func:`~cdec.plot_raster`"
+
+#: ../../reference/functions.rst:106
+msgid "draws any GeoTIFF"
+msgstr "zeichnet ein beliebiges GeoTIFF"
+
+#: ../../reference/functions.rst:107
+msgid ":doc:`plotting`"
+msgstr ":doc:`plotting`"
+
+#: ../../reference/functions.rst:108
+msgid ":func:`~cdec.show_scl_classes`"
+msgstr ":func:`~cdec.show_scl_classes`"
+
+#: ../../reference/functions.rst:109
+msgid "prints the Sentinel-2 SCL classes with a hint for each"
+msgstr "gibt die SCL-Klassen von Sentinel-2 mit einem Hinweis zu jeder aus"
+
+#: ../../reference/functions.rst:110 ../../reference/functions.rst:130
+#: ../../reference/functions.rst:133
+msgid ":doc:`scl`"
+msgstr ":doc:`scl`"
+
+#: ../../reference/functions.rst:111
+msgid ":func:`~cdec.eo.summary.summarize_raster`"
+msgstr ":func:`~cdec.eo.summary.summarize_raster`"
+
+#: ../../reference/functions.rst:112
+msgid "describes a GeoTIFF as text"
+msgstr "beschreibt ein GeoTIFF als Text"
+
+#: ../../reference/functions.rst:113 ../../reference/functions.rst:116
+msgid ":doc:`files`"
+msgstr ":doc:`files`"
+
+#: ../../reference/functions.rst:114
+msgid ""
+":func:`~cdec.eo.postprocessing.enhance_color`, "
+":func:`~cdec.eo.postprocessing.enhance_contrast`"
+msgstr ""
+":func:`~cdec.eo.postprocessing.enhance_color`, "
+":func:`~cdec.eo.postprocessing.enhance_contrast`"
+
+#: ../../reference/functions.rst:115
+msgid "turn reflectance into colours"
+msgstr "wandeln Reflektanz in Farben um"
+
+#: ../../reference/functions.rst:119
+msgid "Constants"
+msgstr "Konstanten"
+
+#: ../../reference/functions.rst:125
+msgid "Name"
+msgstr "Name"
+
+#: ../../reference/functions.rst:126
+msgid "Content"
+msgstr "Inhalt"
+
+#: ../../reference/functions.rst:128
+msgid "``cdec.SCL_CLASSES``, ``cdec.SCL_HINTS``, ``cdec.SCL_COLORS``"
+msgstr "``cdec.SCL_CLASSES``, ``cdec.SCL_HINTS``, ``cdec.SCL_COLORS``"
+
+#: ../../reference/functions.rst:129
+msgid "the 12 SCL classes, a hint for each and their colours"
+msgstr "die 12 SCL-Klassen, ein Hinweis zu jeder und ihre Farben"
+
+#: ../../reference/functions.rst:131
+msgid ""
+"``cdec.SCL_LAND``, ``cdec.SCL_LAND_AND_WATER``, "
+"``cdec.SCL_LAND_WATER_AND_SNOW``"
+msgstr ""
+"``cdec.SCL_LAND``, ``cdec.SCL_LAND_AND_WATER``, "
+"``cdec.SCL_LAND_WATER_AND_SNOW``"
+
+#: ../../reference/functions.rst:132
+msgid "ready-made selections ``(4, 5)``, ``(4, 5, 6)`` and ``(4, 5, 6, 11)``"
+msgstr "vorgefertigte Auswahlen ``(4, 5)``, ``(4, 5, 6)`` und ``(4, 5, 6, 11)``"
+
+#: ../../reference/functions.rst:134
+msgid "``cdec.WORLDCOVER_CLASSES``, ``cdec.WORLDCOVER_COLORS``"
+msgstr "``cdec.WORLDCOVER_CLASSES``, ``cdec.WORLDCOVER_COLORS``"
+
+#: ../../reference/functions.rst:135
+msgid "names and colours of the land cover classes"
+msgstr "Namen und Farben der Landbedeckungsklassen"
+
+#: ../../reference/index.rst:2
+msgid "Reference"
+msgstr "Referenz"
+
+#: ../../reference/index.rst:4
+msgid ""
+"Look-up pages. Everything listed here can be imported from the package, "
+"for example ``from cdec import download_ndvi``. The documentation of "
+"every download and plot function is on the page of its :doc:`data type "
+"</data/index>`; the pages below list them all and describe what is "
+"shared."
+msgstr ""
+"Nachschlageseiten. Alles, was hier aufgeführt ist, lässt sich aus dem "
+"Paket importieren, zum Beispiel ``from cdec import download_ndvi``. Die "
+"Dokumentation jeder Download- und Plot-Funktion steht auf der Seite ihres"
+" :doc:`Datentyps </data/index>`; die folgenden Seiten listen sie alle auf"
+" und beschreiben, was gemeinsam ist."
+
+#: ../../reference/internals.rst:2
+msgid "Developer reference"
+msgstr "Entwicklerreferenz"
+
+#: ../../reference/internals.rst:4
+msgid ""
+"Every ``download_*`` function follows the same recipe: connect, describe "
+"the data as an openEO data cube, hand the cube to "
+":func:`~cdec.eo.util.download_raster_cube`. These are the helpers behind "
+"it. They are not meant to be called by users of the package."
+msgstr ""
+"Jede ``download_*``-Funktion folgt demselben Rezept: verbinden, die Daten"
+" als openEO-Datacube beschreiben, den Cube an "
+":func:`~cdec.eo.util.download_raster_cube` übergeben. Das sind die "
+"Hilfsfunktionen dahinter. Sie sind nicht dafür gedacht, von Nutzern des "
+"Pakets aufgerufen zu werden."
+
+#: ../../reference/internals.rst:9
+msgid "Shared helpers"
+msgstr "Gemeinsame Hilfsfunktionen"
+
+#: cdec.eo.util:1 of
+msgid "Shared helpers used by all ``download_*`` functions."
+msgstr "Gemeinsame Hilfsfunktionen, die alle ``download_*``-Funktionen verwenden."
+
+#: cdec.eo.util:3 of
+msgid "Every download function in this package follows the same recipe:"
+msgstr "Jede Download-Funktion in diesem Paket folgt demselben Rezept:"
+
+#: cdec.eo.util:5 of
+msgid "connect to the openEO backend,"
+msgstr "sich mit dem openEO-Backend verbinden,"
+
+#: cdec.eo.util:6 of
+msgid ""
+"describe the wanted data as an openEO *data cube* (load, mask, average, "
+"...),"
+msgstr ""
+"die gewünschten Daten als openEO-*Datacube* beschreiben (laden, "
+"maskieren, mitteln, ...),"
+
+#: cdec.eo.util:7 of
+msgid ""
+"hand the cube to :func:`download_raster_cube`, which downloads it and "
+"writes the final GeoTIFF / Cloud Optimized GeoTIFF."
+msgstr ""
+"den Cube an :func:`download_raster_cube` übergeben, die ihn herunterlädt "
+"und das fertige GeoTIFF / Cloud Optimized GeoTIFF schreibt."
+
+#: cdec.eo.util:10 of
+msgid ""
+"Steps 1 and 3 live here. Step 2 is deliberately kept inside each "
+"``download_*`` function so that it can be read from top to bottom."
+msgstr ""
+"Die Schritte 1 und 3 stehen hier. Schritt 2 bleibt absichtlich in jeder "
+"``download_*``-Funktion, damit sie von oben nach unten gelesen werden "
+"kann."
+
+#: cdec.eo.util.get_connection:1 of
+msgid "Connect to the Copernicus Data Space openEO backend and log in."
+msgstr ""
+"Verbindet sich mit dem openEO-Backend des Copernicus Data Space und "
+"meldet sich an."
+
+#: cdec.eo.util.get_connection:3 of
+msgid ""
+"The first call opens a login (device code flow). The openEO client stores"
+" a refresh token, so later calls log in silently."
+msgstr ""
+"Der erste Aufruf öffnet einen Login (Device-Code-Verfahren). Der openEO-"
+"Client speichert ein Refresh-Token, sodass spätere Aufrufe sich still "
+"anmelden."
+
+#: cdec.eo.util.prepare_output_path:1 of
+msgid "Return the absolute output path and create missing parent folders."
+msgstr ""
+"Gibt den absoluten Ausgabepfad zurück und legt fehlende übergeordnete "
+"Ordner an."
+
+#: cdec.eo.util.download_raster_cube:1 of
+msgid "Download an openEO data cube as GeoTIFF and return the final path."
+msgstr ""
+"Lädt einen openEO-Datacube als GeoTIFF herunter und gibt den endgültigen "
+"Pfad zurück."
+
+#: cdec.eo.util.download_raster_cube:3 of
+msgid ""
+"The cube is first downloaded into a hidden temporary folder next to the "
+"target file. Only when everything succeeded (download, optional "
+"``postprocess``, optional COG conversion) is the finished file moved to "
+"``file_path``. A failed download therefore never leaves a half-written "
+"file behind and never overwrites an existing good file."
+msgstr ""
+"Der Cube wird zuerst in einen versteckten temporären Ordner neben der "
+"Zieldatei heruntergeladen. Erst wenn alles geklappt hat (Download, "
+"optionales ``postprocess``, optionale COG-Umwandlung), wird die fertige "
+"Datei nach ``file_path`` verschoben. Ein fehlgeschlagener Download "
+"hinterlässt daher nie eine halb geschriebene Datei und überschreibt nie "
+"eine vorhandene gute Datei."
+
+#: cdec.eo.util.download_raster_cube:9 of
+msgid "openEO data cube that already contains the final result."
+msgstr "openEO-Datacube, der bereits das Endergebnis enthält."
+
+#: cdec.eo.util.download_raster_cube:10 of
+msgid "Destination path. Missing parent folders are created."
+msgstr "Zielpfad. Fehlende übergeordnete Ordner werden angelegt."
+
+#: cdec.eo.util.download_raster_cube:11 of
+msgid "If ``True``, convert the download to a Cloud Optimized GeoTIFF."
+msgstr ""
+"Wenn ``True``, wird der Download in ein Cloud Optimized GeoTIFF "
+"umgewandelt."
+
+#: cdec.eo.util.download_raster_cube:12 of
+msgid ""
+"Resampling method for the COG overview levels. Use ``\"nearest\"`` for "
+"categorical data such as land cover."
+msgstr ""
+"Resampling-Methode für die Übersichtsstufen des COG. Verwende "
+"``\"nearest\"`` für kategoriale Daten wie die Landbedeckung."
+
+#: cdec.eo.util.download_raster_cube:14 of
+msgid ""
+"Optional function that receives the path of the downloaded GeoTIFF and "
+"rewrites it in place (e.g. colour enhancement)."
+msgstr ""
+"Optionale Funktion, die den Pfad des heruntergeladenen GeoTIFF erhält und"
+" es an Ort und Stelle umschreibt (z. B. Farbverbesserung)."
+
+#: cdec.eo.util.download_raster_cube:16 of
+msgid ""
+"If ``True``, print a summary of the finished file (see "
+":func:`cdec.eo.summary.summarize_raster`)."
+msgstr ""
+"Wenn ``True``, wird eine Zusammenfassung der fertigen Datei ausgegeben "
+"(siehe :func:`cdec.eo.summary.summarize_raster`)."
+
+#: cdec.eo.util.download_raster_cube:18 cdec.eo.util.download_raster_cube:19
+#: cdec.eo.util.download_raster_cube:20 of
+msgid "Title, unit of the values and more lines for that summary."
+msgstr "Titel, Einheit der Werte und weitere Zeilen für diese Zusammenfassung."
+
+#: cdec.eo.util.BACKEND_URL:1 of
+msgid "Address of the Copernicus Data Space openEO backend."
+msgstr "Adresse des openEO-Backends des Copernicus Data Space."
+
+#: cdec.eo.util.SENTINEL2_REFLECTANCE_SCALE:1 of
+msgid ""
+"Sentinel-2 L2A is stored as integers. Multiplying by this factor gives "
+"reflectance between 0 (black) and 1 (perfectly white)."
+msgstr ""
+"Sentinel-2 L2A wird als Ganzzahlen gespeichert. Die Multiplikation mit "
+"diesem Faktor ergibt eine Reflektanz zwischen 0 (schwarz) und 1 (perfekt "
+"weiß)."
+
+#: cdec.eo.util.DEFAULT_DEM_TEMPORAL_EXTENT:1 of
+msgid ""
+"Static data sets (they do not change over time) still need a temporal "
+"extent in openEO. This is the acquisition period of the elevation model."
+msgstr ""
+"Statische Datensätze (sie ändern sich nicht über die Zeit) brauchen in "
+"openEO trotzdem eine zeitliche Ausdehnung. Das ist der Aufnahmezeitraum "
+"des Höhenmodells."
+
+#: ../../reference/internals.rst:21
+msgid "Scene classification helpers"
+msgstr "Hilfsfunktionen für die Szenenklassifikation"
+
+#: cdec.eo.scl:1 of
+msgid "Sentinel-2 Scene Classification Layer (SCL): what the classes mean."
+msgstr "Sentinel-2 Scene Classification Layer (SCL): was die Klassen bedeuten."
+
+#: cdec.eo.scl:3 of
+msgid ""
+"Every Sentinel-2 L2A scene comes with an extra band, the *Scene "
+"Classification Layer*. For each 20 m pixel it contains one number from 0 "
+"to 11 that says what the pixel probably shows (vegetation, water, cloud, "
+"...). The Sentinel-2 download functions use it to throw away unusable "
+"pixels *before* they average the scenes of your period:"
+msgstr ""
+"Jede Sentinel-2-L2A-Szene hat ein zusätzliches Band, die *Scene "
+"Classification Layer*. Für jedes 20-m-Pixel enthält sie eine Zahl von 0 "
+"bis 11, die sagt, was das Pixel wahrscheinlich zeigt (Vegetation, Wasser,"
+" Wolke, ...). Die Sentinel-2-Download-Funktionen verwenden sie, um "
+"unbrauchbare Pixel auszusortieren, *bevor* sie die Szenen deines "
+"Zeitraums mitteln:"
+
+#: cdec.eo.scl:9 of
+msgid "cdec.download_ndvi(path, area, period, scl_classes=(4, 5))"
+msgstr "cdec.download_ndvi(path, area, period, scl_classes=(4, 5))"
+
+#: cdec.eo.scl:11 of
+msgid ""
+"``scl_classes`` is the list of classes you want to **keep**. Everything "
+"else is treated as no data. If you want to see which classes exist and "
+"what they mean, run::"
+msgstr ""
+"``scl_classes`` ist die Liste der Klassen, die du **behalten** willst. "
+"Alles andere wird als ohne Daten behandelt. Wenn du sehen willst, welche "
+"Klassen es gibt und was sie bedeuten, führe aus::"
+
+#: cdec.eo.scl:19 of
+msgid ""
+"The classification is calculated automatically (by ESA's Sen2Cor "
+"processor) and is not perfect. Thin clouds, haze and cloud edges are "
+"sometimes labelled as land, and snow is sometimes labelled as cloud. Look"
+" at your result before you trust it."
+msgstr ""
+"Die Klassifikation wird automatisch berechnet (vom Sen2Cor-Prozessor der "
+"ESA) und ist nicht perfekt. Dünne Wolken, Dunst und Wolkenränder werden "
+"manchmal als Land eingestuft, und Schnee wird manchmal als Wolke "
+"eingestuft. Sieh dir dein Ergebnis an, bevor du ihm vertraust."
+
+#: cdec.eo.scl:24 of
+msgid "``max_cloud_cover`` and ``scl_classes`` are two different filters:"
+msgstr "``max_cloud_cover`` und ``scl_classes`` sind zwei verschiedene Filter:"
+
+#: cdec.eo.scl:26 of
+msgid "``max_cloud_cover`` drops whole *scenes* that are too cloudy overall."
+msgstr "``max_cloud_cover`` entfernt ganze *Szenen*, die insgesamt zu wolkig sind."
+
+#: cdec.eo.scl:27 of
+msgid "``scl_classes`` drops single *pixels* that are cloudy, shadowed, ..."
+msgstr ""
+"``scl_classes`` entfernt einzelne *Pixel*, die bewölkt, beschattet sind, "
+"..."
+
+#: cdec.eo.scl.check_scl_classes:1 of
+msgid ""
+"Validate the ``scl_classes`` argument of the Sentinel-2 download "
+"functions."
+msgstr "Prüft das Argument ``scl_classes`` der Sentinel-2-Download-Funktionen."
+
+#: cdec.eo.scl.check_scl_classes:3 of
+msgid ""
+"Returns ``None`` if masking is switched off (``scl_classes=None``), "
+"otherwise the class IDs as a list of plain ``int``. Raises ``ValueError``"
+" for an empty selection or for anything that is not an ID from "
+":data:`SCL_CLASSES`."
+msgstr ""
+"Gibt ``None`` zurück, wenn die Maskierung ausgeschaltet ist "
+"(``scl_classes=None``), sonst die Klassen-IDs als Liste einfacher "
+"``int``. Löst ``ValueError`` aus bei einer leeren Auswahl oder bei allem,"
+" was keine ID aus :data:`SCL_CLASSES` ist."
+
+#: cdec.eo.scl.check_scl_classes:8 of
+msgid ""
+"The download functions call this *before* connecting to the backend, so "
+"that a typo fails immediately instead of after the login."
+msgstr ""
+"Die Download-Funktionen rufen dies auf, *bevor* sie sich mit dem Backend "
+"verbinden, damit ein Tippfehler sofort scheitert und nicht erst nach dem "
+"Login."
+
+#: cdec.eo.scl.describe_scl_classes:1 of
+msgid ""
+"Write a selection of SCL classes as text, e.g. ``4 Vegetation, 5 Not "
+"vegetated``."
+msgstr ""
+"Schreibt eine Auswahl von SCL-Klassen als Text, z. B. ``4 Vegetation, 5 "
+"Not vegetated``."
+
+#: cdec.eo.scl.describe_scl_classes:3 of
+msgid "Expects a selection that ``check_scl_classes`` has already accepted."
+msgstr "Erwartet eine Auswahl, die ``check_scl_classes`` bereits akzeptiert hat."
+
+#: ../../reference/internals.rst:27
+msgid "Summary helpers"
+msgstr "Hilfsfunktionen für die Zusammenfassung"
+
+#: cdec.eo.summary:1 of
+msgid ""
+"A short summary of a downloaded raster, printed by the ``download_*`` "
+"functions."
+msgstr ""
+"Eine kurze Zusammenfassung eines heruntergeladenen Rasters, ausgegeben "
+"von den ``download_*``-Funktionen."
+
+#: cdec.eo.summary:3 of
+msgid ""
+"The download functions print it when they are called with "
+"``verbose=True`` (the default). Everything about the raster itself "
+"(extent, grid, resolution, values, no data) is read from the finished "
+"file, so the summary shows what is really in it. The caller only adds a "
+"title, the unit of the values and a few lines about the request. The "
+"result looks like this::"
+msgstr ""
+"Die Download-Funktionen geben sie aus, wenn sie mit ``verbose=True`` "
+"aufgerufen werden (der Standard). Alles über das Raster selbst "
+"(Ausdehnung, Raster, Auflösung, Werte, keine Daten) wird aus der fertigen"
+" Datei gelesen, die Zusammenfassung zeigt also, was wirklich darin steht."
+" Der Aufrufer fügt nur einen Titel, die Einheit der Werte und ein paar "
+"Zeilen zur Anfrage hinzu. Das Ergebnis sieht so aus::"
+
+#: cdec.eo.summary:20 of
+msgid ""
+"The same function can describe any raster file, for example one that was "
+"downloaded earlier: "
+"``print(summarize_raster(\"data/ndvi_bremen.tif\"))``."
+msgstr ""
+"Dieselbe Funktion kann jede Rasterdatei beschreiben, zum Beispiel eine "
+"früher heruntergeladene: "
+"``print(summarize_raster(\"data/ndvi_bremen.tif\"))``."
+
+#: cdec.eo.summary.format_period:1 of
+msgid ""
+"Write a temporal extent as text, e.g. ``2024-06-01 to 2024-07-01 (end "
+"date not included)``."
+msgstr ""
+"Schreibt eine zeitliche Ausdehnung als Text, z. B. ``2024-06-01 to "
+"2024-07-01 (end date not included)``."
+
+#: cdec.eo.summary.sentinel2_details:1 of
+msgid ""
+"The lines about the request that the Sentinel-2 functions with SCL "
+"masking print."
+msgstr ""
+"Die Zeilen zur Anfrage, die die Sentinel-2-Funktionen mit SCL-Maskierung "
+"ausgeben."
+
+#: ../../reference/plotting.rst:2
+msgid "Plot functions"
+msgstr "Plot-Funktionen"
+
+#: ../../reference/plotting.rst:4
+msgid ""
+"The plot function of each data type is documented on the page of the data"
+" type (:doc:`functions`). This page describes what they share, and "
+":func:`~cdec.plot_raster`, which draws any GeoTIFF."
+msgstr ""
+"Die Plot-Funktion jedes Datentyps ist auf der Seite des Datentyps "
+"dokumentiert (:doc:`functions`). Diese Seite beschreibt, was sie "
+"gemeinsam haben, und :func:`~cdec.plot_raster`, die jedes GeoTIFF "
+"zeichnet."
+
+#: ../../reference/plotting.rst:8
+msgid "Shared options"
+msgstr "Gemeinsame Optionen"
+
+#: ../../reference/plotting.rst:10
+msgid ""
+"Every plot function takes the file path and keyword options. It draws "
+"into a matplotlib ``Axes`` and returns it."
+msgstr ""
+"Jede Plot-Funktion nimmt den Dateipfad und Schlüsselwort-Optionen. Sie "
+"zeichnet in ein matplotlib-``Axes`` und gibt es zurück."
+
+#: ../../reference/plotting.rst:16
+msgid "Option"
+msgstr "Option"
+
+#: ../../reference/plotting.rst:18
+msgid "Available in"
+msgstr "Verfügbar in"
+
+#: ../../reference/plotting.rst:19
+msgid "``ax``"
+msgstr "``ax``"
+
+#: ../../reference/plotting.rst:20
+msgid "the ``Axes`` to draw into; without it the function creates a figure"
+msgstr ""
+"das ``Axes``, in das gezeichnet wird; ohne es erzeugt die Funktion eine "
+"Abbildung"
+
+#: ../../reference/plotting.rst:21 ../../reference/plotting.rst:24
+#: ../../reference/plotting.rst:27
+msgid "all"
+msgstr "alle"
+
+#: ../../reference/plotting.rst:22
+msgid "``show``"
+msgstr "``show``"
+
+#: ../../reference/plotting.rst:23
+msgid ""
+"``True``: call ``plt.show()`` afterwards. Default: show only if the "
+"function created the figure"
+msgstr ""
+"``True``: danach ``plt.show()`` aufrufen. Standard: nur zeigen, wenn die "
+"Funktion die Abbildung erzeugt hat"
+
+#: ../../reference/plotting.rst:25
+msgid "``title``"
+msgstr "``title``"
+
+#: ../../reference/plotting.rst:26
+msgid ""
+"the title; ``None`` (default) gives the default title of the data type, "
+"``\"\"`` no title"
+msgstr ""
+"der Titel; ``None`` (Standard) ergibt den Standardtitel des Datentyps, "
+"``\"\"`` keinen Titel"
+
+#: ../../reference/plotting.rst:28
+msgid "``cmap``"
+msgstr "``cmap``"
+
+#: ../../reference/plotting.rst:29
+msgid "the matplotlib colour map"
+msgstr "die matplotlib-Farbskala"
+
+#: ../../reference/plotting.rst:30
+msgid "indices, temperature, soil water index, elevation"
+msgstr "Indizes, Temperatur, Bodenwasserindex, Höhe"
+
+#: ../../reference/plotting.rst:31
+msgid "``vmin``, ``vmax``"
+msgstr "``vmin``, ``vmax``"
+
+#: ../../reference/plotting.rst:32
+msgid ""
+"the value range of the colours; the defaults are fixed for the indices "
+"(-1 ... 1) and the soil water index (0 ... 100) and follow the image for "
+"temperature and elevation"
+msgstr ""
+"der Wertebereich der Farben; die Standardwerte sind für die Indizes (-1 "
+"... 1) und den Bodenwasserindex (0 ... 100) fest und folgen bei "
+"Temperatur und Höhe dem Bild"
+
+#: ../../reference/plotting.rst:34 ../../reference/plotting.rst:37
+msgid "the same"
+msgstr "dieselben"
+
+#: ../../reference/plotting.rst:35
+msgid "``colorbar``"
+msgstr "``colorbar``"
+
+#: ../../reference/plotting.rst:36
+msgid "``False`` draws no colour bar"
+msgstr "``False`` zeichnet keine Farbleiste"
+
+#: ../../reference/plotting.rst:40
+msgid "What is drawn"
+msgstr "Was gezeichnet wird"
+
+#: ../../reference/plotting.rst:42
+msgid "Pixels without data are transparent."
+msgstr "Pixel ohne Daten sind transparent."
+
+#: ../../reference/plotting.rst:43
+msgid ""
+"The axes show the coordinates of the file: degrees or metres. For "
+"longitude and latitude the map is corrected for the shorter degrees of "
+"longitude (:doc:`/explanation/grids-and-time`)."
+msgstr ""
+"Die Achsen zeigen die Koordinaten der Datei: Grad oder Meter. Bei Länge "
+"und Breite wird die Karte für die kürzeren Längengrade korrigiert "
+"(:doc:`/explanation/grids-and-time`)."
+
+#: ../../reference/plotting.rst:45
+msgid ""
+"A file with the wrong number of bands (for example a true-colour file "
+"passed to ``plot_ndvi``) raises a ``ValueError`` that names the file and "
+"points to ``plot_raster``."
+msgstr ""
+"Eine Datei mit der falschen Anzahl an Bändern (zum Beispiel eine "
+"Echtfarben-Datei, die an ``plot_ndvi`` übergeben wird) löst einen "
+"``ValueError`` aus, der die Datei nennt und auf ``plot_raster`` verweist."
+
+#: ../../reference/plotting.rst:49
+msgid "Any GeoTIFF"
+msgstr "Ein beliebiges GeoTIFF"
+
+#: cdec.plot.raster.plot_raster:1 of
+msgid "Draw any GeoTIFF, decided by its format."
+msgstr "Zeichnet ein beliebiges GeoTIFF, wobei sein Format entscheidet."
+
+#: cdec.plot.raster.plot_raster:3 of
+msgid ""
+"A file with **three 8-bit bands** is a colour picture (for example the "
+"true-colour image) and is drawn as it is."
+msgstr ""
+"Eine Datei mit **drei 8-Bit-Bändern** ist ein Farbbild (zum Beispiel das "
+"Echtfarbenbild) und wird so gezeichnet, wie sie ist."
+
+#: cdec.plot.raster.plot_raster:5 of
+msgid "Everything else is drawn as **one band of numbers** with a colour bar."
+msgstr ""
+"Alles andere wird als **ein Band aus Zahlen** mit einer Farbleiste "
+"gezeichnet."
+
+#: cdec.plot.raster.plot_raster:7 of
+msgid ""
+"The function cannot know what the numbers mean. For the data types of "
+"this package use the matching function (``plot_ndvi``, ``plot_dem``, "
+"...), which sets a suitable colour map and value range."
+msgstr ""
+"Die Funktion kann nicht wissen, was die Zahlen bedeuten. Für die "
+"Datentypen dieses Pakets verwende die passende Funktion (``plot_ndvi``, "
+"``plot_dem``, ...), die eine geeignete Farbskala und einen passenden "
+"Wertebereich setzt."
+
+#: cdec.plot.raster.plot_raster:11 of
+msgid ""
+"The GeoTIFF to draw, for example the file written by a ``download_*`` "
+"function."
+msgstr ""
+"Das GeoTIFF, das gezeichnet werden soll, zum Beispiel die von einer "
+"``download_*``-Funktion geschriebene Datei."
+
+#: cdec.plot.raster.plot_raster:13 of
+msgid "Which band to draw (1 is the first). Ignored for colour pictures."
+msgstr ""
+"Welches Band gezeichnet wird (1 ist das erste). Wird bei Farbbildern "
+"ignoriert."
+
+#: cdec.plot.raster.plot_raster:14 of
+msgid ""
+"Name of a matplotlib colour map, see "
+"https://matplotlib.org/stable/users/explain/colors/colormaps.html"
+msgstr ""
+"Name einer matplotlib-Farbskala, siehe "
+"https://matplotlib.org/stable/users/explain/colors/colormaps.html"
+
+#: cdec.plot.raster.plot_raster:16 cdec.plot.raster.plot_raster:19 of
+msgid ""
+"Values at the two ends of the colour map. ``None`` takes the smallest and"
+" largest value of the band. Fix them (for example ``vmin=-1, vmax=1`` for"
+" NDVI) to compare several images with the same colours."
+msgstr ""
+"Werte an den beiden Enden der Farbskala. ``None`` nimmt den kleinsten und"
+" größten Wert des Bandes. Lege sie fest (zum Beispiel ``vmin=-1, vmax=1``"
+" für den NDVI), um mehrere Bilder mit denselben Farben zu vergleichen."
+
+#: cdec.plot.raster.plot_raster:22 of
+msgid ""
+"Text next to the colour bar. Default: the description stored in the file,"
+" if there is one."
+msgstr ""
+"Text neben der Farbleiste. Standard: die in der Datei gespeicherte "
+"Beschreibung, falls es eine gibt."
+
+#: cdec.plot.raster.plot_raster:24 of
+msgid "Title of the plot."
+msgstr "Titel des Plots."
+
+#: cdec.plot.raster.plot_raster:25 of
+msgid "Draw a colour bar."
+msgstr "Eine Farbleiste zeichnen."
+
+#: cdec.plot.raster.plot_raster:26 of
+msgid "A matplotlib ``Axes`` to draw into. ``None`` creates a new figure."
+msgstr ""
+"Ein matplotlib-``Axes``, in das gezeichnet wird. ``None`` erzeugt eine "
+"neue Abbildung."
+
+#: cdec.plot.raster.plot_raster:27 of
+msgid ""
+"Call ``plt.show()`` at the end. The default (``None``) shows the figure "
+"only if the function created it, so a figure that you put together "
+"yourself is not shown too early."
+msgstr ""
+"Ruft am Ende ``plt.show()`` auf. Der Standard (``None``) zeigt die "
+"Abbildung nur, wenn die Funktion sie erzeugt hat, sodass eine selbst "
+"zusammengestellte Abbildung nicht zu früh gezeigt wird."
+
+#: cdec.plot.raster.plot_raster:31 of
+msgid "The axes with the plot, for further changes."
+msgstr "Die Achsen mit dem Plot, für weitere Änderungen."
+
+#: ../../reference/scl.rst:2
+msgid "Sentinel-2 scene classification"
+msgstr "Szenenklassifikation von Sentinel-2"
+
+#: ../../reference/scl.rst:4
+msgid ""
+"Every Sentinel-2 Level-2A scene comes with an extra band, the *Scene "
+"Classification Layer* (SCL). For each 20 m pixel it contains one number "
+"from 0 to 11 that says what the pixel probably shows. The Sentinel-2 "
+"download functions use it to throw away unusable pixels *before* they "
+"average the scenes of your period. ``scl_classes`` is the list of classes"
+" you want to **keep**; everything else is treated as no data "
+"(:doc:`/howto/filter-clouds`, :doc:`/explanation/clouds-and-masking`)."
+msgstr ""
+"Jede Sentinel-2-Level-2A-Szene hat ein zusätzliches Band, die *Scene "
+"Classification Layer* (SCL). Für jedes 20-m-Pixel enthält sie eine Zahl "
+"von 0 bis 11, die sagt, was das Pixel wahrscheinlich zeigt. Die "
+"Sentinel-2-Download-Funktionen verwenden sie, um unbrauchbare Pixel "
+"auszusortieren, *bevor* sie die Szenen deines Zeitraums mitteln. "
+"``scl_classes`` ist die Liste der Klassen, die du **behalten** willst; "
+"alles andere wird als ohne Daten behandelt (:doc:`/howto/filter-clouds`, "
+":doc:`/explanation/clouds-and-masking`)."
+
+#: ../../reference/scl.rst:5
+msgid "ID"
+msgstr "ID"
+
+#: ../../reference/scl.rst:6
+msgid "Class"
+msgstr "Klasse"
+
+#: ../../reference/scl.rst:7
+msgid "Hint"
+msgstr "Hinweis"
+
+#: ../../reference/scl.rst:8
+msgid "Color"
+msgstr "Farbe"
+
+#: ../../reference/scl.rst:9
+msgid "0"
+msgstr "0"
+
+#: ../../reference/scl.rst:10
+msgid "No data"
+msgstr "Keine Daten (No data)"
+
+#: ../../reference/scl.rst:11
+msgid ""
+"No measurement for this pixel (for example outside the satellite's "
+"track). Always exclude."
+msgstr ""
+"Keine Messung für dieses Pixel (zum Beispiel außerhalb der Aufnahmespur "
+"des Satelliten). Immer ausschließen."
+
+#: ../../reference/scl.rst:12
+msgid ":swatch:`#000000`"
+msgstr ":swatch:`#000000`"
+
+#: ../../reference/scl.rst:13
+msgid "1"
+msgstr "1"
+
+#: ../../reference/scl.rst:14
+msgid "Saturated or defective"
+msgstr "Gesättigt oder defekt (Saturated or defective)"
+
+#: ../../reference/scl.rst:15
+msgid ""
+"The sensor was overexposed or the pixel is defective, so the values "
+"cannot be trusted. Always exclude."
+msgstr ""
+"Der Sensor war überbelichtet oder das Pixel ist defekt, die Werte sind "
+"daher nicht vertrauenswürdig. Immer ausschließen."
+
+#: ../../reference/scl.rst:16
+msgid ":swatch:`#ff0000`"
+msgstr ":swatch:`#ff0000`"
+
+#: ../../reference/scl.rst:17
+msgid "2"
+msgstr "2"
+
+#: ../../reference/scl.rst:18
+msgid "Topographic casted shadows"
+msgstr "Topografische Schatten (Topographic casted shadows)"
+
+#: ../../reference/scl.rst:19
+msgid ""
+"Dark pixels in the shadow of terrain such as hills. Scenes before "
+"2022-01-25 call this class 'dark features/shadows'. Usually exclude."
+msgstr ""
+"Dunkle Pixel im Schatten von Gelände wie Hügeln. Szenen vor dem "
+"2022-01-25 nennen diese Klasse 'dark features/shadows'. Meist "
+"ausschließen."
+
+#: ../../reference/scl.rst:20
+msgid ":swatch:`#2f2f2f`"
+msgstr ":swatch:`#2f2f2f`"
+
+#: ../../reference/scl.rst:21
+msgid "3"
+msgstr "3"
+
+#: ../../reference/scl.rst:22
+msgid "Cloud shadows"
+msgstr "Wolkenschatten (Cloud shadows)"
+
+#: ../../reference/scl.rst:23
+msgid ""
+"The dark ground under a cloud. The reflectance is too low, which distorts"
+" averages and indices. Exclude."
+msgstr ""
+"Der dunkle Boden unter einer Wolke. Die Reflektanz ist zu niedrig, was "
+"Mittelwerte und Indizes verfälscht. Ausschließen."
+
+#: ../../reference/scl.rst:24
+msgid ":swatch:`#643200`"
+msgstr ":swatch:`#643200`"
+
+#: ../../reference/scl.rst:25
+msgid "4"
+msgstr "4"
+
+#: ../../reference/scl.rst:26
+msgid "Vegetation"
+msgstr "Vegetation"
+
+#: ../../reference/scl.rst:27
+msgid ""
+"Green plants: forests, fields, grass, parks. Keep for vegetation indices "
+"and most maps."
+msgstr ""
+"Grüne Pflanzen: Wälder, Felder, Gras, Parks. Für Vegetationsindizes und "
+"die meisten Karten behalten."
+
+#: ../../reference/scl.rst:28
+msgid ":swatch:`#00a000`"
+msgstr ":swatch:`#00a000`"
+
+#: ../../reference/scl.rst:29
+msgid "5"
+msgstr "5"
+
+#: ../../reference/scl.rst:30
+msgid "Not vegetated"
+msgstr "Nicht bewachsen (Not vegetated)"
+
+#: ../../reference/scl.rst:31
+msgid ""
+"Bare soil, sand, roads, roofs and other built-up surfaces, and sometimes "
+"dry or sparse vegetation. Keep it for city maps."
+msgstr ""
+"Nackter Boden, Sand, Straßen, Dächer und andere bebaute Oberflächen und "
+"manchmal trockene oder spärliche Vegetation. Für Stadtkarten behalten."
+
+#: ../../reference/scl.rst:32
+msgid ":swatch:`#ffe65a`"
+msgstr ":swatch:`#ffe65a`"
+
+#: ../../reference/scl.rst:33
+msgid "6"
+msgstr "6"
+
+#: ../../reference/scl.rst:34
+msgid "Water"
+msgstr "Wasser (Water)"
+
+#: ../../reference/scl.rst:35
+msgid ""
+"Lakes, rivers and sea. Keep for the water index, true-colour and false-"
+"colour images, exclude for NDVI/EVI (water has no vegetation signal)."
+msgstr ""
+"Seen, Flüsse und Meer. Für den Wasserindex, Echtfarbenbilder und "
+"Falschfarbenbilder behalten, für NDVI/EVI ausschließen (Wasser hat kein "
+"Vegetationssignal)."
+
+#: ../../reference/scl.rst:36
+msgid ":swatch:`#0000ff`"
+msgstr ":swatch:`#0000ff`"
+
+#: ../../reference/scl.rst:37
+msgid "7"
+msgstr "7"
+
+#: ../../reference/scl.rst:38
+msgid "Unclassified"
+msgstr "Nicht klassifiziert (Unclassified)"
+
+#: ../../reference/scl.rst:39
+msgid ""
+"Pixels the classifier could not assign, often haze, cloud edges or mixed "
+"pixels. Exclude unless you have too few observations."
+msgstr ""
+"Pixel, die der Klassifikator nicht zuordnen konnte, oft Dunst, "
+"Wolkenränder oder Mischpixel. Ausschließen, außer du hast zu wenige "
+"Beobachtungen."
+
+#: ../../reference/scl.rst:40
+msgid ":swatch:`#808080`"
+msgstr ":swatch:`#808080`"
+
+#: ../../reference/scl.rst:41
+msgid "8"
+msgstr "8"
+
+#: ../../reference/scl.rst:42
+msgid "Cloud, medium probability"
+msgstr "Wolke, mittlere Wahrscheinlichkeit (Cloud, medium probability)"
+
+#: ../../reference/scl.rst:43
+msgid "Probably a cloud. Exclude."
+msgstr "Wahrscheinlich eine Wolke. Ausschließen."
+
+#: ../../reference/scl.rst:44
+msgid ":swatch:`#c0c0c0`"
+msgstr ":swatch:`#c0c0c0`"
+
+#: ../../reference/scl.rst:45
+msgid "9"
+msgstr "9"
+
+#: ../../reference/scl.rst:46
+msgid "Cloud, high probability"
+msgstr "Wolke, hohe Wahrscheinlichkeit (Cloud, high probability)"
+
+#: ../../reference/scl.rst:47
+msgid "Almost certainly a cloud. Exclude."
+msgstr "Fast sicher eine Wolke. Ausschließen."
+
+#: ../../reference/scl.rst:48
+msgid ":swatch:`#ffffff`"
+msgstr ":swatch:`#ffffff`"
+
+#: ../../reference/scl.rst:49
+msgid "10"
+msgstr "10"
+
+#: ../../reference/scl.rst:50
+msgid "Thin cirrus"
+msgstr "Dünne Zirruswolken (Thin cirrus)"
+
+#: ../../reference/scl.rst:51
+msgid ""
+"High, thin cloud. The ground is partly visible but looks washed out. "
+"Exclude."
+msgstr ""
+"Hohe, dünne Wolke. Der Boden ist teilweise sichtbar, wirkt aber blass. "
+"Ausschließen."
+
+#: ../../reference/scl.rst:52
+msgid ":swatch:`#64c8ff`"
+msgstr ":swatch:`#64c8ff`"
+
+#: ../../reference/scl.rst:53
+msgid "11"
+msgstr "11"
+
+#: ../../reference/scl.rst:54
+msgid "Snow or ice"
+msgstr "Schnee oder Eis (Snow or ice)"
+
+#: ../../reference/scl.rst:55
+msgid ""
+"Snow or ice. Keep only for snow studies; the classifier sometimes "
+"confuses snow with cloud."
+msgstr ""
+"Schnee oder Eis. Nur für Schneestudien behalten; der Klassifikator "
+"verwechselt Schnee manchmal mit Wolken."
+
+#: ../../reference/scl.rst:56
+msgid ":swatch:`#ff96ff`"
+msgstr ":swatch:`#ff96ff`"
+
+#: ../../reference/scl.rst:14
+msgid ""
+"The classification is calculated automatically (by ESA's Sen2Cor "
+"processor) and is not perfect: thin clouds, haze and cloud edges are "
+"sometimes labelled as land, and snow is sometimes labelled as cloud. The "
+"class names follow the Sentinel Hub and ESA documentation; the hints are "
+"written for this package. To see the classes of your own area as a map, "
+"download the :doc:`scene classification </data/scene-classification>`."
+msgstr ""
+"Die Klassifikation wird automatisch berechnet (vom Sen2Cor-Prozessor der "
+"ESA) und ist nicht perfekt: Dünne Wolken, Dunst und Wolkenränder werden "
+"manchmal als Land eingestuft, und Schnee wird manchmal als Wolke "
+"eingestuft. Die Klassennamen folgen der Dokumentation von Sentinel Hub "
+"und ESA; die Hinweise sind für dieses Paket geschrieben. Um die Klassen "
+"deines eigenen Gebiets als Karte zu sehen, lade die "
+":doc:`Szenenklassifikation </data/scene-classification>` herunter."
+
+#: cdec.eo.scl.show_scl_classes:1 of
+msgid "Print the SCL classes with a short hint, one line per class."
+msgstr "Gibt die SCL-Klassen mit einem kurzen Hinweis aus, eine Zeile je Klasse."
+
+#: cdec.eo.scl.show_scl_classes:3 of
+msgid ""
+"Pass the classes you intend to use as ``selected`` to see them marked "
+"with ``X`` (the classes that would be kept)::"
+msgstr ""
+"Übergib die Klassen, die du verwenden willst, als ``selected``, um sie "
+"mit ``X`` markiert zu sehen (die Klassen, die behalten würden)::"
+
+#: ../../reference/scl.rst:24
+msgid ""
+"The 12 classes of the Sentinel-2 Scene Classification Layer: class number"
+" to name."
+msgstr ""
+"Die 12 Klassen der Scene Classification Layer von Sentinel-2: "
+"Klassennummer zu Name."
+
+#: ../../reference/scl.rst:29
+msgid ""
+"A short explanation for every class, and whether you usually want to keep"
+" it."
+msgstr ""
+"Eine kurze Erklärung zu jeder Klasse und ob du sie normalerweise behalten"
+" willst."
+
+#: ../../reference/scl.rst:35
+msgid ""
+"Vegetation and not vegetated: the default ``scl_classes`` of NDVI, EVI "
+"and NDMI."
+msgstr ""
+"Vegetation und nicht bewachsen: die Standard-``scl_classes`` von NDVI, "
+"EVI und NDMI."
+
+#: ../../reference/scl.rst:41
+msgid ""
+"Land and water: the default ``scl_classes`` of NDWI, the true-colour "
+"image and the false-colour images (urban, infrared and SWIR)."
+msgstr ""
+"Land und Wasser: die Standard-``scl_classes`` von NDWI, dem "
+"Echtfarbenbild und den Falschfarbenbildern (Stadtansicht, Infrarot und "
+"SWIR)."
+
+#: ../../reference/scl.rst:48
+msgid "Land, water and snow or ice: the default ``scl_classes`` of NDSI."
+msgstr "Land, Wasser und Schnee oder Eis: die Standard-``scl_classes`` von NDSI."
+
+#: ../../reference/scl.rst:53
+msgid ""
+"The colour of every class as hex code (the colours of the Copernicus "
+"Browser layer). This is the colour table that "
+":func:`~cdec.download_scene_classification_map` stores in the GeoTIFF, "
+"and the colours of :func:`~cdec.plot_scene_classification_map`."
+msgstr ""
+"Die Farbe jeder Klasse als Hex-Code (die Farben der Ebene im Copernicus "
+"Browser). Das ist die Farbtabelle, die "
+":func:`~cdec.download_scene_classification_map` im GeoTIFF speichert, und"
+" die Farben von :func:`~cdec.plot_scene_classification_map`."
+

@@ -1,0 +1,3992 @@
+# German translation of the CDEC documentation.
+# Copyright (C) 2026, Soeren Sparmann
+# This file is distributed under the same license as the CDEC package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDEC 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-24 11:51+0100\n"
+"PO-Revision-Date: 2026-11-23 16:30+0000\n"
+"Last-Translator: Soeren Sparmann\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../data/elevation.rst:2
+msgid "Elevation (Copernicus DEM)"
+msgstr "Höhe (Copernicus DEM)"
+
+#: ../../data/elevation.rst:4
+msgid ""
+"The height of the ground in metres. The Copernicus digital elevation "
+"model (DEM) covers the whole world on a 30 m grid. Use it for relief "
+"maps, slopes, and to find out which parts of an area lie low."
+msgstr ""
+"Die Höhe des Bodens in Metern. Das digitale Höhenmodell (DEM) von "
+"Copernicus deckt die ganze Welt auf einem 30-m-Raster ab. Verwende es für"
+" Reliefkarten, Hangneigungen und um herauszufinden, welche Teile eines "
+"Gebiets tief liegen."
+
+#: ../../data/elevation.rst:7 ../../data/evi.rst:8
+#: ../../data/false-color-infrared.rst:10 ../../data/false-color-swir.rst:10
+#: ../../data/false-color-urban.rst:9 ../../data/land-cover.rst:7
+#: ../../data/land-surface-temperature.rst:8 ../../data/landsat-ndvi.rst:8
+#: ../../data/ndmi.rst:9 ../../data/ndsi.rst:9 ../../data/ndvi.rst:9
+#: ../../data/ndwi.rst:8 ../../data/scene-classification.rst:9
+#: ../../data/soil-water-index.rst:8 ../../data/true-color.rst:8
+msgid "At a glance"
+msgstr "Auf einen Blick"
+
+#: ../../data/elevation.rst:11 ../../data/evi.rst:12
+#: ../../data/false-color-infrared.rst:14 ../../data/false-color-swir.rst:14
+#: ../../data/false-color-urban.rst:13 ../../data/land-cover.rst:11
+#: ../../data/land-surface-temperature.rst:12 ../../data/landsat-ndvi.rst:12
+#: ../../data/ndmi.rst:13 ../../data/ndsi.rst:13 ../../data/ndvi.rst:13
+#: ../../data/ndwi.rst:12 ../../data/scene-classification.rst:13
+#: ../../data/soil-water-index.rst:12 ../../data/true-color.rst:12
+msgid "Download function"
+msgstr "Download-Funktion"
+
+#: ../../data/elevation.rst:12
+msgid ":func:`~cdec.download_digital_elevation_model`, short ``download_dem``"
+msgstr ":func:`~cdec.download_digital_elevation_model`, kurz ``download_dem``"
+
+#: ../../data/elevation.rst:13 ../../data/evi.rst:14
+#: ../../data/false-color-infrared.rst:16 ../../data/false-color-swir.rst:16
+#: ../../data/false-color-urban.rst:15 ../../data/land-cover.rst:13
+#: ../../data/land-surface-temperature.rst:14 ../../data/landsat-ndvi.rst:14
+#: ../../data/ndmi.rst:15 ../../data/ndsi.rst:15 ../../data/ndvi.rst:15
+#: ../../data/ndwi.rst:14 ../../data/scene-classification.rst:15
+#: ../../data/soil-water-index.rst:14 ../../data/true-color.rst:14
+msgid "Plot function"
+msgstr "Plot-Funktion"
+
+#: ../../data/elevation.rst:14
+msgid ":func:`~cdec.plot_digital_elevation_model`, short ``plot_dem``"
+msgstr ":func:`~cdec.plot_digital_elevation_model`, kurz ``plot_dem``"
+
+#: ../../data/elevation.rst:15 ../../data/evi.rst:16
+#: ../../data/false-color-infrared.rst:18 ../../data/false-color-swir.rst:18
+#: ../../data/false-color-urban.rst:17 ../../data/index.rst:25
+#: ../../data/index.rst:53 ../../data/index.rst:81 ../../data/index.rst:114
+#: ../../data/index.rst:137 ../../data/land-cover.rst:15
+#: ../../data/land-surface-temperature.rst:16 ../../data/landsat-ndvi.rst:16
+#: ../../data/ndmi.rst:17 ../../data/ndsi.rst:17 ../../data/ndvi.rst:17
+#: ../../data/ndwi.rst:16 ../../data/scene-classification.rst:17
+#: ../../data/soil-water-index.rst:16 ../../data/true-color.rst:16
+msgid "Source"
+msgstr "Quelle"
+
+#: ../../data/elevation.rst:16
+msgid "Copernicus DEM (collection ``COPERNICUS_30``), band ``DEM``"
+msgstr "Copernicus DEM (Collection ``COPERNICUS_30``), Band ``DEM``"
+
+#: ../../data/elevation.rst:17 ../../data/evi.rst:18
+#: ../../data/false-color-infrared.rst:20 ../../data/false-color-swir.rst:20
+#: ../../data/false-color-urban.rst:19 ../../data/index.rst:26
+#: ../../data/index.rst:54 ../../data/index.rst:82 ../../data/index.rst:115
+#: ../../data/index.rst:138 ../../data/land-cover.rst:17
+#: ../../data/land-surface-temperature.rst:18 ../../data/landsat-ndvi.rst:18
+#: ../../data/ndmi.rst:19 ../../data/ndsi.rst:19 ../../data/ndvi.rst:19
+#: ../../data/ndwi.rst:18 ../../data/scene-classification.rst:19
+#: ../../data/soil-water-index.rst:18 ../../data/true-color.rst:18
+msgid "Pixel size"
+msgstr "Pixelgröße"
+
+#: ../../data/elevation.rst:18 ../../data/index.rst:41 ../../data/index.rst:143
+#: ../../data/landsat-ndvi.rst:19
+msgid "30 m"
+msgstr "30 m"
+
+#: ../../data/elevation.rst:19 ../../data/evi.rst:20
+#: ../../data/false-color-infrared.rst:22 ../../data/false-color-swir.rst:22
+#: ../../data/false-color-urban.rst:21 ../../data/index.rst:27
+#: ../../data/index.rst:55 ../../data/index.rst:83 ../../data/index.rst:116
+#: ../../data/index.rst:139 ../../data/land-cover.rst:19
+#: ../../data/land-surface-temperature.rst:20 ../../data/landsat-ndvi.rst:20
+#: ../../data/ndmi.rst:21 ../../data/ndsi.rst:21 ../../data/ndvi.rst:21
+#: ../../data/ndwi.rst:20 ../../data/scene-classification.rst:21
+#: ../../data/soil-water-index.rst:20 ../../data/true-color.rst:20
+msgid "Result"
+msgstr "Ergebnis"
+
+#: ../../data/elevation.rst:20
+msgid "one band of floating-point numbers in **metres**"
+msgstr "ein Band aus Gleitkommazahlen in **Metern**"
+
+#: ../../data/elevation.rst:21 ../../data/evi.rst:22
+#: ../../data/false-color-infrared.rst:25 ../../data/false-color-swir.rst:25
+#: ../../data/false-color-urban.rst:24 ../../data/land-cover.rst:21
+#: ../../data/land-surface-temperature.rst:22 ../../data/landsat-ndvi.rst:22
+#: ../../data/ndmi.rst:23 ../../data/ndsi.rst:23 ../../data/ndvi.rst:23
+#: ../../data/ndwi.rst:22 ../../data/scene-classification.rst:23
+#: ../../data/soil-water-index.rst:22 ../../data/true-color.rst:23
+msgid "Clouds"
+msgstr "Wolken"
+
+#: ../../data/elevation.rst:22 ../../data/land-cover.rst:22
+msgid "not affected"
+msgstr "nicht betroffen"
+
+#: ../../data/elevation.rst:23 ../../data/evi.rst:25
+#: ../../data/false-color-infrared.rst:28 ../../data/false-color-swir.rst:28
+#: ../../data/false-color-urban.rst:27 ../../data/land-cover.rst:23
+#: ../../data/land-surface-temperature.rst:24 ../../data/landsat-ndvi.rst:25
+#: ../../data/ndmi.rst:26 ../../data/ndsi.rst:26 ../../data/ndvi.rst:26
+#: ../../data/ndwi.rst:25 ../../data/scene-classification.rst:26
+#: ../../data/soil-water-index.rst:24 ../../data/true-color.rst:26
+msgid "Period"
+msgstr "Zeitraum"
+
+#: ../../data/elevation.rst:24
+msgid "**none needed.** The model is static; ``temporal_extent`` is optional."
+msgstr ""
+"**nicht nötig.** Das Modell ist statisch; ``temporal_extent`` ist "
+"optional."
+
+#: ../../data/elevation.rst:27 ../../data/evi.rst:29
+#: ../../data/false-color-infrared.rst:32 ../../data/false-color-swir.rst:32
+#: ../../data/false-color-urban.rst:31 ../../data/land-cover.rst:27
+#: ../../data/land-surface-temperature.rst:28 ../../data/landsat-ndvi.rst:29
+#: ../../data/ndmi.rst:30 ../../data/ndsi.rst:30 ../../data/ndvi.rst:30
+#: ../../data/ndwi.rst:29 ../../data/scene-classification.rst:30
+#: ../../data/soil-water-index.rst:28 ../../data/true-color.rst:30
+msgid "Example"
+msgstr "Beispiel"
+
+#: ../../data/elevation.rst:38
+msgid ""
+"Elevation map of Bremen: low green land along a river, some higher brown "
+"spots, heights from about -14 to 43 metres."
+msgstr ""
+"Höhenkarte von Bremen: tiefes grünes Land an einem Fluss, einige höhere "
+"braune Stellen, Höhen von etwa -14 bis 43 Metern."
+
+#: ../../data/elevation.rst:42
+msgid ""
+"Bremen, heights in metres. Copernicus DEM, see :doc:`/reference/data-"
+"sources`."
+msgstr ""
+"Bremen, Höhen in Metern. Copernicus DEM, siehe :doc:`/reference/data-"
+"sources`."
+
+#: ../../data/elevation.rst:45 ../../data/evi.rst:48
+#: ../../data/false-color-infrared.rst:51 ../../data/false-color-swir.rst:51
+#: ../../data/false-color-urban.rst:50 ../../data/land-cover.rst:63
+#: ../../data/land-surface-temperature.rst:47 ../../data/landsat-ndvi.rst:48
+#: ../../data/ndmi.rst:49 ../../data/ndsi.rst:51 ../../data/ndvi.rst:49
+#: ../../data/ndwi.rst:48 ../../data/scene-classification.rst:52
+#: ../../data/soil-water-index.rst:47 ../../data/true-color.rst:49
+msgid "Things to know"
+msgstr "Gut zu wissen"
+
+#: ../../data/elevation.rst:47
+msgid ""
+"**No period.** The model was made once (from data of 2010 to 2015). The "
+"function uses that period if you do not give one, so a recent period "
+"would find no data (:doc:`/howto/choose-period`)."
+msgstr ""
+"**Kein Zeitraum.** Das Modell wurde einmal erstellt (aus Daten von 2010 "
+"bis 2015). Die Funktion verwendet diesen Zeitraum, wenn du keinen "
+"angibst; ein aktueller Zeitraum fände daher keine Daten (:doc:`/howto"
+"/choose-period`)."
+
+#: ../../data/elevation.rst:49
+msgid ""
+"**A surface model.** It shows the top of what the satellite measured, "
+"which includes buildings and forest canopies, not only the bare ground."
+msgstr ""
+"**Ein Oberflächenmodell.** Es zeigt die Oberseite dessen, was der "
+"Satellit gemessen hat, also auch Gebäude und Baumkronen, nicht nur den "
+"nackten Boden."
+
+#: ../../data/elevation.rst:51
+msgid ""
+"**Heights** are metres, measured from a model of the sea level (the "
+"geoid), so values near the coast can be slightly negative. The example "
+"area ranges from about -14 to 43 m."
+msgstr ""
+"**Höhen** sind Meter, gemessen von einem Modell des Meeresspiegels (dem "
+"Geoid) aus, daher können Werte nahe der Küste leicht negativ sein. Das "
+"Beispielgebiet reicht von etwa -14 bis 43 m."
+
+#: ../../data/elevation.rst:53
+msgid ""
+"**The plot** uses terrain colours; they follow the lowest and the highest"
+" value of the image. Give two maps the same ``vmin`` and ``vmax`` to "
+"compare them."
+msgstr ""
+"**Der Plot** verwendet Geländefarben; sie folgen dem niedrigsten und dem "
+"höchsten Wert des Bildes. Gib zwei Karten dasselbe ``vmin`` und ``vmax``,"
+" um sie zu vergleichen."
+
+#: ../../data/elevation.rst:55 ../../data/land-cover.rst:82
+#: ../../data/land-surface-temperature.rst:57
+#: ../../data/soil-water-index.rst:58
+msgid "The file uses longitude and latitude (EPSG:4326)."
+msgstr "Die Datei verwendet Länge und Breite (EPSG:4326)."
+
+#: ../../data/elevation.rst:58 ../../data/evi.rst:60
+#: ../../data/false-color-infrared.rst:64 ../../data/false-color-swir.rst:66
+#: ../../data/false-color-urban.rst:62 ../../data/land-cover.rst:85
+#: ../../data/land-surface-temperature.rst:60 ../../data/landsat-ndvi.rst:60
+#: ../../data/ndmi.rst:66 ../../data/ndsi.rst:71 ../../data/ndvi.rst:65
+#: ../../data/ndwi.rst:66 ../../data/scene-classification.rst:68
+#: ../../data/soil-water-index.rst:61 ../../data/true-color.rst:66
+msgid "See also"
+msgstr "Siehe auch"
+
+#: ../../data/elevation.rst:60
+msgid ":doc:`land-cover`, :doc:`/howto/plot-and-save`"
+msgstr ":doc:`land-cover`, :doc:`/howto/plot-and-save`"
+
+#: ../../data/elevation.rst:63 ../../data/evi.rst:65
+#: ../../data/false-color-infrared.rst:70 ../../data/false-color-swir.rst:72
+#: ../../data/false-color-urban.rst:67 ../../data/land-cover.rst:90
+#: ../../data/land-surface-temperature.rst:65 ../../data/landsat-ndvi.rst:65
+#: ../../data/ndmi.rst:71 ../../data/ndsi.rst:76 ../../data/ndvi.rst:70
+#: ../../data/ndwi.rst:71 ../../data/scene-classification.rst:73
+#: ../../data/soil-water-index.rst:66 ../../data/true-color.rst:71
+msgid "Download"
+msgstr "Download"
+
+#: cdec.eo.dem.download_digital_elevation_model:1 of
+msgid "*Short alias:* ``download_dem``"
+msgstr "*Kurzer Alias:* ``download_dem``"
+
+#: cdec.eo.dem.download_digital_elevation_model:3 of
+msgid "Download a Copernicus digital elevation model."
+msgstr "Lädt ein digitales Höhenmodell von Copernicus herunter."
+
+#: cdec.eo.dem.download_digital_elevation_model:5 of
+msgid ""
+"The function loads the ``DEM`` band from the static ``COPERNICUS_30`` "
+"openEO collection and reduces its time dimension to one elevation raster."
+" The collection's known acquisition period is used by default, so users "
+"do not have to provide a temporal extent."
+msgstr ""
+"Die Funktion lädt das Band ``DEM`` aus der statischen openEO-Collection "
+"``COPERNICUS_30`` und reduziert ihre Zeitdimension zu einem Höhenraster. "
+"Standardmäßig wird der bekannte Aufnahmezeitraum der Collection "
+"verwendet, sodass Nutzer keine zeitliche Ausdehnung angeben müssen."
+
+#: ../../data/elevation.rst ../../data/evi.rst
+#: ../../data/false-color-infrared.rst ../../data/false-color-swir.rst
+#: ../../data/false-color-urban.rst ../../data/land-cover.rst
+#: ../../data/land-surface-temperature.rst ../../data/landsat-ndvi.rst
+#: ../../data/ndmi.rst ../../data/ndsi.rst ../../data/ndvi.rst
+#: ../../data/ndwi.rst ../../data/scene-classification.rst
+#: ../../data/soil-water-index.rst ../../data/true-color.rst
+msgid "Parameters"
+msgstr "Parameter"
+
+#: cdec.eo.dem.download_digital_elevation_model:10
+#: cdec.eo.evi.download_enhanced_vegetation_index:15
+#: cdec.eo.landsat.download_landsat_ndvi:10
+#: cdec.eo.lst.download_land_surface_temperature:11
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:18
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:16
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:12
+#: cdec.eo.ndwi.download_normalized_difference_water_index:18
+#: cdec.eo.scene_classification.download_scene_classification_map:12
+#: cdec.eo.soil_water_index.download_soil_water_index:15
+#: cdec.eo.worldcover.download_land_cover:6 of
+msgid ""
+"Destination path of the GeoTIFF file. Missing parent directories are "
+"created automatically."
+msgstr ""
+"Zielpfad der GeoTIFF-Datei. Fehlende übergeordnete Verzeichnisse werden "
+"automatisch angelegt."
+
+#: cdec.eo.dem.download_digital_elevation_model:12
+#: cdec.eo.evi.download_enhanced_vegetation_index:17
+#: cdec.eo.false_color_infrared.download_false_color_infrared:12
+#: cdec.eo.false_color_swir.download_false_color_swir:12
+#: cdec.eo.false_color_urban.download_false_color_urban:12
+#: cdec.eo.landsat.download_landsat_ndvi:12
+#: cdec.eo.lst.download_land_surface_temperature:13
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:20
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:18
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:14
+#: cdec.eo.ndwi.download_normalized_difference_water_index:20
+#: cdec.eo.scene_classification.download_scene_classification_map:14
+#: cdec.eo.soil_water_index.download_soil_water_index:17
+#: cdec.eo.tci.download_true_color_image:9
+#: cdec.eo.worldcover.download_land_cover:8 of
+#, python-brace-format
+msgid ""
+"Area to download: an openEO bounding-box dictionary such as ``{\"west\": "
+"8.7, \"south\": 53.0, \"east\": 8.9, \"north\": 53.1}`` (degrees, WGS "
+"84), a Shapely geometry, or the path to a GeoJSON file."
+msgstr ""
+"Das herunterzuladende Gebiet: ein openEO-Bounding-Box-Dictionary wie "
+"``{\"west\": 8.7, \"south\": 53.0, \"east\": 8.9, \"north\": 53.1}`` "
+"(Grad, WGS 84), eine Shapely-Geometrie oder der Pfad zu einer GeoJSON-"
+"Datei."
+
+#: cdec.eo.dem.download_digital_elevation_model:15 of
+msgid ""
+"Collection period used for the openEO request. The default covers the "
+"acquisition period of the Copernicus DEM and normally does not need to be"
+" changed: the DEM is a static data set, so a recent period such as June "
+"2024 is outside of it and normally finds no data."
+msgstr ""
+"Für die openEO-Anfrage verwendeter Zeitraum der Collection. Der Standard "
+"deckt den Aufnahmezeitraum des Copernicus DEM ab und muss normalerweise "
+"nicht geändert werden: Das DEM ist ein statischer Datensatz, ein "
+"aktueller Zeitraum wie Juni 2024 liegt daher außerhalb und findet "
+"normalerweise keine Daten."
+
+#: cdec.eo.dem.download_digital_elevation_model:19
+#: cdec.eo.lst.download_land_surface_temperature:19
+#: cdec.eo.soil_water_index.download_soil_water_index:26
+#: cdec.eo.worldcover.download_land_cover:14 of
+msgid ""
+"If ``True``, write a Cloud Optimized GeoTIFF. If ``False``, keep a "
+"regular GeoTIFF."
+msgstr ""
+"Wenn ``True``, wird ein Cloud Optimized GeoTIFF geschrieben. Wenn "
+"``False``, bleibt es ein normales GeoTIFF."
+
+#: cdec.eo.dem.download_digital_elevation_model:21 of
+msgid ""
+"Resampling method used to build COG overview levels. ``\"average\"`` is a"
+" suitable default for continuous elevation data."
+msgstr ""
+"Resampling-Methode zum Erzeugen der Übersichtsstufen des COG. "
+"``\"average\"`` ist ein passender Standard für kontinuierliche "
+"Höhendaten."
+
+#: cdec.eo.dem.download_digital_elevation_model:23
+#: cdec.eo.evi.download_enhanced_vegetation_index:35
+#: cdec.eo.false_color_infrared.download_false_color_infrared:37
+#: cdec.eo.false_color_swir.download_false_color_swir:37
+#: cdec.eo.false_color_urban.download_false_color_urban:37
+#: cdec.eo.landsat.download_landsat_ndvi:20
+#: cdec.eo.lst.download_land_surface_temperature:23
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:38
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:37
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:32
+#: cdec.eo.ndwi.download_normalized_difference_water_index:39
+#: cdec.eo.scene_classification.download_scene_classification_map:26
+#: cdec.eo.soil_water_index.download_soil_water_index:30
+#: cdec.eo.tci.download_true_color_image:33
+#: cdec.eo.worldcover.download_land_cover:18 of
+msgid ""
+"If ``True`` (the default), print a short summary of the downloaded file: "
+"extent, grid and resolution, value range and the share of pixels without "
+"data."
+msgstr ""
+"Wenn ``True`` (der Standard), wird eine kurze Zusammenfassung der "
+"heruntergeladenen Datei ausgegeben: Ausdehnung, Raster und Auflösung, "
+"Wertebereich und Anteil der Pixel ohne Daten."
+
+#: ../../data/elevation.rst ../../data/evi.rst
+#: ../../data/false-color-infrared.rst ../../data/false-color-swir.rst
+#: ../../data/false-color-urban.rst ../../data/land-cover.rst
+#: ../../data/land-surface-temperature.rst ../../data/landsat-ndvi.rst
+#: ../../data/ndmi.rst ../../data/ndsi.rst ../../data/ndvi.rst
+#: ../../data/ndwi.rst ../../data/scene-classification.rst
+#: ../../data/soil-water-index.rst ../../data/true-color.rst
+msgid "Returns"
+msgstr "Rückgabe"
+
+#: cdec.eo.dem.download_digital_elevation_model:27
+#: cdec.eo.lst.download_land_surface_temperature:27 of
+msgid "Absolute path to the downloaded raster file."
+msgstr "Absoluter Pfad zur heruntergeladenen Rasterdatei."
+
+#: ../../data/elevation.rst ../../data/evi.rst
+#: ../../data/false-color-infrared.rst ../../data/false-color-swir.rst
+#: ../../data/false-color-urban.rst ../../data/land-cover.rst
+#: ../../data/land-surface-temperature.rst ../../data/landsat-ndvi.rst
+#: ../../data/ndmi.rst ../../data/ndsi.rst ../../data/ndvi.rst
+#: ../../data/ndwi.rst ../../data/scene-classification.rst
+#: ../../data/soil-water-index.rst ../../data/true-color.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
+
+#: ../../data/elevation.rst:68 ../../data/evi.rst:70
+#: ../../data/false-color-infrared.rst:75 ../../data/false-color-swir.rst:77
+#: ../../data/false-color-urban.rst:72 ../../data/land-cover.rst:95
+#: ../../data/land-surface-temperature.rst:70 ../../data/landsat-ndvi.rst:70
+#: ../../data/ndmi.rst:76 ../../data/ndsi.rst:81 ../../data/ndvi.rst:75
+#: ../../data/ndwi.rst:76 ../../data/scene-classification.rst:78
+#: ../../data/soil-water-index.rst:71 ../../data/true-color.rst:76
+msgid "Plot"
+msgstr "Plot"
+
+#: cdec.plot.products.plot_digital_elevation_model:1 of
+msgid "*Short alias:* ``plot_dem``"
+msgstr "*Kurzer Alias:* ``plot_dem``"
+
+#: cdec.plot.products.plot_digital_elevation_model:3 of
+msgid "Draw the heights of ``download_digital_elevation_model``."
+msgstr "Zeichnet die Höhen von ``download_digital_elevation_model``."
+
+#: cdec.plot.products.plot_digital_elevation_model:5 of
+msgid ""
+"The values are metres above sea level. The \"terrain\" colour map goes "
+"from blue and green (low) over yellow and brown to white (high). The "
+"range follows the values of this image; in flat country such as Bremen a "
+"few metres of difference already use the whole colour map."
+msgstr ""
+"Die Werte sind Meter über dem Meeresspiegel. Die Farbskala „terrain“ geht"
+" von Blau und Grün (tief) über Gelb und Braun zu Weiß (hoch). Der Bereich"
+" folgt den Werten dieses Bildes; in flachem Land wie Bremen nutzen schon "
+"wenige Meter Unterschied die ganze Farbskala."
+
+#: cdec.plot.products.plot_digital_elevation_model:10 of
+msgid "The GeoTIFF written by ``download_dem``."
+msgstr "Das von ``download_dem`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_digital_elevation_model:11
+#: cdec.plot.products.plot_enhanced_vegetation_index:11
+#: cdec.plot.products.plot_false_color_infrared:12
+#: cdec.plot.products.plot_false_color_swir:12
+#: cdec.plot.products.plot_false_color_urban:14
+#: cdec.plot.products.plot_land_cover:12
+#: cdec.plot.products.plot_land_surface_temperature:12
+#: cdec.plot.products.plot_landsat_ndvi:9
+#: cdec.plot.products.plot_normalized_difference_moisture_index:11
+#: cdec.plot.products.plot_normalized_difference_snow_index:11
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:11
+#: cdec.plot.products.plot_normalized_difference_water_index:11
+#: cdec.plot.products.plot_scene_classification_map:14
+#: cdec.plot.products.plot_soil_water_index:10
+#: cdec.plot.products.plot_true_color_image:12 of
+msgid "A matplotlib ``Axes`` to draw into. ``None`` creates a new figure."
+msgstr ""
+"Ein matplotlib-``Axes``, in das gezeichnet wird. ``None`` erzeugt eine "
+"neue Abbildung."
+
+#: cdec.plot.products.plot_digital_elevation_model:12 of
+msgid "Title of the plot. Default: \"Elevation\". Use ``\"\"`` for no title."
+msgstr ""
+"Titel des Plots. Standard: \"Elevation\". Verwende ``\"\"`` für keinen "
+"Titel."
+
+#: cdec.plot.products.plot_digital_elevation_model:13
+#: cdec.plot.products.plot_enhanced_vegetation_index:13
+#: cdec.plot.products.plot_land_surface_temperature:14
+#: cdec.plot.products.plot_landsat_ndvi:11
+#: cdec.plot.products.plot_normalized_difference_moisture_index:13
+#: cdec.plot.products.plot_normalized_difference_snow_index:13
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:13
+#: cdec.plot.products.plot_normalized_difference_water_index:13
+#: cdec.plot.products.plot_soil_water_index:12 of
+msgid "Name of a matplotlib colour map."
+msgstr "Name einer matplotlib-Farbskala."
+
+#: cdec.plot.products.plot_digital_elevation_model:14
+#: cdec.plot.products.plot_digital_elevation_model:16 of
+msgid ""
+"Values at the two ends of the colour map, in metres. ``None`` takes the "
+"smallest and largest value of the image."
+msgstr ""
+"Werte an den beiden Enden der Farbskala, in Metern. ``None`` nimmt den "
+"kleinsten und größten Wert des Bildes."
+
+#: cdec.plot.products.plot_digital_elevation_model:18
+#: cdec.plot.products.plot_enhanced_vegetation_index:18
+#: cdec.plot.products.plot_land_surface_temperature:19
+#: cdec.plot.products.plot_landsat_ndvi:16
+#: cdec.plot.products.plot_normalized_difference_moisture_index:18
+#: cdec.plot.products.plot_normalized_difference_snow_index:18
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:18
+#: cdec.plot.products.plot_normalized_difference_water_index:18
+#: cdec.plot.products.plot_soil_water_index:17 of
+msgid "Draw a colour bar."
+msgstr "Eine Farbleiste zeichnen."
+
+#: cdec.plot.products.plot_digital_elevation_model:19
+#: cdec.plot.products.plot_enhanced_vegetation_index:19
+#: cdec.plot.products.plot_false_color_infrared:14
+#: cdec.plot.products.plot_false_color_swir:14
+#: cdec.plot.products.plot_false_color_urban:16
+#: cdec.plot.products.plot_land_cover:14
+#: cdec.plot.products.plot_land_surface_temperature:20
+#: cdec.plot.products.plot_landsat_ndvi:17
+#: cdec.plot.products.plot_normalized_difference_moisture_index:19
+#: cdec.plot.products.plot_normalized_difference_snow_index:19
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:19
+#: cdec.plot.products.plot_normalized_difference_water_index:19
+#: cdec.plot.products.plot_scene_classification_map:16
+#: cdec.plot.products.plot_soil_water_index:18
+#: cdec.plot.products.plot_true_color_image:14 of
+msgid ""
+"Call ``plt.show()`` at the end. The default (``None``) shows the figure "
+"only if this function created it."
+msgstr ""
+"Ruft am Ende ``plt.show()`` auf. Der Standard (``None``) zeigt die "
+"Abbildung nur, wenn diese Funktion sie erzeugt hat."
+
+#: cdec.plot.products.plot_digital_elevation_model:22
+#: cdec.plot.products.plot_enhanced_vegetation_index:22
+#: cdec.plot.products.plot_false_color_infrared:17
+#: cdec.plot.products.plot_false_color_swir:17
+#: cdec.plot.products.plot_false_color_urban:19
+#: cdec.plot.products.plot_land_surface_temperature:23
+#: cdec.plot.products.plot_landsat_ndvi:20
+#: cdec.plot.products.plot_normalized_difference_moisture_index:22
+#: cdec.plot.products.plot_normalized_difference_snow_index:22
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:22
+#: cdec.plot.products.plot_normalized_difference_water_index:22
+#: cdec.plot.products.plot_soil_water_index:21
+#: cdec.plot.products.plot_true_color_image:17 of
+msgid "The axes with the plot, for further changes."
+msgstr "Die Achsen mit dem Plot, für weitere Änderungen."
+
+#: ../../data/elevation.rst ../../data/evi.rst
+#: ../../data/false-color-infrared.rst ../../data/false-color-swir.rst
+#: ../../data/false-color-urban.rst ../../data/land-cover.rst
+#: ../../data/land-surface-temperature.rst ../../data/landsat-ndvi.rst
+#: ../../data/ndmi.rst ../../data/ndsi.rst ../../data/ndvi.rst
+#: ../../data/ndwi.rst ../../data/scene-classification.rst
+#: ../../data/soil-water-index.rst ../../data/true-color.rst
+msgid "Raises"
+msgstr "Löst aus"
+
+#: cdec.plot.products.plot_digital_elevation_model:25
+#: cdec.plot.products.plot_enhanced_vegetation_index:25
+#: cdec.plot.products.plot_land_cover:22
+#: cdec.plot.products.plot_land_surface_temperature:26
+#: cdec.plot.products.plot_landsat_ndvi:23
+#: cdec.plot.products.plot_normalized_difference_moisture_index:25
+#: cdec.plot.products.plot_normalized_difference_snow_index:25
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:25
+#: cdec.plot.products.plot_normalized_difference_water_index:25
+#: cdec.plot.products.plot_scene_classification_map:24
+#: cdec.plot.products.plot_soil_water_index:24 of
+msgid "If the file does not have exactly one band."
+msgstr "Wenn die Datei nicht genau ein Band hat."
+
+#: ../../data/evi.rst:2
+msgid "EVI (Sentinel-2)"
+msgstr "EVI (Sentinel-2)"
+
+#: ../../data/evi.rst:4
+msgid ""
+"The **Enhanced Vegetation Index** is a second vegetation index. It uses "
+"the blue band to correct for the atmosphere and does not level off as "
+"quickly as the NDVI over very dense vegetation. The formula is ``EVI = "
+"2.5 * (NIR - red) / (NIR + 6 * red - 7.5 * blue + 1)``."
+msgstr ""
+"Der **Enhanced Vegetation Index** ist ein zweiter Vegetationsindex. Er "
+"verwendet das blaue Band, um die Atmosphäre zu korrigieren, und flacht "
+"über sehr dichter Vegetation nicht so schnell ab wie der NDVI. Die Formel"
+" lautet ``EVI = 2.5 * (NIR - red) / (NIR + 6 * red - 7.5 * blue + 1)``."
+
+#: ../../data/evi.rst:13
+msgid ":func:`~cdec.download_enhanced_vegetation_index`, short ``download_evi``"
+msgstr ":func:`~cdec.download_enhanced_vegetation_index`, kurz ``download_evi``"
+
+#: ../../data/evi.rst:15
+msgid ":func:`~cdec.plot_enhanced_vegetation_index`, short ``plot_evi``"
+msgstr ":func:`~cdec.plot_enhanced_vegetation_index`, kurz ``plot_evi``"
+
+#: ../../data/evi.rst:17
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B02 (blue), B04"
+" (red) and B08 (near-infrared)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B02 (blau), "
+"B04 (rot) und B08 (nahes Infrarot)"
+
+#: ../../data/evi.rst:19 ../../data/false-color-infrared.rst:21
+#: ../../data/index.rst:31 ../../data/index.rst:36 ../../data/index.rst:59
+#: ../../data/index.rst:69 ../../data/index.rst:87 ../../data/index.rst:92
+#: ../../data/index.rst:97 ../../data/index.rst:102 ../../data/index.rst:148
+#: ../../data/land-cover.rst:18 ../../data/ndvi.rst:20 ../../data/ndwi.rst:19
+#: ../../data/true-color.rst:19
+msgid "10 m"
+msgstr "10 m"
+
+#: ../../data/evi.rst:21
+msgid ""
+"one band of floating-point numbers, no unit, typically 0 ... 1 for "
+"vegetation"
+msgstr ""
+"ein Band aus Gleitkommazahlen, keine Einheit, typisch 0 ... 1 für "
+"Vegetation"
+
+#: ../../data/evi.rst:23 ../../data/ndmi.rst:24 ../../data/ndvi.rst:24
+msgid ""
+"scenes above ``max_cloud_cover`` (20 %) are not used; pixels are masked "
+"with ``scl_classes`` (default: vegetation and not vegetated)"
+msgstr ""
+"Szenen über ``max_cloud_cover`` (20 %) werden nicht verwendet; Pixel "
+"werden mit ``scl_classes`` maskiert (Standard: Vegetation und nicht "
+"bewachsen)"
+
+#: ../../data/evi.rst:26 ../../data/false-color-infrared.rst:29
+#: ../../data/false-color-swir.rst:29 ../../data/false-color-urban.rst:28
+#: ../../data/land-surface-temperature.rst:25 ../../data/ndmi.rst:27
+#: ../../data/ndsi.rst:27 ../../data/ndvi.rst:27 ../../data/ndwi.rst:26
+#: ../../data/true-color.rst:27
+msgid "mean of all observations of ``temporal_extent``"
+msgstr "Mittelwert aller Beobachtungen von ``temporal_extent``"
+
+#: ../../data/evi.rst:41
+msgid "EVI of Bremen in June 2024: similar to the NDVI map, with lower values."
+msgstr ""
+"EVI von Bremen im Juni 2024: ähnlich wie die NDVI-Karte, mit niedrigeren "
+"Werten."
+
+#: ../../data/evi.rst:45 ../../data/false-color-urban.rst:47
+#: ../../data/ndvi.rst:46 ../../data/true-color.rst:46
+msgid ""
+"Bremen, June 2024. White: no data. Contains modified Copernicus Sentinel "
+"data 2024."
+msgstr ""
+"Bremen, Juni 2024. Weiß: keine Daten. Contains modified Copernicus "
+"Sentinel data 2024."
+
+#: ../../data/evi.rst:50
+#, python-format
+msgid ""
+"**Extreme values.** The denominator of the formula can come close to "
+"zero, and then the result explodes. The example file ranges from -52 to "
+"263, although its median is 0.39 and 99 % of its pixels lie between 0.01 "
+"and 0.83. Before you calculate statistics, clip the values or use "
+"percentiles instead of the maximum: ``numpy.clip(evi, -1, 1)``."
+msgstr ""
+"**Extreme Werte.** Der Nenner der Formel kann nahe null kommen, und dann "
+"explodiert das Ergebnis. Die Beispieldatei reicht von -52 bis 263, obwohl"
+" ihr Median 0,39 beträgt und 99 % ihrer Pixel zwischen 0,01 und 0,83 "
+"liegen. Beschneide die Werte oder nimm Perzentile statt des Maximums, "
+"bevor du Statistiken berechnest: ``numpy.clip(evi, -1, 1)``."
+
+#: ../../data/evi.rst:54
+msgid ""
+"**The plot** uses a fixed range of -1 to 1. Pixels outside the range get "
+"the colour of the nearest end of the colour bar."
+msgstr ""
+"**Der Plot** verwendet einen festen Bereich von -1 bis 1. Pixel außerhalb"
+" des Bereichs bekommen die Farbe des nächstgelegenen Endes der "
+"Farbleiste."
+
+#: ../../data/evi.rst:56
+msgid ""
+"Like the NDVI, the index is calculated from the mean reflectance of the "
+"period, water is empty by default, and holes can be filled with a longer "
+"period (:doc:`ndvi`, :doc:`/howto/filter-clouds`)."
+msgstr ""
+"Wie beim NDVI wird der Index aus der mittleren Reflektanz des Zeitraums "
+"berechnet, Wasser ist standardmäßig leer, und Löcher lassen sich mit "
+"einem längeren Zeitraum füllen (:doc:`ndvi`, :doc:`/howto/filter-"
+"clouds`)."
+
+#: ../../data/evi.rst:62
+msgid ""
+":doc:`ndvi`, :doc:`/howto/filter-clouds`, :doc:`/explanation/clouds-and-"
+"masking`"
+msgstr ""
+":doc:`ndvi`, :doc:`/howto/filter-clouds`, :doc:`/explanation/clouds-and-"
+"masking`"
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:1 of
+msgid "*Short alias:* ``download_evi``"
+msgstr "*Kurzer Alias:* ``download_evi``"
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:3 of
+msgid "Download a Sentinel-2 Enhanced Vegetation Index (EVI) raster."
+msgstr "Lädt ein Sentinel-2-Raster des Enhanced Vegetation Index (EVI) herunter."
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:5 of
+msgid ""
+"Blue, red and near-infrared reflectance from Sentinel-2 Level-2A are "
+"masked using the Scene Classification Layer (SCL), then averaged over the"
+" requested period before calculating EVI:"
+msgstr ""
+"Blaue, rote und nahinfrarote Reflektanz von Sentinel-2 Level-2A wird mit "
+"der Scene Classification Layer (SCL) maskiert und über den angeforderten "
+"Zeitraum gemittelt, bevor der EVI berechnet wird:"
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:9 of
+msgid "``EVI = 2.5 * (NIR - red) / (NIR + 6 * red - 7.5 * blue + 1)``"
+msgstr "``EVI = 2.5 * (NIR - red) / (NIR + 6 * red - 7.5 * blue + 1)``"
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:11 of
+msgid ""
+"The output retains the 10 m reflectance grid; SCL classification detail "
+"remains 20 m. As with "
+":func:`cdec.download_normalized_difference_vegetation_index`, the index "
+"is calculated from mean reflectance, rather than averaging indices from "
+"individual dates."
+msgstr ""
+"Die Ausgabe behält das 10-m-Reflektanzraster; die Detailgenauigkeit der "
+"SCL-Klassifikation bleibt 20 m. Wie bei "
+":func:`cdec.download_normalized_difference_vegetation_index` wird der "
+"Index aus der mittleren Reflektanz berechnet und nicht als Mittelwert der"
+" Indizes einzelner Tage."
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:20
+#: cdec.eo.false_color_infrared.download_false_color_infrared:15
+#: cdec.eo.false_color_swir.download_false_color_swir:15
+#: cdec.eo.false_color_urban.download_false_color_urban:15
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:23
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:21
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:17
+#: cdec.eo.ndwi.download_normalized_difference_water_index:23
+#: cdec.eo.scene_classification.download_scene_classification_map:17
+#: cdec.eo.tci.download_true_color_image:12 of
+msgid ""
+"Start and end of the observation period, e.g. ``[\"2024-06-01\", "
+"\"2024-07-01\"]``. The end date itself is *not* included, so this example"
+" covers all of June."
+msgstr ""
+"Beginn und Ende des Beobachtungszeitraums, z. B. ``[\"2024-06-01\", "
+"\"2024-07-01\"]``. Das Enddatum selbst ist *nicht* enthalten, dieses "
+"Beispiel umfasst also den ganzen Juni."
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:23
+#: cdec.eo.false_color_infrared.download_false_color_infrared:18
+#: cdec.eo.false_color_swir.download_false_color_swir:18
+#: cdec.eo.false_color_urban.download_false_color_urban:18
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:26
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:24
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:20
+#: cdec.eo.ndwi.download_normalized_difference_water_index:26
+#: cdec.eo.tci.download_true_color_image:15 of
+msgid ""
+"Maximum cloud cover of a whole scene in percent. Scenes that are cloudier"
+" are not used at all. This scene filter complements ``scl_classes``, "
+"which removes single pixels."
+msgstr ""
+"Maximale Wolkenbedeckung einer ganzen Szene in Prozent. Wolkigere Szenen "
+"werden gar nicht verwendet. Dieser Szenenfilter ergänzt ``scl_classes``, "
+"das einzelne Pixel entfernt."
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:26
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:29
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:23 of
+msgid ""
+"Scene Classification Layer (SCL) classes to **keep**, as a tuple of class"
+" IDs. The default ``SCL_LAND`` = ``(4, 5)`` keeps vegetation and non-"
+"vegetated land and drops water, clouds, cirrus, shadows, snow/ice, "
+"unclassified and defective pixels. Use ``SCL_LAND_AND_WATER`` = ``(4, 5, "
+"6)`` to also keep water, or ``None`` to switch SCL masking off. Run "
+"``cdec.show_scl_classes()`` to see what each class means. Pixels without "
+"any retained observation remain no data."
+msgstr ""
+"Klassen der Scene Classification Layer (SCL), die **behalten** werden, "
+"als Tupel von Klassen-IDs. Der Standard ``SCL_LAND`` = ``(4, 5)`` behält "
+"Vegetation und nicht bewachsenes Land und verwirft Wasser, Wolken, "
+"Zirren, Schatten, Schnee/Eis, nicht klassifizierte und defekte Pixel. "
+"Verwende ``SCL_LAND_AND_WATER`` = ``(4, 5, 6)``, um auch Wasser zu "
+"behalten, oder ``None``, um die SCL-Maskierung auszuschalten. Führe "
+"``cdec.show_scl_classes()`` aus, um zu sehen, was jede Klasse bedeutet. "
+"Pixel ohne eine einzige behaltene Beobachtung bleiben ohne Daten."
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:33
+#: cdec.eo.false_color_infrared.download_false_color_infrared:35
+#: cdec.eo.false_color_swir.download_false_color_swir:35
+#: cdec.eo.false_color_urban.download_false_color_urban:35
+#: cdec.eo.landsat.download_landsat_ndvi:18
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:36
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:35
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:30
+#: cdec.eo.ndwi.download_normalized_difference_water_index:37
+#: cdec.eo.scene_classification.download_scene_classification_map:23
+#: cdec.eo.tci.download_true_color_image:31 of
+msgid "If ``True``, write a Cloud Optimized GeoTIFF."
+msgstr "Wenn ``True``, wird ein Cloud Optimized GeoTIFF geschrieben."
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:34
+#: cdec.eo.false_color_infrared.download_false_color_infrared:36
+#: cdec.eo.false_color_swir.download_false_color_swir:36
+#: cdec.eo.false_color_urban.download_false_color_urban:36
+#: cdec.eo.landsat.download_landsat_ndvi:19
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:37
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:36
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:31
+#: cdec.eo.ndwi.download_normalized_difference_water_index:38
+#: cdec.eo.tci.download_true_color_image:32 of
+msgid "Resampling method used to build COG overview levels."
+msgstr "Resampling-Methode zum Erzeugen der Übersichtsstufen des COG."
+
+#: cdec.eo.evi.download_enhanced_vegetation_index:39 of
+msgid "Absolute path to the downloaded EVI raster."
+msgstr "Absoluter Pfad zum heruntergeladenen EVI-Raster."
+
+#: cdec.plot.products.plot_enhanced_vegetation_index:1 of
+msgid "*Short alias:* ``plot_evi``"
+msgstr "*Kurzer Alias:* ``plot_evi``"
+
+#: cdec.plot.products.plot_enhanced_vegetation_index:3 of
+msgid "Draw the EVI of ``download_enhanced_vegetation_index``."
+msgstr "Zeichnet den EVI von ``download_enhanced_vegetation_index``."
+
+#: cdec.plot.products.plot_enhanced_vegetation_index:5 of
+msgid ""
+"EVI is read like NDVI but reacts less to the atmosphere and does not "
+"saturate as early over dense vegetation. It uses the same colour map and "
+"the same fixed range (-1 ... 1) as "
+":func:`plot_normalized_difference_vegetation_index`, so NDVI and EVI of "
+"the same area can be compared by eye."
+msgstr ""
+"Der EVI wird wie der NDVI gelesen, reagiert aber weniger auf die "
+"Atmosphäre und sättigt über dichter Vegetation nicht so früh. Er "
+"verwendet dieselbe Farbskala und denselben festen Bereich (-1 ... 1) wie "
+":func:`plot_normalized_difference_vegetation_index`, sodass NDVI und EVI "
+"desselben Gebiets mit dem Auge verglichen werden können."
+
+#: cdec.plot.products.plot_enhanced_vegetation_index:10 of
+msgid "The GeoTIFF written by ``download_evi``."
+msgstr "Das von ``download_evi`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_enhanced_vegetation_index:12 of
+msgid ""
+"Title of the plot. Default: \"EVI (Sentinel-2)\". Use ``\"\"`` for no "
+"title."
+msgstr ""
+"Titel des Plots. Standard: \"EVI (Sentinel-2)\". Verwende ``\"\"`` für "
+"keinen Titel."
+
+#: cdec.plot.products.plot_enhanced_vegetation_index:14
+#: cdec.plot.products.plot_enhanced_vegetation_index:16
+#: cdec.plot.products.plot_landsat_ndvi:12
+#: cdec.plot.products.plot_landsat_ndvi:14
+#: cdec.plot.products.plot_normalized_difference_moisture_index:14
+#: cdec.plot.products.plot_normalized_difference_moisture_index:16
+#: cdec.plot.products.plot_normalized_difference_snow_index:14
+#: cdec.plot.products.plot_normalized_difference_snow_index:16
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:14
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:16
+#: cdec.plot.products.plot_normalized_difference_water_index:14
+#: cdec.plot.products.plot_normalized_difference_water_index:16
+#: cdec.plot.products.plot_soil_water_index:13
+#: cdec.plot.products.plot_soil_water_index:15 of
+msgid ""
+"Values at the two ends of the colour map. ``None`` takes the smallest and"
+" largest value of the image instead."
+msgstr ""
+"Werte an den beiden Enden der Farbskala. ``None`` nimmt stattdessen den "
+"kleinsten und größten Wert des Bildes."
+
+#: ../../data/false-color-infrared.rst:2
+msgid "False-colour infrared image (Sentinel-2)"
+msgstr "Falschfarben-Infrarotbild (Sentinel-2)"
+
+#: ../../data/false-color-infrared.rst:4
+msgid ""
+"The classic picture for vegetation. The near-infrared band is shown as "
+"red, the red band as green and the green band as blue. Healthy plants "
+"reflect much near-infrared light, so vegetation looks **red**: the denser"
+" and healthier the plants, the brighter the red. Water absorbs near-"
+"infrared light and looks dark blue to black; built-up areas look grey to "
+"blue-grey, and bare soil looks pale brown to grey. Compare it with the "
+":doc:`true-colour image <true-color>` of the same area to learn the "
+"colours."
+msgstr ""
+"Das klassische Bild für Vegetation. Das nahe Infrarot wird als Rot "
+"gezeigt, das rote Band als Grün und das grüne Band als Blau. Gesunde "
+"Pflanzen reflektieren viel nahes Infrarotlicht, deshalb erscheint "
+"Vegetation **rot**: je dichter und gesünder die Pflanzen, desto "
+"leuchtender das Rot. Wasser absorbiert nahes Infrarotlicht und erscheint "
+"dunkelblau bis schwarz; bebaute Flächen sehen grau bis blaugrau aus, "
+"nackter Boden blassbraun bis grau. Vergleiche es mit dem "
+":doc:`Echtfarbenbild <true-color>` desselben Gebiets, um die Farben zu "
+"lernen."
+
+#: ../../data/false-color-infrared.rst:15
+msgid ":func:`~cdec.download_false_color_infrared`, short ``download_infrared``"
+msgstr ":func:`~cdec.download_false_color_infrared`, kurz ``download_infrared``"
+
+#: ../../data/false-color-infrared.rst:17
+msgid ":func:`~cdec.plot_false_color_infrared`, short ``plot_infrared``"
+msgstr ":func:`~cdec.plot_false_color_infrared`, kurz ``plot_infrared``"
+
+#: ../../data/false-color-infrared.rst:19
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B08 (shown as "
+"red), B04 (green) and B03 (blue)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B08 (als Rot "
+"gezeigt), B04 (Grün) und B03 (Blau)"
+
+#: ../../data/false-color-infrared.rst:23 ../../data/false-color-swir.rst:23
+#: ../../data/false-color-urban.rst:22
+msgid ""
+"by default an 8-bit colour picture (three bands, 0 ... 255); with "
+"``enhance_contrast=False`` three bands of reflectance (floating point)"
+msgstr ""
+"standardmäßig ein 8-Bit-Farbbild (drei Bänder, 0 ... 255); mit "
+"``enhance_contrast=False`` drei Bänder Reflektanz (Gleitkomma)"
+
+#: ../../data/false-color-infrared.rst:26 ../../data/false-color-swir.rst:26
+#: ../../data/false-color-urban.rst:25 ../../data/ndwi.rst:23
+#: ../../data/true-color.rst:24
+msgid ""
+"scenes above ``max_cloud_cover`` (20 %) are not used; pixels are masked "
+"with ``scl_classes`` (default: vegetation, not vegetated and water)"
+msgstr ""
+"Szenen über ``max_cloud_cover`` (20 %) werden nicht verwendet; Pixel "
+"werden mit ``scl_classes`` maskiert (Standard: Vegetation, nicht "
+"bewachsen und Wasser)"
+
+#: ../../data/false-color-infrared.rst:44
+msgid ""
+"Colour-infrared image of Bremen: vegetation bright red, built-up areas "
+"grey, rivers and lakes black, white patches without data."
+msgstr ""
+"Farbinfrarotbild von Bremen: Vegetation leuchtend rot, bebaute Flächen "
+"grau, Flüsse und Seen schwarz, weiße Stellen ohne Daten."
+
+#: ../../data/false-color-infrared.rst:48
+msgid ""
+"Bremen, June 2024. Red: vegetation, grey: built-up, black: water. White: "
+"no data. Contains modified Copernicus Sentinel data 2024."
+msgstr ""
+"Bremen, Juni 2024. Rot: Vegetation, Grau: bebaut, Schwarz: Wasser. Weiß: "
+"keine Daten. Contains modified Copernicus Sentinel data 2024."
+
+#: ../../data/false-color-infrared.rst:53
+msgid ""
+"**A fixed stretch.** It is the stretch of the :doc:`false-colour urban "
+"image <false-color-urban>`: the reflectance 0 to 0.4 becomes 0 to 255, "
+"and the brightest values are compressed instead of clipped. No statistics"
+" of the image are used, so the same reflectance always gets the same "
+"colour and images of different dates or places can be compared by eye "
+"(:doc:`/howto/compare-images`)."
+msgstr ""
+"**Eine feste Streckung.** Es ist die Streckung der :doc:`Falschfarben-"
+"Stadtansicht <false-color-urban>`: Die Reflektanz 0 bis 0,4 wird zu 0 bis"
+" 255, und die hellsten Werte werden komprimiert statt abgeschnitten. Es "
+"werden keine Statistiken des Bildes verwendet, dieselbe Reflektanz "
+"bekommt also immer dieselbe Farbe, und Bilder verschiedener Zeitpunkte "
+"oder Orte lassen sich mit dem Auge vergleichen (:doc:`/howto/compare-"
+"images`)."
+
+#: ../../data/false-color-infrared.rst:57 ../../data/false-color-swir.rst:59
+#: ../../data/false-color-urban.rst:55
+msgid ""
+"**Do not calculate with the picture.** For differences and thresholds "
+"download with ``enhance_contrast=False`` (:doc:`/howto/calculate-with-"
+"reflectance`)."
+msgstr ""
+"**Rechne nicht mit dem Bild.** Für Differenzen und Schwellenwerte lade "
+"mit ``enhance_contrast=False`` herunter (:doc:`/howto/calculate-with-"
+"reflectance`)."
+
+#: ../../data/false-color-infrared.rst:59
+msgid ""
+"**Red is not always vegetation.** Dry grass and bare fields reflect less "
+"near-infrared light than healthy plants and look pink or pale. For a "
+"number instead of a colour use the :doc:`ndvi`."
+msgstr ""
+"**Rot ist nicht immer Vegetation.** Trockenes Gras und nackte Felder "
+"reflektieren weniger nahes Infrarotlicht als gesunde Pflanzen und sehen "
+"rosa oder blass aus. Für eine Zahl statt einer Farbe nimm den "
+":doc:`ndvi`."
+
+#: ../../data/false-color-infrared.rst:61 ../../data/false-color-swir.rst:63
+msgid ""
+"**Pixels without data** are masked in the file and transparent in the "
+"plot, as in the other pictures."
+msgstr ""
+"**Pixel ohne Daten** sind in der Datei maskiert und im Plot transparent, "
+"wie bei den anderen Bildern."
+
+#: ../../data/false-color-infrared.rst:66
+msgid ""
+":doc:`true-color`, :doc:`false-color-urban`, :doc:`false-color-swir`, "
+":doc:`/explanation/colours-and-values`, :doc:`/howto/filter-clouds`"
+msgstr ""
+":doc:`true-color`, :doc:`false-color-urban`, :doc:`false-color-swir`, "
+":doc:`/explanation/colours-and-values`, :doc:`/howto/filter-clouds`"
+
+#: cdec.eo.false_color_infrared.download_false_color_infrared:1 of
+msgid "*Short alias:* ``download_infrared``"
+msgstr "*Kurzer Alias:* ``download_infrared``"
+
+#: cdec.eo.false_color_infrared.download_false_color_infrared:3 of
+msgid "Download a Sentinel-2 false-colour infrared composite."
+msgstr "Lädt ein Sentinel-2-Falschfarben-Infrarotkomposit herunter."
+
+#: cdec.eo.false_color_infrared.download_false_color_infrared:5 of
+msgid ""
+"B08, B04 and B03 are displayed as red, green and blue, respectively (the "
+"classic colour-infrared picture). Observations are masked using SCL, "
+"averaged over the requested period, and then enhanced for display by "
+"stretching contrast and compressing highlights. The output grid is 10 m; "
+"SCL classification detail remains 20 m."
+msgstr ""
+"B08, B04 und B03 werden als Rot, Grün beziehungsweise Blau dargestellt "
+"(das klassische Color-Infrarot-Bild). Die Beobachtungen werden mit der "
+"SCL maskiert, über den angeforderten Zeitraum gemittelt und dann für die "
+"Darstellung durch Kontraststreckung und Komprimierung der Lichter "
+"verbessert. Das Ausgaberaster ist 10 m; die SCL-Klassifikation behält "
+"ihre Detailgenauigkeit von 20 m."
+
+#: cdec.eo.false_color_infrared.download_false_color_infrared:11
+#: cdec.eo.false_color_swir.download_false_color_swir:11
+#: cdec.eo.false_color_urban.download_false_color_urban:11
+#: cdec.eo.tci.download_true_color_image:8 of
+msgid "Destination GeoTIFF path. Missing parent directories are created."
+msgstr ""
+"Pfad der Ziel-GeoTIFF-Datei. Fehlende übergeordnete Verzeichnisse werden "
+"angelegt."
+
+#: cdec.eo.false_color_infrared.download_false_color_infrared:21
+#: cdec.eo.false_color_swir.download_false_color_swir:21
+#: cdec.eo.false_color_urban.download_false_color_urban:21 of
+msgid ""
+"Scene Classification Layer (SCL) classes to **keep**, as a tuple of class"
+" IDs. The default ``SCL_LAND_AND_WATER`` = ``(4, 5, 6)`` keeps "
+"vegetation, non-vegetated land and water and drops clouds, cirrus, "
+"shadows, snow/ice, unclassified and defective pixels. Add ``11`` to keep "
+"snow/ice, or use ``None`` to switch SCL masking off. Run "
+"``cdec.show_scl_classes()`` to see what each class means. Pixels without "
+"any retained observation remain no data, also after contrast enhancement."
+msgstr ""
+"Klassen der Scene Classification Layer (SCL), die **behalten** werden, "
+"als Tupel von Klassen-IDs. Der Standard ``SCL_LAND_AND_WATER`` = ``(4, 5,"
+" 6)`` behält Vegetation, nicht bewachsenes Land und Wasser und verwirft "
+"Wolken, Zirren, Schatten, Schnee/Eis, nicht klassifizierte und defekte "
+"Pixel. Füge ``11`` hinzu, um Schnee/Eis zu behalten, oder verwende "
+"``None``, um die SCL-Maskierung auszuschalten. Führe "
+"``cdec.show_scl_classes()`` aus, um zu sehen, was jede Klasse bedeutet. "
+"Pixel ohne eine einzige behaltene Beobachtung bleiben auch nach der "
+"Kontrastverbesserung ohne Daten."
+
+#: cdec.eo.false_color_infrared.download_false_color_infrared:29
+#: cdec.eo.false_color_swir.download_false_color_swir:29
+#: cdec.eo.false_color_urban.download_false_color_urban:29 of
+msgid ""
+"If ``True``, create an 8-bit RGB image using a reflectance stretch of "
+"0..0.4 with highlight compression. The stretch is fixed: it does not look"
+" at the values of the image, so the same reflectance always gets the same"
+" colour, and images of different dates or places can be compared by eye. "
+"If ``False``, retain the three bands as floating-point reflectance values"
+" (use this for calculations)."
+msgstr ""
+"Wenn ``True``, wird ein 8-Bit-RGB-Bild mit einer Reflektanzstreckung von "
+"0..0,4 und Komprimierung der Lichter erzeugt. Die Streckung ist fest: Sie"
+" schaut nicht auf die Werte des Bildes, dieselbe Reflektanz bekommt also "
+"immer dieselbe Farbe, und Bilder verschiedener Zeitpunkte oder Orte "
+"lassen sich mit dem Auge vergleichen. Wenn ``False``, bleiben die drei "
+"Bänder als Gleitkomma-Reflektanzwerte erhalten (für Berechnungen "
+"verwenden)."
+
+#: cdec.eo.false_color_infrared.download_false_color_infrared:41 of
+msgid "Absolute path to the downloaded infrared composite."
+msgstr "Absoluter Pfad zum heruntergeladenen Infrarotkomposit."
+
+#: cdec.plot.products.plot_false_color_infrared:1 of
+msgid "*Short alias:* ``plot_infrared``"
+msgstr "*Kurzer Alias:* ``plot_infrared``"
+
+#: cdec.plot.products.plot_false_color_infrared:3 of
+msgid "Draw the picture of ``download_false_color_infrared``."
+msgstr "Zeichnet das Bild von ``download_false_color_infrared``."
+
+#: cdec.plot.products.plot_false_color_infrared:5 of
+msgid ""
+"Bands B08, B04 and B03 are shown as red, green and blue. In this false "
+"colour image vegetation looks red, water dark and built-up areas grey or "
+"blue-grey. A file downloaded with the default ``enhance_contrast=True`` "
+"already holds 8-bit colours and is drawn as it is. A file downloaded with"
+" ``enhance_contrast=False`` holds reflectance; it gets the same contrast "
+"stretch (0 ... 0.4) as the download would have applied, **for the picture"
+" only**. Pixels without data are transparent."
+msgstr ""
+"Die Bänder B08, B04 und B03 werden als Rot, Grün und Blau gezeigt. In "
+"diesem Falschfarbenbild erscheint Vegetation rot, Wasser dunkel und "
+"bebaute Flächen grau oder blaugrau. Eine mit dem Standard "
+"``enhance_contrast=True`` heruntergeladene Datei enthält bereits 8-Bit-"
+"Farben und wird so gezeichnet, wie sie ist. Eine mit "
+"``enhance_contrast=False`` heruntergeladene Datei enthält Reflektanz; sie"
+" bekommt dieselbe Kontraststreckung (0 ... 0,4), die der Download "
+"angewendet hätte, **nur für das Bild**. Pixel ohne Daten sind "
+"transparent."
+
+#: cdec.plot.products.plot_false_color_infrared:11 of
+msgid "The GeoTIFF written by ``download_infrared``."
+msgstr "Das von ``download_infrared`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_false_color_infrared:13 of
+msgid ""
+"Title of the plot. Default: \"False colour infrared (Sentinel-2)\". Use "
+"``\"\"`` for no title."
+msgstr ""
+"Titel des Plots. Standard: \"False colour infrared (Sentinel-2)\". "
+"Verwende ``\"\"`` für keinen Titel."
+
+#: cdec.plot.products.plot_false_color_infrared:20
+#: cdec.plot.products.plot_false_color_swir:20
+#: cdec.plot.products.plot_false_color_urban:22
+#: cdec.plot.products.plot_true_color_image:20 of
+msgid ""
+"If the file does not have exactly three bands, or if they are neither"
+"     8-bit nor floating-point."
+msgstr ""
+"Wenn die Datei nicht genau drei Bänder hat oder wenn sie weder 8-Bit noch"
+" Gleitkomma sind."
+
+#: ../../data/false-color-swir.rst:2
+msgid "False-colour SWIR image (Sentinel-2)"
+msgstr "Falschfarben-SWIR-Bild (Sentinel-2)"
+
+#: ../../data/false-color-swir.rst:4
+msgid ""
+"A picture made of invisible light that separates snow, clouds, water and "
+"vegetation. A short-wave infrared band is shown as red, a near-infrared "
+"band as green and the red band as blue. Vegetation looks **green**, bare "
+"soil and built-up areas look brown to orange, and water looks black. Snow"
+" and ice absorb short-wave infrared light and look cyan (light blue), "
+"while clouds stay white. Compare it with the :doc:`true-colour image "
+"<true-color>` of the same area to learn the colours."
+msgstr ""
+"Ein Bild aus unsichtbarem Licht, das Schnee, Wolken, Wasser und "
+"Vegetation voneinander trennt. Ein kurzwelliges Infrarotband wird als Rot"
+" gezeigt, ein nahes Infrarotband als Grün und das rote Band als Blau. "
+"Vegetation erscheint **grün**, nackter Boden und bebaute Flächen braun "
+"bis orange und Wasser schwarz. Schnee und Eis absorbieren kurzwelliges "
+"Infrarotlicht und erscheinen cyan (hellblau), Wolken bleiben weiß. "
+"Vergleiche es mit dem :doc:`Echtfarbenbild <true-color>` desselben "
+"Gebiets, um die Farben zu lernen."
+
+#: ../../data/false-color-swir.rst:15
+msgid ":func:`~cdec.download_false_color_swir`, short ``download_swir``"
+msgstr ":func:`~cdec.download_false_color_swir`, kurz ``download_swir``"
+
+#: ../../data/false-color-swir.rst:17
+msgid ":func:`~cdec.plot_false_color_swir`, short ``plot_swir``"
+msgstr ":func:`~cdec.plot_false_color_swir`, kurz ``plot_swir``"
+
+#: ../../data/false-color-swir.rst:19
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B12 (shown as "
+"red), B8A (green) and B04 (blue)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B12 (als Rot "
+"gezeigt), B8A (Grün) und B04 (Blau)"
+
+#: ../../data/false-color-swir.rst:21
+msgid "10 m (B12 and B8A have 20 m detail)"
+msgstr "10 m (B12 und B8A haben 20 m Detailgenauigkeit)"
+
+#: ../../data/false-color-swir.rst:44
+msgid ""
+"Short-wave infrared image of Bremen: vegetation bright green, built-up "
+"areas brown and grey, rivers and lakes black, white patches without data."
+msgstr ""
+"Kurzwelliges Infrarotbild von Bremen: Vegetation leuchtend grün, bebaute "
+"Flächen braun und grau, Flüsse und Seen schwarz, weiße Stellen ohne "
+"Daten."
+
+#: ../../data/false-color-swir.rst:48
+msgid ""
+"Bremen, June 2024. Green: vegetation, brown and grey: built-up, black: "
+"water. White: no data. Contains modified Copernicus Sentinel data 2024."
+msgstr ""
+"Bremen, Juni 2024. Grün: Vegetation, Braun und Grau: bebaut, Schwarz: "
+"Wasser. Weiß: keine Daten. Contains modified Copernicus Sentinel data "
+"2024."
+
+#: ../../data/false-color-swir.rst:53
+msgid ""
+"**Clouds and snow are removed by default**, so you do not see the colours"
+" that tell them apart. To see snow use ``scl_classes=(4, 5, 6, 11)``; to "
+"see clouds next to it use ``scl_classes=None``. Choose a short period, so"
+" that the picture is not a mean of days with and without snow "
+"(:doc:`/howto/filter-clouds`, :doc:`ndsi`)."
+msgstr ""
+"**Wolken und Schnee werden standardmäßig entfernt**, du siehst also nicht"
+" die Farben, die sie unterscheiden. Um Schnee zu sehen, verwende "
+"``scl_classes=(4, 5, 6, 11)``; um daneben auch Wolken zu sehen, "
+"``scl_classes=None``. Wähle einen kurzen Zeitraum, damit das Bild nicht "
+"der Mittelwert aus Tagen mit und ohne Schnee ist (:doc:`/howto/filter-"
+"clouds`, :doc:`ndsi`)."
+
+#: ../../data/false-color-swir.rst:56
+msgid ""
+"**A fixed stretch.** It is the stretch of the :doc:`false-colour urban "
+"image <false-color-urban>`: the reflectance 0 to 0.4 becomes 0 to 255, "
+"and the brightest values are compressed instead of clipped. The same "
+"reflectance always gets the same colour, so images can be compared by eye"
+" (:doc:`/howto/compare-images`)."
+msgstr ""
+"**Eine feste Streckung.** Es ist die Streckung der :doc:`Falschfarben-"
+"Stadtansicht <false-color-urban>`: Die Reflektanz 0 bis 0,4 wird zu 0 bis"
+" 255, und die hellsten Werte werden komprimiert statt abgeschnitten. "
+"Dieselbe Reflektanz bekommt immer dieselbe Farbe, sodass sich Bilder mit "
+"dem Auge vergleichen lassen (:doc:`/howto/compare-images`)."
+
+#: ../../data/false-color-swir.rst:61
+msgid ""
+"**Similar to the urban image.** Both use short-wave infrared bands. The "
+"urban image shows vegetation in green and the city in grey; this one has "
+"brown built-up areas and separates snow from cloud."
+msgstr ""
+"**Ähnlich wie die Stadtansicht.** Beide verwenden kurzwellige "
+"Infrarotbänder. Die Stadtansicht zeigt Vegetation grün und die Stadt "
+"grau; dieses Bild hat braune bebaute Flächen und trennt Schnee von "
+"Wolken."
+
+#: ../../data/false-color-swir.rst:68
+msgid ""
+":doc:`true-color`, :doc:`false-color-urban`, :doc:`false-color-infrared`,"
+" :doc:`ndsi`, :doc:`/explanation/colours-and-values`"
+msgstr ""
+":doc:`true-color`, :doc:`false-color-urban`, :doc:`false-color-infrared`,"
+" :doc:`ndsi`, :doc:`/explanation/colours-and-values`"
+
+#: cdec.eo.false_color_swir.download_false_color_swir:1 of
+msgid "*Short alias:* ``download_swir``"
+msgstr "*Kurzer Alias:* ``download_swir``"
+
+#: cdec.eo.false_color_swir.download_false_color_swir:3 of
+msgid "Download a Sentinel-2 false-colour SWIR composite."
+msgstr "Lädt ein Sentinel-2-Falschfarben-SWIR-Komposit herunter."
+
+#: cdec.eo.false_color_swir.download_false_color_swir:5 of
+msgid ""
+"B12, B8A and B04 are displayed as red, green and blue, respectively. "
+"Observations are masked using SCL, averaged over the requested period, "
+"and then enhanced for display by stretching contrast and compressing "
+"highlights. The output grid is 10 m; B12, B8A and SCL retain their native"
+" 20 m detail."
+msgstr ""
+"B12, B8A und B04 werden als Rot, Grün beziehungsweise Blau dargestellt. "
+"Die Beobachtungen werden mit der SCL maskiert, über den angeforderten "
+"Zeitraum gemittelt und dann für die Darstellung durch Kontraststreckung "
+"und Komprimierung der Lichter verbessert. Das Ausgaberaster ist 10 m; "
+"B12, B8A und SCL behalten ihre native Detailgenauigkeit von 20 m."
+
+#: cdec.eo.false_color_swir.download_false_color_swir:41 of
+msgid "Absolute path to the downloaded SWIR composite."
+msgstr "Absoluter Pfad zum heruntergeladenen SWIR-Komposit."
+
+#: cdec.plot.products.plot_false_color_swir:1 of
+msgid "*Short alias:* ``plot_swir``"
+msgstr "*Kurzer Alias:* ``plot_swir``"
+
+#: cdec.plot.products.plot_false_color_swir:3 of
+msgid "Draw the picture of ``download_false_color_swir``."
+msgstr "Zeichnet das Bild von ``download_false_color_swir``."
+
+#: cdec.plot.products.plot_false_color_swir:5 of
+msgid ""
+"Bands B12, B8A and B04 are shown as red, green and blue. In this false "
+"colour image vegetation looks green, bare ground and built-up areas brown"
+" to orange, water black, and snow cyan while clouds stay white. A file "
+"downloaded with the default ``enhance_contrast=True`` already holds 8-bit"
+" colours and is drawn as it is. A file downloaded with "
+"``enhance_contrast=False`` holds reflectance; it gets the same contrast "
+"stretch (0 ... 0.4) as the download would have applied, **for the picture"
+" only**. Pixels without data are transparent."
+msgstr ""
+"Die Bänder B12, B8A und B04 werden als Rot, Grün und Blau gezeigt. In "
+"diesem Falschfarbenbild erscheint Vegetation grün, nackter Boden und "
+"bebaute Flächen braun bis orange, Wasser schwarz und Schnee cyan, während"
+" Wolken weiß bleiben. Eine mit dem Standard ``enhance_contrast=True`` "
+"heruntergeladene Datei enthält bereits 8-Bit-Farben und wird so "
+"gezeichnet, wie sie ist. Eine mit ``enhance_contrast=False`` "
+"heruntergeladene Datei enthält Reflektanz; sie bekommt dieselbe "
+"Kontraststreckung (0 ... 0,4), die der Download angewendet hätte, **nur "
+"für das Bild**. Pixel ohne Daten sind transparent."
+
+#: cdec.plot.products.plot_false_color_swir:11 of
+msgid "The GeoTIFF written by ``download_swir``."
+msgstr "Das von ``download_swir`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_false_color_swir:13 of
+msgid ""
+"Title of the plot. Default: \"False colour SWIR (Sentinel-2)\". Use "
+"``\"\"`` for no title."
+msgstr ""
+"Titel des Plots. Standard: \"False colour SWIR (Sentinel-2)\". Verwende "
+"``\"\"`` für keinen Titel."
+
+#: ../../data/false-color-urban.rst:2
+msgid "False-colour urban image (Sentinel-2)"
+msgstr "Falschfarben-Stadtbild (Sentinel-2)"
+
+#: ../../data/false-color-urban.rst:4
+msgid ""
+"A picture that uses invisible light. Two short-wave infrared bands and "
+"the red band are shown as red, green and blue, so that surfaces which "
+"look alike to the eye get different colours: vegetation, bare soil, "
+"built-up areas and water. In the example below vegetation is green, water"
+" is black and the built-up areas of the city are grey. Compare it with "
+"the :doc:`true-colour image <true-color>` of the same area to learn the "
+"colours."
+msgstr ""
+"Ein Bild, das unsichtbares Licht nutzt. Zwei kurzwellige Infrarotbänder "
+"und das rote Band werden als Rot, Grün und Blau gezeigt, sodass "
+"Oberflächen, die dem Auge gleich aussehen, verschiedene Farben bekommen: "
+"Vegetation, nackter Boden, bebaute Flächen und Wasser. Im Beispiel unten "
+"ist die Vegetation grün, das Wasser schwarz und die bebauten Flächen der "
+"Stadt sind grau. Vergleiche es mit dem :doc:`Echtfarbenbild <true-color>`"
+" desselben Gebiets, um die Farben zu lernen."
+
+#: ../../data/false-color-urban.rst:14
+msgid ":func:`~cdec.download_false_color_urban`, short ``download_urban``"
+msgstr ":func:`~cdec.download_false_color_urban`, kurz ``download_urban``"
+
+#: ../../data/false-color-urban.rst:16
+msgid ":func:`~cdec.plot_false_color_urban`, short ``plot_urban``"
+msgstr ":func:`~cdec.plot_false_color_urban`, kurz ``plot_urban``"
+
+#: ../../data/false-color-urban.rst:18
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B12 (shown as "
+"red), B11 (green) and B04 (blue)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B12 (als Rot "
+"gezeigt), B11 (Grün) und B04 (Blau)"
+
+#: ../../data/false-color-urban.rst:20
+msgid "10 m (B11 and B12 have 20 m detail)"
+msgstr "10 m (B11 und B12 haben 20 m Detailgenauigkeit)"
+
+#: ../../data/false-color-urban.rst:43
+msgid ""
+"False-colour urban image of Bremen: green vegetation, black river and "
+"lakes, grey city, white patches without data."
+msgstr ""
+"Falschfarben-Stadtbild von Bremen: grüne Vegetation, schwarzer Fluss und "
+"Seen, graue Stadt, weiße Stellen ohne Daten."
+
+#: ../../data/false-color-urban.rst:52
+msgid ""
+"**A fixed stretch.** The reflectance 0 to 0.4 becomes 0 to 255, and the "
+"brightest values are compressed instead of clipped. No statistics of the "
+"image are used, so the same reflectance always gets the same colour and "
+"images of different dates or places can be compared by eye (:doc:`/howto"
+"/compare-images`)."
+msgstr ""
+"**Eine feste Streckung.** Die Reflektanz 0 bis 0,4 wird zu 0 bis 255, und"
+" die hellsten Werte werden komprimiert statt abgeschnitten. Es werden "
+"keine Statistiken des Bildes verwendet, dieselbe Reflektanz bekommt also "
+"immer dieselbe Farbe, und Bilder verschiedener Zeitpunkte oder Orte "
+"lassen sich mit dem Auge vergleichen (:doc:`/howto/compare-images`)."
+
+#: ../../data/false-color-urban.rst:57
+msgid ""
+"**Not identical to the Copernicus Browser.** The stretch is the one of "
+"the Sentinel Hub \"false colour (urban)\" layer, but that layer shows one"
+" acquisition date, and this one the cloud-masked mean of a period."
+msgstr ""
+"**Nicht identisch mit dem Copernicus Browser.** Die Streckung ist die der"
+" Sentinel-Hub-Ebene „false colour (urban)“, aber diese Ebene zeigt einen "
+"Aufnahmetag, und dieses Paket den wolkenmaskierten Mittelwert eines "
+"Zeitraums."
+
+#: ../../data/false-color-urban.rst:59
+msgid ""
+"**Pixels without data** are masked in the file and transparent in the "
+"plot, as in the true-colour image."
+msgstr ""
+"**Pixel ohne Daten** sind in der Datei maskiert und im Plot transparent, "
+"wie beim Echtfarbenbild."
+
+#: ../../data/false-color-urban.rst:64
+msgid ""
+":doc:`true-color`, :doc:`/explanation/colours-and-values`, :doc:`/howto"
+"/filter-clouds`"
+msgstr ""
+":doc:`true-color`, :doc:`/explanation/colours-and-values`, :doc:`/howto"
+"/filter-clouds`"
+
+#: cdec.eo.false_color_urban.download_false_color_urban:1 of
+msgid "*Short alias:* ``download_urban``"
+msgstr "*Kurzer Alias:* ``download_urban``"
+
+#: cdec.eo.false_color_urban.download_false_color_urban:3 of
+msgid "Download a Sentinel-2 false-colour urban composite."
+msgstr "Lädt ein Sentinel-2-Falschfarben-Stadtkomposit herunter."
+
+#: cdec.eo.false_color_urban.download_false_color_urban:5 of
+msgid ""
+"B12, B11 and B04 are displayed as red, green and blue, respectively. "
+"Observations are masked using SCL, averaged over the requested period, "
+"and then enhanced for display by stretching contrast and compressing "
+"highlights. The output grid is 10 m; B11, B12 and SCL retain their native"
+" 20 m detail."
+msgstr ""
+"B12, B11 und B04 werden als Rot, Grün beziehungsweise Blau dargestellt. "
+"Die Beobachtungen werden mit der SCL maskiert, über den angeforderten "
+"Zeitraum gemittelt und dann für die Darstellung durch Kontraststreckung "
+"und Komprimierung der Lichter verbessert. Das Ausgaberaster ist 10 m; "
+"B11, B12 und SCL behalten ihre native Detailgenauigkeit von 20 m."
+
+#: cdec.eo.false_color_urban.download_false_color_urban:41 of
+msgid "Absolute path to the downloaded urban composite."
+msgstr "Absoluter Pfad zum heruntergeladenen Stadtkomposit."
+
+#: cdec.plot.products.plot_false_color_urban:1 of
+msgid "*Short alias:* ``plot_urban``"
+msgstr "*Kurzer Alias:* ``plot_urban``"
+
+#: cdec.plot.products.plot_false_color_urban:3 of
+msgid "Draw the picture of ``download_false_color_urban``."
+msgstr "Zeichnet das Bild von ``download_false_color_urban``."
+
+#: cdec.plot.products.plot_false_color_urban:5 of
+msgid ""
+"Bands B12, B11 and B04 are shown as red, green and blue. In this false "
+"colour image built-up areas look in shades of grey and brown-red, "
+"vegetation green and water dark. A file downloaded with the default "
+"``enhance_contrast=True`` already holds 8-bit colours and is drawn as it "
+"is. A file downloaded with ``enhance_contrast=False`` holds reflectance; "
+"it gets the same contrast stretch (0 ... 0.4) as the download would have "
+"applied, **for the picture only**. Pixels without data are transparent."
+msgstr ""
+"Die Bänder B12, B11 und B04 werden als Rot, Grün und Blau gezeigt. In "
+"diesem Falschfarbenbild erscheinen bebaute Flächen in Grau- und Braunrot-"
+"Tönen, Vegetation grün und Wasser dunkel. Eine mit dem Standard "
+"``enhance_contrast=True`` heruntergeladene Datei enthält bereits 8-Bit-"
+"Farben und wird so gezeichnet, wie sie ist. Eine mit "
+"``enhance_contrast=False`` heruntergeladene Datei enthält Reflektanz; sie"
+" bekommt dieselbe Kontraststreckung (0 ... 0,4), die der Download "
+"angewendet hätte, **nur für das Bild**. Pixel ohne Daten sind "
+"transparent."
+
+#: cdec.plot.products.plot_false_color_urban:13 of
+msgid "The GeoTIFF written by ``download_urban``."
+msgstr "Das von ``download_urban`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_false_color_urban:15 of
+msgid ""
+"Title of the plot. Default: \"False colour urban (Sentinel-2)\". Use "
+"``\"\"`` for no title."
+msgstr ""
+"Titel des Plots. Standard: \"False colour urban (Sentinel-2)\". Verwende "
+"``\"\"`` für keinen Titel."
+
+#: ../../data/index.rst:2
+msgid "Data types"
+msgstr "Datentypen"
+
+#: ../../data/index.rst:4
+msgid ""
+"CDEC downloads fifteen kinds of data. Each has a page that shows what the"
+" data is, how to download and plot it, what the numbers mean, and what to"
+" watch out for. The pages all have the same layout:"
+msgstr ""
+"CDEC lädt fünfzehn Arten von Daten herunter. Jede hat eine Seite, die "
+"zeigt, was die Daten sind, wie du sie herunterlädst und zeichnest, was "
+"die Zahlen bedeuten und worauf du achten musst. Alle Seiten haben "
+"denselben Aufbau:"
+
+#: ../../data/index.rst:7
+msgid "a short description and a table *At a glance*,"
+msgstr "eine kurze Beschreibung und eine Tabelle *Auf einen Blick*,"
+
+#: ../../data/index.rst:8
+msgid "an example that you can copy and run as it is, with its picture,"
+msgstr ""
+"ein Beispiel, das du kopieren und unverändert ausführen kannst, mit "
+"seinem Bild,"
+
+#: ../../data/index.rst:9
+msgid "things to know,"
+msgstr "Gut zu wissen,"
+
+#: ../../data/index.rst:10
+msgid "the reference of the download function and of the plot function."
+msgstr "die Referenz der Download-Funktion und der Plot-Funktion."
+
+#: ../../data/index.rst:12
+msgid ""
+"Every download function has a long name, a short alias (the same "
+"function) and a plot function with the matching name. Every function is "
+"called as ``download_xxx(file_path, spatial_extent, temporal_extent, "
+"...)`` and returns the absolute path of the file."
+msgstr ""
+"Jede Download-Funktion hat einen langen Namen, einen kurzen Alias "
+"(dieselbe Funktion) und eine Plot-Funktion mit dem passenden Namen. Jede "
+"Funktion wird als ``download_xxx(file_path, spatial_extent, "
+"temporal_extent, ...)`` aufgerufen und gibt den absoluten Pfad der Datei "
+"zurück."
+
+#: ../../data/index.rst:17
+msgid "Vegetation"
+msgstr "Vegetation"
+
+#: ../../data/index.rst:23 ../../data/index.rst:51 ../../data/index.rst:79
+#: ../../data/index.rst:112 ../../data/index.rst:135
+msgid "Data type"
+msgstr "Datentyp"
+
+#: ../../data/index.rst:24 ../../data/index.rst:52 ../../data/index.rst:80
+#: ../../data/index.rst:113 ../../data/index.rst:136
+msgid "Functions"
+msgstr "Funktionen"
+
+#: ../../data/index.rst:28
+msgid ":doc:`ndvi`"
+msgstr ":doc:`ndvi`"
+
+#: ../../data/index.rst:29
+msgid "``download_ndvi``, ``plot_ndvi``"
+msgstr "``download_ndvi``, ``plot_ndvi``"
+
+#: ../../data/index.rst:30 ../../data/index.rst:35 ../../data/index.rst:58
+#: ../../data/index.rst:63 ../../data/index.rst:68 ../../data/index.rst:86
+#: ../../data/index.rst:91 ../../data/index.rst:96 ../../data/index.rst:101
+#: ../../data/index.rst:152
+msgid "Sentinel-2"
+msgstr "Sentinel-2"
+
+#: ../../data/index.rst:32 ../../data/index.rst:42 ../../data/index.rst:60
+#: ../../data/index.rst:65 ../../data/index.rst:70
+msgid "number, about -1 ... 1"
+msgstr "Zahl, etwa -1 ... 1"
+
+#: ../../data/index.rst:33
+msgid ":doc:`evi`"
+msgstr ":doc:`evi`"
+
+#: ../../data/index.rst:34
+msgid "``download_evi``, ``plot_evi``"
+msgstr "``download_evi``, ``plot_evi``"
+
+#: ../../data/index.rst:37
+msgid "number"
+msgstr "Zahl"
+
+#: ../../data/index.rst:38
+msgid ":doc:`landsat-ndvi`"
+msgstr ":doc:`landsat-ndvi`"
+
+#: ../../data/index.rst:39
+msgid "``download_landsat``, ``plot_landsat``"
+msgstr "``download_landsat``, ``plot_landsat``"
+
+#: ../../data/index.rst:40
+msgid "Landsat mosaic, 1997-2024"
+msgstr "Landsat-Mosaik, 1997-2024"
+
+#: ../../data/index.rst:45
+msgid "Water, moisture and snow"
+msgstr "Wasser, Feuchte und Schnee"
+
+#: ../../data/index.rst:56
+msgid ":doc:`ndwi`"
+msgstr ":doc:`ndwi`"
+
+#: ../../data/index.rst:57
+msgid "``download_ndwi``, ``plot_ndwi``"
+msgstr "``download_ndwi``, ``plot_ndwi``"
+
+#: ../../data/index.rst:61
+msgid ":doc:`ndmi`"
+msgstr ":doc:`ndmi`"
+
+#: ../../data/index.rst:62
+msgid "``download_ndmi``, ``plot_ndmi``"
+msgstr "``download_ndmi``, ``plot_ndmi``"
+
+#: ../../data/index.rst:64 ../../data/index.rst:153 ../../data/ndmi.rst:20
+#: ../../data/scene-classification.rst:20
+msgid "20 m"
+msgstr "20 m"
+
+#: ../../data/index.rst:66
+msgid ":doc:`ndsi`"
+msgstr ":doc:`ndsi`"
+
+#: ../../data/index.rst:67
+msgid "``download_ndsi``, ``plot_ndsi``"
+msgstr "``download_ndsi``, ``plot_ndsi``"
+
+#: ../../data/index.rst:73
+msgid "Pictures"
+msgstr "Bilder"
+
+#: ../../data/index.rst:84
+msgid ":doc:`true-color`"
+msgstr ":doc:`true-color`"
+
+#: ../../data/index.rst:85
+msgid "``download_tci``, ``plot_tci``"
+msgstr "``download_tci``, ``plot_tci``"
+
+#: ../../data/index.rst:88 ../../data/index.rst:93 ../../data/index.rst:98
+#: ../../data/index.rst:103
+msgid "8-bit colour picture (or reflectance)"
+msgstr "8-Bit-Farbbild (oder Reflektanz)"
+
+#: ../../data/index.rst:89
+msgid ":doc:`false-color-urban`"
+msgstr ":doc:`false-color-urban`"
+
+#: ../../data/index.rst:90
+msgid "``download_urban``, ``plot_urban``"
+msgstr "``download_urban``, ``plot_urban``"
+
+#: ../../data/index.rst:94
+msgid ":doc:`false-color-infrared`"
+msgstr ":doc:`false-color-infrared`"
+
+#: ../../data/index.rst:95
+msgid "``download_infrared``, ``plot_infrared``"
+msgstr "``download_infrared``, ``plot_infrared``"
+
+#: ../../data/index.rst:99
+msgid ":doc:`false-color-swir`"
+msgstr ":doc:`false-color-swir`"
+
+#: ../../data/index.rst:100
+msgid "``download_swir``, ``plot_swir``"
+msgstr "``download_swir``, ``plot_swir``"
+
+#: ../../data/index.rst:106
+msgid "Temperature and soil moisture"
+msgstr "Temperatur und Bodenfeuchte"
+
+#: ../../data/index.rst:117
+msgid ":doc:`land-surface-temperature`"
+msgstr ":doc:`land-surface-temperature`"
+
+#: ../../data/index.rst:118
+msgid "``download_lst``, ``plot_lst``"
+msgstr "``download_lst``, ``plot_lst``"
+
+#: ../../data/index.rst:119
+msgid "Sentinel-3"
+msgstr "Sentinel-3"
+
+#: ../../data/index.rst:120 ../../data/index.rst:125
+#: ../../data/land-surface-temperature.rst:19
+#: ../../data/soil-water-index.rst:19
+msgid "1 km"
+msgstr "1 km"
+
+#: ../../data/index.rst:121
+msgid "Kelvin"
+msgstr "Kelvin"
+
+#: ../../data/index.rst:122
+msgid ":doc:`soil-water-index`"
+msgstr ":doc:`soil-water-index`"
+
+#: ../../data/index.rst:123
+msgid "``download_swi``, ``plot_swi``"
+msgstr "``download_swi``, ``plot_swi``"
+
+#: ../../data/index.rst:124
+msgid "Copernicus Land Monitoring Service"
+msgstr "Copernicus Land Monitoring Service"
+
+#: ../../data/index.rst:126
+msgid "percent, 0 ... 100"
+msgstr "Prozent, 0 ... 100"
+
+#: ../../data/index.rst:129
+msgid "Terrain and land cover"
+msgstr "Gelände und Landbedeckung"
+
+#: ../../data/index.rst:140
+msgid ":doc:`elevation`"
+msgstr ":doc:`elevation`"
+
+#: ../../data/index.rst:141
+msgid "``download_dem``, ``plot_dem``"
+msgstr "``download_dem``, ``plot_dem``"
+
+#: ../../data/index.rst:142
+msgid "Copernicus DEM"
+msgstr "Copernicus DEM"
+
+#: ../../data/index.rst:144
+msgid "metres"
+msgstr "Meter"
+
+#: ../../data/index.rst:145
+msgid ":doc:`land-cover`"
+msgstr ":doc:`land-cover`"
+
+#: ../../data/index.rst:146
+msgid "``download_land_cover``, ``plot_land_cover``"
+msgstr "``download_land_cover``, ``plot_land_cover``"
+
+#: ../../data/index.rst:147
+msgid "ESA WorldCover 2021"
+msgstr "ESA WorldCover 2021"
+
+#: ../../data/index.rst:149 ../../data/index.rst:154
+msgid "class numbers"
+msgstr "Klassennummern"
+
+#: ../../data/index.rst:150
+msgid ":doc:`scene-classification`"
+msgstr ":doc:`scene-classification`"
+
+#: ../../data/index.rst:151
+msgid "``download_scl``, ``plot_scl``"
+msgstr "``download_scl``, ``plot_scl``"
+
+#: ../../data/index.rst:156
+msgid ""
+"The pictures on these pages show the area of the tutorial (Bremen, "
+"Germany), made from real downloads. See :doc:`/reference/data-sources` "
+"for the credits of the data."
+msgstr ""
+"Die Bilder auf diesen Seiten zeigen das Gebiet des Tutorials (Bremen, "
+"Deutschland) und wurden aus echten Downloads erzeugt. Die Quellenangaben "
+"der Daten stehen in :doc:`/reference/data-sources`."
+
+#: ../../data/land-cover.rst:2
+msgid "Land cover (ESA WorldCover)"
+msgstr "Landbedeckung (ESA WorldCover)"
+
+#: ../../data/land-cover.rst:4
+msgid ""
+"What covers the ground? The ESA WorldCover map for 2021 sorts every 10 m "
+"pixel into one of eleven classes: tree cover, grassland, cropland, built-"
+"up, water and so on. The numbers in the file are **class numbers**, not "
+"measurements."
+msgstr ""
+"Was bedeckt den Boden? Die ESA-WorldCover-Karte für 2021 ordnet jedes "
+"10-m-Pixel einer von elf Klassen zu: Baumbedeckung, Grasland, Ackerland, "
+"bebaut, Wasser und so weiter. Die Zahlen in der Datei sind "
+"**Klassennummern**, keine Messwerte."
+
+#: ../../data/land-cover.rst:12
+msgid ":func:`~cdec.download_land_cover` (no short alias)"
+msgstr ":func:`~cdec.download_land_cover` (kein kurzer Alias)"
+
+#: ../../data/land-cover.rst:14
+msgid ":func:`~cdec.plot_land_cover` (no short alias)"
+msgstr ":func:`~cdec.plot_land_cover` (kein kurzer Alias)"
+
+#: ../../data/land-cover.rst:16
+msgid ""
+"ESA WorldCover 2021, version 2 (collection "
+"``ESA_WORLDCOVER_10M_2021_V2``), band ``MAP``"
+msgstr ""
+"ESA WorldCover 2021, Version 2 (Collection "
+"``ESA_WORLDCOVER_10M_2021_V2``), Band ``MAP``"
+
+#: ../../data/land-cover.rst:20
+msgid ""
+"one band of 8-bit integers: the class numbers 10, 20, ... 100; 0 is no "
+"data. A colour table is stored in the file."
+msgstr ""
+"ein Band aus 8-Bit-Ganzzahlen: die Klassennummern 10, 20, ... 100; 0 "
+"bedeutet keine Daten. Eine Farbtabelle ist in der Datei gespeichert."
+
+#: ../../data/land-cover.rst:24
+msgid ""
+"**none needed.** The map is for the year 2021; ``temporal_extent`` is "
+"optional."
+msgstr ""
+"**nicht nötig.** Die Karte gilt für das Jahr 2021; ``temporal_extent`` "
+"ist optional."
+
+#: ../../data/land-cover.rst:38
+msgid ""
+"Land cover of Bremen: red built-up areas, dark green tree cover, yellow "
+"grassland, blue water, with a legend of the classes."
+msgstr ""
+"Landbedeckung von Bremen: rote bebaute Flächen, dunkelgrüne "
+"Baumbedeckung, gelbes Grasland, blaues Wasser, mit einer Legende der "
+"Klassen."
+
+#: ../../data/land-cover.rst:42
+msgid ""
+"Bremen, 2021. The legend lists the classes that occur in the picture. © "
+"ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data "
+"(2021) processed by ESA WorldCover consortium."
+msgstr ""
+"Bremen, 2021. Die Legende listet die Klassen, die im Bild vorkommen. © "
+"ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data "
+"(2021) processed by ESA WorldCover consortium."
+
+#: ../../data/land-cover.rst:46
+msgid "The classes"
+msgstr "Die Klassen"
+
+#: ../../data/land-cover.rst:51
+msgid "The classes of the ESA WorldCover map: class number to name."
+msgstr "Die Klassen der ESA-WorldCover-Karte: Klassennummer zu Name."
+
+#: ../../data/land-cover.rst:56
+msgid ""
+"The official WorldCover colour of every class number, as hex code. This "
+"is the colour table that :func:`~cdec.download_land_cover` stores in the "
+"GeoTIFF and :func:`~cdec.plot_land_cover` uses."
+msgstr ""
+"Die offizielle WorldCover-Farbe jeder Klassennummer als Hex-Code. Das ist"
+" die Farbtabelle, die :func:`~cdec.download_land_cover` im GeoTIFF "
+"speichert und :func:`~cdec.plot_land_cover` verwendet."
+
+#: ../../data/land-cover.rst:5
+msgid "ID"
+msgstr "ID"
+
+#: ../../data/land-cover.rst:6
+msgid "Class"
+msgstr "Klasse"
+
+#: ../../data/land-cover.rst:7
+msgid "Color"
+msgstr "Farbe"
+
+#: ../../data/land-cover.rst:8
+msgid "10"
+msgstr "10"
+
+#: ../../data/land-cover.rst:9
+msgid "Tree cover"
+msgstr "Baumbedeckung (Tree cover)"
+
+#: ../../data/land-cover.rst:10
+msgid ":swatch:`#006400`"
+msgstr ":swatch:`#006400`"
+
+#: ../../data/land-cover.rst:11
+msgid "20"
+msgstr "20"
+
+#: ../../data/land-cover.rst:12
+msgid "Shrubland"
+msgstr "Strauchland (Shrubland)"
+
+#: ../../data/land-cover.rst:13
+msgid ":swatch:`#ffbb22`"
+msgstr ":swatch:`#ffbb22`"
+
+#: ../../data/land-cover.rst:14
+msgid "30"
+msgstr "30"
+
+#: ../../data/land-cover.rst:15
+msgid "Grassland"
+msgstr "Grasland (Grassland)"
+
+#: ../../data/land-cover.rst:16
+msgid ":swatch:`#ffff4c`"
+msgstr ":swatch:`#ffff4c`"
+
+#: ../../data/land-cover.rst:17
+msgid "40"
+msgstr "40"
+
+#: ../../data/land-cover.rst:18
+msgid "Cropland"
+msgstr "Ackerland (Cropland)"
+
+#: ../../data/land-cover.rst:19
+msgid ":swatch:`#f096ff`"
+msgstr ":swatch:`#f096ff`"
+
+#: ../../data/land-cover.rst:20
+msgid "50"
+msgstr "50"
+
+#: ../../data/land-cover.rst:21
+msgid "Built-up"
+msgstr "Bebaut (Built-up)"
+
+#: ../../data/land-cover.rst:22
+msgid ":swatch:`#fa0000`"
+msgstr ":swatch:`#fa0000`"
+
+#: ../../data/land-cover.rst:23
+msgid "60"
+msgstr "60"
+
+#: ../../data/land-cover.rst:24
+msgid "Bare / sparse vegetation"
+msgstr "Nackter Boden / spärliche Vegetation (Bare / sparse vegetation)"
+
+#: ../../data/land-cover.rst:25
+msgid ":swatch:`#b4b4b4`"
+msgstr ":swatch:`#b4b4b4`"
+
+#: ../../data/land-cover.rst:26
+msgid "70"
+msgstr "70"
+
+#: ../../data/land-cover.rst:27
+msgid "Snow and ice"
+msgstr "Schnee und Eis (Snow and ice)"
+
+#: ../../data/land-cover.rst:28
+msgid ":swatch:`#f0f0f0`"
+msgstr ":swatch:`#f0f0f0`"
+
+#: ../../data/land-cover.rst:29
+msgid "80"
+msgstr "80"
+
+#: ../../data/land-cover.rst:30
+msgid "Permanent water bodies"
+msgstr "Dauerhafte Gewässer (Permanent water bodies)"
+
+#: ../../data/land-cover.rst:31
+msgid ":swatch:`#0064c8`"
+msgstr ":swatch:`#0064c8`"
+
+#: ../../data/land-cover.rst:32
+msgid "90"
+msgstr "90"
+
+#: ../../data/land-cover.rst:33
+msgid "Herbaceous wetland"
+msgstr "Krautiges Feuchtgebiet (Herbaceous wetland)"
+
+#: ../../data/land-cover.rst:34
+msgid ":swatch:`#0096a0`"
+msgstr ":swatch:`#0096a0`"
+
+#: ../../data/land-cover.rst:35
+msgid "95"
+msgstr "95"
+
+#: ../../data/land-cover.rst:36
+msgid "Mangroves"
+msgstr "Mangroven (Mangroves)"
+
+#: ../../data/land-cover.rst:37
+msgid ":swatch:`#00cf75`"
+msgstr ":swatch:`#00cf75`"
+
+#: ../../data/land-cover.rst:38
+msgid "100"
+msgstr "100"
+
+#: ../../data/land-cover.rst:39
+msgid "Moss and lichen"
+msgstr "Moos und Flechten (Moss and lichen)"
+
+#: ../../data/land-cover.rst:40
+msgid ":swatch:`#fae6a0`"
+msgstr ":swatch:`#fae6a0`"
+
+#: ../../data/land-cover.rst:65
+msgid ""
+"**Count, do not average.** The numbers are labels. The mean of 10 (tree "
+"cover) and 50 (built-up) says nothing. Count pixels per class instead:"
+msgstr ""
+"**Zählen, nicht mitteln.** Die Zahlen sind Bezeichnungen. Der Mittelwert "
+"von 10 (Baumbedeckung) und 50 (bebaut) sagt nichts aus. Zähle stattdessen"
+" die Pixel je Klasse:"
+
+#: ../../data/land-cover.rst:76
+msgid ""
+"**Nearest neighbour.** The overview levels of the file are made with "
+"``overview_resampling=\"nearest\"``, so no invented in-between classes "
+"appear when you zoom out."
+msgstr ""
+"**Nächster Nachbar.** Die Übersichtsstufen der Datei werden mit "
+"``overview_resampling=\"nearest\"`` erzeugt, sodass beim Herauszoomen "
+"keine erfundenen Zwischenklassen entstehen."
+
+#: ../../data/land-cover.rst:78
+msgid ""
+"**The colours** are stored in the file as a colour table, so programs "
+"that read colour tables, such as QGIS, can show the official colours "
+"without any setup."
+msgstr ""
+"**Die Farben** sind als Farbtabelle in der Datei gespeichert, sodass "
+"Programme, die Farbtabellen lesen, wie QGIS, die offiziellen Farben ohne "
+"Einrichtung zeigen können."
+
+#: ../../data/land-cover.rst:80
+msgid ""
+"The map is for the year 2021. It is a classification made by an "
+"algorithm: it is not perfect, and fine structures can be wrong."
+msgstr ""
+"Die Karte gilt für das Jahr 2021. Sie ist eine Klassifikation, die ein "
+"Algorithmus erstellt hat: Sie ist nicht perfekt, und feine Strukturen "
+"können falsch sein."
+
+#: ../../data/land-cover.rst:87
+msgid ":doc:`elevation`, :doc:`/reference/data-sources`"
+msgstr ":doc:`elevation`, :doc:`/reference/data-sources`"
+
+#: cdec.eo.worldcover.download_land_cover:1 of
+msgid "Download the ESA WorldCover 2021 land-cover map at 10 m resolution."
+msgstr ""
+"Lädt die ESA-WorldCover-Landbedeckungskarte 2021 mit 10 m Auflösung "
+"herunter."
+
+#: cdec.eo.worldcover.download_land_cover:3 of
+msgid ""
+"The resulting raster contains integer class IDs in its ``MAP`` band. An "
+"ESA WorldCover color table is attached to the GeoTIFF for visualization."
+msgstr ""
+"Das Ergebnisraster enthält ganzzahlige Klassen-IDs in seinem Band "
+"``MAP``. Eine ESA-WorldCover-Farbtabelle wird zur Visualisierung an das "
+"GeoTIFF angehängt."
+
+#: cdec.eo.worldcover.download_land_cover:11 of
+msgid ""
+"Collection period used for the openEO request. The default covers the "
+"static 2021 WorldCover product and normally does not need changing. Other"
+" years find no data in this collection."
+msgstr ""
+"Für die openEO-Anfrage verwendeter Zeitraum der Collection. Der Standard "
+"deckt das statische WorldCover-Produkt 2021 ab und muss normalerweise "
+"nicht geändert werden. Andere Jahre finden in dieser Collection keine "
+"Daten."
+
+#: cdec.eo.worldcover.download_land_cover:16 of
+msgid ""
+"Resampling method used to build COG overview levels. ``\"nearest\"`` "
+"preserves categorical class IDs and should normally not be changed."
+msgstr ""
+"Resampling-Methode zum Erzeugen der Übersichtsstufen des COG. "
+"``\"nearest\"`` bewahrt kategoriale Klassen-IDs und sollte normalerweise "
+"nicht geändert werden."
+
+#: cdec.eo.worldcover.download_land_cover:22 of
+msgid "Absolute path to the downloaded land-cover raster."
+msgstr "Absoluter Pfad zum heruntergeladenen Landbedeckungsraster."
+
+#: cdec.plot.products.plot_land_cover:1 of
+msgid "Draw the classes of ``download_land_cover``."
+msgstr "Zeichnet die Klassen von ``download_land_cover``."
+
+#: cdec.plot.products.plot_land_cover:3 of
+msgid ""
+"Every pixel is one of the WorldCover classes "
+"(``cdec.WORLDCOVER_CLASSES``) and is drawn in the official colour of its "
+"class (``cdec.WORLDCOVER_COLORS``). The legend lists only the classes "
+"that occur in the image. Pixels with another value are transparent."
+msgstr ""
+"Jedes Pixel gehört zu einer der WorldCover-Klassen "
+"(``cdec.WORLDCOVER_CLASSES``) und wird in der offiziellen Farbe seiner "
+"Klasse gezeichnet (``cdec.WORLDCOVER_COLORS``). Die Legende listet nur "
+"die Klassen, die im Bild vorkommen. Pixel mit einem anderen Wert sind "
+"transparent."
+
+#: cdec.plot.products.plot_land_cover:8 of
+msgid ""
+"The colours are not read from the colour table inside the file but from "
+"``cdec.WORLDCOVER_COLORS``, so the picture looks the same for every file."
+msgstr ""
+"Die Farben werden nicht aus der Farbtabelle in der Datei gelesen, sondern"
+" aus ``cdec.WORLDCOVER_COLORS``, sodass das Bild für jede Datei gleich "
+"aussieht."
+
+#: cdec.plot.products.plot_land_cover:11 of
+msgid "The GeoTIFF written by ``download_land_cover``."
+msgstr "Das von ``download_land_cover`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_land_cover:13 of
+msgid ""
+"Title of the plot. Default: \"Land cover (ESA WorldCover)\". Use ``\"\"``"
+" for no title."
+msgstr ""
+"Titel des Plots. Standard: \"Land cover (ESA WorldCover)\". Verwende "
+"``\"\"`` für keinen Titel."
+
+#: cdec.plot.products.plot_land_cover:17 of
+msgid ""
+"The axes with the plot, for further changes. The legend is placed to the "
+"right of the plot; to save it in a picture file use "
+"``plt.savefig(\"land_cover.png\", bbox_inches=\"tight\")``."
+msgstr ""
+"Die Achsen mit dem Plot, für weitere Änderungen. Die Legende steht rechts"
+" neben dem Plot; um sie in einer Bilddatei zu speichern, verwende "
+"``plt.savefig(\"land_cover.png\", bbox_inches=\"tight\")``."
+
+#: ../../data/land-surface-temperature.rst:2
+msgid "Land surface temperature (Sentinel-3)"
+msgstr "Landoberflächentemperatur (Sentinel-3)"
+
+#: ../../data/land-surface-temperature.rst:4
+msgid ""
+"How hot is the ground? The land surface temperature (LST) is the "
+"temperature of the surface that the satellite sees: roofs, asphalt, soil "
+"and the tops of plants. It is *not* the air temperature that a weather "
+"report gives, and it can be much higher than the air in the sun and lower"
+" at night."
+msgstr ""
+"Wie heiß ist der Boden? Die Landoberflächentemperatur (LST) ist die "
+"Temperatur der Oberfläche, die der Satellit sieht: Dächer, Asphalt, Boden"
+" und die Oberseiten von Pflanzen. Sie ist *nicht* die Lufttemperatur, die"
+" ein Wetterbericht nennt, und kann in der Sonne viel höher und nachts "
+"niedriger als die der Luft sein."
+
+#: ../../data/land-surface-temperature.rst:13
+msgid ":func:`~cdec.download_land_surface_temperature`, short ``download_lst``"
+msgstr ":func:`~cdec.download_land_surface_temperature`, kurz ``download_lst``"
+
+#: ../../data/land-surface-temperature.rst:15
+msgid ":func:`~cdec.plot_land_surface_temperature`, short ``plot_lst``"
+msgstr ":func:`~cdec.plot_land_surface_temperature`, kurz ``plot_lst``"
+
+#: ../../data/land-surface-temperature.rst:17
+msgid ""
+"Sentinel-3 SLSTR Level-2 (collection ``SENTINEL3_SLSTR_L2_LST``), band "
+"``LST``"
+msgstr ""
+"Sentinel-3 SLSTR Level-2 (Collection ``SENTINEL3_SLSTR_L2_LST``), Band "
+"``LST``"
+
+#: ../../data/land-surface-temperature.rst:21
+msgid ""
+"one band of floating-point numbers in **Kelvin** (subtract 273.15 for "
+"degrees Celsius)"
+msgstr ""
+"ein Band aus Gleitkommazahlen in **Kelvin** (ziehe 273,15 ab für Grad "
+"Celsius)"
+
+#: ../../data/land-surface-temperature.rst:23
+msgid ""
+"**no cloud masking**: the mean contains every observation that the "
+"backend delivers"
+msgstr ""
+"**keine Wolkenmaskierung**: Der Mittelwert enthält jede Beobachtung, die "
+"das Backend liefert"
+
+#: ../../data/land-surface-temperature.rst:40
+msgid ""
+"Land surface temperature of Bremen in June 2024 as large blocks, between "
+"279 and 283 Kelvin, warmer in the city centre."
+msgstr ""
+"Landoberflächentemperatur von Bremen im Juni 2024 als große Blöcke, "
+"zwischen 279 und 283 Kelvin, im Stadtzentrum wärmer."
+
+#: ../../data/land-surface-temperature.rst:44
+msgid ""
+"Bremen, June 2024, in Kelvin. Contains modified Copernicus Sentinel data "
+"2024."
+msgstr ""
+"Bremen, Juni 2024, in Kelvin. Contains modified Copernicus Sentinel data "
+"2024."
+
+#: ../../data/land-surface-temperature.rst:49
+msgid ""
+"**A coarse grid.** One pixel is about 1 km wide. The area of the example "
+"(12 by 10 km) has only 21 by 11 pixels, and the plot shows them as "
+"blocks. This data type is meant for large areas and regional patterns, "
+"not for single streets."
+msgstr ""
+"**Ein grobes Raster.** Ein Pixel ist etwa 1 km breit. Das Beispielgebiet "
+"(12 mal 10 km) hat nur 21 mal 11 Pixel, und der Plot zeigt sie als "
+"Blöcke. Dieser Datentyp ist für große Gebiete und regionale Muster "
+"gedacht, nicht für einzelne Straßen."
+
+#: ../../data/land-surface-temperature.rst:52
+msgid ""
+"**Check the numbers.** The example has a mean of 281 K, which is 8 "
+"degrees Celsius. That is cold for a June day. Because nothing is masked, "
+"the mean may include cloudy observations (the cloud top is cold) and "
+"night-time observations. Do not read the result as the air temperature of"
+" a June day."
+msgstr ""
+"**Prüfe die Zahlen.** Das Beispiel hat einen Mittelwert von 281 K, das "
+"sind 8 Grad Celsius. Das ist kalt für einen Junitag. Weil nichts maskiert"
+" wird, kann der Mittelwert bewölkte Beobachtungen (die Wolkenoberseite "
+"ist kalt) und nächtliche Beobachtungen enthalten. Lies das Ergebnis nicht"
+" als Lufttemperatur eines Junitags."
+
+#: ../../data/land-surface-temperature.rst:55
+msgid ""
+"**Same range for comparisons.** The plot colours follow the smallest and "
+"largest value of the image. To compare two maps give both the same "
+"``vmin`` and ``vmax`` in Kelvin (:doc:`/howto/compare-images`)."
+msgstr ""
+"**Gleicher Bereich für Vergleiche.** Die Farben des Plots folgen dem "
+"kleinsten und größten Wert des Bildes. Um zwei Karten zu vergleichen, gib"
+" beiden dasselbe ``vmin`` und ``vmax`` in Kelvin (:doc:`/howto/compare-"
+"images`)."
+
+#: ../../data/land-surface-temperature.rst:62
+msgid ":doc:`/explanation/clouds-and-masking`, :doc:`/howto/choose-period`"
+msgstr ":doc:`/explanation/clouds-and-masking`, :doc:`/howto/choose-period`"
+
+#: cdec.eo.lst.download_land_surface_temperature:1 of
+msgid "*Short alias:* ``download_lst``"
+msgstr "*Kurzer Alias:* ``download_lst``"
+
+#: cdec.eo.lst.download_land_surface_temperature:3 of
+msgid "Download mean land surface temperature data from Sentinel-3."
+msgstr "Lädt mittlere Landoberflächentemperaturdaten von Sentinel-3 herunter."
+
+#: cdec.eo.lst.download_land_surface_temperature:5 of
+msgid ""
+"The function loads the ``LST`` band from the ``SENTINEL3_SLSTR_L2_LST`` "
+"openEO collection and calculates the temporal mean for the requested "
+"period. Values in the resulting raster are stored in Kelvin. No cloud "
+"masking is applied: the mean contains every observation the backend "
+"delivers."
+msgstr ""
+"Die Funktion lädt das Band ``LST`` aus der openEO-Collection "
+"``SENTINEL3_SLSTR_L2_LST`` und berechnet den zeitlichen Mittelwert für "
+"den angeforderten Zeitraum. Die Werte im Ergebnisraster sind in Kelvin "
+"gespeichert. Es wird keine Wolkenmaskierung angewendet: Der Mittelwert "
+"enthält jede Beobachtung, die das Backend liefert."
+
+#: cdec.eo.lst.download_land_surface_temperature:16 of
+msgid ""
+"Start and end of the requested period, e.g. ``[\"2024-06-01\", "
+"\"2024-07-01\"]``. The end date itself is *not* included, so this example"
+" covers all of June."
+msgstr ""
+"Beginn und Ende des angeforderten Zeitraums, z. B. ``[\"2024-06-01\", "
+"\"2024-07-01\"]``. Das Enddatum selbst ist *nicht* enthalten, dieses "
+"Beispiel umfasst also den ganzen Juni."
+
+#: cdec.eo.lst.download_land_surface_temperature:21 of
+msgid ""
+"Resampling method used to build COG overview levels. ``\"average\"`` is a"
+" suitable default for continuous temperature data."
+msgstr ""
+"Resampling-Methode zum Erzeugen der Übersichtsstufen des COG. "
+"``\"average\"`` ist ein passender Standard für kontinuierliche "
+"Temperaturdaten."
+
+#: cdec.plot.products.plot_land_surface_temperature:1 of
+msgid "*Short alias:* ``plot_lst``"
+msgstr "*Kurzer Alias:* ``plot_lst``"
+
+#: cdec.plot.products.plot_land_surface_temperature:3 of
+msgid "Draw the temperature of ``download_land_surface_temperature``."
+msgstr "Zeichnet die Temperatur von ``download_land_surface_temperature``."
+
+#: cdec.plot.products.plot_land_surface_temperature:5 of
+msgid ""
+"The values are in **Kelvin** (0 degrees Celsius = 273.15 K), as "
+"downloaded; nothing is converted. The colour map goes from dark (cold) to"
+" bright (warm). The range follows the values of this image, so the same "
+"colour can mean different temperatures in two images. To compare images, "
+"give both the same ``vmin`` and ``vmax``."
+msgstr ""
+"Die Werte sind in **Kelvin** (0 Grad Celsius = 273,15 K), wie "
+"heruntergeladen; es wird nichts umgerechnet. Die Farbskala geht von "
+"dunkel (kalt) zu hell (warm). Der Bereich folgt den Werten dieses Bildes,"
+" dieselbe Farbe kann also in zwei Bildern verschiedene Temperaturen "
+"bedeuten. Um Bilder zu vergleichen, gib beiden dasselbe ``vmin`` und "
+"``vmax``."
+
+#: cdec.plot.products.plot_land_surface_temperature:11 of
+msgid "The GeoTIFF written by ``download_lst``."
+msgstr "Das von ``download_lst`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_land_surface_temperature:13 of
+msgid ""
+"Title of the plot. Default: \"Land surface temperature\". Use ``\"\"`` "
+"for no title."
+msgstr ""
+"Titel des Plots. Standard: \"Land surface temperature\". Verwende "
+"``\"\"`` für keinen Titel."
+
+#: cdec.plot.products.plot_land_surface_temperature:15
+#: cdec.plot.products.plot_land_surface_temperature:17 of
+msgid ""
+"Values at the two ends of the colour map, in Kelvin. ``None`` takes the "
+"smallest and largest value of the image."
+msgstr ""
+"Werte an den beiden Enden der Farbskala, in Kelvin. ``None`` nimmt den "
+"kleinsten und größten Wert des Bildes."
+
+#: ../../data/landsat-ndvi.rst:2
+msgid "NDVI (Landsat)"
+msgstr "NDVI (Landsat)"
+
+#: ../../data/landsat-ndvi.rst:4
+msgid ""
+"The same vegetation index as :doc:`ndvi`, calculated from the Landsat bi-"
+"monthly mosaics. They run from 1997 to 2024, so this is the data type for"
+" questions about **change over decades**: how did the vegetation of an "
+"area develop since 1997? The price is a coarser pixel (30 m instead of 10"
+" m)."
+msgstr ""
+"Derselbe Vegetationsindex wie :doc:`ndvi`, berechnet aus den "
+"zweimonatlichen Landsat-Mosaiken. Sie reichen von 1997 bis 2024, daher "
+"ist dies der Datentyp für Fragen zur **Veränderung über Jahrzehnte**: Wie"
+" hat sich die Vegetation eines Gebiets seit 1997 entwickelt? Der Preis "
+"ist ein gröberes Pixel (30 m statt 10 m)."
+
+#: ../../data/landsat-ndvi.rst:13
+msgid ":func:`~cdec.download_landsat_ndvi`, short ``download_landsat``"
+msgstr ":func:`~cdec.download_landsat_ndvi`, kurz ``download_landsat``"
+
+#: ../../data/landsat-ndvi.rst:15
+msgid ":func:`~cdec.plot_landsat_ndvi`, short ``plot_landsat``"
+msgstr ":func:`~cdec.plot_landsat_ndvi`, kurz ``plot_landsat``"
+
+#: ../../data/landsat-ndvi.rst:17
+msgid ""
+"Landsat bi-monthly mosaic (collection ``LANDSAT_BIMONTHLY_MOSAIC``), "
+"bands B03 (red) and B04 (near-infrared)"
+msgstr ""
+"Landsat-Mosaik, zweimonatlich (Collection ``LANDSAT_BIMONTHLY_MOSAIC``), "
+"Bänder B03 (rot) und B04 (nahes Infrarot)"
+
+#: ../../data/landsat-ndvi.rst:21
+msgid "one band of floating-point numbers, no unit, -1 ... 1"
+msgstr "ein Band aus Gleitkommazahlen, keine Einheit, -1 ... 1"
+
+#: ../../data/landsat-ndvi.rst:23
+msgid ""
+"none needed: the mosaics are reconstructed and cloud-free. There are no "
+"``max_cloud_cover`` and ``scl_classes`` options."
+msgstr ""
+"nicht nötig: Die Mosaike sind rekonstruiert und wolkenfrei. Es gibt keine"
+" Optionen ``max_cloud_cover`` und ``scl_classes``."
+
+#: ../../data/landsat-ndvi.rst:26
+msgid "1997 to 2024; mean of the mosaics inside ``temporal_extent``"
+msgstr "1997 bis 2024; Mittelwert der Mosaike innerhalb von ``temporal_extent``"
+
+#: ../../data/landsat-ndvi.rst:41
+msgid ""
+"Landsat NDVI of Bremen in June 2024: green fields, a white river, yellow "
+"built-up areas."
+msgstr ""
+"Landsat-NDVI von Bremen im Juni 2024: grüne Felder, ein weißer Fluss, "
+"gelbe bebaute Flächen."
+
+#: ../../data/landsat-ndvi.rst:45
+msgid ""
+"Bremen, June 2024. White: no data. Landsat data, see :doc:`/reference"
+"/data-sources`."
+msgstr ""
+"Bremen, Juni 2024. Weiß: keine Daten. Landsat-Daten, siehe "
+":doc:`/reference/data-sources`."
+
+#: ../../data/landsat-ndvi.rst:50
+msgid ""
+"**Not the same as the Sentinel-2 NDVI.** Different satellites, bands, "
+"pixel size and processing give slightly different numbers. Compare "
+"Landsat with Landsat, and Sentinel-2 with Sentinel-2."
+msgstr ""
+"**Nicht dasselbe wie der Sentinel-2-NDVI.** Verschiedene Satelliten, "
+"Bänder, Pixelgrößen und Verarbeitungen ergeben leicht unterschiedliche "
+"Zahlen. Vergleiche Landsat mit Landsat und Sentinel-2 mit Sentinel-2."
+
+#: ../../data/landsat-ndvi.rst:52
+msgid ""
+"**Several decades:** use the same months of different years (for example "
+"June 1998, 2008, 2018 and 2024) to avoid mixing up seasons with change."
+msgstr ""
+"**Mehrere Jahrzehnte:** Verwende dieselben Monate verschiedener Jahre "
+"(zum Beispiel Juni 1998, 2008, 2018 und 2024), um Jahreszeiten nicht mit "
+"Veränderung zu verwechseln."
+
+#: ../../data/landsat-ndvi.rst:54
+msgid "**Empty pixels.** In the example the river is empty; the rest is complete."
+msgstr "**Leere Pixel.** Im Beispiel ist der Fluss leer; der Rest ist vollständig."
+
+#: ../../data/landsat-ndvi.rst:55
+msgid ""
+"The file uses longitude and latitude (EPSG:4326), so its pixel size is "
+"given in degrees. The plot corrects the shape of the map for that "
+"(:doc:`/explanation/grids-and-time`)."
+msgstr ""
+"Die Datei verwendet Länge und Breite (EPSG:4326), ihre Pixelgröße wird "
+"daher in Grad angegeben. Der Plot korrigiert die Form der Karte "
+"entsprechend (:doc:`/explanation/grids-and-time`)."
+
+#: ../../data/landsat-ndvi.rst:57
+msgid ""
+"The plot uses red-yellow-green colours and a fixed range of -1 to 1, like"
+" the Sentinel-2 NDVI."
+msgstr ""
+"Der Plot verwendet Rot-Gelb-Grün-Farben und einen festen Bereich von -1 "
+"bis 1, wie beim Sentinel-2-NDVI."
+
+#: ../../data/landsat-ndvi.rst:62
+msgid ":doc:`ndvi`, :doc:`/howto/choose-period`"
+msgstr ":doc:`ndvi`, :doc:`/howto/choose-period`"
+
+#: cdec.eo.landsat.download_landsat_ndvi:1 of
+msgid "*Short alias:* ``download_landsat``"
+msgstr "*Kurzer Alias:* ``download_landsat``"
+
+#: cdec.eo.landsat.download_landsat_ndvi:3 of
+msgid "Download an NDVI raster from the Landsat bi-monthly mosaic."
+msgstr "Lädt ein NDVI-Raster aus dem zweimonatlichen Landsat-Mosaik herunter."
+
+#: cdec.eo.landsat.download_landsat_ndvi:5 of
+msgid ""
+"The source collection provides reconstructed, cloud-free Landsat mosaics "
+"at 30 metre resolution from 1997 through 2024. Red and near-infrared "
+"bands are averaged over the requested period before calculating NDVI. The"
+" mosaics are already cloud-free, so there is no cloud-cover or SCL "
+"masking here."
+msgstr ""
+"Die Quell-Collection liefert rekonstruierte, wolkenfreie Landsat-Mosaike "
+"mit 30 Metern Auflösung von 1997 bis 2024. Rote und nahinfrarote Bänder "
+"werden über den angeforderten Zeitraum gemittelt, bevor der NDVI "
+"berechnet wird. Die Mosaike sind bereits wolkenfrei, daher gibt es hier "
+"keine Wolkenbedeckungs- oder SCL-Maskierung."
+
+#: cdec.eo.landsat.download_landsat_ndvi:15 of
+msgid ""
+"Start and end of the observation period, e.g. ``[\"2024-06-01\", "
+"\"2024-07-01\"]``. The end date itself is *not* included. The mosaics end"
+" on 2024-12-31, later dates find no data."
+msgstr ""
+"Beginn und Ende des Beobachtungszeitraums, z. B. ``[\"2024-06-01\", "
+"\"2024-07-01\"]``. Das Enddatum selbst ist *nicht* enthalten. Die Mosaike"
+" enden am 2024-12-31, spätere Daten finden keine Daten."
+
+#: cdec.eo.landsat.download_landsat_ndvi:24
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:36 of
+msgid "Absolute path to the downloaded NDVI raster."
+msgstr "Absoluter Pfad zum heruntergeladenen NDVI-Raster."
+
+#: cdec.plot.products.plot_landsat_ndvi:1 of
+msgid "*Short alias:* ``plot_landsat``"
+msgstr "*Kurzer Alias:* ``plot_landsat``"
+
+#: cdec.plot.products.plot_landsat_ndvi:3 of
+msgid "Draw the NDVI of ``download_landsat_ndvi``."
+msgstr "Zeichnet den NDVI von ``download_landsat_ndvi``."
+
+#: cdec.plot.products.plot_landsat_ndvi:5 of
+msgid ""
+"Same colour map and range as "
+":func:`plot_normalized_difference_vegetation_index`. Landsat pixels are "
+"larger than Sentinel-2 pixels, so the same area looks coarser."
+msgstr ""
+"Dieselbe Farbskala und derselbe Bereich wie "
+":func:`plot_normalized_difference_vegetation_index`. Landsat-Pixel sind "
+"größer als Sentinel-2-Pixel, dasselbe Gebiet sieht daher gröber aus."
+
+#: cdec.plot.products.plot_landsat_ndvi:8 of
+msgid "The GeoTIFF written by ``download_landsat``."
+msgstr "Das von ``download_landsat`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_landsat_ndvi:10 of
+msgid "Title of the plot. Default: \"NDVI (Landsat)\". Use ``\"\"`` for no title."
+msgstr ""
+"Titel des Plots. Standard: \"NDVI (Landsat)\". Verwende ``\"\"`` für "
+"keinen Titel."
+
+#: ../../data/ndmi.rst:2
+msgid "NDMI (Sentinel-2)"
+msgstr "NDMI (Sentinel-2)"
+
+#: ../../data/ndmi.rst:4
+msgid ""
+"The **Normalized Difference Moisture Index** shows how much water the "
+"vegetation holds. Water in the leaves absorbs short-wave infrared light, "
+"while the structure of the leaves reflects near-infrared light, so ``NDMI"
+" = (NIR - SWIR) / (NIR + SWIR)`` is high for moist, leafy vegetation and "
+"falls when plants dry out. The result is one number per pixel, between -1"
+" and 1."
+msgstr ""
+"Der **Normalized Difference Moisture Index** zeigt, wie viel Wasser die "
+"Vegetation enthält. Wasser in den Blättern absorbiert kurzwelliges "
+"Infrarotlicht, während die Struktur der Blätter nahes Infrarotlicht "
+"reflektiert. Deshalb ist ``NDMI = (NIR - SWIR) / (NIR + SWIR)`` hoch für "
+"feuchte, belaubte Vegetation und sinkt, wenn die Pflanzen austrocknen. "
+"Das Ergebnis ist eine Zahl pro Pixel zwischen -1 und 1."
+
+#: ../../data/ndmi.rst:14
+msgid ""
+":func:`~cdec.download_normalized_difference_moisture_index`, short "
+"``download_ndmi``"
+msgstr ""
+":func:`~cdec.download_normalized_difference_moisture_index`, kurz "
+"``download_ndmi``"
+
+#: ../../data/ndmi.rst:16
+msgid ""
+":func:`~cdec.plot_normalized_difference_moisture_index`, short "
+"``plot_ndmi``"
+msgstr ""
+":func:`~cdec.plot_normalized_difference_moisture_index`, kurz "
+"``plot_ndmi``"
+
+#: ../../data/ndmi.rst:18
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B8A (near-"
+"infrared) and B11 (short-wave infrared)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B8A (nahes "
+"Infrarot) und B11 (kurzwelliges Infrarot)"
+
+#: ../../data/ndmi.rst:22 ../../data/ndsi.rst:22 ../../data/ndvi.rst:22
+#: ../../data/ndwi.rst:21
+msgid "one band of floating-point numbers, no unit, about -1 ... 1"
+msgstr "ein Band aus Gleitkommazahlen, keine Einheit, etwa -1 ... 1"
+
+#: ../../data/ndmi.rst:42
+msgid ""
+"NDMI of Bremen in June 2024: green-blue for moist vegetation, beige for "
+"drier surfaces, white patches without data and without water."
+msgstr ""
+"NDMI von Bremen im Juni 2024: Blaugrün für feuchte Vegetation, Beige für "
+"trockenere Flächen, weiße Stellen ohne Daten und ohne Wasser."
+
+#: ../../data/ndmi.rst:46
+msgid ""
+"Bremen, June 2024. Green-blue: moist, beige: dry. White: no data, and "
+"water. Contains modified Copernicus Sentinel data 2024."
+msgstr ""
+"Bremen, Juni 2024. Blaugrün: feucht, Beige: trocken. Weiß: keine Daten, "
+"und Wasser. Contains modified Copernicus Sentinel data 2024."
+
+#: ../../data/ndmi.rst:51
+msgid ""
+"**Both bands have 20 m pixels**, so the file has 20 m pixels, not 10 m "
+"like the :doc:`ndvi`."
+msgstr ""
+"**Beide Bänder haben 20-m-Pixel**, die Datei hat also 20-m-Pixel und "
+"nicht 10 m wie beim :doc:`ndvi`."
+
+#: ../../data/ndmi.rst:52
+msgid ""
+"**Moisture of the plants, not of the soil.** The index describes the "
+"leaves. For the water in the soil use the :doc:`soil-water-index`, which "
+"is much coarser (1 km)."
+msgstr ""
+"**Feuchte der Pflanzen, nicht des Bodens.** Der Index beschreibt die "
+"Blätter. Für das Wasser im Boden nimm den :doc:`soil-water-index`, der "
+"viel gröber ist (1 km)."
+
+#: ../../data/ndmi.rst:54
+msgid ""
+"**Compare the same kind of vegetation.** A meadow and a forest have "
+"different values even when both are healthy. The index is most useful for"
+" comparing one place at different times, for example a dry and a wet "
+"summer (:doc:`/howto/compare-images`)."
+msgstr ""
+"**Vergleiche gleiche Vegetation.** Eine Wiese und ein Wald haben "
+"unterschiedliche Werte, auch wenn beide gesund sind. Der Index eignet "
+"sich am besten, um einen Ort zu verschiedenen Zeiten zu vergleichen, zum "
+"Beispiel einen trockenen und einen nassen Sommer (:doc:`/howto/compare-"
+"images`)."
+
+#: ../../data/ndmi.rst:57
+msgid ""
+"**Water is empty by default.** The default ``scl_classes`` is ``(4, 5)``."
+" Water has no meaningful moisture value here; use "
+"``scl_classes=cdec.SCL_LAND_AND_WATER`` if you want to see it anyway."
+msgstr ""
+"**Wasser ist standardmäßig leer.** Das Standard-``scl_classes`` ist ``(4,"
+" 5)``. Wasser hat hier keinen sinnvollen Feuchtewert; verwende "
+"``scl_classes=cdec.SCL_LAND_AND_WATER``, wenn du es trotzdem sehen "
+"willst."
+
+#: ../../data/ndmi.rst:59
+msgid ""
+"**The name.** The same formula is called NDWI in some books (Gao's "
+"index). In this package :doc:`ndwi` is the index of McFeeters, made to "
+"find open water."
+msgstr ""
+"**Der Name.** Dieselbe Formel heißt in manchen Büchern NDWI (der Index "
+"von Gao). In diesem Paket ist :doc:`ndwi` der Index von McFeeters, der "
+"offenes Wasser finden soll."
+
+#: ../../data/ndmi.rst:61 ../../data/ndsi.rst:67 ../../data/ndwi.rst:61
+msgid ""
+"**The index is calculated from the mean reflectance** of the period, not "
+"as the mean of the index of every date."
+msgstr ""
+"**Der Index wird aus der mittleren Reflektanz** des Zeitraums berechnet, "
+"nicht als Mittelwert des Index jedes Tages."
+
+#: ../../data/ndmi.rst:62
+msgid ""
+"**The plot** uses brown-white-blue-green colours and a fixed range of -1 "
+"to 1: brown for dry, blue-green for moist."
+msgstr ""
+"**Der Plot** verwendet Braun-Weiß-Blaugrün-Farben und einen festen "
+"Bereich von -1 bis 1: Braun für trocken, Blaugrün für feucht."
+
+#: ../../data/ndmi.rst:68
+msgid ""
+":doc:`ndvi`, :doc:`ndwi`, :doc:`soil-water-index`, :doc:`/howto/filter-"
+"clouds`"
+msgstr ""
+":doc:`ndvi`, :doc:`ndwi`, :doc:`soil-water-index`, :doc:`/howto/filter-"
+"clouds`"
+
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:1 of
+msgid "*Short alias:* ``download_ndmi``"
+msgstr "*Kurzer Alias:* ``download_ndmi``"
+
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:3 of
+msgid "Download a Sentinel-2 NDMI (moisture index) raster."
+msgstr "Lädt ein Sentinel-2-NDMI-Raster (Feuchteindex) herunter."
+
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:5 of
+msgid ""
+"Near-infrared (B8A) and short-wave infrared (B11) reflectance from "
+"Sentinel-2 Level-2A are masked using the Scene Classification Layer "
+"(SCL), then averaged over the requested period before calculating the "
+"Normalized Difference Moisture Index:"
+msgstr ""
+"Die Reflektanz im nahen Infrarot (B8A) und im kurzwelligen Infrarot (B11)"
+" von Sentinel-2 Level-2A wird mit der Scene Classification Layer (SCL) "
+"maskiert und über den angeforderten Zeitraum gemittelt, bevor der "
+"Normalized Difference Moisture Index berechnet wird:"
+
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:10 of
+msgid "``NDMI = (NIR - SWIR) / (NIR + SWIR)``"
+msgstr "``NDMI = (NIR - SWIR) / (NIR + SWIR)``"
+
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:12 of
+msgid ""
+"It is high for vegetation that holds much water and low for dry "
+"vegetation and bare ground. Both bands have a pixel size of 20 m, so the "
+"output grid is 20 m. As with "
+":func:`cdec.download_normalized_difference_vegetation_index`, the index "
+"is calculated from mean reflectance, rather than averaging indices from "
+"individual dates."
+msgstr ""
+"Er ist hoch für Vegetation, die viel Wasser enthält, und niedrig für "
+"trockene Vegetation und nackten Boden. Beide Bänder haben eine Pixelgröße"
+" von 20 m, daher ist das Ausgaberaster 20 m groß. Wie bei "
+":func:`cdec.download_normalized_difference_vegetation_index` wird der "
+"Index aus der mittleren Reflektanz berechnet und nicht als Mittelwert der"
+" Indizes einzelner Tage."
+
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:42 of
+msgid "Absolute path to the downloaded NDMI raster."
+msgstr "Absoluter Pfad zum heruntergeladenen NDMI-Raster."
+
+#: cdec.plot.products.plot_normalized_difference_moisture_index:1 of
+msgid "*Short alias:* ``plot_ndmi``"
+msgstr "*Kurzer Alias:* ``plot_ndmi``"
+
+#: cdec.plot.products.plot_normalized_difference_moisture_index:3 of
+msgid "Draw the NDMI of ``download_normalized_difference_moisture_index``."
+msgstr "Zeichnet den NDMI von ``download_normalized_difference_moisture_index``."
+
+#: cdec.plot.products.plot_normalized_difference_moisture_index:5 of
+msgid ""
+"NDMI lies between -1 and 1: dry vegetation and bare ground are low, "
+"vegetation that holds much water is high. The colour map goes from brown "
+"(dry) over white to blue-green (moist). The range is fixed to -1 ... 1, "
+"so two images always have the same colours and can be compared."
+msgstr ""
+"Der NDMI liegt zwischen -1 und 1: Trockene Vegetation und nackter Boden "
+"sind niedrig, Vegetation mit viel Wasser ist hoch. Die Farbskala geht von"
+" Braun (trocken) über Weiß zu Blaugrün (feucht). Der Bereich ist auf -1 "
+"... 1 festgelegt, sodass zwei Bilder immer dieselben Farben haben und "
+"verglichen werden können."
+
+#: cdec.plot.products.plot_normalized_difference_moisture_index:10 of
+msgid "The GeoTIFF written by ``download_ndmi``."
+msgstr "Das von ``download_ndmi`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_normalized_difference_moisture_index:12 of
+msgid ""
+"Title of the plot. Default: \"NDMI (Sentinel-2)\". Use ``\"\"`` for no "
+"title."
+msgstr ""
+"Titel des Plots. Standard: \"NDMI (Sentinel-2)\". Verwende ``\"\"`` für "
+"keinen Titel."
+
+#: ../../data/ndsi.rst:2
+msgid "NDSI (Sentinel-2)"
+msgstr "NDSI (Sentinel-2)"
+
+#: ../../data/ndsi.rst:4
+msgid ""
+"The **Normalized Difference Snow Index** shows snow and ice. Snow "
+"reflects a lot of green light and absorbs short-wave infrared light, so "
+"``NDSI = (green - SWIR) / (green + SWIR)`` is high for snow and ice and "
+"low for most other surfaces. A value above about 0.4 is a common first "
+"guess for snow. The result is one number per pixel, between -1 and 1."
+msgstr ""
+"Der **Normalized Difference Snow Index** zeigt Schnee und Eis. Schnee "
+"reflektiert viel grünes Licht und absorbiert kurzwelliges Infrarotlicht. "
+"Deshalb ist ``NDSI = (green - SWIR) / (green + SWIR)`` hoch für Schnee "
+"und Eis und niedrig für die meisten anderen Oberflächen. Ein Wert über "
+"etwa 0,4 ist eine übliche erste Vermutung für Schnee. Das Ergebnis ist "
+"eine Zahl pro Pixel zwischen -1 und 1."
+
+#: ../../data/ndsi.rst:14
+msgid ""
+":func:`~cdec.download_normalized_difference_snow_index`, short "
+"``download_ndsi``"
+msgstr ""
+":func:`~cdec.download_normalized_difference_snow_index`, kurz "
+"``download_ndsi``"
+
+#: ../../data/ndsi.rst:16
+msgid ":func:`~cdec.plot_normalized_difference_snow_index`, short ``plot_ndsi``"
+msgstr ":func:`~cdec.plot_normalized_difference_snow_index`, kurz ``plot_ndsi``"
+
+#: ../../data/ndsi.rst:18
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B03 (green) and"
+" B11 (short-wave infrared)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B03 (grün) und"
+" B11 (kurzwelliges Infrarot)"
+
+#: ../../data/ndsi.rst:20
+msgid "10 m (B11 has 20 m detail)"
+msgstr "10 m (B11 hat 20 m Detailgenauigkeit)"
+
+#: ../../data/ndsi.rst:24
+msgid ""
+"scenes above ``max_cloud_cover`` (20 %) are not used; pixels are masked "
+"with ``scl_classes`` (default: vegetation, not vegetated, water and snow "
+"or ice)"
+msgstr ""
+"Szenen über ``max_cloud_cover`` (20 %) werden nicht verwendet; Pixel "
+"werden mit ``scl_classes`` maskiert (Standard: Vegetation, nicht "
+"bewachsen, Wasser und Schnee oder Eis)"
+
+#: ../../data/ndsi.rst:32
+msgid ""
+"There is no snow in Bremen in June, so this example looks at the "
+"Zugspitze in the Bavarian Alps in winter:"
+msgstr ""
+"In Bremen liegt im Juni kein Schnee, deshalb zeigt dieses Beispiel die "
+"Zugspitze in den bayerischen Alpen im Winter:"
+
+#: ../../data/ndsi.rst:44
+msgid ""
+"NDSI of the Zugspitze in February 2024: snow-covered slopes in dark blue,"
+" snow-free ground in pale blue, white patches without data."
+msgstr ""
+"NDSI der Zugspitze im Februar 2024: schneebedeckte Hänge in Dunkelblau, "
+"schneefreier Boden in Hellblau, weiße Stellen ohne Daten."
+
+#: ../../data/ndsi.rst:48
+msgid ""
+"Zugspitze, February 2024. Dark blue: snow or ice. White: no data. "
+"Contains modified Copernicus Sentinel data 2024."
+msgstr ""
+"Zugspitze, Februar 2024. Dunkelblau: Schnee oder Eis. Weiß: keine Daten. "
+"Contains modified Copernicus Sentinel data 2024."
+
+#: ../../data/ndsi.rst:53
+msgid ""
+"**Snow or cloud?** Clouds and snow look alike. The scene classification "
+"can label snow as cloud and cloud as snow, and it removes everything it "
+"calls cloud. If a snowy area stays empty, download once with "
+"``scl_classes=None`` and compare the result with the :doc:`scene-"
+"classification`."
+msgstr ""
+"**Schnee oder Wolke?** Wolken und Schnee sehen ähnlich aus. Die "
+"Szenenklassifikation kann Schnee als Wolke und Wolken als Schnee "
+"einstufen, und sie entfernt alles, was sie Wolke nennt. Bleibt ein "
+"verschneites Gebiet leer, lade einmal mit ``scl_classes=None`` herunter "
+"und vergleiche das Ergebnis mit der :doc:`scene-classification`."
+
+#: ../../data/ndsi.rst:56
+msgid ""
+"**Choose a short period.** The mean of a long period mixes days with and "
+"without snow, and the result shows neither. For snow use a few days to a "
+"few weeks, and a higher ``max_cloud_cover`` in the mountains, where the "
+"weather changes quickly (:doc:`/howto/choose-period`)."
+msgstr ""
+"**Wähle einen kurzen Zeitraum.** Der Mittelwert eines langen Zeitraums "
+"mischt Tage mit und ohne Schnee, und das Ergebnis zeigt keines von "
+"beiden. Für Schnee nimm einige Tage bis einige Wochen und in den Bergen, "
+"wo das Wetter schnell wechselt, ein höheres ``max_cloud_cover`` "
+"(:doc:`/howto/choose-period`)."
+
+#: ../../data/ndsi.rst:59
+msgid ""
+"**Snow is kept by default.** The default ``scl_classes`` is ``(4, 5, 6, "
+"11)``: the classes of :doc:`ndwi` and the class *snow or ice*. NDVI and "
+"EVI drop snow (:doc:`ndvi`)."
+msgstr ""
+"**Schnee wird standardmäßig behalten.** Das Standard-``scl_classes`` ist "
+"``(4, 5, 6, 11)``: die Klassen des :doc:`ndwi` und die Klasse *Schnee "
+"oder Eis*. NDVI und EVI lassen Schnee weg (:doc:`ndvi`)."
+
+#: ../../data/ndsi.rst:61
+msgid ""
+"**Not every high value is snow.** Thin clouds and some bright surfaces "
+"can also reach high values. Look at :doc:`true-color` or :doc:`false-"
+"color-swir` of the same area to check."
+msgstr ""
+"**Nicht jeder hohe Wert ist Schnee.** Auch dünne Wolken und manche helle "
+"Oberflächen können hohe Werte erreichen. Sieh dir zur Kontrolle das :doc"
+":`true-color` oder das :doc:`false-color-swir` desselben Gebiets an."
+
+#: ../../data/ndsi.rst:63
+msgid ""
+"**Values outside -1 ... 1.** A few pixels can lie outside, in the very "
+"dark ones (shadows), where one of the reflectances is below zero and the "
+"sum in the denominator is close to zero. The example file ranges from -6 "
+"to 10.3, but only 21 of its about 438,000 pixels are outside -1 ... 1. "
+"Treat them as noise or clip them with ``numpy.clip(ndsi, -1, 1)``."
+msgstr ""
+"**Werte außerhalb von -1 ... 1.** Einige Pixel können außerhalb liegen, "
+"nämlich die sehr dunklen (Schatten), bei denen eine der Reflektanzen "
+"unter null liegt und die Summe im Nenner nahe null ist. Die Beispieldatei"
+" reicht von -6 bis 10,3, aber nur 21 ihrer rund 438.000 Pixel liegen "
+"außerhalb von -1 ... 1. Behandle sie als Rauschen oder beschneide sie mit"
+" ``numpy.clip(ndsi, -1, 1)``."
+
+#: ../../data/ndsi.rst:68
+msgid ""
+"**The plot** uses white-blue colours and a fixed range of -1 to 1: the "
+"darker the blue, the more likely snow."
+msgstr ""
+"**Der Plot** verwendet Weiß-Blau-Farben und einen festen Bereich von -1 "
+"bis 1: je dunkler das Blau, desto wahrscheinlicher ist es Schnee."
+
+#: ../../data/ndsi.rst:73
+msgid ""
+":doc:`false-color-swir`, :doc:`scene-classification`, :doc:`/howto"
+"/filter-clouds`, :doc:`/howto/choose-period`"
+msgstr ""
+":doc:`false-color-swir`, :doc:`scene-classification`, :doc:`/howto"
+"/filter-clouds`, :doc:`/howto/choose-period`"
+
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:1 of
+msgid "*Short alias:* ``download_ndsi``"
+msgstr "*Kurzer Alias:* ``download_ndsi``"
+
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:3 of
+msgid "Download a Sentinel-2 NDSI (snow index) raster."
+msgstr "Lädt ein Sentinel-2-NDSI-Raster (Schneeindex) herunter."
+
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:5 of
+msgid ""
+"Green and short-wave infrared (B11) reflectance from Sentinel-2 Level-2A "
+"are masked using the Scene Classification Layer (SCL), then averaged over"
+" the requested period before calculating the Normalized Difference Snow "
+"Index:"
+msgstr ""
+"Die Reflektanz im Grünen und im kurzwelligen Infrarot (B11) von "
+"Sentinel-2 Level-2A wird mit der Scene Classification Layer (SCL) "
+"maskiert und über den angeforderten Zeitraum gemittelt, bevor der "
+"Normalized Difference Snow Index berechnet wird:"
+
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:10 of
+msgid "``NDSI = (green - SWIR) / (green + SWIR)``"
+msgstr "``NDSI = (green - SWIR) / (green + SWIR)``"
+
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:12 of
+msgid ""
+"Snow is bright in green light and dark in short-wave infrared light, so "
+"the index is high over snow and ice. The output retains the 10 m "
+"reflectance grid; B11 and the SCL keep their native 20 m detail."
+msgstr ""
+"Schnee ist im grünen Licht hell und im kurzwelligen Infrarotlicht dunkel,"
+" deshalb ist der Index über Schnee und Eis hoch. Die Ausgabe behält das "
+"10-m-Reflektanzraster; B11 und die SCL behalten ihre native "
+"Detailgenauigkeit von 20 m."
+
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:27 of
+msgid ""
+"Scene Classification Layer (SCL) classes to **keep**, as a tuple of class"
+" IDs. The default ``SCL_LAND_WATER_AND_SNOW`` = ``(4, 5, 6, 11)`` keeps "
+"vegetation, non-vegetated land, water and snow or ice and drops clouds, "
+"cirrus, shadows, unclassified and defective pixels. Do not remove class "
+"``11``: it is the snow that this index looks for. Use ``None`` to switch "
+"SCL masking off. Run ``cdec.show_scl_classes()`` to see what each class "
+"means. Pixels without any retained observation remain no data."
+msgstr ""
+"Klassen der Scene Classification Layer (SCL), die **behalten** werden, "
+"als Tupel von Klassen-IDs. Der Standard ``SCL_LAND_WATER_AND_SNOW`` = "
+"``(4, 5, 6, 11)`` behält Vegetation, nicht bewachsenes Land, Wasser und "
+"Schnee oder Eis und verwirft Wolken, Zirren, Schatten, nicht "
+"klassifizierte und defekte Pixel. Entferne die Klasse ``11`` nicht: Sie "
+"ist der Schnee, den dieser Index sucht. Verwende ``None``, um die SCL-"
+"Maskierung auszuschalten. Führe ``cdec.show_scl_classes()`` aus, um zu "
+"sehen, was jede Klasse bedeutet. Pixel ohne eine einzige behaltene "
+"Beobachtung bleiben ohne Daten."
+
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:41 of
+msgid "Absolute path to the downloaded NDSI raster."
+msgstr "Absoluter Pfad zum heruntergeladenen NDSI-Raster."
+
+#: cdec.plot.products.plot_normalized_difference_snow_index:1 of
+msgid "*Short alias:* ``plot_ndsi``"
+msgstr "*Kurzer Alias:* ``plot_ndsi``"
+
+#: cdec.plot.products.plot_normalized_difference_snow_index:3 of
+msgid "Draw the NDSI of ``download_normalized_difference_snow_index``."
+msgstr "Zeichnet den NDSI von ``download_normalized_difference_snow_index``."
+
+#: cdec.plot.products.plot_normalized_difference_snow_index:5 of
+msgid ""
+"NDSI lies between -1 and 1: snow and ice are high (usually above 0.4), "
+"land and water are low. The colour map goes from white (low) to dark blue"
+" (high). The range is fixed to -1 ... 1, so two images always have the "
+"same colours and can be compared."
+msgstr ""
+"Der NDSI liegt zwischen -1 und 1: Schnee und Eis sind hoch (meist über "
+"0,4), Land und Wasser sind niedrig. Die Farbskala geht von Weiß (niedrig)"
+" zu Dunkelblau (hoch). Der Bereich ist auf -1 ... 1 festgelegt, sodass "
+"zwei Bilder immer dieselben Farben haben und verglichen werden können."
+
+#: cdec.plot.products.plot_normalized_difference_snow_index:10 of
+msgid "The GeoTIFF written by ``download_ndsi``."
+msgstr "Das von ``download_ndsi`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_normalized_difference_snow_index:12 of
+msgid ""
+"Title of the plot. Default: \"NDSI (Sentinel-2)\". Use ``\"\"`` for no "
+"title."
+msgstr ""
+"Titel des Plots. Standard: \"NDSI (Sentinel-2)\". Verwende ``\"\"`` für "
+"keinen Titel."
+
+#: ../../data/ndvi.rst:2
+msgid "NDVI (Sentinel-2)"
+msgstr "NDVI (Sentinel-2)"
+
+#: ../../data/ndvi.rst:4
+msgid ""
+"The **Normalized Difference Vegetation Index** tells how green and dense "
+"the plants are. Healthy plants reflect much near-infrared light and "
+"absorb red light, so ``NDVI = (NIR - red) / (NIR + red)`` is high for "
+"them. The result is one number per pixel: close to 1 for dense green "
+"vegetation, around 0.1 to 0.2 for bare soil, and low or negative for "
+"water, built-up surfaces and clouds."
+msgstr ""
+"Der **Normalized Difference Vegetation Index** sagt, wie grün und dicht "
+"die Pflanzen sind. Gesunde Pflanzen reflektieren viel nahes Infrarotlicht"
+" und absorbieren rotes Licht, daher ist ``NDVI = (NIR - red) / (NIR + "
+"red)`` für sie hoch. Das Ergebnis ist eine Zahl je Pixel: nahe 1 für "
+"dichte grüne Vegetation, um 0,1 bis 0,2 für nackten Boden und niedrig "
+"oder negativ für Wasser, bebaute Flächen und Wolken."
+
+#: ../../data/ndvi.rst:14
+msgid ""
+":func:`~cdec.download_normalized_difference_vegetation_index`, short "
+"``download_ndvi``"
+msgstr ""
+":func:`~cdec.download_normalized_difference_vegetation_index`, kurz "
+"``download_ndvi``"
+
+#: ../../data/ndvi.rst:16
+msgid ""
+":func:`~cdec.plot_normalized_difference_vegetation_index`, short "
+"``plot_ndvi``"
+msgstr ""
+":func:`~cdec.plot_normalized_difference_vegetation_index`, kurz "
+"``plot_ndvi``"
+
+#: ../../data/ndvi.rst:18
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B04 (red) and "
+"B08 (near-infrared)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B04 (rot) und "
+"B08 (nahes Infrarot)"
+
+#: ../../data/ndvi.rst:42
+msgid ""
+"NDVI of Bremen in June 2024: green fields and parks, yellow-green built-"
+"up areas, white patches without data."
+msgstr ""
+"NDVI von Bremen im Juni 2024: grüne Felder und Parks, gelbgrüne bebaute "
+"Flächen, weiße Stellen ohne Daten."
+
+#: ../../data/ndvi.rst:51
+msgid ""
+"**The index is calculated from the mean reflectance** of the period, not "
+"as the mean of the NDVI of every date."
+msgstr ""
+"**Der Index wird aus der mittleren Reflektanz** des Zeitraums berechnet, "
+"nicht als Mittelwert des NDVI jedes Tages."
+
+#: ../../data/ndvi.rst:53
+msgid ""
+"**Holes.** A pixel without a single usable observation stays empty. In "
+"the example about a quarter of the pixels are empty. A longer period or a"
+" higher ``max_cloud_cover`` fills holes (:doc:`/howto/filter-clouds`)."
+msgstr ""
+"**Löcher.** Ein Pixel ohne eine einzige brauchbare Beobachtung bleibt "
+"leer. Im Beispiel ist etwa ein Viertel der Pixel leer. Ein längerer "
+"Zeitraum oder ein höheres ``max_cloud_cover`` füllt Löcher (:doc:`/howto"
+"/filter-clouds`)."
+
+#: ../../data/ndvi.rst:55
+msgid ""
+"**Water is empty by default.** The default ``scl_classes`` is ``(4, 5)``,"
+" which keeps vegetation and not vegetated pixels only. Use "
+"``scl_classes=cdec.SCL_LAND_AND_WATER`` to keep water."
+msgstr ""
+"**Wasser ist standardmäßig leer.** Das Standard-``scl_classes`` ist ``(4,"
+" 5)``; es behält nur Vegetation und nicht bewachsene Pixel. Verwende "
+"``scl_classes=cdec.SCL_LAND_AND_WATER``, um Wasser zu behalten."
+
+#: ../../data/ndvi.rst:57
+msgid ""
+"**Values outside -1 ... 1.** A few pixels can lie slightly outside, for "
+"example when the red reflectance is close to zero. The example file "
+"ranges from -0.66 to 1.26. Treat them as noise or clip them with "
+"``numpy.clip(ndvi, -1, 1)``."
+msgstr ""
+"**Werte außerhalb von -1 ... 1.** Einige Pixel können leicht außerhalb "
+"liegen, zum Beispiel wenn die rote Reflektanz nahe null ist. Die "
+"Beispieldatei reicht von -0,66 bis 1,26. Behandle sie als Rauschen oder "
+"beschneide sie mit ``numpy.clip(ndvi, -1, 1)``."
+
+#: ../../data/ndvi.rst:60
+msgid ""
+"**The plot** uses red-yellow-green colours and a fixed range of -1 to 1, "
+"so the same colour always means the same NDVI and two maps can be "
+"compared by eye."
+msgstr ""
+"**Der Plot** verwendet Rot-Gelb-Grün-Farben und einen festen Bereich von "
+"-1 bis 1, sodass dieselbe Farbe immer denselben NDVI bedeutet und zwei "
+"Karten mit dem Auge verglichen werden können."
+
+#: ../../data/ndvi.rst:62
+msgid ""
+"For a longer time series (1997-2024) at a coarser resolution use :doc"
+":`landsat-ndvi`."
+msgstr ""
+"Für eine längere Zeitreihe (1997-2024) mit gröberer Auflösung verwende "
+":doc:`landsat-ndvi`."
+
+#: ../../data/ndvi.rst:67
+msgid ""
+":doc:`/howto/filter-clouds`, :doc:`/howto/choose-period`, "
+":doc:`/explanation/clouds-and-masking`"
+msgstr ""
+":doc:`/howto/filter-clouds`, :doc:`/howto/choose-period`, "
+":doc:`/explanation/clouds-and-masking`"
+
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:1 of
+msgid "*Short alias:* ``download_ndvi``"
+msgstr "*Kurzer Alias:* ``download_ndvi``"
+
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:3 of
+msgid "Download a Sentinel-2 NDVI raster."
+msgstr "Lädt ein Sentinel-2-NDVI-Raster herunter."
+
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:5 of
+msgid ""
+"Red and near-infrared reflectance from Sentinel-2 Level-2A are masked "
+"using the Scene Classification Layer (SCL), then averaged over the "
+"requested period before calculating NDVI. Use "
+":func:`cdec.download_landsat_ndvi` for the historical Landsat mosaic. The"
+" output retains the 10 m reflectance grid; SCL classification detail "
+"remains 20 m."
+msgstr ""
+"Rote und nahinfrarote Reflektanz von Sentinel-2 Level-2A wird mit der "
+"Scene Classification Layer (SCL) maskiert und über den angeforderten "
+"Zeitraum gemittelt, bevor der NDVI berechnet wird. Verwende "
+":func:`cdec.download_landsat_ndvi` für das historische Landsat-Mosaik. "
+"Die Ausgabe behält das 10-m-Reflektanzraster; die Detailgenauigkeit der "
+"SCL-Klassifikation bleibt 20 m."
+
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:1 of
+msgid "*Short alias:* ``plot_ndvi``"
+msgstr "*Kurzer Alias:* ``plot_ndvi``"
+
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:3 of
+msgid "Draw the NDVI of ``download_normalized_difference_vegetation_index``."
+msgstr "Zeichnet den NDVI von ``download_normalized_difference_vegetation_index``."
+
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:5 of
+msgid ""
+"NDVI lies between -1 and 1: water and bare ground are around or below 0, "
+"dense green vegetation is above 0.6. The colour map goes from red (low) "
+"over yellow to green (high). The range is fixed to -1 ... 1, so two "
+"images always have the same colours and can be compared."
+msgstr ""
+"Der NDVI liegt zwischen -1 und 1: Wasser und nackter Boden liegen um 0 "
+"oder darunter, dichte grüne Vegetation liegt über 0,6. Die Farbskala geht"
+" von Rot (niedrig) über Gelb zu Grün (hoch). Der Bereich ist auf -1 ... 1"
+" festgelegt, sodass zwei Bilder immer dieselben Farben haben und "
+"verglichen werden können."
+
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:10 of
+msgid "The GeoTIFF written by ``download_ndvi``."
+msgstr "Das von ``download_ndvi`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_normalized_difference_vegetation_index:12 of
+msgid ""
+"Title of the plot. Default: \"NDVI (Sentinel-2)\". Use ``\"\"`` for no "
+"title."
+msgstr ""
+"Titel des Plots. Standard: \"NDVI (Sentinel-2)\". Verwende ``\"\"`` für "
+"keinen Titel."
+
+#: ../../data/ndwi.rst:2
+msgid "NDWI (Sentinel-2)"
+msgstr "NDWI (Sentinel-2)"
+
+#: ../../data/ndwi.rst:4
+msgid ""
+"The **Normalized Difference Water Index** shows open water. Water "
+"reflects more green light than near-infrared light, while plants and soil"
+" do the opposite, so ``NDWI = (green - NIR) / (green + NIR)`` is above 0 "
+"for water and below 0 for most land. The result is one number per pixel, "
+"between -1 and 1."
+msgstr ""
+"Der **Normalized Difference Water Index** zeigt offenes Wasser. Wasser "
+"reflektiert mehr grünes als nahes Infrarotlicht, Pflanzen und Boden "
+"verhalten sich umgekehrt. Deshalb ist ``NDWI = (green - NIR) / (green + "
+"NIR)`` über Wasser größer als 0 und über den meisten Landflächen kleiner "
+"als 0. Das Ergebnis ist eine Zahl pro Pixel zwischen -1 und 1."
+
+#: ../../data/ndwi.rst:13
+msgid ""
+":func:`~cdec.download_normalized_difference_water_index`, short "
+"``download_ndwi``"
+msgstr ""
+":func:`~cdec.download_normalized_difference_water_index`, kurz "
+"``download_ndwi``"
+
+#: ../../data/ndwi.rst:15
+msgid ":func:`~cdec.plot_normalized_difference_water_index`, short ``plot_ndwi``"
+msgstr ":func:`~cdec.plot_normalized_difference_water_index`, kurz ``plot_ndwi``"
+
+#: ../../data/ndwi.rst:17
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B03 (green) and"
+" B08 (near-infrared)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B03 (grün) und"
+" B08 (nahes Infrarot)"
+
+#: ../../data/ndwi.rst:41
+msgid ""
+"NDWI of Bremen in June 2024: rivers and lakes in blue, fields and built-"
+"up areas in red, white patches without data."
+msgstr ""
+"NDWI von Bremen im Juni 2024: Flüsse und Seen in Blau, Felder und bebaute"
+" Flächen in Rot, weiße Stellen ohne Daten."
+
+#: ../../data/ndwi.rst:45
+msgid ""
+"Bremen, June 2024. Blue: water, red: land. White: no data. Contains "
+"modified Copernicus Sentinel data 2024."
+msgstr ""
+"Bremen, Juni 2024. Blau: Wasser, Rot: Land. Weiß: keine Daten. Contains "
+"modified Copernicus Sentinel data 2024."
+
+#: ../../data/ndwi.rst:50
+msgid ""
+"**Two indices are called NDWI.** This page is the index of McFeeters "
+"(green and near-infrared), made to find open water. Gao's index (near-"
+"infrared and short-wave infrared) measures the water in leaves; this "
+"package calls it :doc:`NDMI <ndmi>`. Check which one a book or a paper "
+"means."
+msgstr ""
+"**Zwei Indizes heißen NDWI.** Diese Seite behandelt den Index von "
+"McFeeters (grün und nahes Infrarot), der offenes Wasser finden soll. Der "
+"Index von Gao (nahes und kurzwelliges Infrarot) misst das Wasser in "
+"Blättern; dieses Paket nennt ihn :doc:`NDMI <ndmi>`. Prüfe, welchen ein "
+"Buch oder eine Veröffentlichung meint."
+
+#: ../../data/ndwi.rst:53
+msgid ""
+"**Water is kept by default.** The default ``scl_classes`` is ``(4, 5, "
+"6)``, because a water index without water is useless. NDVI and EVI drop "
+"water instead (:doc:`ndvi`)."
+msgstr ""
+"**Wasser wird standardmäßig behalten.** Das Standard-``scl_classes`` ist "
+"``(4, 5, 6)``, denn ein Wasserindex ohne Wasser ist nutzlos. NDVI und EVI"
+" lassen Wasser dagegen weg (:doc:`ndvi`)."
+
+#: ../../data/ndwi.rst:55
+msgid ""
+"**Above 0 is a first guess, not a water map.** Built-up areas and shadows"
+" can also have values close to 0 or slightly above. For a water mask "
+"combine the index with the scene classification (class 6, :doc:`scene-"
+"classification`) or the :doc:`land cover map <land-cover>`."
+msgstr ""
+"**Über 0 ist eine erste Vermutung, keine Wasserkarte.** Auch bebaute "
+"Flächen und Schatten können Werte nahe 0 oder etwas darüber haben. Für "
+"eine Wassermaske kombiniere den Index mit der Szenenklassifikation "
+"(Klasse 6, :doc:`scene-classification`) oder der "
+":doc:`Landbedeckungskarte <land-cover>`."
+
+#: ../../data/ndwi.rst:58
+msgid ""
+"**Values outside -1 ... 1.** A few pixels can lie slightly outside, in "
+"the very dark ones (shadows, deep water), where one of the reflectances "
+"is below zero. The example file ranges from -1.22 to 0.67; two of its "
+"about 930,000 pixels are below -1. Treat them as noise or clip them with "
+"``numpy.clip(ndwi, -1, 1)``."
+msgstr ""
+"**Werte außerhalb von -1 ... 1.** Einige Pixel können leicht außerhalb "
+"liegen, nämlich die sehr dunklen (Schatten, tiefes Wasser), bei denen "
+"eine der Reflektanzen unter null liegt. Die Beispieldatei reicht von "
+"-1,22 bis 0,67; zwei ihrer rund 930.000 Pixel liegen unter -1. Behandle "
+"sie als Rauschen oder beschneide sie mit ``numpy.clip(ndwi, -1, 1)``."
+
+#: ../../data/ndwi.rst:62
+msgid ""
+"**The plot** uses red-white-blue colours and a fixed range of -1 to 1: "
+"red for land, blue for water, so the same colour always means the same "
+"NDWI and two maps can be compared by eye."
+msgstr ""
+"**Der Plot** verwendet Rot-Weiß-Blau-Farben und einen festen Bereich von "
+"-1 bis 1: Rot für Land, Blau für Wasser, sodass dieselbe Farbe immer "
+"denselben NDWI bedeutet und zwei Karten mit dem Auge verglichen werden "
+"können."
+
+#: ../../data/ndwi.rst:68
+msgid ""
+":doc:`ndmi`, :doc:`scene-classification`, :doc:`/howto/filter-clouds`, "
+":doc:`/explanation/clouds-and-masking`"
+msgstr ""
+":doc:`ndmi`, :doc:`scene-classification`, :doc:`/howto/filter-clouds`, "
+":doc:`/explanation/clouds-and-masking`"
+
+#: cdec.eo.ndwi.download_normalized_difference_water_index:1 of
+msgid "*Short alias:* ``download_ndwi``"
+msgstr "*Kurzer Alias:* ``download_ndwi``"
+
+#: cdec.eo.ndwi.download_normalized_difference_water_index:3 of
+msgid "Download a Sentinel-2 NDWI (water index) raster."
+msgstr "Lädt ein Sentinel-2-NDWI-Raster (Wasserindex) herunter."
+
+#: cdec.eo.ndwi.download_normalized_difference_water_index:5 of
+msgid ""
+"Green and near-infrared reflectance from Sentinel-2 Level-2A are masked "
+"using the Scene Classification Layer (SCL), then averaged over the "
+"requested period before calculating the Normalized Difference Water Index"
+" of McFeeters:"
+msgstr ""
+"Die Reflektanz im Grünen und im nahen Infrarot von Sentinel-2 Level-2A "
+"wird mit der Scene Classification Layer (SCL) maskiert und über den "
+"angeforderten Zeitraum gemittelt, bevor der Normalized Difference Water "
+"Index nach McFeeters berechnet wird:"
+
+#: cdec.eo.ndwi.download_normalized_difference_water_index:10 of
+msgid "``NDWI = (green - NIR) / (green + NIR)``"
+msgstr "``NDWI = (green - NIR) / (green + NIR)``"
+
+#: cdec.eo.ndwi.download_normalized_difference_water_index:12 of
+msgid ""
+"It is positive over open water and negative over land. This is not the "
+"index that some books also call NDWI and that uses short-wave infrared; "
+"that one is :func:`cdec.download_normalized_difference_moisture_index`. "
+"The output retains the 10 m reflectance grid; SCL classification detail "
+"remains 20 m."
+msgstr ""
+"Er ist über offenem Wasser positiv und über Land negativ. Das ist nicht "
+"der Index, den manche Bücher auch NDWI nennen und der kurzwelliges "
+"Infrarot verwendet; dieser ist "
+":func:`cdec.download_normalized_difference_moisture_index`. Die Ausgabe "
+"behält das 10-m-Reflektanzraster; die SCL-Klassifikation behält ihre "
+"Detailgenauigkeit von 20 m."
+
+#: cdec.eo.ndwi.download_normalized_difference_water_index:29 of
+msgid ""
+"Scene Classification Layer (SCL) classes to **keep**, as a tuple of class"
+" IDs. The default ``SCL_LAND_AND_WATER`` = ``(4, 5, 6)`` keeps "
+"vegetation, non-vegetated land and water and drops clouds, cirrus, "
+"shadows, snow/ice, unclassified and defective pixels. Do not use "
+"``SCL_LAND``: it removes the water that this index looks for. Use "
+"``None`` to switch SCL masking off. Run ``cdec.show_scl_classes()`` to "
+"see what each class means. Pixels without any retained observation remain"
+" no data."
+msgstr ""
+"Klassen der Scene Classification Layer (SCL), die **behalten** werden, "
+"als Tupel von Klassen-IDs. Der Standard ``SCL_LAND_AND_WATER`` = ``(4, 5,"
+" 6)`` behält Vegetation, nicht bewachsenes Land und Wasser und verwirft "
+"Wolken, Zirren, Schatten, Schnee/Eis, nicht klassifizierte und defekte "
+"Pixel. Verwende nicht ``SCL_LAND``: Es entfernt das Wasser, das dieser "
+"Index sucht. Verwende ``None``, um die SCL-Maskierung auszuschalten. "
+"Führe ``cdec.show_scl_classes()`` aus, um zu sehen, was jede Klasse "
+"bedeutet. Pixel ohne eine einzige behaltene Beobachtung bleiben ohne "
+"Daten."
+
+#: cdec.eo.ndwi.download_normalized_difference_water_index:43 of
+msgid "Absolute path to the downloaded NDWI raster."
+msgstr "Absoluter Pfad zum heruntergeladenen NDWI-Raster."
+
+#: cdec.plot.products.plot_normalized_difference_water_index:1 of
+msgid "*Short alias:* ``plot_ndwi``"
+msgstr "*Kurzer Alias:* ``plot_ndwi``"
+
+#: cdec.plot.products.plot_normalized_difference_water_index:3 of
+msgid "Draw the NDWI of ``download_normalized_difference_water_index``."
+msgstr "Zeichnet den NDWI von ``download_normalized_difference_water_index``."
+
+#: cdec.plot.products.plot_normalized_difference_water_index:5 of
+msgid ""
+"NDWI lies between -1 and 1: open water is above 0, land is below 0. The "
+"colour map goes from red (land) over white to blue (water). The range is "
+"fixed to -1 ... 1, so two images always have the same colours and can be "
+"compared."
+msgstr ""
+"Der NDWI liegt zwischen -1 und 1: Offenes Wasser liegt über 0, Land "
+"darunter. Die Farbskala geht von Rot (Land) über Weiß zu Blau (Wasser). "
+"Der Bereich ist auf -1 ... 1 festgelegt, sodass zwei Bilder immer "
+"dieselben Farben haben und verglichen werden können."
+
+#: cdec.plot.products.plot_normalized_difference_water_index:10 of
+msgid "The GeoTIFF written by ``download_ndwi``."
+msgstr "Das von ``download_ndwi`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_normalized_difference_water_index:12 of
+msgid ""
+"Title of the plot. Default: \"NDWI (Sentinel-2)\". Use ``\"\"`` for no "
+"title."
+msgstr ""
+"Titel des Plots. Standard: \"NDWI (Sentinel-2)\". Verwende ``\"\"`` für "
+"keinen Titel."
+
+#: ../../data/scene-classification.rst:2
+msgid "Scene classification (Sentinel-2)"
+msgstr "Szenenklassifikation (Sentinel-2)"
+
+#: ../../data/scene-classification.rst:4
+msgid ""
+"A map of what every pixel probably shows: vegetation, bare ground, water,"
+" cloud, cloud shadow, snow and so on. It is the *Scene Classification "
+"Layer* (SCL) that the other Sentinel-2 downloads use to mask clouds "
+"(:doc:`/reference/scl`). Download it to see **why** pixels are missing in"
+" an NDVI or a true-colour image, and to choose ``scl_classes`` for them."
+msgstr ""
+"Eine Karte dessen, was jedes Pixel wahrscheinlich zeigt: Vegetation, "
+"nackter Boden, Wasser, Wolke, Wolkenschatten, Schnee und so weiter. Es "
+"ist die *Scene Classification Layer* (SCL), mit der die anderen "
+"Sentinel-2-Downloads Wolken maskieren (:doc:`/reference/scl`). Lade sie "
+"herunter, um zu sehen, **warum** Pixel in einem NDVI oder einem "
+"Echtfarbenbild fehlen, und um ``scl_classes`` dafür zu wählen."
+
+#: ../../data/scene-classification.rst:14
+msgid ":func:`~cdec.download_scene_classification_map`, short ``download_scl``"
+msgstr ":func:`~cdec.download_scene_classification_map`, kurz ``download_scl``"
+
+#: ../../data/scene-classification.rst:16
+msgid ":func:`~cdec.plot_scene_classification_map`, short ``plot_scl``"
+msgstr ":func:`~cdec.plot_scene_classification_map`, kurz ``plot_scl``"
+
+#: ../../data/scene-classification.rst:18
+msgid "Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), band SCL"
+msgstr "Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Band SCL"
+
+#: ../../data/scene-classification.rst:22
+msgid ""
+"one band of class numbers (0 ... 11) with the colours of the classes "
+"attached to the file; 0 means no data"
+msgstr ""
+"ein Band aus Klassennummern (0 ... 11), an die Datei sind die Farben der "
+"Klassen angehängt; 0 bedeutet keine Daten"
+
+#: ../../data/scene-classification.rst:24
+msgid ""
+"**all scenes are used** (``max_cloud_cover=100``), because the clouds are"
+" what the map should show; no pixel is masked"
+msgstr ""
+"**Alle Szenen werden verwendet** (``max_cloud_cover=100``), weil die "
+"Wolken das sind, was die Karte zeigen soll; kein Pixel wird maskiert"
+
+#: ../../data/scene-classification.rst:27
+msgid "the **most recent** observation of every pixel in ``temporal_extent``"
+msgstr "die **jüngste** Beobachtung jedes Pixels in ``temporal_extent``"
+
+#: ../../data/scene-classification.rst:42
+msgid ""
+"Scene classification of Bremen: vegetation green, not vegetated yellow, "
+"water blue, cloud shadows brown, clouds white and grey."
+msgstr ""
+"Szenenklassifikation von Bremen: Vegetation grün, nicht bewachsener Boden"
+" gelb, Wasser blau, Wolkenschatten braun, Wolken weiß und grau."
+
+#: ../../data/scene-classification.rst:46
+msgid ""
+"Bremen, most recent observation of every pixel in June 2024. Contains "
+"modified Copernicus Sentinel data 2024."
+msgstr ""
+"Bremen, jeweils jüngste Beobachtung jedes Pixels im Juni 2024. Contains "
+"modified Copernicus Sentinel data 2024."
+
+#: ../../data/scene-classification.rst:48
+msgid ""
+"The legend of the plot lists only the classes that occur in the picture. "
+"``cdec.show_scl_classes()`` prints all 12 classes with a hint for each "
+"one."
+msgstr ""
+"Die Legende des Plots listet nur die Klassen auf, die im Bild vorkommen. "
+"``cdec.show_scl_classes()`` gibt alle 12 Klassen mit einem Hinweis zu "
+"jeder aus."
+
+#: ../../data/scene-classification.rst:54
+msgid ""
+"**No average.** Class numbers have no mean: the average of \"vegetation\""
+" (4) and \"cloud\" (9) is not a class. Each pixel keeps the class of its "
+"most recent observation in the period."
+msgstr ""
+"**Kein Mittelwert.** Klassennummern haben keinen Mittelwert: Der "
+"Durchschnitt von „Vegetation“ (4) und „Wolke“ (9) ist keine Klasse. Jedes"
+" Pixel behält die Klasse seiner jüngsten Beobachtung im Zeitraum."
+
+#: ../../data/scene-classification.rst:56
+msgid ""
+"**One date per pixel, not one date for the picture.** Neighbouring pixels"
+" can come from different days. For the classification of one day use a "
+"period of one day."
+msgstr ""
+"**Ein Datum pro Pixel, nicht ein Datum für das Bild.** Benachbarte Pixel "
+"können von verschiedenen Tagen stammen. Für die Klassifikation eines "
+"Tages nimm einen Zeitraum von einem Tag."
+
+#: ../../data/scene-classification.rst:58
+msgid ""
+"**Use it to choose** ``scl_classes``. If a pixel is missing in your NDVI,"
+" look up its class here. A river that is missing is class 6 (water), "
+"which NDVI drops by default; a patch that is missing in summer is "
+"probably cloud or cloud shadow (:doc:`/howto/filter-clouds`)."
+msgstr ""
+"**Nutze sie, um** ``scl_classes`` **zu wählen.** Fehlt ein Pixel in "
+"deinem NDVI, schlage hier seine Klasse nach. Ein fehlender Fluss ist "
+"Klasse 6 (Wasser), die der NDVI standardmäßig verwirft; eine im Sommer "
+"fehlende Stelle ist wahrscheinlich Wolke oder Wolkenschatten "
+"(:doc:`/howto/filter-clouds`)."
+
+#: ../../data/scene-classification.rst:61
+msgid ""
+"**It is a guess of a computer program.** The classification is not "
+"perfect: thin clouds, haze and cloud edges are sometimes labelled as "
+"land, and snow is sometimes labelled as cloud (:doc:`/reference/scl`)."
+msgstr ""
+"**Es ist die Vermutung eines Computerprogramms.** Die Klassifikation ist "
+"nicht perfekt: Dünne Wolken, Dunst und Wolkenränder werden manchmal als "
+"Land eingestuft, und Schnee wird manchmal als Wolke eingestuft "
+"(:doc:`/reference/scl`)."
+
+#: ../../data/scene-classification.rst:63
+msgid ""
+"**The colours** are the ones of ``cdec.SCL_COLORS``. The plot takes them "
+"from there, not from the colour table inside the file, so every file "
+"looks the same."
+msgstr ""
+"**Die Farben** sind die von ``cdec.SCL_COLORS``. Der Plot nimmt sie von "
+"dort und nicht aus der Farbtabelle in der Datei, sodass jede Datei gleich"
+" aussieht."
+
+#: ../../data/scene-classification.rst:65
+msgid ""
+"**Class 0** (no data) is transparent in the plot, as are pixels without "
+"any observation."
+msgstr ""
+"**Klasse 0** (keine Daten) ist im Plot transparent, ebenso wie Pixel ohne"
+" jede Beobachtung."
+
+#: ../../data/scene-classification.rst:70
+msgid ""
+":doc:`/reference/scl`, :doc:`/howto/filter-clouds`, :doc:`/explanation"
+"/clouds-and-masking`, :doc:`land-cover`"
+msgstr ""
+":doc:`/reference/scl`, :doc:`/howto/filter-clouds`, :doc:`/explanation"
+"/clouds-and-masking`, :doc:`land-cover`"
+
+#: cdec.eo.scene_classification.download_scene_classification_map:1 of
+msgid "*Short alias:* ``download_scl``"
+msgstr "*Kurzer Alias:* ``download_scl``"
+
+#: cdec.eo.scene_classification.download_scene_classification_map:3 of
+msgid "Download the Sentinel-2 scene classification map."
+msgstr "Lädt die Sentinel-2-Szenenklassifikationskarte herunter."
+
+#: cdec.eo.scene_classification.download_scene_classification_map:5 of
+msgid ""
+"The Scene Classification Layer (SCL) says for every 20 m pixel what it "
+"probably shows: vegetation, water, cloud, snow and so on (see "
+"``cdec.show_scl_classes()``). Class numbers cannot be averaged, so every "
+"pixel keeps the class of its most recent observation in the requested "
+"period. The result contains the class IDs 1 to 11; 0 means no data. The "
+"colour table of the map is attached to the GeoTIFF."
+msgstr ""
+"Die Scene Classification Layer (SCL) sagt für jedes 20-m-Pixel, was es "
+"wahrscheinlich zeigt: Vegetation, Wasser, Wolke, Schnee und so weiter "
+"(siehe ``cdec.show_scl_classes()``). Klassennummern lassen sich nicht "
+"mitteln, deshalb behält jedes Pixel die Klasse seiner jüngsten "
+"Beobachtung im angeforderten Zeitraum. Das Ergebnis enthält die Klassen-"
+"IDs 1 bis 11; 0 bedeutet keine Daten. Die Farbtabelle der Karte ist an "
+"das GeoTIFF angehängt."
+
+#: cdec.eo.scene_classification.download_scene_classification_map:20 of
+msgid ""
+"Maximum cloud cover of a whole scene in percent. Scenes that are cloudier"
+" are not used at all. The default of 100 uses every scene, because the "
+"clouds are what a classification map should show."
+msgstr ""
+"Maximale Wolkenbedeckung einer ganzen Szene in Prozent. Wolkigere Szenen "
+"werden gar nicht verwendet. Der Standard von 100 verwendet jede Szene, "
+"weil die Wolken das sind, was eine Klassifikationskarte zeigen soll."
+
+#: cdec.eo.scene_classification.download_scene_classification_map:24 of
+msgid ""
+"Resampling method used to build COG overview levels. ``\"nearest\"`` "
+"keeps the class IDs and should normally not be changed."
+msgstr ""
+"Resampling-Methode zum Erzeugen der Übersichtsstufen des COG. "
+"``\"nearest\"`` bewahrt die Klassen-IDs und sollte normalerweise nicht "
+"geändert werden."
+
+#: cdec.eo.scene_classification.download_scene_classification_map:30 of
+msgid "Absolute path to the downloaded scene classification raster."
+msgstr "Absoluter Pfad zum heruntergeladenen Szenenklassifikationsraster."
+
+#: cdec.plot.products.plot_scene_classification_map:1 of
+msgid "*Short alias:* ``plot_scl``"
+msgstr "*Kurzer Alias:* ``plot_scl``"
+
+#: cdec.plot.products.plot_scene_classification_map:3 of
+msgid "Draw the classes of ``download_scene_classification_map``."
+msgstr "Zeichnet die Klassen von ``download_scene_classification_map``."
+
+#: cdec.plot.products.plot_scene_classification_map:5 of
+msgid ""
+"Every pixel is one of the SCL classes (``cdec.SCL_CLASSES``) and is drawn"
+" in the colour of its class (``cdec.SCL_COLORS``). The legend lists only "
+"the classes that occur in the image. Pixels of class 0 (no data) are "
+"transparent and are not in the legend."
+msgstr ""
+"Jedes Pixel gehört zu einer der SCL-Klassen (``cdec.SCL_CLASSES``) und "
+"wird in der Farbe seiner Klasse gezeichnet (``cdec.SCL_COLORS``). Die "
+"Legende listet nur die Klassen auf, die im Bild vorkommen. Pixel der "
+"Klasse 0 (keine Daten) sind transparent und stehen nicht in der Legende."
+
+#: cdec.plot.products.plot_scene_classification_map:10 of
+msgid ""
+"The colours are not read from the colour table inside the file but from "
+"``cdec.SCL_COLORS``, so the picture looks the same for every file."
+msgstr ""
+"Die Farben werden nicht aus der Farbtabelle in der Datei gelesen, sondern"
+" aus ``cdec.SCL_COLORS``, sodass das Bild für jede Datei gleich aussieht."
+
+#: cdec.plot.products.plot_scene_classification_map:13 of
+msgid "The GeoTIFF written by ``download_scl``."
+msgstr "Das von ``download_scl`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_scene_classification_map:15 of
+msgid ""
+"Title of the plot. Default: \"Scene classification (Sentinel-2)\". Use "
+"``\"\"`` for no title."
+msgstr ""
+"Titel des Plots. Standard: \"Scene classification (Sentinel-2)\". "
+"Verwende ``\"\"`` für keinen Titel."
+
+#: cdec.plot.products.plot_scene_classification_map:19 of
+msgid ""
+"The axes with the plot, for further changes. The legend is placed to the "
+"right of the plot; to save it in a picture file use "
+"``plt.savefig(\"scene_classification.png\", bbox_inches=\"tight\")``."
+msgstr ""
+"Die Achsen mit dem Plot, für weitere Änderungen. Die Legende steht rechts"
+" neben dem Plot; um sie in einer Bilddatei zu speichern, verwende "
+"``plt.savefig(\"scene_classification.png\", bbox_inches=\"tight\")``."
+
+#: ../../data/soil-water-index.rst:2
+msgid "Soil water index"
+msgstr "Bodenwasserindex"
+
+#: ../../data/soil-water-index.rst:4
+msgid ""
+"How wet is the soil? The Soil Water Index (SWI) of the Copernicus Land "
+"Monitoring Service describes the soil moisture in percent: 0 is dry, 100 "
+"is saturated. It is calculated from radar data and available for Europe "
+"on a 1 km grid, every day."
+msgstr ""
+"Wie feucht ist der Boden? Der Soil Water Index (SWI) des Copernicus Land "
+"Monitoring Service beschreibt die Bodenfeuchte in Prozent: 0 ist trocken,"
+" 100 ist gesättigt. Er wird aus Radardaten berechnet und ist für Europa "
+"auf einem 1-km-Raster täglich verfügbar."
+
+#: ../../data/soil-water-index.rst:13
+msgid ":func:`~cdec.download_soil_water_index`, short ``download_swi``"
+msgstr ":func:`~cdec.download_soil_water_index`, kurz ``download_swi``"
+
+#: ../../data/soil-water-index.rst:15
+msgid ":func:`~cdec.plot_soil_water_index`, short ``plot_swi``"
+msgstr ":func:`~cdec.plot_soil_water_index`, kurz ``plot_swi``"
+
+#: ../../data/soil-water-index.rst:17
+msgid ""
+"Copernicus Land Monitoring Service (collection "
+"``CLMS_SWI_EUROPE_1KM_DAILY_V2``, daily, Europe)"
+msgstr ""
+"Copernicus Land Monitoring Service (Collection "
+"``CLMS_SWI_EUROPE_1KM_DAILY_V2``, täglich, Europa)"
+
+#: ../../data/soil-water-index.rst:21
+msgid "one band of floating-point numbers in percent, 0 ... 100"
+msgstr "ein Band aus Gleitkommazahlen in Prozent, 0 ... 100"
+
+#: ../../data/soil-water-index.rst:23
+msgid "not affected (it is a modelled product)"
+msgstr "nicht betroffen (es ist ein modelliertes Produkt)"
+
+#: ../../data/soil-water-index.rst:25
+msgid ""
+"mean of all days of ``temporal_extent``. **Version 2 starts on "
+"2025-07-13.**"
+msgstr ""
+"Mittelwert aller Tage von ``temporal_extent``. **Version 2 beginnt am "
+"2025-07-13.**"
+
+#: ../../data/soil-water-index.rst:40
+msgid ""
+"Soil water index of Bremen in August 2025 as large blocks between 17 and "
+"34 percent, some blocks empty."
+msgstr ""
+"Bodenwasserindex von Bremen im August 2025 als große Blöcke zwischen 17 "
+"und 34 Prozent, einige Blöcke leer."
+
+#: ../../data/soil-water-index.rst:44
+msgid ""
+"Bremen, August 2025, ``depth=20``. White: no data. Generated using "
+"European Union's Copernicus Land Monitoring Service information."
+msgstr ""
+"Bremen, August 2025, ``depth=20``. Weiß: keine Daten. Generated using "
+"European Union's Copernicus Land Monitoring Service information."
+
+#: ../../data/soil-water-index.rst:49
+msgid ""
+"**Check the dates first.** CLMS publishes version 2 of the 1 km SWI from "
+"2025-07-13 onwards; version 1 covers 2015 up to 2025-07-12. An earlier "
+"period (such as June 2024) may find no data in this collection. The "
+"Copernicus Data Space also labels its CLMS collections as experimental."
+msgstr ""
+"**Prüfe zuerst die Daten.** CLMS veröffentlicht Version 2 des 1-km-SWI ab"
+" dem 2025-07-13; Version 1 deckt 2015 bis zum 2025-07-12 ab. Ein früherer"
+" Zeitraum (etwa Juni 2024) findet in dieser Collection möglicherweise "
+"keine Daten. Der Copernicus Data Space kennzeichnet seine CLMS-"
+"Collections außerdem als experimentell."
+
+#: ../../data/soil-water-index.rst:52
+msgid ""
+"**The depth.** The ``depth`` argument is the characteristic time length "
+"*T* of the index in days: 2, 5, 10, 15, 20, 40, 60 or 100. A small *T* "
+"follows recent rain and describes the topsoil; a large *T* is slow and "
+"describes deeper layers. The default is 2."
+msgstr ""
+"**Die Tiefe.** Das Argument ``depth`` ist die charakteristische Zeitlänge"
+" *T* des Index in Tagen: 2, 5, 10, 15, 20, 40, 60 oder 100. Ein kleines "
+"*T* folgt dem jüngsten Regen und beschreibt den Oberboden; ein großes *T*"
+" ist langsam und beschreibt tiefere Schichten. Der Standard ist 2."
+
+#: ../../data/soil-water-index.rst:55
+msgid ""
+"**Empty blocks.** In the example about a third of the pixels have no "
+"value."
+msgstr ""
+"**Leere Blöcke.** Im Beispiel haben etwa ein Drittel der Pixel keinen "
+"Wert."
+
+#: ../../data/soil-water-index.rst:56
+msgid ""
+"**The plot** uses white-to-blue colours and a fixed range of 0 to 100, so"
+" the same colour always means the same moisture."
+msgstr ""
+"**Der Plot** verwendet Weiß-bis-Blau-Farben und einen festen Bereich von "
+"0 bis 100, sodass dieselbe Farbe immer dieselbe Feuchte bedeutet."
+
+#: ../../data/soil-water-index.rst:63
+msgid ":doc:`/howto/choose-period`"
+msgstr ":doc:`/howto/choose-period`"
+
+#: cdec.eo.soil_water_index.download_soil_water_index:1 of
+msgid "*Short alias:* ``download_swi``"
+msgstr "*Kurzer Alias:* ``download_swi``"
+
+#: cdec.eo.soil_water_index.download_soil_water_index:3 of
+msgid "Download the mean Soil Water Index (SWI) of a period."
+msgstr "Lädt den mittleren Soil Water Index (SWI) eines Zeitraums herunter."
+
+#: cdec.eo.soil_water_index.download_soil_water_index:5 of
+msgid ""
+"The function loads one SWI band from the ``CLMS_SWI_EUROPE_1KM_DAILY_V2``"
+" openEO collection (Europe, 1 km, daily) and calculates the temporal mean"
+" for the requested period. The SWI describes soil moisture in percent (0 "
+"= dry, 100 = saturated) according to the CLMS product description."
+msgstr ""
+"Die Funktion lädt ein SWI-Band aus der openEO-Collection "
+"``CLMS_SWI_EUROPE_1KM_DAILY_V2`` (Europa, 1 km, täglich) und berechnet "
+"den zeitlichen Mittelwert für den angeforderten Zeitraum. Der SWI "
+"beschreibt laut Produktbeschreibung des CLMS die Bodenfeuchte in Prozent "
+"(0 = trocken, 100 = gesättigt)."
+
+#: cdec.eo.soil_water_index.download_soil_water_index:10 of
+msgid ""
+"Check the dates before you use this function: CLMS publishes *version 2* "
+"of the 1 km SWI from 2025-07-13 onwards, while version 1 covers 2015 up "
+"to 2025-07-12. Earlier periods may therefore find no data in this "
+"collection. CDSE also labels its openEO CLMS collections as experimental."
+msgstr ""
+"Prüfe die Daten, bevor du diese Funktion verwendest: Das CLMS "
+"veröffentlicht *Version 2* des 1-km-SWI ab dem 2025-07-13, während "
+"Version 1 2015 bis zum 2025-07-12 abdeckt. Frühere Zeiträume finden in "
+"dieser Collection daher möglicherweise keine Daten. CDSE kennzeichnet "
+"seine openEO-CLMS-Collections außerdem als experimentell."
+
+#: cdec.eo.soil_water_index.download_soil_water_index:20 of
+msgid ""
+"Start and end of the observation period, e.g. ``[\"2025-08-01\", "
+"\"2025-09-01\"]``. The end date itself is *not* included, so this example"
+" covers all of August."
+msgstr ""
+"Beginn und Ende des Beobachtungszeitraums, z. B. ``[\"2025-08-01\", "
+"\"2025-09-01\"]``. Das Enddatum selbst ist *nicht* enthalten, dieses "
+"Beispiel umfasst also den ganzen August."
+
+#: cdec.eo.soil_water_index.download_soil_water_index:23 of
+msgid ""
+"Characteristic time length T of the SWI in days. One of 2, 5, 10, 15, 20,"
+" 40, 60 or 100. Small values describe the topsoil, large values the "
+"deeper and slower soil layers."
+msgstr ""
+"Charakteristische Zeitlänge T des SWI in Tagen. Eines von 2, 5, 10, 15, "
+"20, 40, 60 oder 100. Kleine Werte beschreiben den Oberboden, große Werte "
+"die tieferen und langsameren Bodenschichten."
+
+#: cdec.eo.soil_water_index.download_soil_water_index:28 of
+msgid ""
+"Resampling method used to build COG overview levels. ``\"average\"`` is a"
+" suitable default for continuous data."
+msgstr ""
+"Resampling-Methode zum Erzeugen der Übersichtsstufen des COG. "
+"``\"average\"`` ist ein passender Standard für kontinuierliche Daten."
+
+#: cdec.eo.soil_water_index.download_soil_water_index:34 of
+msgid "Absolute path to the downloaded SWI raster."
+msgstr "Absoluter Pfad zum heruntergeladenen SWI-Raster."
+
+#: cdec.eo.soil_water_index.download_soil_water_index:37 of
+msgid ""
+"If ``depth`` is not one of the available values. This is checked     "
+"before connecting to the backend."
+msgstr ""
+"Wenn ``depth`` keiner der verfügbaren Werte ist. Das wird vor der "
+"Verbindung mit dem Backend geprüft."
+
+#: cdec.plot.products.plot_soil_water_index:1 of
+msgid "*Short alias:* ``plot_swi``"
+msgstr "*Kurzer Alias:* ``plot_swi``"
+
+#: cdec.plot.products.plot_soil_water_index:3 of
+msgid "Draw the soil moisture of ``download_soil_water_index``."
+msgstr "Zeichnet die Bodenfeuchte von ``download_soil_water_index``."
+
+#: cdec.plot.products.plot_soil_water_index:5 of
+msgid ""
+"The soil water index is given in percent: 0 is dry, 100 is saturated. The"
+" colour map goes from white (dry) to dark blue (wet). The range is fixed "
+"to 0 ... 100, so images of different days can be compared."
+msgstr ""
+"Der Soil Water Index wird in Prozent angegeben: 0 ist trocken, 100 ist "
+"gesättigt. Die Farbskala geht von Weiß (trocken) zu Dunkelblau (nass). "
+"Der Bereich ist auf 0 ... 100 festgelegt, sodass Bilder verschiedener "
+"Tage verglichen werden können."
+
+#: cdec.plot.products.plot_soil_water_index:9 of
+msgid "The GeoTIFF written by ``download_swi``."
+msgstr "Das von ``download_swi`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_soil_water_index:11 of
+msgid ""
+"Title of the plot. Default: \"Soil water index\". Use ``\"\"`` for no "
+"title."
+msgstr ""
+"Titel des Plots. Standard: \"Soil water index\". Verwende ``\"\"`` für "
+"keinen Titel."
+
+#: ../../data/true-color.rst:2
+msgid "True-colour image (Sentinel-2)"
+msgstr "Echtfarbenbild (Sentinel-2)"
+
+#: ../../data/true-color.rst:4
+msgid ""
+"A picture of the area as the eye would see it: red, green and blue light."
+" The image is the *mean* of all cloud-free observations of the period, "
+"not a photo of one day, so it looks calmer than a single satellite image,"
+" and clouds are replaced by the data of other days."
+msgstr ""
+"Ein Bild des Gebiets, wie das Auge es sehen würde: rotes, grünes und "
+"blaues Licht. Das Bild ist der *Mittelwert* aller wolkenfreien "
+"Beobachtungen des Zeitraums, kein Foto eines einzelnen Tages, und sieht "
+"daher ruhiger aus als ein einzelnes Satellitenbild; Wolken werden durch "
+"die Daten anderer Tage ersetzt."
+
+#: ../../data/true-color.rst:13
+msgid ":func:`~cdec.download_true_color_image`, short ``download_tci``"
+msgstr ":func:`~cdec.download_true_color_image`, kurz ``download_tci``"
+
+#: ../../data/true-color.rst:15
+msgid ":func:`~cdec.plot_true_color_image`, short ``plot_tci``"
+msgstr ":func:`~cdec.plot_true_color_image`, kurz ``plot_tci``"
+
+#: ../../data/true-color.rst:17
+msgid ""
+"Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B04 (red), B03 "
+"(green) and B02 (blue)"
+msgstr ""
+"Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B04 (rot), B03"
+" (grün) und B02 (blau)"
+
+#: ../../data/true-color.rst:21
+msgid ""
+"by default an 8-bit colour picture (three bands, 0 ... 255); with "
+"``enhance_color=False`` three bands of reflectance (floating point, about"
+" 0 ... 1)"
+msgstr ""
+"standardmäßig ein 8-Bit-Farbbild (drei Bänder, 0 ... 255); mit "
+"``enhance_color=False`` drei Bänder Reflektanz (Gleitkomma, etwa 0 ... 1)"
+
+#: ../../data/true-color.rst:42
+msgid ""
+"True-colour image of Bremen in June 2024: green fields, grey roads and "
+"buildings, a dark river, white patches without data."
+msgstr ""
+"Echtfarbenbild von Bremen im Juni 2024: grüne Felder, graue Straßen und "
+"Gebäude, ein dunkler Fluss, weiße Stellen ohne Daten."
+
+#: ../../data/true-color.rst:51
+msgid ""
+"**A picture, not a measurement.** The default file holds colours for the "
+"eye. The reflectance is recalculated into 0 ... 255 with a fixed "
+"brightness, saturation and gamma curve. For calculations download with "
+"``enhance_color=False`` (:doc:`/howto/calculate-with-reflectance`)."
+msgstr ""
+"**Ein Bild, keine Messung.** Die Standarddatei enthält Farben für das "
+"Auge. Die Reflektanz wird mit einer festen Helligkeits-, Sättigungs- und "
+"Gammakurve in 0 ... 255 umgerechnet. Für Berechnungen lade mit "
+"``enhance_color=False`` herunter (:doc:`/howto/calculate-with-"
+"reflectance`)."
+
+#: ../../data/true-color.rst:54
+msgid ""
+"**Comparable colours.** The curve does not look at the image, so the same"
+" reflectance always gets the same colour, in every image "
+"(:doc:`/explanation/colours-and-values`)."
+msgstr ""
+"**Vergleichbare Farben.** Die Kurve schaut nicht auf das Bild, dieselbe "
+"Reflektanz bekommt also in jedem Bild immer dieselbe Farbe "
+"(:doc:`/explanation/colours-and-values`)."
+
+#: ../../data/true-color.rst:56
+msgid ""
+"**Pixels without data** are black in the numbers, but the file stores a "
+"mask. GIS programs and the plot function show them as transparent."
+msgstr ""
+"**Pixel ohne Daten** sind in den Zahlen schwarz, aber die Datei speichert"
+" eine Maske. GIS-Programme und die Plot-Funktion zeigen sie transparent."
+
+#: ../../data/true-color.rst:58
+msgid ""
+"**Water is kept** by default (``scl_classes=(4, 5, 6)``), clouds and "
+"shadows are removed. Pixels that stay empty are the ones where every "
+"observation of the period was removed."
+msgstr ""
+"**Wasser wird standardmäßig behalten** (``scl_classes=(4, 5, 6)``), "
+"Wolken und Schatten werden entfernt. Pixel, die leer bleiben, sind die, "
+"bei denen jede Beobachtung des Zeitraums entfernt wurde."
+
+#: ../../data/true-color.rst:60
+msgid ""
+"The reflectance version can contain a few values above 1 (the example up "
+"to 1.8): bright clouds or snow that were not masked."
+msgstr ""
+"Die Reflektanz-Version kann einige Werte über 1 enthalten (im Beispiel "
+"bis 1,8): helle Wolken oder Schnee, die nicht maskiert wurden."
+
+#: ../../data/true-color.rst:62
+msgid ""
+"Plot a reflectance file with :func:`~cdec.plot_true_color_image` as well:"
+" it enhances the colours *for the picture only*."
+msgstr ""
+"Zeichne auch eine Reflektanzdatei mit "
+":func:`~cdec.plot_true_color_image`: Die Funktion verbessert die Farben "
+"*nur für das Bild*."
+
+#: ../../data/true-color.rst:68
+msgid ""
+":doc:`false-color-urban`, :doc:`/howto/compare-images`, :doc:`/howto"
+"/filter-clouds`"
+msgstr ""
+":doc:`false-color-urban`, :doc:`/howto/compare-images`, :doc:`/howto"
+"/filter-clouds`"
+
+#: cdec.eo.tci.download_true_color_image:1 of
+msgid "*Short alias:* ``download_tci``"
+msgstr "*Kurzer Alias:* ``download_tci``"
+
+#: cdec.eo.tci.download_true_color_image:3 of
+msgid "Download mean Sentinel-2 true-colour reflectance with SCL masking."
+msgstr ""
+"Lädt die mittlere Sentinel-2-Echtfarben-Reflektanz mit SCL-Maskierung "
+"herunter."
+
+#: cdec.eo.tci.download_true_color_image:5 of
+msgid ""
+"The output retains the 10 m reflectance grid; SCL classification detail "
+"remains 20 m."
+msgstr ""
+"Die Ausgabe behält das 10-m-Reflektanzraster; die Detailgenauigkeit der "
+"SCL-Klassifikation bleibt 20 m."
+
+#: cdec.eo.tci.download_true_color_image:18 of
+msgid ""
+"Scene Classification Layer (SCL) classes to **keep**, as a tuple of class"
+" IDs. The default ``SCL_LAND_AND_WATER`` = ``(4, 5, 6)`` keeps "
+"vegetation, non-vegetated land and water and drops clouds, cirrus, "
+"shadows, snow/ice, unclassified and defective pixels. Add ``11`` to keep "
+"snow/ice, or use ``None`` to switch SCL masking off. Run "
+"``cdec.show_scl_classes()`` to see what each class means. Pixels without "
+"any retained observation remain no data, also after colour enhancement."
+msgstr ""
+"Klassen der Scene Classification Layer (SCL), die **behalten** werden, "
+"als Tupel von Klassen-IDs. Der Standard ``SCL_LAND_AND_WATER`` = ``(4, 5,"
+" 6)`` behält Vegetation, nicht bewachsenes Land und Wasser und verwirft "
+"Wolken, Zirren, Schatten, Schnee/Eis, nicht klassifizierte und defekte "
+"Pixel. Füge ``11`` hinzu, um Schnee/Eis zu behalten, oder verwende "
+"``None``, um die SCL-Maskierung auszuschalten. Führe "
+"``cdec.show_scl_classes()`` aus, um zu sehen, was jede Klasse bedeutet. "
+"Pixel ohne eine einzige behaltene Beobachtung bleiben auch nach der "
+"Farbverbesserung ohne Daten."
+
+#: cdec.eo.tci.download_true_color_image:26 of
+msgid ""
+"If ``True``, enhance reflectance to an 8-bit RGB image. The enhancement "
+"uses fixed constants and does not look at the values of the image, so the"
+" same reflectance always gets the same colour. If ``False``, retain the "
+"three bands as floating-point reflectance values (use this for "
+"calculations)."
+msgstr ""
+"Wenn ``True``, wird die Reflektanz zu einem 8-Bit-RGB-Bild verbessert. "
+"Die Verbesserung verwendet feste Konstanten und schaut nicht auf die "
+"Werte des Bildes, dieselbe Reflektanz bekommt also immer dieselbe Farbe. "
+"Wenn ``False``, bleiben die drei Bänder als Gleitkomma-Reflektanzwerte "
+"erhalten (für Berechnungen verwenden)."
+
+#: cdec.eo.tci.download_true_color_image:37 of
+msgid "Absolute path to the downloaded RGB raster."
+msgstr "Absoluter Pfad zum heruntergeladenen RGB-Raster."
+
+#: cdec.plot.products.plot_true_color_image:1 of
+msgid "*Short alias:* ``plot_tci``"
+msgstr "*Kurzer Alias:* ``plot_tci``"
+
+#: cdec.plot.products.plot_true_color_image:3 of
+msgid "Draw the picture of ``download_true_color_image``."
+msgstr "Zeichnet das Bild von ``download_true_color_image``."
+
+#: cdec.plot.products.plot_true_color_image:5 of
+msgid ""
+"A file downloaded with the default ``enhance_color=True`` already holds "
+"8-bit colours and is drawn as it is. A file downloaded with "
+"``enhance_color=False`` holds reflectance; it is given the same colour "
+"enhancement as the download would have applied, **for the picture only**."
+" The file keeps its reflectance values. Pixels without data are "
+"transparent."
+msgstr ""
+"Eine mit dem Standard ``enhance_color=True`` heruntergeladene Datei "
+"enthält bereits 8-Bit-Farben und wird so gezeichnet, wie sie ist. Eine "
+"mit ``enhance_color=False`` heruntergeladene Datei enthält Reflektanz; "
+"sie bekommt dieselbe Farbverbesserung, die der Download angewendet hätte,"
+" **nur für das Bild**. Die Datei behält ihre Reflektanzwerte. Pixel ohne "
+"Daten sind transparent."
+
+#: cdec.plot.products.plot_true_color_image:11 of
+msgid "The GeoTIFF written by ``download_tci``."
+msgstr "Das von ``download_tci`` geschriebene GeoTIFF."
+
+#: cdec.plot.products.plot_true_color_image:13 of
+msgid ""
+"Title of the plot. Default: \"True colour (Sentinel-2)\". Use ``\"\"`` "
+"for no title."
+msgstr ""
+"Titel des Plots. Standard: \"True colour (Sentinel-2)\". Verwende "
+"``\"\"`` für keinen Titel."
+

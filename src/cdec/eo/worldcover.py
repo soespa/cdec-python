@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import numpy as np
 import rasterio
 
 from .util import (
@@ -48,10 +49,29 @@ WORLDCOVER_COLORS: dict[int, str] = {
 
 
 def _apply_worldcover_colormap(raster_path: Path) -> None:
+    """Attach the official WorldCover colour table to a class-ID raster.
+
+    A GeoTIFF colour table only works for integer bands. For any other data
+    type (for example float32) rasterio would silently skip the colour table,
+    so such a raster is converted to ``uint8`` first. That is safe because
+    the largest WorldCover class ID is 100.
+    """
     colormap = {
         value: (*bytes.fromhex(color.removeprefix("#")), 255)
         for value, color in WORLDCOVER_COLORS.items()
     }
+
+    with rasterio.open(raster_path) as raster:
+        data_type = raster.dtypes[0]
+        if data_type != "uint8":
+            class_ids = raster.read(1)
+            profile = raster.profile
+
+    if data_type != "uint8":
+        class_ids = np.clip(np.nan_to_num(class_ids, nan=0), 0, 255).astype("uint8")
+        profile.update(dtype="uint8", count=1, nodata=0)  # class 0 = no data
+        with rasterio.open(raster_path, "w", **profile) as raster:
+            raster.write(class_ids, 1)
 
     with rasterio.open(raster_path, "r+") as raster:
         raster.write_colormap(1, colormap)
@@ -61,8 +81,10 @@ def download_land_cover(
     file_path: str | Path,
     spatial_extent: SpatialExtent,
     temporal_extent: TemporalExtent = WORLDCOVER_TEMPORAL_EXTENT,
+    *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "nearest",
+    verbose: bool = True,
 ) -> Path:
     """Download the ESA WorldCover 2021 land-cover map at 10 m resolution.
 
@@ -75,17 +97,23 @@ def download_land_cover(
         Destination path of the GeoTIFF file. Missing parent directories are
         created automatically.
     spatial_extent:
-        Area to download, for example an openEO bounding-box dictionary, a
-        Shapely geometry, or a path to a vector file.
+        Area to download: an openEO bounding-box dictionary such as
+        ``{"west": 8.7, "south": 53.0, "east": 8.9, "north": 53.1}`` (degrees,
+        WGS 84), a Shapely geometry, or the path to a GeoJSON file.
     temporal_extent:
         Collection period used for the openEO request. The default covers the
         static 2021 WorldCover product and normally does not need changing.
+        Other years find no data in this collection.
     create_cog:
         If ``True``, write a Cloud Optimized GeoTIFF. If ``False``, keep a
         regular GeoTIFF.
     overview_resampling:
         Resampling method used to build COG overview levels. ``"nearest"``
         preserves categorical class IDs and should normally not be changed.
+    verbose:
+        If ``True`` (the default), print a short summary of the downloaded
+        file: extent, grid and resolution, value range and the share of
+        pixels without data.
 
     Returns
     -------
@@ -107,5 +135,8 @@ def download_land_cover(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
+        verbose=verbose,
+        description="ESA WorldCover 2021 land cover (10 m)",
+        unit="land-cover class IDs (names and colours: cdec.WORLDCOVER_CLASSES)",
         postprocess=_apply_worldcover_colormap,
     )

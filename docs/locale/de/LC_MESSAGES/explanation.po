@@ -1,0 +1,626 @@
+# German translation of the CDEC documentation.
+# Copyright (C) 2026, Soeren Sparmann
+# This file is distributed under the same license as the CDEC package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDEC 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-23 17:15+0100\n"
+"PO-Revision-Date: 2026-11-23 16:30+0000\n"
+"Last-Translator: Soeren Sparmann\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../explanation/clouds-and-masking.rst:2
+msgid "Clouds and masking"
+msgstr "Wolken und Maskierung"
+
+#: ../../explanation/clouds-and-masking.rst:4
+msgid ""
+"Optical satellites like Sentinel-2 cannot see through clouds. On a "
+"typical day a large part of central Europe is covered, and the shadows of"
+" clouds are dark patches that look like water. If you average images "
+"without caring, the clouds end up in your NDVI as low values, and your "
+"forest looks sick."
+msgstr ""
+"Optische Satelliten wie Sentinel-2 können nicht durch Wolken sehen. An "
+"einem typischen Tag ist ein großer Teil Mitteleuropas bedeckt, und die "
+"Schatten der Wolken sind dunkle Flecken, die wie Wasser aussehen. Wenn du"
+" Bilder ohne Rücksicht mittelst, landen die Wolken als niedrige Werte in "
+"deinem NDVI, und dein Wald sieht krank aus."
+
+#: ../../explanation/clouds-and-masking.rst:9
+msgid "Two filters"
+msgstr "Zwei Filter"
+
+#: ../../explanation/clouds-and-masking.rst:11
+msgid "The Sentinel-2 download functions remove clouds in two steps:"
+msgstr "Die Sentinel-2-Download-Funktionen entfernen Wolken in zwei Schritten:"
+
+#: ../../explanation/clouds-and-masking.rst:13
+msgid "``max_cloud_cover``: whole scenes"
+msgstr "``max_cloud_cover``: ganze Szenen"
+
+#: ../../explanation/clouds-and-masking.rst:14
+#, python-format
+msgid ""
+"Every scene (a tile of about 100 by 100 km) has an estimate of its cloud "
+"cover in percent. Scenes above the limit (default 20) are not used at "
+"all. This is fast and cheap but coarse: a scene with 15 % clouds is used,"
+" clouds included."
+msgstr ""
+"Für jede Szene (eine Kachel von etwa 100 mal 100 km) gibt es eine "
+"Schätzung ihrer Wolkenbedeckung in Prozent. Szenen über dem Grenzwert "
+"(Standard 20) werden gar nicht verwendet. Das ist schnell und billig, "
+"aber grob: Eine Szene mit 15 % Wolken wird verwendet, Wolken "
+"eingeschlossen."
+
+#: ../../explanation/clouds-and-masking.rst:18
+msgid "``scl_classes``: single pixels"
+msgstr "``scl_classes``: einzelne Pixel"
+
+#: ../../explanation/clouds-and-masking.rst:19
+msgid ""
+"Every scene comes with a *Scene Classification Layer* (SCL): for each 20 "
+"m pixel a number from 0 to 11 says what the pixel probably shows "
+"(vegetation, water, cloud, shadow, snow ...). You list the classes you "
+"want to **keep**; every other pixel is treated as no data "
+"(:doc:`/reference/scl`)."
+msgstr ""
+"Zu jeder Szene gehört eine *Scene Classification Layer* (SCL): Für jedes "
+"20-m-Pixel sagt eine Zahl von 0 bis 11, was das Pixel wahrscheinlich "
+"zeigt (Vegetation, Wasser, Wolke, Schatten, Schnee ...). Du listest die "
+"Klassen auf, die du **behalten** willst; jedes andere Pixel gilt als ohne"
+" Daten (:doc:`/reference/scl`)."
+
+#: ../../explanation/clouds-and-masking.rst:23
+msgid ""
+"Why a list to keep and not a list to drop? It is the safer way round: a "
+"class you forgot is removed, not silently kept."
+msgstr ""
+"Warum eine Liste zum Behalten und nicht eine zum Entfernen? So ist es "
+"sicherer: Eine Klasse, die du vergessen hast, wird entfernt und nicht "
+"stillschweigend behalten."
+
+#: ../../explanation/clouds-and-masking.rst:27
+msgid "The mean of what is left"
+msgstr "Der Mittelwert dessen, was übrig bleibt"
+
+#: ../../explanation/clouds-and-masking.rst:29
+msgid ""
+"Masked pixels are no data, and the average over time ignores no data. A "
+"pixel therefore uses only the observations that were clear. A pixel stays"
+" empty only when *every* observation of the period was masked: the white "
+"patches in the maps of :doc:`/data/ndvi` and :doc:`/data/true-color`. A "
+"longer period is the best cure."
+msgstr ""
+"Maskierte Pixel haben keine Daten, und der Durchschnitt über die Zeit "
+"ignoriert fehlende Daten. Ein Pixel verwendet also nur die klaren "
+"Beobachtungen. Ein Pixel bleibt nur leer, wenn *jede* Beobachtung des "
+"Zeitraums maskiert wurde: die weißen Flecken in den Karten von "
+":doc:`/data/ndvi` und :doc:`/data/true-color`. Ein längerer Zeitraum "
+"hilft am besten."
+
+#: ../../explanation/clouds-and-masking.rst:34
+msgid "The limits"
+msgstr "Die Grenzen"
+
+#: ../../explanation/clouds-and-masking.rst:36
+msgid ""
+"The classification is calculated automatically (by ESA's Sen2Cor "
+"processor) and is not perfect. Thin clouds, haze and cloud edges are "
+"sometimes labelled as land; snow is sometimes labelled as cloud. Look at "
+"your result before you trust it."
+msgstr ""
+"Die Klassifikation wird automatisch berechnet (vom Sen2Cor-Prozessor der "
+"ESA) und ist nicht perfekt. Dünne Wolken, Dunst und Wolkenränder werden "
+"manchmal als Land eingestuft; Schnee wird manchmal als Wolke eingestuft. "
+"Sieh dir dein Ergebnis an, bevor du ihm vertraust."
+
+#: ../../explanation/clouds-and-masking.rst:41
+msgid "Other data types"
+msgstr "Andere Datentypen"
+
+#: ../../explanation/clouds-and-masking.rst:43
+msgid "The **Landsat** mosaic is already reconstructed to be free of clouds."
+msgstr ""
+"Das **Landsat**-Mosaik ist bereits so rekonstruiert, dass es frei von "
+"Wolken ist."
+
+#: ../../explanation/clouds-and-masking.rst:44
+msgid ""
+"**Land surface temperature** has *no* masking, and its mean can include "
+"cloudy observations (:doc:`/data/land-surface-temperature`)."
+msgstr ""
+"Die **Landoberflächentemperatur** hat *keine* Maskierung, und ihr "
+"Mittelwert kann bewölkte Beobachtungen enthalten (:doc:`/data/land-"
+"surface-temperature`)."
+
+#: ../../explanation/clouds-and-masking.rst:46
+msgid ""
+"The **soil water index**, the **elevation model** and the **land cover "
+"map** do not depend on clouds."
+msgstr ""
+"Der **Bodenwasserindex**, das **Höhenmodell** und die "
+"**Landbedeckungskarte** hängen nicht von Wolken ab."
+
+#: ../../explanation/colours-and-values.rst:2
+msgid "Colours and values"
+msgstr "Farben und Werte"
+
+#: ../../explanation/colours-and-values.rst:4
+msgid ""
+"A GeoTIFF holds numbers. Whether you see a picture, a colour map or just "
+"numbers is a question of how you display them. The package keeps the two "
+"apart."
+msgstr ""
+"Ein GeoTIFF enthält Zahlen. Ob du ein Bild, eine Farbskala oder nur "
+"Zahlen siehst, hängt davon ab, wie du sie darstellst. Das Paket hält "
+"beides getrennt."
+
+#: ../../explanation/colours-and-values.rst:8
+msgid "Measurements and pictures"
+msgstr "Messwerte und Bilder"
+
+#: ../../explanation/colours-and-values.rst:10
+#, python-format
+msgid ""
+"**Reflectance** is what the satellite measures: the share of the light "
+"that the ground reflects, from 0 (black) to about 1 (white). It is the "
+"right basis for calculations, but as a picture it looks dark and flat, "
+"because most of the land reflects only 5 to 30 % of the light."
+msgstr ""
+"**Reflektanz** ist das, was der Satellit misst: der Anteil des Lichts, "
+"den der Boden zurückwirft, von 0 (schwarz) bis etwa 1 (weiß). Sie ist die"
+" richtige Grundlage für Berechnungen, sieht als Bild aber dunkel und "
+"flach aus, weil die meisten Landflächen nur 5 bis 30 % des Lichts "
+"reflektieren."
+
+#: ../../explanation/colours-and-values.rst:14
+msgid ""
+"**A picture** is made for the eye: reflectance stretched to 0 ... 255 so "
+"that it looks like a photograph. It is right for looking, but the numbers"
+" are no longer measurements."
+msgstr ""
+"**Ein Bild** ist für das Auge gemacht: Die Reflektanz wird auf 0 ... 255 "
+"gestreckt, damit es wie ein Foto aussieht. Es ist richtig zum Ansehen, "
+"aber die Zahlen sind keine Messwerte mehr."
+
+#: ../../explanation/colours-and-values.rst:17
+msgid ""
+"The colour downloads (:doc:`/data/true-color` and the false-colour images"
+" :doc:`/data/false-color-urban`, :doc:`/data/false-color-infrared` and "
+":doc:`/data/false-color-swir`) therefore give you a picture by default, "
+"and the reflectance if you ask for it (``enhance_color=False``, "
+"``enhance_contrast=False``). The index downloads (NDVI, EVI, NDWI, NDMI, "
+"NDSI) are always measurements, and the scene classification is a map of "
+"class numbers."
+msgstr ""
+"Die Farb-Downloads (:doc:`/data/true-color` und die Falschfarbenbilder "
+":doc:`/data/false-color-urban`, :doc:`/data/false-color-infrared` und "
+":doc:`/data/false-color-swir`) liefern deshalb standardmäßig ein Bild und"
+" die Reflektanz, wenn du danach fragst (``enhance_color=False``, "
+"``enhance_contrast=False``). Die Index-Downloads (NDVI, EVI, NDWI, NDMI, "
+"NDSI) sind immer Messwerte, und die Szenenklassifikation ist eine Karte "
+"aus Klassennummern."
+
+#: ../../explanation/colours-and-values.rst:24
+msgid "A fixed stretch"
+msgstr "Eine feste Streckung"
+
+#: ../../explanation/colours-and-values.rst:26
+msgid ""
+"Most GIS programs stretch the colours of every image between its own "
+"smallest and largest value. Then the same colour means different things "
+"in different images, and two images cannot be compared by eye."
+msgstr ""
+"Die meisten GIS-Programme strecken die Farben jedes Bildes zwischen "
+"seinem eigenen kleinsten und größten Wert. Dann bedeutet dieselbe Farbe "
+"in verschiedenen Bildern Verschiedenes, und zwei Bilder lassen sich nicht"
+" mit dem Auge vergleichen."
+
+#: ../../explanation/colours-and-values.rst:29
+msgid ""
+"The enhancement of the package is **fixed**: it depends only on "
+"constants, never on the image. Reflectance 0.1 gets the same colour in an"
+" image of Bremen and of the Alps, in June and in December. The colours of"
+" two pictures are therefore comparable. The price is that the contrast of"
+" a very dark or very bright image is not optimised."
+msgstr ""
+"Die Farbverbesserung des Pakets ist **fest**: Sie hängt nur von "
+"Konstanten ab, nie vom Bild. Eine Reflektanz von 0,1 bekommt in einem "
+"Bild von Bremen und in einem der Alpen, im Juni und im Dezember dieselbe "
+"Farbe. Die Farben zweier Bilder sind daher vergleichbar. Der Preis: Der "
+"Kontrast eines sehr dunklen oder sehr hellen Bildes ist nicht optimiert."
+
+#: ../../explanation/colours-and-values.rst:34
+msgid "Plots follow the same idea"
+msgstr "Plots folgen derselben Idee"
+
+#: ../../explanation/colours-and-values.rst:36
+msgid ""
+"The plot functions use a fixed range wherever the data has a natural one:"
+" -1 to 1 for the indices (vegetation, water, moisture and snow) and 0 to "
+"100 for the soil water index. For temperature and elevation there is no "
+"natural range, so the colours follow the image, and you set ``vmin`` and "
+"``vmax`` yourself to compare (:doc:`/howto/compare-images`)."
+msgstr ""
+"Die Plot-Funktionen verwenden einen festen Wertebereich, wo die Daten "
+"einen natürlichen haben: -1 bis 1 für die Indizes (Vegetation, Wasser, "
+"Feuchte und Schnee) und 0 bis 100 für den Bodenwasserindex. Für "
+"Temperatur und Höhe gibt es keinen natürlichen Bereich, die Farben folgen"
+" also dem Bild, und du setzt ``vmin`` und ``vmax`` selbst, um zu "
+"vergleichen (:doc:`/howto/compare-images`)."
+
+#: ../../explanation/colours-and-values.rst:40
+msgid ""
+"If you downloaded the reflectance version of a colour image, the plot "
+"function enhances the colours *for the picture only*. The numbers in your"
+" file are never changed by plotting."
+msgstr ""
+"Wenn du die Reflektanz-Version eines Farbbildes heruntergeladen hast, "
+"verbessert die Plot-Funktion die Farben *nur für das Bild*. Die Zahlen in"
+" deiner Datei werden durch das Zeichnen nie verändert."
+
+#: ../../explanation/design.rst:2
+msgid "Why the package looks like this"
+msgstr "Warum das Paket so aussieht"
+
+#: ../../explanation/design.rst:4
+msgid ""
+"The package is written for students who read the code. These decisions "
+"follow from that."
+msgstr ""
+"Das Paket ist für Studierende geschrieben, die den Code lesen. Daraus "
+"ergeben sich diese Entscheidungen."
+
+#: ../../explanation/design.rst:6
+msgid "**One function per data type.**"
+msgstr "**Eine Funktion je Datentyp.**"
+
+#: ../../explanation/design.rst:7
+msgid ""
+"``download_ndvi``, ``download_tci`` ... each has its own module and reads"
+" from top to bottom. A little repetition is accepted so that you can read"
+" one module and understand it, instead of following a framework."
+msgstr ""
+"``download_ndvi``, ``download_tci`` ... hat jeweils ein eigenes Modul und"
+" liest sich von oben nach unten. Ein wenig Wiederholung wird in Kauf "
+"genommen, damit du ein Modul lesen und verstehen kannst, statt einem "
+"Framework zu folgen."
+
+#: ../../explanation/design.rst:10
+msgid "**Long names and short aliases.**"
+msgstr "**Lange Namen und kurze Aliase.**"
+
+#: ../../explanation/design.rst:11
+msgid ""
+"``download_true_color_image`` says what it does, ``download_tci`` is "
+"quick to type. They are the same function, and the documentation of the "
+"long name shows the alias."
+msgstr ""
+"``download_true_color_image`` sagt, was die Funktion tut, "
+"``download_tci`` ist schnell getippt. Es ist dieselbe Funktion, und die "
+"Dokumentation des langen Namens zeigt den Alias."
+
+#: ../../explanation/design.rst:14
+msgid "**The options worth changing come first.**"
+msgstr "**Die Optionen, die man ändern will, kommen zuerst.**"
+
+#: ../../explanation/design.rst:15
+msgid ""
+"``max_cloud_cover`` and ``scl_classes`` follow directly after the three "
+"standard arguments. Technical options (``create_cog``, "
+"``overview_resampling``, ``verbose``) must be written with their names, "
+"so they cannot be confused with the others."
+msgstr ""
+"``max_cloud_cover`` und ``scl_classes`` folgen direkt auf die drei "
+"Standardargumente. Technische Optionen (``create_cog``, "
+"``overview_resampling``, ``verbose``) müssen mit ihrem Namen geschrieben "
+"werden, damit sie nicht mit den anderen verwechselt werden können."
+
+#: ../../explanation/design.rst:19
+msgid "**Functions return a file path.**"
+msgstr "**Funktionen geben einen Dateipfad zurück.**"
+
+#: ../../explanation/design.rst:20
+msgid ""
+"The result is a GeoTIFF, not a Python object. You open it with "
+"``rasterio`` and can use it in QGIS and every other program, and nothing "
+"in the package stands between you and your data."
+msgstr ""
+"Das Ergebnis ist ein GeoTIFF, kein Python-Objekt. Du öffnest es mit "
+"``rasterio`` und kannst es in QGIS und jedem anderen Programm verwenden; "
+"nichts im Paket steht zwischen dir und deinen Daten."
+
+#: ../../explanation/design.rst:23
+msgid "**One plot function per data type.**"
+msgstr "**Eine Plot-Funktion je Datentyp.**"
+
+#: ../../explanation/design.rst:24
+msgid ""
+"A file does not say what its numbers mean. NDVI, EVI, temperature and "
+"elevation are all one band of floating-point numbers; even NDVI and EVI "
+"have the same value range. The colour map and the value range are part of"
+" the interpretation, so each plot function writes these decisions down "
+"(``src/cdec/plot/products.py``: each function is a single short call). "
+":func:`~cdec.plot_raster` is the one that only looks at the *format*, for"
+" data of your own."
+msgstr ""
+"Eine Datei sagt nicht, was ihre Zahlen bedeuten. NDVI, EVI, Temperatur "
+"und Höhe sind alle ein Band aus Gleitkommazahlen; sogar NDVI und EVI "
+"haben denselben Wertebereich. Die Farbskala und der Wertebereich gehören "
+"zur Interpretation, deshalb schreibt jede Plot-Funktion diese "
+"Entscheidungen auf (``src/cdec/plot/products.py``: jede Funktion ist ein "
+"einziger kurzer Aufruf). :func:`~cdec.plot_raster` ist die Funktion, die "
+"nur auf das *Format* achtet, für deine eigenen Daten."
+
+#: ../../explanation/design.rst:29
+msgid "**A summary after every download.**"
+msgstr "**Eine Zusammenfassung nach jedem Download.**"
+
+#: ../../explanation/design.rst:30
+msgid ""
+"The numbers are read from the file, so what you see is what is in it, and"
+" a student learns the vocabulary (extent, grid, values, no data) from the"
+" first download on."
+msgstr ""
+"Die Zahlen werden aus der Datei gelesen, du siehst also, was wirklich in "
+"ihr steht, und lernst von Anfang an das Vokabular (Ausdehnung, Raster, "
+"Werte, keine Daten)."
+
+#: ../../explanation/grids-and-time.rst:2
+msgid "Grids and time"
+msgstr "Raster und Zeit"
+
+#: ../../explanation/grids-and-time.rst:5
+msgid "Where is a pixel?"
+msgstr "Wo liegt ein Pixel?"
+
+#: ../../explanation/grids-and-time.rst:7
+msgid ""
+"A GeoTIFF is a grid of pixels, and the file stores how this grid sits on "
+"the Earth: its **coordinate system** and its **pixel size**."
+msgstr ""
+"Ein GeoTIFF ist ein Raster aus Pixeln, und die Datei speichert, wie "
+"dieses Raster auf der Erde liegt: sein **Koordinatensystem** und seine "
+"**Pixelgröße**."
+
+#: ../../explanation/grids-and-time.rst:10
+msgid ""
+"The Sentinel-2 downloads come in a *metric* system, UTM. The coordinates "
+"are metres (in the example EPSG:32632 for Bremen) and the pixels are "
+"squares of 10 m. The plot labels the axes \"Easting (m)\" and \"Northing "
+"(m)\"."
+msgstr ""
+"Die Sentinel-2-Downloads kommen in einem *metrischen* System, UTM. Die "
+"Koordinaten sind Meter (im Beispiel EPSG:32632 für Bremen), und die Pixel"
+" sind Quadrate von 10 m. Der Plot beschriftet die Achsen mit „Easting "
+"(m)“ und „Northing (m)“."
+
+#: ../../explanation/grids-and-time.rst:12
+msgid ""
+"The other data types come in *longitude and latitude* (EPSG:4326). The "
+"pixel size is then given in degrees. A degree of longitude is shorter "
+"than a degree of latitude (about 0.6 times as long at the latitude of "
+"Bremen), so the plot functions correct the shape of the map; without that"
+" it would look stretched from east to west."
+msgstr ""
+"Die anderen Datentypen kommen in *Länge und Breite* (EPSG:4326). Die "
+"Pixelgröße wird dann in Grad angegeben. Ein Längengrad ist kürzer als ein"
+" Breitengrad (auf der Breite von Bremen etwa 0,6-mal so lang), deshalb "
+"korrigieren die Plot-Funktionen die Form der Karte; ohne das sähe sie in "
+"Ost-West-Richtung gestreckt aus."
+
+#: ../../explanation/grids-and-time.rst:16
+msgid ""
+"``summarize_raster`` and the summary printed after a download show the "
+"grid of a file (:doc:`/howto/check-a-file`). The edges of the file can "
+"differ a little from your box, because the data has its own grid."
+msgstr ""
+"``summarize_raster`` und die nach einem Download ausgegebene "
+"Zusammenfassung zeigen das Raster einer Datei "
+"(:doc:`/howto/check-a-file`). Die Ränder der Datei können ein wenig von "
+"deinem Rechteck abweichen, weil die Daten ihr eigenes Raster haben."
+
+#: ../../explanation/grids-and-time.rst:19
+msgid ""
+"The pixel size is not the same as the *detail* of the data. The 10 m grid"
+" of Sentinel-2 holds bands of 10 m and 20 m detail; the scene "
+"classification, for example, has 20 m detail only."
+msgstr ""
+"Die Pixelgröße ist nicht dasselbe wie der *Detailgrad* der Daten. Das "
+"10-m-Raster von Sentinel-2 enthält Bänder mit 10 m und 20 m Detail; die "
+"Szenenklassifikation hat zum Beispiel nur 20 m Detail."
+
+#: ../../explanation/grids-and-time.rst:23
+msgid "When is it?"
+msgstr "Wann ist es?"
+
+#: ../../explanation/grids-and-time.rst:25
+msgid ""
+"The period is ``[start, end]`` and the end date is not included, as in "
+"many programming languages: ``[\"2024-06-01\", \"2024-07-01\"]`` is all "
+"of June. The result is the mean of the period and has no time dimension "
+"(:doc:`how-it-works`)."
+msgstr ""
+"Der Zeitraum ist ``[start, end]``, und das Enddatum ist nicht enthalten, "
+"wie in vielen Programmiersprachen: ``[\"2024-06-01\", \"2024-07-01\"]`` "
+"ist der ganze Juni. Das Ergebnis ist der Mittelwert des Zeitraums und hat"
+" keine Zeitdimension (:doc:`how-it-works`)."
+
+#: ../../explanation/grids-and-time.rst:29
+msgid ""
+"The data types differ in how often they observe: Sentinel-2 every few "
+"days, Sentinel-3 temperature and the soil water index about daily, the "
+"Landsat mosaics every two months. A period shorter than that finds "
+"nothing or very little; static data (elevation, land cover) has no time "
+"at all (:doc:`/howto/choose-period`)."
+msgstr ""
+"Die Datentypen unterscheiden sich darin, wie oft sie beobachten: "
+"Sentinel-2 alle paar Tage, die Sentinel-3-Temperatur und der "
+"Bodenwasserindex ungefähr täglich, die Landsat-Mosaike alle zwei Monate. "
+"Ein kürzerer Zeitraum findet nichts oder sehr wenig; statische Daten "
+"(Höhe, Landbedeckung) haben gar keine Zeit (:doc:`/howto/choose-period`)."
+
+#: ../../explanation/how-it-works.rst:2
+msgid "How a download works"
+msgstr "Wie ein Download funktioniert"
+
+#: ../../explanation/how-it-works.rst:4
+msgid ""
+"The satellites do not send you files; they send the Copernicus Data Space"
+" petabytes of images. You would not want to download all of them just to "
+"look at one city. CDEC therefore uses **openEO**, a standard way to ask a"
+" server to do the work."
+msgstr ""
+"Die Satelliten schicken dir keine Dateien; sie schicken dem Copernicus "
+"Data Space Petabytes an Bildern. Du willst nicht alle herunterladen, nur "
+"um eine Stadt anzusehen. CDEC verwendet deshalb **openEO**, eine "
+"standardisierte Art, einen Server die Arbeit machen zu lassen."
+
+#: ../../explanation/how-it-works.rst:9
+msgid "Describe, do not download"
+msgstr "Beschreiben, nicht herunterladen"
+
+#: ../../explanation/how-it-works.rst:11
+msgid ""
+"A ``download_*`` function does not fetch images. It writes down a recipe "
+"for the server, as a *data cube*: a block of data with the dimensions x, "
+"y, time and band. The recipe of the NDVI reads like this:"
+msgstr ""
+"Eine ``download_*``-Funktion holt keine Bilder. Sie schreibt ein Rezept "
+"für den Server auf, als *Datacube*: ein Datenblock mit den Dimensionen x,"
+" y, Zeit und Band. Das Rezept für den NDVI liest sich so:"
+
+#: ../../explanation/how-it-works.rst:14
+msgid ""
+"**Load** the red and near-infrared bands (and the scene classification) "
+"of your area and period."
+msgstr ""
+"**Laden** der roten und der nahinfraroten Bänder (und der "
+"Szenenklassifikation) deines Gebiets und Zeitraums."
+
+#: ../../explanation/how-it-works.rst:15
+msgid "**Mask** the pixels that you do not want, such as clouds."
+msgstr "**Maskieren** der Pixel, die du nicht willst, etwa Wolken."
+
+#: ../../explanation/how-it-works.rst:16
+msgid "**Average** over time, so that one value per pixel is left."
+msgstr "**Mitteln** über die Zeit, sodass ein Wert je Pixel übrig bleibt."
+
+#: ../../explanation/how-it-works.rst:17
+msgid "**Calculate** the index from the averages."
+msgstr "**Berechnen** des Index aus den Mittelwerten."
+
+#: ../../explanation/how-it-works.rst:18
+msgid "**Download** the result as a GeoTIFF."
+msgstr "**Herunterladen** des Ergebnisses als GeoTIFF."
+
+#: ../../explanation/how-it-works.rst:20
+msgid ""
+"Only the final result, a few megabytes, travels to your computer. Every "
+"module of the package (``src/cdec/eo/``) is this recipe for one data "
+"type; :doc:`design` says why the recipe is not hidden in a function that "
+"all modules share."
+msgstr ""
+"Nur das Endergebnis, ein paar Megabyte, wandert auf deinen Computer. "
+"Jedes Modul des Pakets (``src/cdec/eo/``) ist dieses Rezept für einen "
+"Datentyp; :doc:`design` erklärt, warum das Rezept nicht in einer Funktion"
+" versteckt ist, die alle Module teilen."
+
+#: ../../explanation/how-it-works.rst:25
+msgid "Why one image per period"
+msgstr "Warum ein Bild je Zeitraum"
+
+#: ../../explanation/how-it-works.rst:27
+msgid ""
+"The result has no time dimension: it is the *mean* of the period. A "
+"single satellite image is always incomplete, because clouds hide parts of"
+" it, and the mean of the usable observations is the simplest way to a "
+"complete, calm picture. The index is calculated from the mean "
+"reflectance, not as the mean of daily indices. If you need to see change,"
+" download two periods and compare them."
+msgstr ""
+"Das Ergebnis hat keine Zeitdimension: Es ist der *Mittelwert* des "
+"Zeitraums. Ein einzelnes Satellitenbild ist immer unvollständig, weil "
+"Wolken Teile verdecken, und der Mittelwert der brauchbaren Beobachtungen "
+"ist der einfachste Weg zu einem vollständigen, ruhigen Bild. Der Index "
+"wird aus der mittleren Reflektanz berechnet, nicht als Mittel täglicher "
+"Indizes. Wenn du Veränderung sehen willst, lade zwei Zeiträume herunter "
+"und vergleiche sie."
+
+#: ../../explanation/how-it-works.rst:33
+msgid "The login"
+msgstr "Der Login"
+
+#: ../../explanation/how-it-works.rst:35
+msgid ""
+"The Copernicus Data Space asks you to log in. The first time, the package"
+" shows a code and a web address; you confirm the code in your browser. "
+"The openEO client stores a token on your computer, so later calls log in "
+"without a question. Every download function connects and logs in again; "
+"this is cheap once the token exists."
+msgstr ""
+"Der Copernicus Data Space verlangt einen Login. Beim ersten Mal zeigt das"
+" Paket einen Code und eine Webadresse; du bestätigst den Code im Browser."
+" Der openEO-Client speichert ein Token auf deinem Computer, spätere "
+"Aufrufe melden sich daher ohne Rückfrage an. Jede Download-Funktion "
+"verbindet sich und meldet sich erneut an; das ist billig, sobald das "
+"Token existiert."
+
+#: ../../explanation/how-it-works.rst:40
+msgid "The file"
+msgstr "Die Datei"
+
+#: ../../explanation/how-it-works.rst:42
+msgid ""
+"The function first writes the download into a hidden temporary folder "
+"next to the target. Then it applies the colour enhancement if you asked "
+"for one, converts the file to a Cloud Optimized GeoTIFF, and only then "
+"moves it to the name you gave. If something fails on the way, the target "
+"file is untouched (:doc:`/howto/output-file`). At the end the function "
+"reads the finished file and prints a summary, so that the numbers you see"
+" are the numbers in the file."
+msgstr ""
+"Die Funktion schreibt den Download zuerst in einen versteckten temporären"
+" Ordner neben dem Ziel. Dann wendet sie die Farbverbesserung an, wenn du "
+"eine verlangt hast, wandelt die Datei in ein Cloud Optimized GeoTIFF um "
+"und verschiebt sie erst danach an den Namen, den du angegeben hast. Wenn "
+"unterwegs etwas schiefgeht, bleibt die Zieldatei unberührt (:doc:`/howto"
+"/output-file`). Am Ende liest die Funktion die fertige Datei und gibt "
+"eine Zusammenfassung aus, sodass die Zahlen, die du siehst, die Zahlen in"
+" der Datei sind."
+
+#: ../../explanation/how-it-works.rst:49
+msgid "Where to read on"
+msgstr "Wie es weitergeht"
+
+#: ../../explanation/how-it-works.rst:51
+msgid ""
+":doc:`clouds-and-masking` explains the masking step, :doc:`colours-and-"
+"values` what happens to the colours, and :doc:`grids-and-time` what the "
+"grid of the result is."
+msgstr ""
+":doc:`clouds-and-masking` erklärt den Schritt der Maskierung, :doc"
+":`colours-and-values` was mit den Farben geschieht und :doc:`grids-and-"
+"time` wie das Raster des Ergebnisses aussieht."
+
+#: ../../explanation/index.rst:2
+msgid "Explanation"
+msgstr "Hintergrund"
+
+#: ../../explanation/index.rst:4
+msgid ""
+"Short background pages. They explain *why*, not *how*; for steps see the "
+":doc:`how-to guides </howto/index>`."
+msgstr ""
+"Kurze Hintergrundseiten. Sie erklären das *Warum*, nicht das *Wie*; "
+"Schritte findest du in den :doc:`Anleitungen </howto/index>`."
+

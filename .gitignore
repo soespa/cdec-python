@@ -1,3 +1,12 @@
 .idea
 .DS_Store
 .venv
+__pycache__/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage*
+tests/output/
+docs/_build/
+*.mo

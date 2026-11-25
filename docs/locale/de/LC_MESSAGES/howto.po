@@ -1,0 +1,927 @@
+# German translation of the CDEC documentation.
+# Copyright (C) 2026, Soeren Sparmann
+# This file is distributed under the same license as the CDEC package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDEC 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-23 17:15+0100\n"
+"PO-Revision-Date: 2026-11-23 16:30+0000\n"
+"Last-Translator: Soeren Sparmann\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../howto/calculate-with-reflectance.rst:2
+msgid "Calculate with reflectance"
+msgstr "Mit Reflektanz rechnen"
+
+#: ../../howto/calculate-with-reflectance.rst:4
+msgid ""
+"The true-colour download and the false-colour downloads (urban, infrared,"
+" SWIR) are *pictures* by default: 8-bit numbers from 0 to 255 that look "
+"good on screen. To calculate with them (differences, thresholds, "
+"statistics) you want the measurement behind the picture: the "
+"**reflectance**, a number between 0 (black) and about 1 (white)."
+msgstr ""
+"Der Download des Echtfarbenbildes und die Falschfarben-Downloads "
+"(Stadtansicht, Infrarot, SWIR) liefern standardmäßig *Bilder*: 8-Bit-"
+"Zahlen von 0 bis 255, die auf dem Bildschirm gut aussehen. Um damit zu "
+"rechnen (Differenzen, Schwellenwerte, Statistiken), brauchst du die "
+"Messung hinter dem Bild: die **Reflektanz**, eine Zahl zwischen 0 "
+"(schwarz) und etwa 1 (weiß)."
+
+#: ../../howto/calculate-with-reflectance.rst:8
+msgid "Download the image without the enhancement:"
+msgstr "Lade das Bild ohne die Farbverbesserung herunter:"
+
+#: ../../howto/calculate-with-reflectance.rst:21
+msgid ""
+"(for the false-colour composites the option is called "
+"``enhance_contrast=False``). The files now have three floating-point "
+"bands, in the order red, green, blue. Read them with ``rasterio``:"
+msgstr ""
+"(bei den Falschfarben-Kompositen heißt die Option "
+"``enhance_contrast=False``). Die Dateien haben jetzt drei Gleitkomma-"
+"Bänder in der Reihenfolge Rot, Grün, Blau. Lies sie mit ``rasterio``:"
+
+#: ../../howto/calculate-with-reflectance.rst:31
+msgid ""
+"Both files have the same area, so they have the same grid and the arrays "
+"fit together."
+msgstr ""
+"Beide Dateien haben dasselbe Gebiet, also dasselbe Raster, und die Arrays"
+" passen zusammen."
+
+#: ../../howto/calculate-with-reflectance.rst:34
+msgid "Good to know"
+msgstr "Gut zu wissen"
+
+#: ../../howto/calculate-with-reflectance.rst:36
+msgid ""
+"Reflectance is not strictly limited to 0 ... 1. A few pixels are slightly"
+" below 0 or above 1 (bright clouds or snow that were not masked)."
+msgstr ""
+"Die Reflektanz ist nicht streng auf 0 ... 1 begrenzt. Einige Pixel liegen"
+" leicht unter 0 oder über 1 (helle Wolken oder Schnee, die nicht maskiert"
+" wurden)."
+
+#: ../../howto/calculate-with-reflectance.rst:38
+msgid ""
+"You can still look at such a file: :func:`~cdec.plot_true_color_image` "
+"applies the colour enhancement **for the picture only** and leaves the "
+"file unchanged (:doc:`/explanation/colours-and-values`)."
+msgstr ""
+"Eine solche Datei kannst du trotzdem ansehen: "
+":func:`~cdec.plot_true_color_image` wendet die Farbverbesserung **nur für"
+" das Bild** an und lässt die Datei unverändert (:doc:`/explanation"
+"/colours-and-values`)."
+
+#: ../../howto/calculate-with-reflectance.rst:40
+msgid ""
+"The index data types (NDVI, EVI, NDWI, NDMI, NDSI) are always numbers; "
+"they have no picture version."
+msgstr ""
+"Die Index-Datentypen (NDVI, EVI, NDWI, NDMI, NDSI) sind immer Zahlen; sie"
+" haben keine Bildversion."
+
+#: ../../howto/check-a-file.rst:2
+msgid "Check a downloaded file"
+msgstr "Eine heruntergeladene Datei prüfen"
+
+#: ../../howto/check-a-file.rst:4
+msgid ""
+"After a download the function prints a summary of the file it wrote "
+"(unless you pass ``verbose=False``). To get the same summary for a file "
+"you downloaded earlier, use :func:`~cdec.eo.summary.summarize_raster`:"
+msgstr ""
+"Nach einem Download gibt die Funktion eine Zusammenfassung der "
+"geschriebenen Datei aus (außer du übergibst ``verbose=False``). Die "
+"gleiche Zusammenfassung für eine früher heruntergeladene Datei bekommst "
+"du mit :func:`~cdec.eo.summary.summarize_raster`:"
+
+#: ../../howto/check-a-file.rst:13
+msgid ""
+"The summary is read from the file itself, so it shows what is really in "
+"it: extent, grid and resolution, the smallest, largest and mean value, "
+"and the share of pixels without data. For a file that was not written by "
+"a ``download_*`` function the title, the unit and the lines about period "
+"and clouds are simply missing; you can pass your own with "
+"``description=``, ``unit=`` and ``details=``."
+msgstr ""
+"Die Zusammenfassung wird aus der Datei selbst gelesen und zeigt daher, "
+"was wirklich darin steht: Ausdehnung, Raster und Auflösung, kleinster, "
+"größter und mittlerer Wert und den Anteil der Pixel ohne Daten. Bei einer"
+" Datei, die nicht von einer ``download_*``-Funktion geschrieben wurde, "
+"fehlen Titel, Einheit und die Zeilen zu Zeitraum und Wolken einfach; du "
+"kannst eigene mit ``description=``, ``unit=`` und ``details=`` übergeben."
+
+#: ../../howto/check-a-file.rst:19
+msgid "What to look at"
+msgstr "Worauf du achten solltest"
+
+#: ../../howto/check-a-file.rst:21
+msgid "**The no data share.**"
+msgstr "**Der Anteil ohne Daten.**"
+
+#: ../../howto/check-a-file.rst:22
+msgid ""
+"A large share is normal for Sentinel-2 data of a short period (clouds). "
+"If it is very large, use a longer period or relax the filters (:doc"
+":`filter-clouds`)."
+msgstr ""
+"Ein großer Anteil ist bei Sentinel-2-Daten eines kurzen Zeitraums normal "
+"(Wolken). Ist er sehr groß, nimm einen längeren Zeitraum oder lockere die"
+" Filter (:doc:`filter-clouds`)."
+
+#: ../../howto/check-a-file.rst:25
+msgid "**The value range.**"
+msgstr "**Der Wertebereich.**"
+
+#: ../../howto/check-a-file.rst:26
+msgid ""
+"Compare it with the data type page. NDVI should be between -1 and 1 "
+"(:doc:`/data/ndvi`); temperature in Kelvin should be around 250 to 320 "
+"(:doc:`/data/land-surface-temperature`)."
+msgstr ""
+"Vergleiche ihn mit der Seite des Datentyps. Der NDVI sollte zwischen -1 "
+"und 1 liegen (:doc:`/data/ndvi`); die Temperatur in Kelvin sollte etwa "
+"bei 250 bis 320 liegen (:doc:`/data/land-surface-temperature`)."
+
+#: ../../howto/check-a-file.rst:29
+msgid "**The grid.**"
+msgstr "**Das Raster.**"
+
+#: ../../howto/check-a-file.rst:30
+msgid ""
+"The pixel size should be the one of the data type (10 m, 30 m or 1 km), "
+"and the extent should be your area."
+msgstr ""
+"Die Pixelgröße sollte die des Datentyps sein (10 m, 30 m oder 1 km), und "
+"die Ausdehnung sollte dein Gebiet sein."
+
+#: ../../howto/check-a-file.rst:33
+msgid "Look at the file with rasterio"
+msgstr "Die Datei mit rasterio ansehen"
+
+#: ../../howto/check-a-file.rst:44
+msgid "And draw it: :doc:`plot-and-save`."
+msgstr "Und zeichne sie: :doc:`plot-and-save`."
+
+#: ../../howto/choose-area.rst:2
+msgid "Choose the area"
+msgstr "Das Gebiet wählen"
+
+#: ../../howto/choose-area.rst:4
+msgid ""
+"Every download function takes the area as its second argument, "
+"``spatial_extent``. There are three ways to write it. All of them use "
+"longitude and latitude in degrees (WGS 84)."
+msgstr ""
+"Jede Download-Funktion nimmt das Gebiet als zweites Argument, "
+"``spatial_extent``. Es gibt drei Möglichkeiten, es zu schreiben. Alle "
+"verwenden Länge und Breite in Grad (WGS 84)."
+
+#: ../../howto/choose-area.rst:7
+msgid "**A box.** Give the four edges. This is the usual way:"
+msgstr "**Ein Rechteck.** Gib die vier Ränder an. Das ist der übliche Weg:"
+
+#: ../../howto/choose-area.rst:13
+msgid ""
+"**A Shapely geometry.** Useful if you have a polygon, or if you prefer "
+"``box(west, south, east, north)``:"
+msgstr ""
+"**Eine Shapely-Geometrie.** Nützlich, wenn du ein Polygon hast oder "
+"``box(west, south, east, north)`` bevorzugst:"
+
+#: ../../howto/choose-area.rst:21
+msgid "**A GeoJSON file.** Give the path of the file:"
+msgstr "**Eine GeoJSON-Datei.** Gib den Pfad der Datei an:"
+
+#: ../../howto/choose-area.rst:28
+msgid "Find your area on a map"
+msgstr "Das Gebiet auf der Karte finden"
+
+#: ../../howto/choose-area.rst:30
+msgid ""
+"You do not have to know coordinates by heart. Draw the area on a map and "
+"let a website give you the numbers or a file. Both sites are free and "
+"need no account."
+msgstr ""
+"Du musst keine Koordinaten auswendig kennen. Zeichne das Gebiet auf eine "
+"Karte und lass dir von einer Website die Zahlen oder eine Datei geben. "
+"Beide Seiten sind kostenlos und brauchen kein Konto."
+
+#: ../../howto/choose-area.rst:34
+msgid "bboxfinder.com: four numbers for a box"
+msgstr "bboxfinder.com: vier Zahlen für ein Rechteck"
+
+#: ../../howto/choose-area.rst:36
+msgid "Open `bboxfinder.com <https://bboxfinder.com/>`__ and zoom to your place."
+msgstr ""
+"Öffne `bboxfinder.com <https://bboxfinder.com/>`__ und zoome zu deinem "
+"Ort."
+
+#: ../../howto/choose-area.rst:37
+msgid "Choose the rectangle tool of the map and drag a rectangle over your area."
+msgstr ""
+"Wähle das Rechteck-Werkzeug der Karte und ziehe ein Rechteck über dein "
+"Gebiet."
+
+#: ../../howto/choose-area.rst:38
+msgid ""
+"Find **Box** in the list of coordinates. Set the format to **Lng / Lat**,"
+" then click the copy icon next to **Box**. You get four numbers in the "
+"order *west, south, east, north*, for example "
+"``8.721771,53.025027,8.904419,53.114965``."
+msgstr ""
+"Suche **Box** in der Liste der Koordinaten. Stelle das Format auf **Lng /"
+" Lat** und klicke dann auf das Kopieren-Symbol neben **Box**. Du bekommst"
+" vier Zahlen in der Reihenfolge *west, south, east, north*, zum Beispiel "
+"``8.721771,53.025027,8.904419,53.114965``."
+
+#: ../../howto/choose-area.rst:41
+msgid "Paste them into your code and let Python split them:"
+msgstr "Füge sie in deinen Code ein und lass Python sie trennen:"
+
+#: ../../howto/choose-area.rst:49
+msgid ""
+"The format **Lat / Lng** turns each pair around. The numbers would then "
+"go under the wrong names and the area would be somewhere else on the "
+"globe, without an error message: check the first plot."
+msgstr ""
+"Das Format **Lat / Lng** dreht jedes Paar um. Die Zahlen stünden dann "
+"unter den falschen Namen, und das Gebiet läge ohne Fehlermeldung an einer"
+" ganz anderen Stelle der Erde: Prüfe den ersten Plot."
+
+#: ../../howto/choose-area.rst:53
+msgid "geojson.io: a file for your area"
+msgstr "geojson.io: eine Datei für dein Gebiet"
+
+#: ../../howto/choose-area.rst:55
+msgid "Open `geojson.io <https://geojson.io/>`__ and zoom to your place."
+msgstr "Öffne `geojson.io <https://geojson.io/>`__ und zoome zu deinem Ort."
+
+#: ../../howto/choose-area.rst:56
+msgid ""
+"Choose the rectangle tool in the toolbar of the map and draw **one** "
+"rectangle. A polygon works too, but a rectangle is the easiest to check."
+msgstr ""
+"Wähle in der Werkzeugleiste der Karte das Rechteck-Werkzeug und zeichne "
+"**ein** Rechteck. Ein Polygon funktioniert auch, aber ein Rechteck lässt "
+"sich am leichtesten prüfen."
+
+#: ../../howto/choose-area.rst:58
+msgid ""
+"Open the **Save** menu at the top and choose **GeoJSON**. The browser "
+"downloads a file, for example ``map.geojson``."
+msgstr ""
+"Öffne oben das Menü **Save** und wähle **GeoJSON**. Der Browser lädt eine"
+" Datei herunter, zum Beispiel ``map.geojson``."
+
+#: ../../howto/choose-area.rst:60
+msgid ""
+"Move the file into your project and give its path. The name has to end "
+"with ``.geojson`` or ``.json``:"
+msgstr ""
+"Verschiebe die Datei in dein Projekt und gib ihren Pfad an. Der Name muss"
+" auf ``.geojson`` oder ``.json`` enden:"
+
+#: ../../howto/choose-area.rst:66
+msgid ""
+"The panel next to the map shows the same area as text. Its numbers are "
+"``[longitude, latitude]`` pairs."
+msgstr ""
+"Der Bereich neben der Karte zeigt dasselbe Gebiet als Text. Seine Zahlen "
+"sind ``[longitude, latitude]``-Paare, die Länge steht also zuerst."
+
+#: ../../howto/choose-area.rst:68
+msgid ""
+"Which site? bboxfinder.com is quicker, and the numbers stay visible in "
+"your code. geojson.io gives you a file that you can keep, share and use "
+"again for the next data type."
+msgstr ""
+"Welche Seite? bboxfinder.com ist schneller, und die Zahlen bleiben in "
+"deinem Code sichtbar. geojson.io gibt dir eine Datei, die du aufbewahren,"
+" weitergeben und für den nächsten Datentyp wieder verwenden kannst."
+
+#: ../../howto/choose-area.rst:72
+msgid "Tips"
+msgstr "Tipps"
+
+#: ../../howto/choose-area.rst:74
+msgid ""
+"``west`` and ``east`` are longitudes, ``south`` and ``north`` are "
+"latitudes. They are easy to mix up (``box`` wants longitude first), so "
+"look at the first plot: is it the place you wanted?"
+msgstr ""
+"``west`` und ``east`` sind Längengrade, ``south`` und ``north`` sind "
+"Breitengrade. Sie sind leicht zu verwechseln (``box`` will zuerst die "
+"Länge), schau dir also den ersten Plot an: Ist es der Ort, den du "
+"wolltest?"
+
+#: ../../howto/choose-area.rst:76
+msgid ""
+"Some tools write the latitude first (Google Maps does). Put each number "
+"under its own name: ``west`` and ``east`` are the longitudes."
+msgstr ""
+"Manche Werkzeuge schreiben zuerst den Breitengrad (Google Maps tut das). "
+"Setze jede Zahl unter ihren eigenen Namen: ``west`` und ``east`` sind die"
+" Längengrade."
+
+#: ../../howto/choose-area.rst:78
+msgid ""
+"Start small. A few kilometres and one month are quick to download; make "
+"the area and the period larger when everything works."
+msgstr ""
+"Fang klein an. Ein paar Kilometer und ein Monat sind schnell "
+"heruntergeladen; mache Gebiet und Zeitraum größer, wenn alles "
+"funktioniert."
+
+#: ../../howto/choose-area.rst:80
+msgid ""
+"The downloaded file is clipped to the area but it has the grid of the "
+"data, so its edges can differ a little from your box (see the ``extent`` "
+"line of the summary)."
+msgstr ""
+"Die heruntergeladene Datei ist auf das Gebiet zugeschnitten, hat aber das"
+" Raster der Daten, deshalb können ihre Ränder ein wenig von deinem "
+"Rechteck abweichen (siehe die Zeile ``extent`` der Zusammenfassung)."
+
+#: ../../howto/choose-area.rst:82
+msgid ""
+"The area must lie inside the coverage of the data type. :doc:`/data/soil-"
+"water-index` covers Europe only."
+msgstr ""
+"Das Gebiet muss in der Abdeckung des Datentyps liegen. :doc:`/data/soil-"
+"water-index` deckt nur Europa ab."
+
+#: ../../howto/choose-period.rst:2
+msgid "Choose the period"
+msgstr "Den Zeitraum wählen"
+
+#: ../../howto/choose-period.rst:4
+msgid ""
+"The third argument, ``temporal_extent``, is the start and the end of the "
+"period:"
+msgstr ""
+"Das dritte Argument, ``temporal_extent``, ist Anfang und Ende des "
+"Zeitraums:"
+
+#: ../../howto/choose-period.rst:10
+msgid ""
+"**The end date is not included.** The example is all of June. For a "
+"single day write the day and the next day: ``[\"2024-06-15\", "
+"\"2024-06-16\"]``."
+msgstr ""
+"**Das Enddatum ist nicht enthalten.** Das Beispiel ist der ganze Juni. "
+"Für einen einzelnen Tag schreibst du den Tag und den nächsten Tag: "
+"``[\"2024-06-15\", \"2024-06-16\"]``."
+
+#: ../../howto/choose-period.rst:13
+msgid ""
+"**The result is one image for the whole period.** The download functions "
+"average all observations of the period (see :doc:`/explanation/how-it-"
+"works`). A longer period gives a calmer, more complete image; a shorter "
+"period shows the state at that time."
+msgstr ""
+"**Das Ergebnis ist ein Bild für den ganzen Zeitraum.** Die Download-"
+"Funktionen mitteln alle Beobachtungen des Zeitraums (siehe "
+":doc:`/explanation/how-it-works`). Ein längerer Zeitraum ergibt ein "
+"ruhigeres, vollständigeres Bild; ein kürzerer zeigt den Zustand zu dieser"
+" Zeit."
+
+#: ../../howto/choose-period.rst:18
+msgid "Which period?"
+msgstr "Welcher Zeitraum?"
+
+#: ../../howto/choose-period.rst:20
+msgid ""
+"**Sentinel-2 images and indices:** there is a new observation every few "
+"days, but clouds hide many of them. A month is a good start. If the map "
+"has white holes, use a longer period or a higher ``max_cloud_cover`` "
+"(:doc:`filter-clouds`)."
+msgstr ""
+"**Sentinel-2-Bilder und -Indizes:** Es gibt alle paar Tage eine neue "
+"Beobachtung, aber Wolken verdecken viele davon. Ein Monat ist ein guter "
+"Anfang. Hat die Karte weiße Löcher, nimm einen längeren Zeitraum oder ein"
+" höheres ``max_cloud_cover`` (:doc:`filter-clouds`)."
+
+#: ../../howto/choose-period.rst:23
+msgid ""
+"**Seasons:** compare the same period of different years (June 2023 and "
+"June 2024), not June and December."
+msgstr ""
+"**Jahreszeiten:** Vergleiche denselben Zeitraum verschiedener Jahre (Juni"
+" 2023 und Juni 2024), nicht Juni und Dezember."
+
+#: ../../howto/choose-period.rst:24
+msgid ""
+"**Landsat NDVI:** the mosaics cover two months each and run from 1997 to "
+"2024 (:doc:`/data/landsat-ndvi`)."
+msgstr ""
+"**Landsat-NDVI:** Die Mosaike umfassen je zwei Monate und reichen von "
+"1997 bis 2024 (:doc:`/data/landsat-ndvi`)."
+
+#: ../../howto/choose-period.rst:26
+msgid ""
+"**Soil water index:** version 2 of the data starts on 2025-07-13. Earlier"
+" periods may find no data (:doc:`/data/soil-water-index`)."
+msgstr ""
+"**Bodenwasserindex:** Version 2 der Daten beginnt am 2025-07-13. Frühere "
+"Zeiträume finden möglicherweise keine Daten (:doc:`/data/soil-water-"
+"index`)."
+
+#: ../../howto/choose-period.rst:30
+msgid "Data that does not change"
+msgstr "Daten, die sich nicht ändern"
+
+#: ../../howto/choose-period.rst:32
+msgid ""
+"The elevation model and the land cover map are *static*: they were made "
+"once. ``download_dem`` and ``download_land_cover`` do not need a "
+"``temporal_extent``; they use the period of their acquisition. If you "
+"give them a recent period such as June 2024, they find no data."
+msgstr ""
+"Das Höhenmodell und die Landbedeckungskarte sind *statisch*: Sie wurden "
+"einmal erstellt. ``download_dem`` und ``download_land_cover`` brauchen "
+"kein ``temporal_extent``; sie verwenden den Zeitraum ihrer Aufnahme. "
+"Gibst du einen aktuellen Zeitraum wie Juni 2024 an, finden sie keine "
+"Daten."
+
+#: ../../howto/compare-images.rst:2
+msgid "Compare images"
+msgstr "Bilder vergleichen"
+
+#: ../../howto/compare-images.rst:4
+msgid ""
+"You want to compare two dates, two places, or two data types. These rules"
+" keep the comparison fair."
+msgstr ""
+"Du willst zwei Zeitpunkte, zwei Orte oder zwei Datentypen vergleichen. "
+"Diese Regeln halten den Vergleich fair."
+
+#: ../../howto/compare-images.rst:6
+msgid "**Compare like with like.**"
+msgstr "**Gleiches mit Gleichem vergleichen.**"
+
+#: ../../howto/compare-images.rst:7
+msgid ""
+"Use the same period length (the mean of a week is noisier than the mean "
+"of a month), the same ``max_cloud_cover`` and the same ``scl_classes``. "
+"Changing ``scl_classes`` changes which pixels are kept at all."
+msgstr ""
+"Verwende dieselbe Zeitraumlänge (der Mittelwert einer Woche ist unruhiger"
+" als der eines Monats), dasselbe ``max_cloud_cover`` und dieselben "
+"``scl_classes``. Eine Änderung von ``scl_classes`` ändert, welche Pixel "
+"überhaupt behalten werden."
+
+#: ../../howto/compare-images.rst:10
+msgid "**Use the same colours.**"
+msgstr "**Dieselben Farben verwenden.**"
+
+#: ../../howto/compare-images.rst:11
+msgid ""
+":doc:`/data/ndvi`, :doc:`/data/evi`, :doc:`/data/ndwi`, "
+":doc:`/data/ndmi`, :doc:`/data/ndsi`, :doc:`/data/landsat-ndvi` and "
+":doc:`/data/soil-water-index` are drawn with a fixed value range, so the "
+"same colour always means the same value. For :doc:`/data/land-surface-"
+"temperature` and :doc:`/data/elevation` the colours follow the image. "
+"Give both images the same range:"
+msgstr ""
+":doc:`/data/ndvi`, :doc:`/data/evi`, :doc:`/data/ndwi`, "
+":doc:`/data/ndmi`, :doc:`/data/ndsi`, :doc:`/data/landsat-ndvi` und "
+":doc:`/data/soil-water-index` werden mit festem Wertebereich gezeichnet, "
+"dieselbe Farbe bedeutet also immer denselben Wert. Bei :doc:`/data/land-"
+"surface-temperature` und :doc:`/data/elevation` folgen die Farben dem "
+"Bild. Gib beiden Bildern denselben Bereich:"
+
+#: ../../howto/compare-images.rst:21
+msgid "**Colour pictures are comparable by eye.**"
+msgstr "**Farbbilder lassen sich mit dem Auge vergleichen.**"
+
+#: ../../howto/compare-images.rst:22
+msgid ""
+":doc:`/data/true-color` and the false-colour images (:doc:`/data/false-"
+"color-urban`, :doc:`/data/false-color-infrared`, :doc:`/data/false-color-"
+"swir`) use a fixed stretch. No statistics of the image are used, so the "
+"same reflectance always gets the same colour, whatever else is in the "
+"image. This is not true for the automatic min/max stretch of many GIS "
+"programs. See :doc:`/explanation/colours-and-values`."
+msgstr ""
+":doc:`/data/true-color` und die Falschfarbenbilder (:doc:`/data/false-"
+"color-urban`, :doc:`/data/false-color-infrared`, :doc:`/data/false-color-"
+"swir`) verwenden eine feste Streckung. Es werden keine Statistiken des "
+"Bildes benutzt, dieselbe Reflektanz bekommt also immer dieselbe Farbe, "
+"egal was sonst im Bild ist. Das gilt nicht für die automatische Min/Max-"
+"Streckung vieler GIS-Programme. Siehe :doc:`/explanation/colours-and-"
+"values`."
+
+#: ../../howto/compare-images.rst:27
+msgid "**Do not calculate with the pictures.**"
+msgstr "**Nicht mit den Bildern rechnen.**"
+
+#: ../../howto/compare-images.rst:28
+msgid ""
+"The 8-bit pictures are for the eye: bright values are compressed and "
+"saturate. For differences, statistics or thresholds use reflectance: :doc"
+":`calculate-with-reflectance`."
+msgstr ""
+"Die 8-Bit-Bilder sind für das Auge: Helle Werte werden gestaucht und "
+"sättigen. Für Differenzen, Statistiken oder Schwellenwerte nimm die "
+"Reflektanz: :doc:`calculate-with-reflectance`."
+
+#: ../../howto/compare-images.rst:31
+msgid "**Copernicus Browser.**"
+msgstr "**Copernicus Browser.**"
+
+#: ../../howto/compare-images.rst:32
+msgid ""
+"The stretch of the false-colour urban image (0 to 0.4, bands B12/B11/B04)"
+" is the one of the Sentinel Hub \"false colour (urban)\" layer; the "
+"infrared and SWIR images use the same stretch. That layer shows *one* "
+"acquisition date, while this package shows the cloud-masked *mean* of a "
+"period, and the highlight compression is re-implemented with NumPy (not "
+"compared pixel by pixel). Expect similar colours, not identical pixels."
+msgstr ""
+"Die Streckung der Falschfarben-Stadtansicht (0 bis 0,4, Bänder "
+"B12/B11/B04) ist die der Sentinel-Hub-Ebene „false colour (urban)“; das "
+"Infrarot- und das SWIR-Bild verwenden dieselbe Streckung. Diese Ebene "
+"zeigt *einen* Aufnahmetag, während dieses Paket den wolkenmaskierten "
+"*Mittelwert* eines Zeitraums zeigt, und die Komprimierung der Lichter ist"
+" mit NumPy neu implementiert (nicht Pixel für Pixel verglichen). Erwarte "
+"ähnliche Farben, keine identischen Pixel."
+
+#: ../../howto/filter-clouds.rst:2
+msgid "Filter clouds"
+msgstr "Wolken filtern"
+
+#: ../../howto/filter-clouds.rst:4
+msgid ""
+"Nine of the Sentinel-2 data types (:doc:`/data/ndvi`, :doc:`/data/evi`, "
+":doc:`/data/ndwi`, :doc:`/data/ndmi`, :doc:`/data/ndsi`, :doc:`/data"
+"/true-color`, :doc:`/data/false-color-urban`, :doc:`/data/false-color-"
+"infrared` and :doc:`/data/false-color-swir`) have two filters. They come "
+"right after the three standard arguments, so they can be given with or "
+"without their names:"
+msgstr ""
+"Neun der Sentinel-2-Datentypen (:doc:`/data/ndvi`, :doc:`/data/evi`, "
+":doc:`/data/ndwi`, :doc:`/data/ndmi`, :doc:`/data/ndsi`, :doc:`/data"
+"/true-color`, :doc:`/data/false-color-urban`, :doc:`/data/false-color-"
+"infrared` und :doc:`/data/false-color-swir`) haben zwei Filter. Sie "
+"stehen direkt nach den drei Standardargumenten und können mit oder ohne "
+"ihre Namen angegeben werden:"
+
+#: ../../howto/filter-clouds.rst:13
+msgid "Option"
+msgstr "Option"
+
+#: ../../howto/filter-clouds.rst:14
+msgid "What it removes"
+msgstr "Was sie entfernt"
+
+#: ../../howto/filter-clouds.rst:15
+msgid "Default"
+msgstr "Standard"
+
+#: ../../howto/filter-clouds.rst:16
+msgid "``max_cloud_cover``"
+msgstr "``max_cloud_cover``"
+
+#: ../../howto/filter-clouds.rst:17
+msgid ""
+"whole **scenes**: a scene with more than this percent cloud cover is not "
+"used at all"
+msgstr ""
+"ganze **Szenen**: Eine Szene mit mehr als diesem Prozentsatz "
+"Wolkenbedeckung wird gar nicht verwendet"
+
+#: ../../howto/filter-clouds.rst:18
+msgid "``20``"
+msgstr "``20``"
+
+#: ../../howto/filter-clouds.rst:19
+msgid "``scl_classes``"
+msgstr "``scl_classes``"
+
+#: ../../howto/filter-clouds.rst:20
+msgid ""
+"single **pixels**: only pixels of these Scene Classification Layer (SCL) "
+"classes are **kept**"
+msgstr ""
+"einzelne **Pixel**: Nur Pixel dieser Klassen der Scene Classification "
+"Layer (SCL) werden **behalten**"
+
+#: ../../howto/filter-clouds.rst:21
+msgid ""
+"``(4, 5)`` for NDVI, EVI and NDMI; ``(4, 5, 6)`` for NDWI, true colour "
+"and the false-colour images; ``(4, 5, 6, 11)`` for NDSI"
+msgstr ""
+"``(4, 5)`` für NDVI, EVI und NDMI; ``(4, 5, 6)`` für NDWI, Echtfarben und"
+" die Falschfarbenbilder; ``(4, 5, 6, 11)`` für NDSI"
+
+#: ../../howto/filter-clouds.rst:33
+msgid "Fill white holes in the map"
+msgstr "Weiße Löcher in der Karte füllen"
+
+#: ../../howto/filter-clouds.rst:35
+msgid ""
+"A pixel is empty only if *every* observation of the period was removed. "
+"Two things help:"
+msgstr ""
+"Ein Pixel ist nur leer, wenn *jede* Beobachtung des Zeitraums entfernt "
+"wurde. Zwei Dinge helfen:"
+
+#: ../../howto/filter-clouds.rst:37
+msgid "a **longer period**, so that more observations are available;"
+msgstr "ein **längerer Zeitraum**, damit mehr Beobachtungen zur Verfügung stehen;"
+
+#: ../../howto/filter-clouds.rst:38
+msgid ""
+"a **higher** ``max_cloud_cover`` (for example 50), so that more scenes "
+"are used. The pixel mask still removes the clouds of those scenes."
+msgstr ""
+"ein **höheres** ``max_cloud_cover`` (zum Beispiel 50), damit mehr Szenen "
+"verwendet werden. Die Pixelmaske entfernt trotzdem die Wolken dieser "
+"Szenen."
+
+#: ../../howto/filter-clouds.rst:42
+msgid "Keep water"
+msgstr "Wasser behalten"
+
+#: ../../howto/filter-clouds.rst:44
+msgid ""
+"NDVI, EVI and NDMI drop water by default (class 6 is not in ``(4, 5)``), "
+"so rivers and lakes are empty. To keep them use "
+"``scl_classes=cdec.SCL_LAND_AND_WATER``."
+msgstr ""
+"NDVI, EVI und NDMI lassen Wasser standardmäßig weg (Klasse 6 ist nicht in"
+" ``(4, 5)``), Flüsse und Seen sind also leer. Um sie zu behalten, "
+"verwende ``scl_classes=cdec.SCL_LAND_AND_WATER``."
+
+#: ../../howto/filter-clouds.rst:48
+msgid "Keep snow"
+msgstr "Schnee behalten"
+
+#: ../../howto/filter-clouds.rst:50
+msgid ""
+"Snow and ice are class 11. Only :doc:`/data/ndsi` keeps them by default. "
+"For the other data types add the class: "
+"``scl_classes=cdec.SCL_LAND_WATER_AND_SNOW``. The scene classification "
+"sometimes labels snow as cloud, so a snowy area can stay empty; "
+"``scl_classes=None`` shows what is there."
+msgstr ""
+"Schnee und Eis sind Klasse 11. Nur :doc:`/data/ndsi` behält sie "
+"standardmäßig. Bei den anderen Datentypen füge die Klasse hinzu: "
+"``scl_classes=cdec.SCL_LAND_WATER_AND_SNOW``. Die Szenenklassifikation "
+"stuft Schnee manchmal als Wolke ein, sodass ein verschneites Gebiet leer "
+"bleiben kann; ``scl_classes=None`` zeigt, was da ist."
+
+#: ../../howto/filter-clouds.rst:55
+msgid "See why pixels are missing"
+msgstr "Sehen, warum Pixel fehlen"
+
+#: ../../howto/filter-clouds.rst:57
+msgid ""
+"If a pixel is empty, the :doc:`/data/scene-classification` tells you "
+"which class it has. That is the class to add to ``scl_classes``, or the "
+"clouds you need a longer period for."
+msgstr ""
+"Ist ein Pixel leer, sagt dir die :doc:`/data/scene-classification`, "
+"welche Klasse es hat. Das ist die Klasse, die du zu ``scl_classes`` "
+"hinzufügen musst, oder die Wolken, für die du einen längeren Zeitraum "
+"brauchst."
+
+#: ../../howto/filter-clouds.rst:61
+msgid "Choose the classes"
+msgstr "Die Klassen wählen"
+
+#: ../../howto/filter-clouds.rst:63
+msgid ""
+"``scl_classes`` is the list of the classes you want to **keep**. Look at "
+"them with:"
+msgstr ""
+"``scl_classes`` ist die Liste der Klassen, die du **behalten** willst. "
+"Sieh sie dir an mit:"
+
+#: ../../howto/filter-clouds.rst:70
+msgid ""
+"The table is also in the reference: :doc:`/reference/scl`. An invalid "
+"class number is reported before the login, not after."
+msgstr ""
+"Die Tabelle steht auch in der Referenz: :doc:`/reference/scl`. Eine "
+"ungültige Klassennummer wird vor dem Login gemeldet, nicht danach."
+
+#: ../../howto/filter-clouds.rst:74
+msgid "The other data types"
+msgstr "Die anderen Datentypen"
+
+#: ../../howto/filter-clouds.rst:76
+msgid ""
+":doc:`/data/landsat-ndvi` is already free of clouds. :doc:`/data/land-"
+"surface-temperature` has no cloud filter at all; see its page. The "
+"elevation model, the land cover map and the soil water index have no "
+"cloud filter either."
+msgstr ""
+":doc:`/data/landsat-ndvi` ist bereits frei von Wolken. :doc:`/data/land-"
+"surface-temperature` hat gar keinen Wolkenfilter; siehe die Seite dazu. "
+"Auch das Höhenmodell, die Landbedeckungskarte und der Bodenwasserindex "
+"haben keinen Wolkenfilter."
+
+#: ../../howto/index.rst:2
+msgid "How-to guides"
+msgstr "Anleitungen"
+
+#: ../../howto/index.rst:4
+msgid ""
+"Short recipes for a goal. They assume that you did the :doc:`tutorial "
+"</tutorial/get-started>`."
+msgstr ""
+"Kurze Rezepte für ein Ziel. Sie setzen voraus, dass du das :doc:`Tutorial"
+" </tutorial/get-started>` durchgearbeitet hast."
+
+#: ../../howto/output-file.rst:2
+msgid "Control the output file"
+msgstr "Die Ausgabedatei steuern"
+
+#: ../../howto/output-file.rst:4
+msgid ""
+"All download functions share these keyword options. They must be written "
+"with their names (``create_cog=False``), so they cannot be mixed up with "
+"the options that are worth changing."
+msgstr ""
+"Alle Download-Funktionen teilen sich diese Schlüsselwort-Optionen. Sie "
+"müssen mit ihrem Namen geschrieben werden (``create_cog=False``), damit "
+"sie nicht mit den Optionen verwechselt werden, die man häufig ändert."
+
+#: ../../howto/output-file.rst:7
+msgid "**File name and folder.**"
+msgstr "**Dateiname und Ordner.**"
+
+#: ../../howto/output-file.rst:8
+msgid ""
+"``file_path`` is a string or a :class:`~pathlib.Path`. Missing folders "
+"are created. The function returns the absolute path of the finished file,"
+" so ``plot_ndvi(download_ndvi(...))`` works."
+msgstr ""
+"``file_path`` ist ein String oder ein :class:`~pathlib.Path`. Fehlende "
+"Ordner werden angelegt. Die Funktion gibt den absoluten Pfad der fertigen"
+" Datei zurück, sodass ``plot_ndvi(download_ndvi(...))`` funktioniert."
+
+#: ../../howto/output-file.rst:11
+msgid "**Plain GeoTIFF instead of Cloud Optimized GeoTIFF.**"
+msgstr "**Einfaches GeoTIFF statt Cloud Optimized GeoTIFF.**"
+
+#: ../../howto/output-file.rst:12
+msgid ""
+"By default the result is a Cloud Optimized GeoTIFF (COG): a normal "
+"GeoTIFF with a layout that allows fast partial reads, and overview levels"
+" for fast zooming. Every GIS and ``rasterio`` can read it. If you want a "
+"plain GeoTIFF, pass ``create_cog=False``."
+msgstr ""
+"Standardmäßig ist das Ergebnis ein Cloud Optimized GeoTIFF (COG): ein "
+"normales GeoTIFF mit einem Aufbau, der schnelles teilweises Lesen "
+"erlaubt, und mit Übersichtsstufen (Overviews) zum schnellen Zoomen. Jedes"
+" GIS und ``rasterio`` kann es lesen. Willst du ein einfaches GeoTIFF, "
+"übergib ``create_cog=False``."
+
+#: ../../howto/output-file.rst:16
+msgid "**Overview levels.**"
+msgstr "**Übersichtsstufen.**"
+
+#: ../../howto/output-file.rst:17
+msgid ""
+"``overview_resampling`` sets how the smaller overview levels of a COG are"
+" calculated. The default ``\"average\"`` suits measurements. The land "
+"cover download uses ``\"nearest\"``, because averaging class numbers "
+"makes no sense."
+msgstr ""
+"``overview_resampling`` legt fest, wie die kleineren Übersichtsstufen "
+"eines COG berechnet werden. Der Standard ``\"average\"`` passt zu "
+"Messwerten. Der Land-Cover-Download verwendet ``\"nearest\"``, weil das "
+"Mitteln von Klassennummern keinen Sinn ergibt."
+
+#: ../../howto/output-file.rst:20
+msgid "**No printed summary.**"
+msgstr "**Keine ausgegebene Zusammenfassung.**"
+
+#: ../../howto/output-file.rst:21
+msgid "``verbose=False`` switches the summary off."
+msgstr "``verbose=False`` schaltet die Zusammenfassung aus."
+
+#: ../../howto/output-file.rst:23
+msgid "**A failed download does no harm.**"
+msgstr "**Ein fehlgeschlagener Download richtet keinen Schaden an.**"
+
+#: ../../howto/output-file.rst:24
+msgid ""
+"The data is first written to a hidden temporary folder next to the target"
+" file. Only when everything succeeded (download, colour enhancement, COG "
+"conversion) it replaces ``file_path``. A failed download never leaves a "
+"half-written file and never overwrites an existing good file. A "
+"successful download replaces an existing file of the same name."
+msgstr ""
+"Die Daten werden zuerst in einen versteckten temporären Ordner neben der "
+"Zieldatei geschrieben. Erst wenn alles geklappt hat (Download, "
+"Farbverbesserung, COG-Umwandlung), ersetzen sie ``file_path``. Ein "
+"fehlgeschlagener Download hinterlässt nie eine halb geschriebene Datei "
+"und überschreibt nie eine vorhandene gute Datei. Ein erfolgreicher "
+"Download ersetzt eine vorhandene Datei desselben Namens."
+
+#: ../../howto/plot-and-save.rst:2
+msgid "Plot and save maps"
+msgstr "Karten zeichnen und speichern"
+
+#: ../../howto/plot-and-save.rst:4
+msgid ""
+"Every download function has a plot function with the matching name: "
+"``plot_ndvi`` for ``download_ndvi``, ``plot_tci`` for ``download_tci``, "
+"and so on. The shared options are described in "
+":doc:`/reference/plotting`; the data type pages show what each map looks "
+"like."
+msgstr ""
+"Jede Download-Funktion hat eine Plot-Funktion mit dem passenden Namen: "
+"``plot_ndvi`` für ``download_ndvi``, ``plot_tci`` für ``download_tci`` "
+"und so weiter. Die gemeinsamen Optionen stehen in "
+":doc:`/reference/plotting`; die Seiten der Datentypen zeigen, wie jede "
+"Karte aussieht."
+
+#: ../../howto/plot-and-save.rst:9
+msgid "Draw one map"
+msgstr "Eine Karte zeichnen"
+
+#: ../../howto/plot-and-save.rst:17
+msgid "A window opens (in a Jupyter notebook the picture appears below the cell)."
+msgstr ""
+"Ein Fenster öffnet sich (in einem Jupyter-Notebook erscheint das Bild "
+"unter der Zelle)."
+
+#: ../../howto/plot-and-save.rst:20
+msgid "Draw several maps next to each other"
+msgstr "Mehrere Karten nebeneinander zeichnen"
+
+#: ../../howto/plot-and-save.rst:22
+msgid ""
+"Every plot function draws into a matplotlib ``Axes`` and returns it. If "
+"you pass one with ``ax=``, you decide when the figure is shown:"
+msgstr ""
+"Jede Plot-Funktion zeichnet in ein matplotlib-``Axes`` und gibt es "
+"zurück. Wenn du eines mit ``ax=`` übergibst, entscheidest du, wann die "
+"Abbildung gezeigt wird:"
+
+#: ../../howto/plot-and-save.rst:36
+msgid "Save a map as a picture"
+msgstr "Eine Karte als Bild speichern"
+
+#: ../../howto/plot-and-save.rst:38
+msgid ""
+"Use ``show=False`` to draw without opening a window, for example in a "
+"loop over many files, and save the figure:"
+msgstr ""
+"Mit ``show=False`` zeichnest du, ohne ein Fenster zu öffnen, zum Beispiel"
+" in einer Schleife über viele Dateien, und speicherst die Abbildung:"
+
+#: ../../howto/plot-and-save.rst:46
+msgid "Change the title or the colours"
+msgstr "Titel oder Farben ändern"
+
+#: ../../howto/plot-and-save.rst:48
+msgid ""
+"``title=`` replaces the title (``title=\"\"`` draws none). The index and "
+"measurement plots accept ``cmap=``, ``vmin=`` and ``vmax=``. Because the "
+"function returns the ``Axes``, everything else is plain matplotlib:"
+msgstr ""
+"``title=`` ersetzt den Titel (``title=\"\"`` zeichnet keinen). Die Plots "
+"für Indizes und Messwerte akzeptieren ``cmap=``, ``vmin=`` und ``vmax=``."
+" Weil die Funktion das ``Axes`` zurückgibt, ist alles Weitere einfaches "
+"matplotlib:"
+
+#: ../../howto/plot-and-save.rst:57
+msgid "Plot any other GeoTIFF"
+msgstr "Ein beliebiges anderes GeoTIFF zeichnen"
+
+#: ../../howto/plot-and-save.rst:59
+msgid ""
+":func:`~cdec.plot_raster` draws any GeoTIFF. It decides by the *format* "
+"of the file: three 8-bit bands are a colour picture, everything else is "
+"one band of numbers with a colour bar."
+msgstr ""
+":func:`~cdec.plot_raster` zeichnet jedes GeoTIFF. Es entscheidet nach dem"
+" *Format* der Datei: Drei 8-Bit-Bänder sind ein Farbbild, alles andere "
+"ist ein Band aus Zahlen mit einer Farbleiste."
+
+#: ../../howto/plot-and-save.rst:68
+msgid ""
+"For a file with several bands choose the band with ``band=`` (``band=1`` "
+"is the first). Why there is no function that finds out the data type by "
+"itself is explained in :doc:`/explanation/design`."
+msgstr ""
+"Bei einer Datei mit mehreren Bändern wählst du das Band mit ``band=`` "
+"(``band=1`` ist das erste). Warum es keine Funktion gibt, die den "
+"Datentyp selbst herausfindet, steht in :doc:`/explanation/design`."
+

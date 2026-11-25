@@ -1,0 +1,356 @@
+# German translation of the CDEC documentation.
+# Copyright (C) 2026, Soeren Sparmann
+# This file is distributed under the same license as the CDEC package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDEC 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-24 11:51+0100\n"
+"PO-Revision-Date: 2026-11-23 16:30+0000\n"
+"Last-Translator: Soeren Sparmann\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contributing.rst:2
+msgid "Contributing"
+msgstr "Mitwirken"
+
+#: ../../contributing.rst:4
+msgid ""
+"This page is for people who change the package: how the code is "
+"organised, how to run the tests, how to build this documentation, and "
+"what to do when you add a data type."
+msgstr ""
+"Diese Seite richtet sich an alle, die das Paket ändern: wie der Code "
+"aufgebaut ist, wie die Tests laufen, wie diese Dokumentation gebaut wird "
+"und was zu tun ist, wenn ein Datentyp hinzukommt."
+
+#: ../../contributing.rst:8
+msgid "Set up"
+msgstr "Einrichten"
+
+#: ../../contributing.rst:15
+msgid "How the code is organised"
+msgstr "Wie der Code aufgebaut ist"
+
+#: ../../contributing.rst:30
+msgid ""
+"Every ``download_*`` function reads from top to bottom in the same way: "
+"check the arguments, connect, describe the data as an openEO data cube "
+"(``load_collection`` -> mask -> ``mean_time`` -> index), then hand the "
+"cube to ``download_raster_cube`` (:doc:`/explanation/how-it-works`). "
+"Start with ``ndvi.py``; the other modules are variations of it. The short"
+" alias of each function is the last line of its module. The helpers are "
+"in the :doc:`developer reference </reference/internals>`."
+msgstr ""
+"Jede ``download_*``-Funktion liest sich von oben nach unten auf dieselbe "
+"Weise: Argumente prüfen, verbinden, die Daten als openEO-Datacube "
+"beschreiben (``load_collection`` -> maskieren -> ``mean_time`` -> Index) "
+"und den Cube dann an ``download_raster_cube`` übergeben "
+"(:doc:`/explanation/how-it-works`). Beginne mit ``ndvi.py``; die anderen "
+"Module sind Varianten davon. Der kurze Alias jeder Funktion steht in der "
+"letzten Zeile ihres Moduls. Die Hilfsfunktionen stehen in der "
+":doc:`Entwicklerreferenz </reference/internals>`."
+
+#: ../../contributing.rst:37
+msgid "Run the tests"
+msgstr "Tests ausführen"
+
+#: ../../contributing.rst:49
+msgid "File"
+msgstr "Datei"
+
+#: ../../contributing.rst:50
+msgid "What it tests"
+msgstr "Was getestet wird"
+
+#: ../../contributing.rst:51
+msgid "``tests/test_download_offline.py``"
+msgstr "``tests/test_download_offline.py``"
+
+#: ../../contributing.rst:52
+msgid ""
+"what every ``download_*`` function asks openEO for, and what it does with"
+" the file (a fake backend replaces openEO)"
+msgstr ""
+"was jede ``download_*``-Funktion bei openEO anfragt und was sie mit der "
+"Datei macht (ein Fake-Backend ersetzt openEO)"
+
+#: ../../contributing.rst:53
+msgid ""
+"``tests/test_postprocessing.py``, ``test_scl.py``, ``test_summary.py``, "
+"``test_util.py``, ``test_package.py``"
+msgstr ""
+"``tests/test_postprocessing.py``, ``test_scl.py``, ``test_summary.py``, "
+"``test_util.py``, ``test_package.py``"
+
+#: ../../contributing.rst:54
+msgid ""
+"colour enhancement (including: same reflectance, same colour), SCL table "
+"and validation, the printed summary, helper functions, the public "
+"interface (aliases, argument order)"
+msgstr ""
+"Farbverbesserung (auch: gleiche Reflektanz, gleiche Farbe), SCL-Tabelle "
+"und Prüfung der Klassen, die ausgegebene Zusammenfassung, "
+"Hilfsfunktionen, die öffentliche Schnittstelle (Aliase, Reihenfolge der "
+"Argumente)"
+
+#: ../../contributing.rst:56
+msgid "``tests/test_plot.py``"
+msgstr "``tests/test_plot.py``"
+
+#: ../../contributing.rst:57
+msgid ""
+"the plot functions: colour maps and ranges, no-data pixels, colour "
+"pictures from reflectance, land-cover legend, axes in degrees or metres, "
+"``plt.show()`` behaviour, the whole way from download to plot"
+msgstr ""
+"die Plot-Funktionen: Farbskalen und Wertebereiche, Pixel ohne Daten, "
+"Farbbilder aus Reflektanz, Legende der Landbedeckung, Achsen in Grad oder"
+" Metern, das Verhalten von ``plt.show()``, der ganze Weg vom Download zum"
+" Plot"
+
+#: ../../contributing.rst:59
+msgid "``tests/test_docs.py``"
+msgstr "``tests/test_docs.py``"
+
+#: ../../contributing.rst:60
+msgid ""
+"the documentation: every public name is documented, every data type has a"
+" page, the pages build without a warning (the build tests are skipped if "
+"Sphinx is not installed)"
+msgstr ""
+"die Dokumentation: jeder öffentliche Name ist dokumentiert, jeder "
+"Datentyp hat eine Seite, die Seiten werden ohne Warnung gebaut (die "
+"Build-Tests werden übersprungen, wenn Sphinx nicht installiert ist)"
+
+#: ../../contributing.rst:62
+msgid "``tests/test_download_live.py``"
+msgstr "``tests/test_download_live.py``"
+
+#: ../../contributing.rst:63
+msgid ""
+"**real downloads** of every data type for Bremen (see "
+"``tests/conftest.py``), with checks of the files and of the values"
+msgstr ""
+"**echte Downloads** jedes Datentyps für Bremen (siehe "
+"``tests/conftest.py``), mit Prüfungen der Dateien und der Werte"
+
+#: ../../contributing.rst:66
+msgid ""
+"The live tests need internet and a Copernicus Data Space account. The "
+"first run asks you to log in. The downloaded rasters are kept in "
+"``tests/output/`` (ignored by git) so you can open them in QGIS."
+msgstr ""
+"Die Live-Tests brauchen Internet und ein Copernicus-Data-Space-Konto. "
+"Beim ersten Lauf wirst du zum Login aufgefordert. Die heruntergeladenen "
+"Raster bleiben in ``tests/output/`` (von git ignoriert), damit du sie in "
+"QGIS öffnen kannst."
+
+#: ../../contributing.rst:70
+msgid "Look at the plots"
+msgstr "Die Plots ansehen"
+
+#: ../../contributing.rst:72
+msgid ""
+"``tests/plot_gallery.py`` is not a test. It draws all plot functions into"
+" one picture so that you can look at them (and check a change of a plot "
+"function with your own eyes):"
+msgstr ""
+"``tests/plot_gallery.py`` ist kein Test. Die Datei zeichnet alle Plot-"
+"Funktionen in ein Bild, damit du sie ansehen kannst (und die Änderung "
+"einer Plot-Funktion mit eigenen Augen prüfst):"
+
+#: ../../contributing.rst:82
+msgid "Build this documentation"
+msgstr "Diese Dokumentation bauen"
+
+#: ../../contributing.rst:88
+msgid ""
+"This builds the English and the German version into "
+"``docs/_build/html/en`` and ``docs/_build/html/de``. Then open "
+"``docs/_build/html/index.html`` in a browser: it forwards you to the "
+"language of your browser (``docs/_build/`` is ignored by git). Every "
+"build uses ``-W``, which turns every warning into an error. ``hatch run "
+"docs:build`` does the same. While you write, one language is quicker:"
+msgstr ""
+"Das baut die englische und die deutsche Version in "
+"``docs/_build/html/en`` und ``docs/_build/html/de``. Öffne danach "
+"``docs/_build/html/index.html`` im Browser: Die Seite leitet dich zur "
+"Sprache deines Browsers weiter (``docs/_build/`` wird von git ignoriert)."
+" Jeder Build verwendet ``-W``; damit wird jede Warnung zu einem Fehler. "
+"``hatch run docs:build`` macht dasselbe. Beim Schreiben geht eine "
+"einzelne Sprache schneller:"
+
+#: ../../contributing.rst:98
+msgid ""
+"The pages follow the `Diátaxis <https://diataxis.fr/>`_ scheme: "
+"``tutorial/`` (learning), ``howto/`` (goals), ``explanation/`` "
+"(understanding) and ``reference/`` (look-up), plus one page for each data"
+" type in ``data/``."
+msgstr ""
+"Die Seiten folgen dem `Diátaxis <https://diataxis.fr/>`_-Schema: "
+"``tutorial/`` (Lernen), ``howto/`` (Ziele), ``explanation/`` (Verstehen) "
+"und ``reference/`` (Nachschlagen), dazu eine Seite je Datentyp in "
+"``data/``."
+
+#: ../../contributing.rst:101
+msgid ""
+"The pictures on the data type pages are real data. They are made from the"
+" files in ``tests/output/`` (after a ``pytest --live`` run) and saved in "
+"``docs/_static/figures/``. After a change of a plot function make them "
+"again and commit them:"
+msgstr ""
+"Die Bilder auf den Seiten der Datentypen zeigen echte Daten. Sie werden "
+"aus den Dateien in ``tests/output/`` (nach einem Lauf von ``pytest "
+"--live``) erzeugt und in ``docs/_static/figures/`` gespeichert. Erzeuge "
+"sie nach einer Änderung einer Plot-Funktion neu und committe sie:"
+
+#: ../../contributing.rst:109
+msgid ""
+"The code examples on the data type pages and the how-to pages are "
+"complete: each one defines the ``spatial_extent`` and the "
+"``temporal_extent`` it uses (Bremen, June 2024), so that a student can "
+"copy it into an empty file and run it. ``tests/test_docs.py`` checks "
+"this, and runs the example of every data type page with the made-up "
+"backend. Keep it that way when you write a new page."
+msgstr ""
+"Die Codebeispiele auf den Datentypseiten und den Anleitungsseiten sind "
+"vollständig: Jedes definiert den ``spatial_extent`` und den "
+"``temporal_extent``, die es benutzt (Bremen, Juni 2024), sodass man es in"
+" eine leere Datei kopieren und ausführen kann. ``tests/test_docs.py`` "
+"prüft das und führt das Beispiel jeder Datentypseite mit dem erfundenen "
+"Backend aus. Lass es so, wenn du eine neue Seite schreibst."
+
+#: ../../contributing.rst:115
+msgid "Translate the documentation"
+msgstr "Die Dokumentation übersetzen"
+
+#: ../../contributing.rst:117
+msgid ""
+"The pages are written in English and translated with Sphinx's gettext "
+"system: the German texts are in ``docs/locale/de/LC_MESSAGES/*.po`` (one "
+"file for each folder of ``docs/``). The ``.rst`` files exist only once, "
+"so both languages have the same pages, the same pictures and the same "
+"code. The ``.po`` files also translate the documentation of the functions"
+" (their docstrings); the docstrings in the code stay English."
+msgstr ""
+"Die Seiten sind auf Englisch geschrieben und mit dem gettext-System von "
+"Sphinx übersetzt: Die deutschen Texte stehen in "
+"``docs/locale/de/LC_MESSAGES/*.po`` (eine Datei je Ordner von ``docs/``)."
+" Die ``.rst``-Dateien gibt es nur einmal, daher haben beide Sprachen "
+"dieselben Seiten, dieselben Bilder und denselben Code. Die "
+"``.po``-Dateien übersetzen auch die Dokumentation der Funktionen (ihre "
+"Docstrings); die Docstrings im Code bleiben englisch."
+
+#: ../../contributing.rst:122
+msgid ""
+"When you change an English text, the German page shows the new English "
+"text until you translate it. To find the texts that changed:"
+msgstr ""
+"Wenn du einen englischen Text änderst, zeigt die deutsche Seite den neuen"
+" englischen Text, bis du ihn übersetzt. So findest du die geänderten "
+"Texte:"
+
+#: ../../contributing.rst:131
+msgid ""
+"Open the ``.po`` files in a text editor or in Poedit and fill in every "
+"``msgstr`` that is empty or marked ``#, fuzzy`` (remove the ``fuzzy`` "
+"line when the translation is right). Do not translate code between double"
+" back-ticks and keep the roles such as ``:doc:`` and ``:func:``: Sphinx "
+"warns about broken markup, and ``tests/test_docs.py`` compares the code "
+"and the roles of every German text with the English one. It also fails "
+"while a German text is missing."
+msgstr ""
+"Öffne die ``.po``-Dateien in einem Texteditor oder in Poedit und fülle "
+"jedes ``msgstr`` aus, das leer oder mit ``#, fuzzy`` markiert ist "
+"(entferne die ``fuzzy``-Zeile, wenn die Übersetzung stimmt). Übersetze "
+"keinen Code zwischen doppelten Backticks und behalte die Rollen wie "
+"``:doc:`` und ``:func:``: Sphinx warnt bei kaputter Auszeichnung, und "
+"``tests/test_docs.py`` vergleicht den Code und die Rollen jedes deutschen"
+" Textes mit dem englischen. Der Test schlägt auch fehl, solange ein "
+"deutscher Text fehlt."
+
+#: ../../contributing.rst:136
+msgid ""
+"For a third language add its code to ``LANGUAGES`` in ``docs/conf.py`` "
+"and run ``sphinx-intl update`` with ``-l`` and that code."
+msgstr ""
+"Für eine dritte Sprache trägst du ihr Kürzel in ``LANGUAGES`` in "
+"``docs/conf.py`` ein und rufst ``sphinx-intl update`` mit ``-l`` und "
+"diesem Kürzel auf."
+
+#: ../../contributing.rst:140
+msgid "Add a data type"
+msgstr "Einen Datentyp hinzufügen"
+
+#: ../../contributing.rst:142
+msgid ""
+"Write ``src/cdec/eo/<name>.py`` with the ``download_<long_name>`` "
+"function and a short alias as its last line; copy ``ndvi.py`` and change "
+"what is different. Export both names in ``src/cdec/eo/__init__.py``."
+msgstr ""
+"Schreibe ``src/cdec/eo/<name>.py`` mit der Funktion "
+"``download_<long_name>`` und einem kurzen Alias als letzter Zeile; "
+"kopiere ``ndvi.py`` und ändere, was anders ist. Exportiere beide Namen in"
+" ``src/cdec/eo/__init__.py``."
+
+#: ../../contributing.rst:144
+msgid ""
+"Write the matching ``plot_<long_name>`` function in "
+"``src/cdec/plot/products.py`` and export it in "
+"``src/cdec/plot/__init__.py``."
+msgstr ""
+"Schreibe die passende Funktion ``plot_<long_name>`` in "
+"``src/cdec/plot/products.py`` und exportiere sie in "
+"``src/cdec/plot/__init__.py``."
+
+#: ../../contributing.rst:146
+msgid ""
+"Add the page ``docs/data/<name>.rst`` (copy a page of a similar data "
+"type) with a line ``.. autofunction:: cdec.download_<long_name>`` and "
+"``.. autofunction:: cdec.plot_<long_name>``, and list it in "
+"``docs/data/index.rst`` and ``docs/reference/functions.rst``. The short "
+"alias needs no line: the documentation of the long name shows it "
+"automatically."
+msgstr ""
+"Lege die Seite ``docs/data/<name>.rst`` an (kopiere die Seite eines "
+"ähnlichen Datentyps) mit einer Zeile ``.. autofunction:: "
+"cdec.download_<long_name>`` und ``.. autofunction:: "
+"cdec.plot_<long_name>`` und trage sie in ``docs/data/index.rst`` und "
+"``docs/reference/functions.rst`` ein. Der kurze Alias braucht keine "
+"Zeile: Die Dokumentation des langen Namens zeigt ihn automatisch."
+
+#: ../../contributing.rst:150
+msgid ""
+"Add the function to the tests (``tests/test_download_offline.py``, "
+"``tests/test_plot.py``, ``tests/test_package.py``) and to the live tests."
+" ``tests/test_docs.py`` fails until the documentation is complete."
+msgstr ""
+"Nimm die Funktion in die Tests auf (``tests/test_download_offline.py``, "
+"``tests/test_plot.py``, ``tests/test_package.py``) und in die Live-Tests."
+" ``tests/test_docs.py`` schlägt fehl, bis die Dokumentation vollständig "
+"ist."
+
+#: ../../contributing.rst:152
+msgid ""
+"Translate the new texts of the page and of the docstrings into German "
+"(see above)."
+msgstr ""
+"Übersetze die neuen Texte der Seite und der Docstrings ins Deutsche "
+"(siehe oben)."
+
+#: ../../contributing.rst:155
+msgid "Make a release"
+msgstr "Ein Release erstellen"
+
+#: ../../contributing.rst:162
+msgid "Raise ``__version__`` in ``src/cdec/__about__.py`` first."
+msgstr "Erhöhe zuerst ``__version__`` in ``src/cdec/__about__.py``."
+

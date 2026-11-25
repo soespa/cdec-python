@@ -1,4 +1,8 @@
-openeo
+openeo>=0.37
 numpy
-rio_cogeo
+rasterio
+matplotlib
+rio-cogeo
 shapely
+pytest
+sphinx

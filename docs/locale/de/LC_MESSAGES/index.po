@@ -1,0 +1,126 @@
+# German translation of the CDEC documentation.
+# Copyright (C) 2026, Soeren Sparmann
+# This file is distributed under the same license as the CDEC package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDEC 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-23 16:26+0100\n"
+"PO-Revision-Date: 2026-11-23 16:30+0000\n"
+"Last-Translator: Soeren Sparmann\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../index.rst:38
+msgid "Learn"
+msgstr "Lernen"
+
+#: ../../index.rst:44
+msgid "Do"
+msgstr "Anwenden"
+
+#: ../../index.rst:50
+msgid "Data types"
+msgstr "Datentypen"
+
+#: ../../index.rst:56
+msgid "Understand"
+msgstr "Verstehen"
+
+#: ../../index.rst:62
+msgid "Look up"
+msgstr "Nachschlagen"
+
+#: ../../index.rst:68
+msgid "Project"
+msgstr "Projekt"
+
+#: ../../index.rst:2
+msgid "CDEC"
+msgstr "CDEC"
+
+#: ../../index.rst:4
+msgid ""
+"CDEC downloads satellite data of a study area from the `Copernicus Data "
+"Space <https://dataspace.copernicus.eu/>`_ and draws it. One function "
+"call gives you one GeoTIFF file that you open with ``rasterio`` or QGIS. "
+"The package is made for teaching: one function per data type, short "
+"readable code, and defaults that work."
+msgstr ""
+"CDEC lädt Satellitendaten für ein Untersuchungsgebiet vom `Copernicus "
+"Data Space <https://dataspace.copernicus.eu/>`_ herunter und zeichnet "
+"sie. Ein Funktionsaufruf liefert dir eine GeoTIFF-Datei, die du mit "
+"``rasterio`` oder QGIS öffnest. Das Paket ist für die Lehre gemacht: eine"
+" Funktion je Datentyp, kurzer lesbarer Code und Standardwerte, die "
+"funktionieren."
+
+#: ../../index.rst:19
+msgid ""
+"The documentation has five parts. Start with the tutorial; come back to "
+"the other parts when you have a question."
+msgstr ""
+"Die Dokumentation hat fünf Teile. Beginne mit dem Tutorial; die anderen "
+"Teile schlägst du bei Fragen nach."
+
+#: ../../index.rst:25
+msgid ":doc:`Get started <tutorial/get-started>`"
+msgstr ":doc:`Erste Schritte <tutorial/get-started>`"
+
+#: ../../index.rst:26
+msgid ""
+"**Tutorial.** Your first download, step by step: install, download, look "
+"at the result."
+msgstr ""
+"**Tutorial.** Dein erster Download, Schritt für Schritt: installieren, "
+"herunterladen, das Ergebnis ansehen."
+
+#: ../../index.rst:27
+msgid ":doc:`How-to guides <howto/index>`"
+msgstr ":doc:`Anleitungen <howto/index>`"
+
+#: ../../index.rst:28
+msgid ""
+"**Recipes** for a goal: choose the area and period, filter clouds, "
+"compare images, plot several maps, check a file."
+msgstr ""
+"**Rezepte** für ein Ziel: Gebiet und Zeitraum wählen, Wolken filtern, "
+"Bilder vergleichen, mehrere Karten zeichnen, eine Datei prüfen."
+
+#: ../../index.rst:30
+msgid ":doc:`Data types <data/index>`"
+msgstr ":doc:`Datentypen <data/index>`"
+
+#: ../../index.rst:31
+msgid ""
+"**One page for each kind of data:** what it shows, how to download and "
+"plot it, and what to watch out for."
+msgstr ""
+"**Eine Seite je Art von Daten:** was sie zeigt, wie du sie herunterlädst "
+"und zeichnest und worauf du achten musst."
+
+#: ../../index.rst:33
+msgid ":doc:`Explanation <explanation/index>`"
+msgstr ":doc:`Hintergrund <explanation/index>`"
+
+#: ../../index.rst:34
+msgid ""
+"**Background:** how the package works, why clouds need care, what the "
+"colours mean."
+msgstr ""
+"**Hintergrund:** wie das Paket funktioniert, warum Wolken Sorgfalt "
+"verlangen, was die Farben bedeuten."
+
+#: ../../index.rst:35
+msgid ":doc:`Reference <reference/index>`"
+msgstr ":doc:`Referenz <reference/index>`"
+
+#: ../../index.rst:36
+msgid "**Look-up:** all functions, argument types and classes."
+msgstr "**Nachschlagewerk:** alle Funktionen, Argumenttypen und Klassen."
+
