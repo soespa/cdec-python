@@ -19,7 +19,7 @@ other surfaces. A value above about 0.4 is a common first guess for snow. The re
    * - Pixel size
      - 10 m (B11 has 20 m detail)
    * - Result
-     - one band of floating-point numbers, no unit, about -1 ... 1
+     - one band of floating-point numbers, no unit, -1 ... 1
    * - Clouds
      - scenes above ``max_cloud_cover`` (20 %) are not used; pixels are masked with ``scl_classes``
        (default: vegetation, not vegetated, water and snow or ice)
@@ -60,10 +60,6 @@ Things to know
   :doc:`ndwi` and the class *snow or ice*. NDVI and EVI drop snow (:doc:`ndvi`).
 * **Not every high value is snow.** Thin clouds and some bright surfaces can also reach high values. Look at
   :doc:`true-color` or :doc:`false-color-swir` of the same area to check.
-* **Values outside -1 ... 1.** A few pixels can lie outside, in the very dark ones (shadows), where one of the
-  reflectances is below zero and the sum in the denominator is close to zero. The example file ranges from -6 to 10.3,
-  but only 21 of its about 438,000 pixels are outside -1 ... 1. Treat them as noise or clip them with
-  ``numpy.clip(ndsi, -1, 1)``.
 * **The index is calculated from the mean reflectance** of the period, not as the mean of the index of every date.
 * **The plot** uses white-blue colours and a fixed range of -1 to 1: the darker the blue, the more likely snow.
 

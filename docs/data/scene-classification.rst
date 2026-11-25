@@ -17,7 +17,7 @@ choose ``scl_classes`` for them.
    * - Source
      - Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), band SCL
    * - Pixel size
-     - 20 m
+     - 10 m (the classes have 20 m detail)
    * - Result
      - one band of class numbers (0 ... 11) with the colours of the classes attached to the file; 0 means no data
    * - Clouds

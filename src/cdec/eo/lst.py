@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .summary import format_period
 from .util import (
     OverviewResampling,
     SpatialExtent,
@@ -19,7 +18,6 @@ def download_land_surface_temperature(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "average",
-    verbose: bool = True,
 ) -> Path:
     """Download mean land surface temperature data from Sentinel-3.
 
@@ -48,15 +46,16 @@ def download_land_surface_temperature(
     overview_resampling:
         Resampling method used to build COG overview levels. ``"average"``
         is a suitable default for continuous temperature data.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded raster file.
+        Absolute path of the GeoTIFF that was written. The file has one band of
+        floating-point numbers (``float32``): the land surface temperature in
+        Kelvin (subtract 273.15 for degrees Celsius). Pixels without data are
+        NaN, which the file declares as its no-data value. The coordinate
+        system is geographic (EPSG:4326, degrees); the pixel size is 0.0089
+        degrees, about 1 km.
     """
 
     connection = get_connection()
@@ -75,13 +74,6 @@ def download_land_surface_temperature(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="Land surface temperature from Sentinel-3 SLSTR (mean of the period)",
-        unit="Kelvin (subtract 273.15 for degrees Celsius)",
-        details={
-            "period": format_period(temporal_extent),
-            "clouds": "no cloud masking",
-        },
     )
 
 

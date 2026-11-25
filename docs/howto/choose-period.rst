@@ -21,9 +21,9 @@ Which period?
   them. A month is a good start. If the map has white holes, use a longer period or a higher
   ``max_cloud_cover`` (:doc:`filter-clouds`).
 * **Seasons:** compare the same period of different years (June 2023 and June 2024), not June and December.
-* **Landsat NDVI:** the mosaics cover two months each and run from 1997 to 2024
+* **Landsat NDVI:** the mosaics cover two months each and run from 1997 to 2025
   (:doc:`/data/landsat-ndvi`).
-* **Soil water index:** version 2 of the data starts on 2025-07-13. Earlier periods may find no data
+* **Soil water index:** the collection (version 2 of the data) starts on 2025-07-12 at 12:00 UTC. Earlier periods may find no data
   (:doc:`/data/soil-water-index`).
 
 Data that does not change

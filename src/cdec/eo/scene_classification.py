@@ -6,7 +6,6 @@ import numpy as np
 import rasterio
 
 from .scl import SCL_COLORS
-from .summary import describe_cloud_cover, format_period
 from .util import (
     OverviewResampling,
     SpatialExtent,
@@ -53,7 +52,6 @@ def download_scene_classification_map(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "nearest",
-    verbose: bool = True,
 ) -> Path:
     """Download the Sentinel-2 scene classification map.
 
@@ -86,15 +84,17 @@ def download_scene_classification_map(
     overview_resampling:
         Resampling method used to build COG overview levels. ``"nearest"``
         keeps the class IDs and should normally not be changed.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded scene classification raster.
+        Absolute path of the GeoTIFF that was written. The file has one band of
+        8-bit integers (``uint8``): the SCL class of every pixel, 1 to 11. 0
+        means no data and is declared as the no-data value. The colours of the
+        classes are stored in the file as a colour table, and
+        ``cdec.show_scl_classes()`` explains the numbers. The pixel size is
+        10 m, in the UTM zone of the area (EPSG:32632 for Bremen); the classes
+        themselves have 20 m detail.
     """
     connection = get_connection()
 
@@ -114,13 +114,6 @@ def download_scene_classification_map(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="Sentinel-2 scene classification (most recent observation of the period, 20 m)",
-        unit="class IDs (names and colours: cdec.SCL_CLASSES, cdec.SCL_COLORS)",
-        details={
-            "period": format_period(temporal_extent),
-            "clouds": describe_cloud_cover(max_cloud_cover),
-        },
         postprocess=_apply_scl_colormap,
     )
 

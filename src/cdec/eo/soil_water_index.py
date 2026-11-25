@@ -5,7 +5,6 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Literal
 
-from .summary import format_period
 from .util import (
     OverviewResampling,
     SpatialExtent,
@@ -30,7 +29,6 @@ def download_soil_water_index(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "average",
-    verbose: bool = True,
 ) -> Path:
     """Download the mean Soil Water Index (SWI) of a period.
 
@@ -39,9 +37,9 @@ def download_soil_water_index(
     for the requested period. The SWI describes soil moisture in percent
     (0 = dry, 100 = saturated) according to the CLMS product description.
 
-    Check the dates before you use this function: CLMS publishes *version 2*
-    of the 1 km SWI from 2025-07-13 onwards, while version 1 covers 2015 up to
-    2025-07-12. Earlier periods may therefore find no data in this collection.
+    Check the dates before you use this function: the collection holds *version 2*
+    of the 1 km SWI and starts on 2025-07-12 at 12:00 UTC, while version 1 covers
+    2015 up to 2025-07-12. Earlier periods may therefore find no data in this collection.
     CDSE also labels its openEO CLMS collections as experimental.
 
     Parameters
@@ -67,15 +65,15 @@ def download_soil_water_index(
     overview_resampling:
         Resampling method used to build COG overview levels. ``"average"``
         is a suitable default for continuous data.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded SWI raster.
+        Absolute path of the GeoTIFF that was written. The file has one band of
+        floating-point numbers (``float32``): the soil water index in percent,
+        from 0 (dry) to 100 (saturated). Pixels without data are NaN, which the
+        file declares as its no-data value. The coordinate system is geographic
+        (EPSG:4326, degrees); the pixel size is 0.0089 degrees, about 1 km.
 
     Raises
     ------
@@ -106,13 +104,6 @@ def download_soil_water_index(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="Soil Water Index from CLMS (mean of the period)",
-        unit="percent (0 = dry, 100 = saturated)",
-        details={
-            "period": format_period(temporal_extent),
-            "depth": f"T = {depth} days (small T: topsoil, large T: deeper soil)",
-        },
     )
 
 

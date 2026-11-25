@@ -19,7 +19,6 @@ How the code is organised
     src/cdec/eo/
         ndvi.py, evi.py, tci.py, ...   one module per data type, one download_* function each
         scl.py                         Sentinel-2 SCL classes: names, hints, ready-made selections
-        summary.py                     the summary that the download functions print
         util.py                        login, download + Cloud Optimized GeoTIFF
         postprocessing.py              colour / contrast enhancement of RGB composites
     src/cdec/plot/
@@ -50,8 +49,8 @@ Run the tests
      - What it tests
    * - ``tests/test_download_offline.py``
      - what every ``download_*`` function asks openEO for, and what it does with the file (a fake backend replaces openEO)
-   * - ``tests/test_postprocessing.py``, ``test_scl.py``, ``test_summary.py``, ``test_util.py``, ``test_package.py``
-     - colour enhancement (including: same reflectance, same colour), SCL table and validation, the printed summary,
+   * - ``tests/test_postprocessing.py``, ``test_scl.py``, ``test_util.py``, ``test_package.py``
+     - colour enhancement (including: same reflectance, same colour), SCL table and validation,
        helper functions, the public interface (aliases, argument order)
    * - ``tests/test_plot.py``
      - the plot functions: colour maps and ranges, no-data pixels, colour pictures from reflectance, land-cover legend,

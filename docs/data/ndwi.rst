@@ -18,7 +18,7 @@ below 0 for most land. The result is one number per pixel, between -1 and 1.
    * - Pixel size
      - 10 m
    * - Result
-     - one band of floating-point numbers, no unit, about -1 ... 1
+     - one band of floating-point numbers, no unit, -1 ... 1
    * - Clouds
      - scenes above ``max_cloud_cover`` (20 %) are not used; pixels are masked with ``scl_classes``
        (default: vegetation, not vegetated and water)
@@ -55,9 +55,6 @@ Things to know
 * **Above 0 is a first guess, not a water map.** Built-up areas and shadows can also have values close to 0 or
   slightly above. For a water mask combine the index with the scene classification (class 6,
   :doc:`scene-classification`) or the :doc:`land cover map <land-cover>`.
-* **Values outside -1 ... 1.** A few pixels can lie slightly outside, in the very dark ones (shadows, deep water),
-  where one of the reflectances is below zero. The example file ranges from -1.22 to 0.67; two of its about 930,000
-  pixels are below -1. Treat them as noise or clip them with ``numpy.clip(ndwi, -1, 1)``.
 * **The index is calculated from the mean reflectance** of the period, not as the mean of the index of every date.
 * **The plot** uses red-white-blue colours and a fixed range of -1 to 1: red for land, blue for water, so the same
   colour always means the same NDWI and two maps can be compared by eye.

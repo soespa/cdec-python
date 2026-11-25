@@ -11,8 +11,8 @@ The documentation follows the Diataxis scheme:
 * The first tests only read the ``.rst`` files. They always run.
 * The other tests build the HTML pages in English and in German (in a
   temporary folder, nothing is written into the repository) and look at the
-  result. They are skipped if Sphinx or the theme is not installed:
-  ``pip install -e ".[docs]"``.
+  result. They are skipped if Sphinx or the theme is not installed (``hatch run test``
+  installs both).
 * The German texts are in ``docs/locale/de/LC_MESSAGES/*.po``. A test fails
   while an English text has no German translation.
 """
@@ -306,26 +306,110 @@ def test_the_sentinel2_pages_say_where_the_cloud_filters_are_explained(page):
     assert "/howto/filter-clouds" in text
 
 
-def test_the_tutorial_shows_download_summary_and_plot():
+def test_the_tutorial_shows_download_help_and_plot():
     text = (DOCS_DIR / "tutorial" / "get-started.rst").read_text(encoding="utf-8")
-    for expected in ["pip install cdec", "download_ndvi", "plot_ndvi", "SCL kept", "rasterio.open"]:
+    for expected in ["pip install cdec", "download_ndvi", "plot_ndvi", "help(download_ndvi)", "rasterio.open"]:
         assert expected in text
 
 
 # ----------------------------------------------------------------------------
-# The README: introduction, installation, quick start, license - and nothing else
+# The README: introduction, installation, quick start, the list of functions, license - and nothing else
 # ----------------------------------------------------------------------------
 def readme_text():
     return (ROOT / "README.md").read_text(encoding="utf-8")
 
 
 def test_the_readme_is_short():
-    assert len(readme_text().splitlines()) <= 80
+    assert len(readme_text().splitlines()) <= 100
 
 
-def test_the_readme_has_installation_quick_start_and_license():
+def test_the_readme_has_installation_quick_start_data_types_build_and_license():
     headings = re.findall(r"^## (.+)$", readme_text(), re.MULTILINE)
-    assert headings == ["Installation", "Quick start", "License"]
+    assert headings == ["Installation", "Quick start", "Data types", "Build and test", "License"]
+
+
+def test_the_installation_in_the_readme_is_only_pip_install_cdec():
+    """Students install the package; the development install is not their business."""
+    text = readme_text()
+    installation = text[text.index("## Installation"):text.index("## Quick start")]
+    assert "pip install cdec" in installation
+    assert "pip install -e" not in text
+    assert "editable" not in text.lower()
+    assert "development" not in installation.lower()
+
+
+def test_the_readme_describes_hatch_for_the_build_at_the_bottom():
+    text = readme_text()
+    assert text.index("## Build and test") > text.index("## Data types")
+    section = text[text.index("## Build and test"):text.index("## License")]
+    for command in ("hatch run test", "hatch run docs:build", "hatch run types:check", "hatch build"):
+        assert command in section, command
+
+
+@pytest.mark.parametrize("download_name", DATA_PAGES)
+def test_the_readme_lists_every_download_function(download_name):
+    short_name = SHORT_NAMES.get(download_name, download_name)
+    assert f"`{short_name}`" in readme_text(), f"{short_name} is missing in the list of data types"
+
+
+def readme_table_rows():
+    """The rows of the table of data types as ``{download function: [cell, ...]}`` (without the header)."""
+    rows = {}
+    for line in readme_text().splitlines():
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        match = re.fullmatch(r"`(download_\w+)`", cells[1]) if line.startswith("|") and len(cells) > 1 else None
+        if match:
+            rows[match.group(1)] = cells
+    return rows
+
+
+def test_the_readme_table_has_a_temporal_extent_for_every_data_type():
+    header = next(line for line in readme_text().splitlines() if line.startswith("| Data |"))
+    assert [cell.strip() for cell in header.strip("|").split("|")][-1] == "Temporal extent"
+    rows = readme_table_rows()
+    assert len(rows) == len(DATA_PAGES)
+    for name, cells in rows.items():
+        assert len(cells) == 5, f"{name} needs five cells: data, function, source, pixel size, temporal extent"
+        assert cells[4], f"{name} has an empty temporal extent"
+
+
+def test_the_readme_marks_elevation_and_land_cover_as_static():
+    rows = readme_table_rows()
+    for name, cells in rows.items():
+        assert ("static" in cells[4]) == (name in ("download_dem", "download_land_cover")), name
+
+
+@pytest.mark.parametrize(
+    ("function", "page", "fact"),
+    [
+        ("download_landsat", "landsat-ndvi", "1997 to 2025"),
+        ("download_swi", "soil-water-index", "2025-07-12"),
+        ("download_dem", "elevation", "2010 to 2015"),
+        ("download_land_cover", "land-cover", "2021"),
+    ],
+)
+def test_the_temporal_extent_of_the_readme_agrees_with_the_data_page(function, page, fact):
+    assert fact.split()[-1] in readme_table_rows()[function][4]
+    assert fact in " ".join((ROOT / "docs" / "data" / f"{page}.rst").read_text(encoding="utf-8").split())
+
+
+def test_the_readme_shows_the_ndvi_picture_of_the_documentation():
+    """PyPI shows the README on its own, so the picture is linked by its web address. The file must exist."""
+    match = re.search(
+        r"!\[([^\]]+)\]\(https://raw\.githubusercontent\.com/[^/]+/[^/]+/main/(docs/_static/figures/ndvi\.png)\)",
+        readme_text(),
+    )
+    assert match, "the README needs the NDVI picture (with alt text) from docs/_static/figures/"
+    assert (ROOT / match.group(2)).stat().st_size > 5_000
+
+
+def test_the_readme_points_to_help_for_the_result_of_a_function():
+    assert "help(download_ndvi)" in readme_text()
+
+
+def test_the_readme_does_not_mention_a_printed_summary():
+    assert "summary" not in readme_text().lower()
+    assert "verbose" not in readme_text().lower()
 
 
 def test_the_readme_does_not_point_to_the_code_review():

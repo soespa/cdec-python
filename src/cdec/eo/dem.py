@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .summary import format_period
 from .util import (
     DEFAULT_DEM_TEMPORAL_EXTENT,
     OverviewResampling,
@@ -20,7 +19,6 @@ def download_digital_elevation_model(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "average",
-    verbose: bool = True,
 ) -> Path:
     """Download a Copernicus digital elevation model.
 
@@ -49,15 +47,15 @@ def download_digital_elevation_model(
     overview_resampling:
         Resampling method used to build COG overview levels. ``"average"``
         is a suitable default for continuous elevation data.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded raster file.
+        Absolute path of the GeoTIFF that was written. The file has one band of
+        floating-point numbers (``float32``): the elevation in metres. Pixels
+        without data are NaN, which the file declares as its no-data value. The
+        coordinate system is geographic (EPSG:4326, degrees); the pixel size is
+        0.00042 x 0.00028 degrees (east-west x north-south), about 30 m.
     """
 
     connection = get_connection()
@@ -76,10 +74,6 @@ def download_digital_elevation_model(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="Copernicus digital elevation model (30 m)",
-        unit="metres",
-        details={"period": format_period(temporal_extent)},
     )
 
 

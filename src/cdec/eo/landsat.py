@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from .summary import format_period
 from .util import (
     OverviewResampling,
     SpatialExtent,
@@ -19,12 +18,11 @@ def download_landsat_ndvi(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "average",
-    verbose: bool = True,
 ) -> Path:
     """Download an NDVI raster from the Landsat bi-monthly mosaic.
 
     The source collection provides reconstructed, cloud-free Landsat mosaics
-    at 30 metre resolution from 1997 through 2024. Red and near-infrared bands are
+    at 30 metre resolution from 1997 through 2025. Red and near-infrared bands are
     averaged over the requested period before calculating NDVI. The mosaics are
     already cloud-free, so there is no cloud-cover or SCL masking here.
 
@@ -45,15 +43,15 @@ def download_landsat_ndvi(
         If ``True``, write a Cloud Optimized GeoTIFF.
     overview_resampling:
         Resampling method used to build COG overview levels.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded NDVI raster.
+        Absolute path of the GeoTIFF that was written. The file has one band of
+        floating-point numbers (``float32``): the NDVI, a number without unit
+        between -1 and 1. Pixels without data are NaN, which the file declares
+        as its no-data value. The coordinate system is geographic (EPSG:4326,
+        degrees); the pixel size is 0.00025 degrees, about 30 m.
     """
     connection = get_connection()
 
@@ -76,13 +74,6 @@ def download_landsat_ndvi(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="NDVI from the Landsat bi-monthly mosaic (30 m)",
-        unit="no unit (index from -1 to 1)",
-        details={
-            "period": format_period(temporal_extent),
-            "clouds": "no masking needed, the mosaics are already cloud-free",
-        },
     )
 
 

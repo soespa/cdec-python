@@ -293,8 +293,8 @@ def check_swi(path, output_tif, spatial_extent):
 def test_swi_for_the_standard_test_period(output_tif, spatial_extent, temporal_extent):
     """June 2024. Expected to FAIL with 'no data' if the collection starts later.
 
-    CLMS publishes version 2 of the 1 km Soil Water Index from 2025-07-13
-    (version 1 covers the years before). The next test shows whether the
+    The collection with version 2 of the 1 km Soil Water Index starts on
+    2025-07-12 at 12:00 UTC (version 1 covers the years before). The next test shows whether the
     function itself works.
     """
     path = download_swi(output_tif, spatial_extent, temporal_extent)

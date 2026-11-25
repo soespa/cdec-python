@@ -25,8 +25,8 @@ The Sentinel-2 functions have ``max_cloud_cover`` and ``scl_classes`` as their
 first options after the three standard arguments (the scene classification map
 has only ``max_cloud_cover``: it *is* the SCL). ``cdec.show_scl_classes()``
 explains the SCL classes. Technical options (``create_cog``,
-``overview_resampling``, ``verbose``) must be passed by keyword. After a
-download, a summary of the file is printed unless ``verbose=False``.
+``overview_resampling``) must be passed by keyword. ``help(download_ndvi)``
+(or any other function) describes the file that the function writes.
 """
 
 from .dem import download_dem, download_digital_elevation_model

@@ -29,7 +29,7 @@ Vegetation
      - ``download_ndvi``, ``plot_ndvi``
      - Sentinel-2
      - 10 m
-     - number, about -1 ... 1
+     - number, -1 ... 1
    * - :doc:`evi`
      - ``download_evi``, ``plot_evi``
      - Sentinel-2
@@ -37,9 +37,9 @@ Vegetation
      - number
    * - :doc:`landsat-ndvi`
      - ``download_landsat``, ``plot_landsat``
-     - Landsat mosaic, 1997-2024
+     - Landsat mosaic, 1997-2025
      - 30 m
-     - number, about -1 ... 1
+     - number, -1 ... 1
 
 Water, moisture and snow
 ------------------------
@@ -57,17 +57,17 @@ Water, moisture and snow
      - ``download_ndwi``, ``plot_ndwi``
      - Sentinel-2
      - 10 m
-     - number, about -1 ... 1
+     - number, -1 ... 1
    * - :doc:`ndmi`
      - ``download_ndmi``, ``plot_ndmi``
      - Sentinel-2
-     - 20 m
-     - number, about -1 ... 1
+     - 10 m
+     - number, -1 ... 1
    * - :doc:`ndsi`
      - ``download_ndsi``, ``plot_ndsi``
      - Sentinel-2
      - 10 m
-     - number, about -1 ... 1
+     - number, -1 ... 1
 
 Pictures
 --------
@@ -150,7 +150,7 @@ Terrain and land cover
    * - :doc:`scene-classification`
      - ``download_scl``, ``plot_scl``
      - Sentinel-2
-     - 20 m
+     - 10 m
      - class numbers
 
 The pictures on these pages show the area of the tutorial (Bremen, Germany), made from real downloads.

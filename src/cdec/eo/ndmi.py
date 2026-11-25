@@ -6,7 +6,6 @@ from typing import Sequence
 from openeo.processes import array_contains, not_
 
 from .scl import SCL_LAND, check_scl_classes
-from .summary import sentinel2_details
 from .util import (
     OverviewResampling,
     SpatialExtent,
@@ -26,7 +25,6 @@ def download_normalized_difference_moisture_index(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "average",
-    verbose: bool = True,
 ) -> Path:
     """Download a Sentinel-2 NDMI (moisture index) raster.
 
@@ -38,8 +36,9 @@ def download_normalized_difference_moisture_index(
     ``NDMI = (NIR - SWIR) / (NIR + SWIR)``
 
     It is high for vegetation that holds much water and low for dry
-    vegetation and bare ground. Both bands have a pixel size of 20 m, so the
-    output grid is 20 m. As with :func:`cdec.download_normalized_difference_vegetation_index`,
+    vegetation and bare ground. Both bands have a pixel size of 20 m; the
+    backend delivers them on the 10 m grid of Sentinel-2, so the file has 10 m
+    pixels with 20 m detail. As with :func:`cdec.download_normalized_difference_vegetation_index`,
     the index is calculated from mean reflectance, rather than averaging
     indices from individual dates.
 
@@ -72,15 +71,16 @@ def download_normalized_difference_moisture_index(
         If ``True``, write a Cloud Optimized GeoTIFF.
     overview_resampling:
         Resampling method used to build COG overview levels.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded NDMI raster.
+        Absolute path of the GeoTIFF that was written. The file has one band of
+        floating-point numbers (``float32``): the NDMI, a number without unit
+        between -1 and 1 (high for plants that hold much water). Pixels without
+        data are NaN, which the file declares as its no-data value. The pixel
+        size is 10 m, in the UTM zone of the area (EPSG:32632 for Bremen); both
+        bands have only 20 m detail.
     """
     # Check the class IDs before connecting to the backend.
     scl_classes = check_scl_classes(scl_classes)
@@ -88,7 +88,7 @@ def download_normalized_difference_moisture_index(
     connection = get_connection()
 
     # Load near-infrared (B8A), short-wave infrared (B11) and optionally SCL together.
-    # All three have a pixel size of 20 m, so the result is a 20 m grid.
+    # All three have a pixel size of 20 m. The backend puts them on the 10 m grid of Sentinel-2.
     reflectance_bands = ["B8A", "B11"]
     bands_to_load = list(reflectance_bands)
     if scl_classes is not None:
@@ -127,10 +127,6 @@ def download_normalized_difference_moisture_index(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="NDMI from Sentinel-2 L2A (mean of the period)",
-        unit="no unit (index from -1 to 1)",
-        details=sentinel2_details(temporal_extent, max_cloud_cover, scl_classes),
     )
 
 

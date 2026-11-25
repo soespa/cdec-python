@@ -16,7 +16,7 @@ from __future__ import annotations
 from datetime import date
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Literal, Mapping, Sequence, TypeAlias
+from typing import Literal, Sequence, TypeAlias
 
 import openeo
 from rio_cogeo.cogeo import cog_translate
@@ -24,7 +24,6 @@ from rio_cogeo.profiles import cog_profiles
 from shapely.geometry.base import BaseGeometry
 
 from .postprocessing import RasterPostprocess
-from .summary import summarize_raster
 
 
 #: Address of the Copernicus Data Space openEO backend.
@@ -78,10 +77,6 @@ def download_raster_cube(
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "average",
     postprocess: RasterPostprocess | None = None,
-    verbose: bool = False,
-    description: str = "",
-    unit: str = "",
-    details: Mapping[str, str] | None = None,
 ) -> Path:
     """Download an openEO data cube as GeoTIFF and return the final path.
 
@@ -105,11 +100,6 @@ def download_raster_cube(
     postprocess:
         Optional function that receives the path of the downloaded GeoTIFF and
         rewrites it in place (e.g. colour enhancement).
-    verbose:
-        If ``True``, print a summary of the finished file (see
-        :func:`cdec.eo.summary.summarize_raster`).
-    description, unit, details:
-        Title, unit of the values and more lines for that summary.
     """
     output_path = prepare_output_path(file_path)
 
@@ -140,8 +130,5 @@ def download_raster_cube(
             result_tif = source_tif
 
         result_tif.replace(output_path)
-
-    if verbose:
-        print(summarize_raster(output_path, description, unit, details))
 
     return output_path

@@ -19,7 +19,7 @@ negative for water, built-up surfaces and clouds.
    * - Pixel size
      - 10 m
    * - Result
-     - one band of floating-point numbers, no unit, about -1 ... 1
+     - one band of floating-point numbers, no unit, -1 ... 1
    * - Clouds
      - scenes above ``max_cloud_cover`` (20 %) are not used; pixels are masked with ``scl_classes``
        (default: vegetation and not vegetated)
@@ -56,10 +56,10 @@ Things to know
   pixels only. Use ``scl_classes=cdec.SCL_LAND_AND_WATER`` to keep water.
 * **Values outside -1 ... 1.** A few pixels can lie slightly outside, for example when the red reflectance is
   close to zero. The example file ranges from -0.66 to 1.26. Treat them as noise or clip them with
-  ``numpy.clip(ndvi, -1, 1)``.
+  ``numpy.clip(ndvi, -1, 1)``. The other indices (EVI, NDWI, NDMI, NDSI) can do the same.
 * **The plot** uses red-yellow-green colours and a fixed range of -1 to 1, so the same colour always means the
   same NDVI and two maps can be compared by eye.
-* For a longer time series (1997-2024) at a coarser resolution use :doc:`landsat-ndvi`.
+* For a longer time series (1997-2025) at a coarser resolution use :doc:`landsat-ndvi`.
 
 See also
 --------

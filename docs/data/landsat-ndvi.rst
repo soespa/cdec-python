@@ -2,7 +2,7 @@ NDVI (Landsat)
 ==============
 
 The same vegetation index as :doc:`ndvi`, calculated from the Landsat bi-monthly mosaics. They run from 1997 to
-2024, so this is the data type for questions about **change over decades**: how did the vegetation of an area
+2025, so this is the data type for questions about **change over decades**: how did the vegetation of an area
 develop since 1997? The price is a coarser pixel (30 m instead of 10 m).
 
 .. list-table:: At a glance
@@ -23,7 +23,7 @@ develop since 1997? The price is a coarser pixel (30 m instead of 10 m).
      - none needed: the mosaics are reconstructed and cloud-free. There are no ``max_cloud_cover`` and
        ``scl_classes`` options.
    * - Period
-     - 1997 to 2024; mean of the mosaics inside ``temporal_extent``
+     - 1997 to 2025; mean of the mosaics inside ``temporal_extent``
 
 Example
 -------

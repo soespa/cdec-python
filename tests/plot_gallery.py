@@ -14,6 +14,7 @@ tests/output/plot_gallery_real.png. Open it, or call a plot function yourself:
 """
 
 import argparse
+from collections.abc import Callable
 import sys
 import tempfile
 from pathlib import Path
@@ -49,7 +50,7 @@ from cdec.eo.worldcover import _apply_worldcover_colormap  # noqa: E402
 # ----------------------------------------------------------------------------
 # The files to draw: a list of (file, plot function)
 # ----------------------------------------------------------------------------
-def real_files() -> list[tuple[Path, callable]]:
+def real_files() -> list[tuple[Path, Callable[..., object]]]:
     """The downloads of the live tests. The name of the file tells which plot function fits."""
     # first match wins: "landsat" must be checked before "ndvi"
     plot_function_for = [
@@ -58,7 +59,7 @@ def real_files() -> list[tuple[Path, callable]]:
         ("tci", plot_tci), ("urban", plot_urban), ("infrared", plot_infrared), ("swir", plot_swir),
         ("scl", plot_scl), ("lst", plot_lst), ("dem", plot_dem),
     ]
-    found = []
+    found: list[tuple[Path, Callable[..., object]]] = []
     for path in sorted(OUTPUT_DIR.glob("*.tif")):
         for keyword, plot_function in plot_function_for:
             if keyword in path.name:
@@ -69,7 +70,7 @@ def real_files() -> list[tuple[Path, callable]]:
     return found
 
 
-def made_up_files(folder: Path) -> list[tuple[Path, callable]]:
+def made_up_files(folder: Path) -> list[tuple[Path, Callable[..., object]]]:
     """A small landscape with a river, a town and fields, written like the backend would write it.
 
     The Sentinel-2 files are in UTM (metres), the other files in longitude/latitude (degrees),
@@ -158,12 +159,12 @@ def made_up_files(folder: Path) -> list[tuple[Path, callable]]:
 # ----------------------------------------------------------------------------
 # Draw them
 # ----------------------------------------------------------------------------
-def draw(files: list[tuple[Path, callable]], picture: Path) -> None:
+def draw(files: list[tuple[Path, Callable[..., object]]], picture: Path) -> None:
     columns = 3
     rows = -(-len(files) // columns)  # round up
     # One sub-figure per plot: the wide legend of the land cover then does not change the others.
     fig = plt.figure(figsize=(6 * columns, 5 * rows), layout="constrained")
-    subfigures = np.atleast_1d(fig.subfigures(rows, columns)).ravel()
+    subfigures = np.atleast_1d(np.asarray(fig.subfigures(rows, columns), dtype=object)).ravel()
 
     for subfigure, (path, plot_function) in zip(subfigures, files):
         ax = subfigure.subplots()

@@ -59,6 +59,3 @@ These three are accepted by every download function and must be written with the
     How the overview levels of a Cloud Optimized GeoTIFF are calculated. Default ``"average"``
     (``"nearest"`` for land cover and the scene classification). One of ``"nearest"``, ``"bilinear"``, ``"cubic"``, ``"cubic_spline"``,
     ``"lanczos"``, ``"average"``, ``"mode"``, ``"gauss"`` or ``"rms"``.
-
-``verbose``
-    ``True`` (default): print a summary of the finished file.

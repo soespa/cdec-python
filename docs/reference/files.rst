@@ -1,13 +1,6 @@
 Helpers for files
 =================
 
-Describing a file
------------------
-
-The download functions print this summary after a download (:doc:`/howto/check-a-file`).
-
-.. autofunction:: cdec.eo.summary.summarize_raster
-
 Colour enhancement
 ------------------
 

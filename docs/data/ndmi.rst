@@ -17,9 +17,9 @@ is one number per pixel, between -1 and 1.
    * - Source
      - Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), bands B8A (near-infrared) and B11 (short-wave infrared)
    * - Pixel size
-     - 20 m
+     - 10 m (both bands have 20 m detail)
    * - Result
-     - one band of floating-point numbers, no unit, about -1 ... 1
+     - one band of floating-point numbers, no unit, -1 ... 1
    * - Clouds
      - scenes above ``max_cloud_cover`` (20 %) are not used; pixels are masked with ``scl_classes``
        (default: vegetation and not vegetated)
@@ -48,7 +48,8 @@ Example
 Things to know
 --------------
 
-* **Both bands have 20 m pixels**, so the file has 20 m pixels, not 10 m like the :doc:`ndvi`.
+* **20 m detail.** Both bands have 20 m pixels. The backend puts them on the 10 m grid of Sentinel-2, so the file has
+  10 m pixels like the :doc:`ndvi`, but no finer detail than 20 m.
 * **Moisture of the plants, not of the soil.** The index describes the leaves. For the water in the soil use the
   :doc:`soil-water-index`, which is much coarser (1 km).
 * **Compare the same kind of vegetation.** A meadow and a forest have different values even when both are healthy.

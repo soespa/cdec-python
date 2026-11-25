@@ -17,9 +17,6 @@ All download functions share these keyword options. They must be written with th
   ``overview_resampling`` sets how the smaller overview levels of a COG are calculated. The default ``"average"``
   suits measurements. The land cover download uses ``"nearest"``, because averaging class numbers makes no sense.
 
-**No printed summary.**
-  ``verbose=False`` switches the summary off.
-
 **A failed download does no harm.**
   The data is first written to a hidden temporary folder next to the target file. Only when everything succeeded
   (download, colour enhancement, COG conversion) it replaces ``file_path``. A failed download never leaves a

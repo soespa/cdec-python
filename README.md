@@ -21,12 +21,6 @@ Python 3.10 or newer is required.
 pip install cdec
 ```
 
-For development (editable install with the test and documentation tools):
-
-```console
-pip install -e ".[test,docs]"
-```
-
 ## Quick start
 
 You need a free [Copernicus Data Space account](https://dataspace.copernicus.eu/). The first download opens a login
@@ -36,32 +30,64 @@ You need a free [Copernicus Data Space account](https://dataspace.copernicus.eu/
 from cdec import download_ndvi, plot_ndvi
 
 spatial_extent = {"west": 8.721771, "south": 53.025027, "east": 8.904419, "north": 53.114965}
-temporal_extent = ["2024-06-01", "2024-07-01"]  # the end date is NOT included: this is all of June
+temporal_extent = ["2024-06-01", "2024-07-01"]
 
 path = download_ndvi("data/ndvi_bremen.tif", spatial_extent, temporal_extent)
-plot_ndvi(path)  # right colours, fixed range -1 ... 1, colour bar
+plot_ndvi(path)
 ```
 
-`download_ndvi` returns the path of the file and prints a summary of what is in it
-(this is the output of a real download for Bremen; `verbose=False` switches the summary off):
+`download_ndvi` returns the path of the file, and `plot_ndvi` draws it:
 
-```text
-NDVI from Sentinel-2 L2A (mean of the period)
-  file      /home/me/data/ndvi_bremen.tif (3.9 MB)
-  extent    west 8.7211, south 53.0247, east 8.9047, north 53.1153 (WGS 84), about 12.3 x 10.1 km
-  grid      1228 x 1005 pixels of 10 m (EPSG:32632)
-  values    -0.6602 to 1.264, mean 0.5496
-  unit      no unit (index from -1 to 1)
-  no data   26.5 % of the pixels
-  period    2024-06-01 to 2024-07-01 (end date not included)
-  clouds    scenes with more than 20 % cloud cover are not used
-  SCL kept  4 Vegetation, 5 Not vegetated
+![NDVI of Bremen in June 2024: green fields and parks, yellow-green built-up areas, white patches without data.](https://raw.githubusercontent.com/soespa/cdec-python/main/docs/_static/figures/ndvi.png)
+
+*Bremen, June 2024. White: no data. Contains modified Copernicus Sentinel data 2024.*
+
+To learn what a function writes (bands, data type, unit, no-data value, pixel size) and what its options do, ask Python:
+
+```python
+help(download_ndvi)
 ```
 
-Every download function has a plot function with the matching name, and a short alias:
-`download_true_color_image` / `download_tci` and `plot_true_color_image` / `plot_tci` are the same functions.
-The documentation (the `docs/` folder, a [Sphinx](https://www.sphinx-doc.org) site) has a get-started tutorial,
-how-to guides, a page for each data type and the full reference.
+## Data types
+
+One function for each data type. Every `download_*` function has a `plot_*` function with the matching name
+(`download_ndvi` and `plot_ndvi`), and a long name that says the same in words
+(`download_normalized_difference_vegetation_index`). The long name and the short name are the same function.
+
+The column *Temporal extent* is the period that the collection covers in openEO (the `t` dimension of its data cube).
+Choose your `temporal_extent` inside it, for example `["2024-06-01", "2024-07-01"]` for June 2024 (the end date is not
+included). Elevation and land cover are static maps and need no period.
+
+| Data | Download function | Source | Pixel size | Temporal extent |
+| --- | --- | --- | --- | --- |
+| NDVI, vegetation | `download_ndvi` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| EVI, vegetation | `download_evi` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| NDWI, water | `download_ndwi` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| NDMI, moisture of plants | `download_ndmi` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| NDSI, snow and ice | `download_ndsi` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| True-colour image | `download_tci` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| False-colour image, urban | `download_urban` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| False-colour image, infrared (vegetation) | `download_infrared` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| False-colour image, short-wave infrared | `download_swir` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| Scene classification (cloud, water, ...) | `download_scl` | Sentinel-2 | 10 m | 2015-06-27 until present |
+| NDVI, long time series | `download_landsat` | Landsat mosaic | 30 m | 1997-01-01 to 2025-12-31 |
+| Land surface temperature | `download_lst` | Sentinel-3 | 1 km | 2016-04-17 until present |
+| Soil water index | `download_swi` | Copernicus Land Monitoring Service | 1 km | 2025-07-12 until present |
+| Elevation | `download_dem` | Copernicus DEM | 30 m | 2010-12-12 to 2015-01-16 (static) |
+| Land cover | `download_land_cover` | ESA WorldCover 2021 | 10 m | 2021 (static) |
+
+## Build and test
+
+The tests, the documentation and the package are run and built with [Hatch](https://hatch.pypa.io/):
+
+```console
+hatch run test          # all tests that work offline
+hatch run docs:build    # the documentation in English and German
+hatch run types:check   # type check with mypy
+hatch build             # the package (sdist and wheel) in the folder dist/
+```
+
+Tests that download real data need a Copernicus login: `hatch run test-live`.
 
 ## License
 

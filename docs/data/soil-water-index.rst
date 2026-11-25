@@ -22,7 +22,7 @@ a 1 km grid, every day.
    * - Clouds
      - not affected (it is a modelled product)
    * - Period
-     - mean of all days of ``temporal_extent``. **Version 2 starts on 2025-07-13.**
+     - mean of all days of ``temporal_extent``. **The collection (version 2) starts on 2025-07-12 at 12:00 UTC.**
 
 Example
 -------
@@ -46,8 +46,8 @@ Example
 Things to know
 --------------
 
-* **Check the dates first.** CLMS publishes version 2 of the 1 km SWI from 2025-07-13 onwards; version 1 covers 2015
-  up to 2025-07-12. An earlier period (such as June 2024) may find no data in this collection. The Copernicus Data
+* **Check the dates first.** The collection holds version 2 of the 1 km SWI and starts on 2025-07-12 at 12:00 UTC;
+  version 1 covers 2015 up to 2025-07-12. An earlier period (such as June 2024) may find no data in this collection. The Copernicus Data
   Space also labels its CLMS collections as experimental.
 * **The depth.** The ``depth`` argument is the characteristic time length *T* of the index in days: 2, 5, 10, 15, 20, 40,
   60 or 100. A small *T* follows recent rain and describes the topsoil; a large *T* is slow and describes deeper

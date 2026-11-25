@@ -21,10 +21,4 @@ Scene classification helpers
 ----------------------------
 
 .. automodule:: cdec.eo.scl
-   :members: check_scl_classes, describe_scl_classes
-
-Summary helpers
----------------
-
-.. automodule:: cdec.eo.summary
-   :members: format_period, sentinel2_details
+   :members: check_scl_classes

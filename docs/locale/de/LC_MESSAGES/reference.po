@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CDEC 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-23 17:15+0100\n"
+"POT-Creation-Date: 2026-11-25 14:12+0100\n"
 "PO-Revision-Date: 2026-11-23 16:30+0000\n"
 "Last-Translator: Soeren Sparmann\n"
 "Language: de\n"
@@ -208,14 +208,6 @@ msgstr ""
 "``\"cubic\"``, ``\"cubic_spline\"``, ``\"lanczos\"``, ``\"average\"``, "
 "``\"mode\"``, ``\"gauss\"`` oder ``\"rms\"``."
 
-#: ../../reference/arguments.rst:63
-msgid "``verbose``"
-msgstr "``verbose``"
-
-#: ../../reference/arguments.rst:64
-msgid "``True`` (default): print a summary of the finished file."
-msgstr "``True`` (Standard): eine Zusammenfassung der fertigen Datei ausgeben."
-
 #: ../../reference/data-sources.rst:2
 msgid "Data sources and credits"
 msgstr "Datenquellen und Quellenangaben"
@@ -315,63 +307,10 @@ msgid "Helpers for files"
 msgstr "Hilfsfunktionen für Dateien"
 
 #: ../../reference/files.rst:5
-msgid "Describing a file"
-msgstr "Eine Datei beschreiben"
-
-#: ../../reference/files.rst:7
-msgid ""
-"The download functions print this summary after a download "
-"(:doc:`/howto/check-a-file`)."
-msgstr ""
-"Die Download-Funktionen geben diese Zusammenfassung nach einem Download "
-"aus (:doc:`/howto/check-a-file`)."
-
-#: cdec.eo.summary.summarize_raster:1 of
-msgid "Return a short text about a raster file, ready to be printed."
-msgstr "Gibt einen kurzen Text über eine Rasterdatei zurück, bereit zum Ausgeben."
-
-#: ../../reference/files.rst ../../reference/internals.rst
-#: ../../reference/plotting.rst
-msgid "Parameters"
-msgstr "Parameter"
-
-#: cdec.eo.summary.summarize_raster:3 of
-msgid "The GeoTIFF to describe."
-msgstr "Das GeoTIFF, das beschrieben werden soll."
-
-#: cdec.eo.summary.summarize_raster:4 of
-msgid "Title line, e.g. ``\"NDVI from Sentinel-2 L2A (mean of the period)\"``."
-msgstr "Titelzeile, z. B. ``\"NDVI from Sentinel-2 L2A (mean of the period)\"``."
-
-#: cdec.eo.summary.summarize_raster:5 of
-msgid "What the values mean, e.g. ``\"Kelvin\"``. Skipped if empty."
-msgstr ""
-"Was die Werte bedeuten, z. B. ``\"Kelvin\"``. Wird übersprungen, wenn "
-"leer."
-
-#: cdec.eo.summary.summarize_raster:6 of
-msgid "More lines (label -> text), printed below the lines read from the file."
-msgstr ""
-"Weitere Zeilen (Bezeichnung -> Text), die unter den aus der Datei "
-"gelesenen Zeilen ausgegeben werden."
-
-#: ../../reference/files.rst ../../reference/plotting.rst
-msgid "Returns"
-msgstr "Rückgabe"
-
-#: cdec.eo.summary.summarize_raster:8 of
-msgid "The summary, one line per entry. ``print`` it."
-msgstr "Die Zusammenfassung, eine Zeile je Eintrag. Gib sie mit ``print`` aus."
-
-#: ../../reference/files.rst ../../reference/plotting.rst
-msgid "Return type"
-msgstr "Rückgabetyp"
-
-#: ../../reference/files.rst:12
 msgid "Colour enhancement"
 msgstr "Farbverbesserung"
 
-#: ../../reference/files.rst:14
+#: ../../reference/files.rst:7
 msgid ""
 "The true-colour download and the false-colour downloads call these when "
 "``enhance_color=True`` or ``enhance_contrast=True`` (:doc:`/explanation"
@@ -389,6 +328,11 @@ msgstr ""
 msgid "Apply the Sentinel-2 true-color enhancement to RGB reflectance data."
 msgstr "Wendet die Sentinel-2-Echtfarben-Verbesserung auf RGB-Reflektanzdaten an."
 
+#: ../../reference/files.rst ../../reference/internals.rst
+#: ../../reference/plotting.rst
+msgid "Parameters"
+msgstr "Parameter"
+
 #: cdec.eo.postprocessing.enhance_color:3 of
 msgid ""
 "Array with shape ``(3, height, width)`` containing red, green, and blue "
@@ -397,11 +341,19 @@ msgstr ""
 "Array der Form ``(3, height, width)`` mit Reflektanzwerten für Rot, Grün "
 "und Blau."
 
+#: ../../reference/files.rst ../../reference/plotting.rst
+msgid "Returns"
+msgstr "Rückgabe"
+
 #: cdec.eo.postprocessing.enhance_color:6 of
 msgid "The enhanced image as 8-bit values (0 to 255), same shape as ``data``."
 msgstr ""
 "Das verbesserte Bild als 8-Bit-Werte (0 bis 255), gleiche Form wie "
 "``data``."
+
+#: ../../reference/files.rst ../../reference/plotting.rst
+msgid "Return type"
+msgstr "Rückgabetyp"
 
 #: ../../reference/files.rst
 msgid "Raises"
@@ -845,7 +797,7 @@ msgstr ":func:`~cdec.plot_digital_elevation_model`"
 msgid "``plot_dem``"
 msgstr "``plot_dem``"
 
-#: ../../reference/functions.rst:84 ../../reference/functions.rst:136
+#: ../../reference/functions.rst:84 ../../reference/functions.rst:133
 msgid ":doc:`/data/land-cover`"
 msgstr ":doc:`/data/land-cover`"
 
@@ -893,7 +845,7 @@ msgstr "Funktion"
 msgid "What it does"
 msgstr "Was sie macht"
 
-#: ../../reference/functions.rst:104 ../../reference/functions.rst:127
+#: ../../reference/functions.rst:104 ../../reference/functions.rst:124
 msgid "Page"
 msgstr "Seite"
 
@@ -917,24 +869,12 @@ msgstr ":func:`~cdec.show_scl_classes`"
 msgid "prints the Sentinel-2 SCL classes with a hint for each"
 msgstr "gibt die SCL-Klassen von Sentinel-2 mit einem Hinweis zu jeder aus"
 
-#: ../../reference/functions.rst:110 ../../reference/functions.rst:130
-#: ../../reference/functions.rst:133
+#: ../../reference/functions.rst:110 ../../reference/functions.rst:127
+#: ../../reference/functions.rst:130
 msgid ":doc:`scl`"
 msgstr ":doc:`scl`"
 
 #: ../../reference/functions.rst:111
-msgid ":func:`~cdec.eo.summary.summarize_raster`"
-msgstr ":func:`~cdec.eo.summary.summarize_raster`"
-
-#: ../../reference/functions.rst:112
-msgid "describes a GeoTIFF as text"
-msgstr "beschreibt ein GeoTIFF als Text"
-
-#: ../../reference/functions.rst:113 ../../reference/functions.rst:116
-msgid ":doc:`files`"
-msgstr ":doc:`files`"
-
-#: ../../reference/functions.rst:114
 msgid ""
 ":func:`~cdec.eo.postprocessing.enhance_color`, "
 ":func:`~cdec.eo.postprocessing.enhance_contrast`"
@@ -942,31 +882,35 @@ msgstr ""
 ":func:`~cdec.eo.postprocessing.enhance_color`, "
 ":func:`~cdec.eo.postprocessing.enhance_contrast`"
 
-#: ../../reference/functions.rst:115
+#: ../../reference/functions.rst:112
 msgid "turn reflectance into colours"
 msgstr "wandeln Reflektanz in Farben um"
 
-#: ../../reference/functions.rst:119
+#: ../../reference/functions.rst:113
+msgid ":doc:`files`"
+msgstr ":doc:`files`"
+
+#: ../../reference/functions.rst:116
 msgid "Constants"
 msgstr "Konstanten"
 
-#: ../../reference/functions.rst:125
+#: ../../reference/functions.rst:122
 msgid "Name"
 msgstr "Name"
 
-#: ../../reference/functions.rst:126
+#: ../../reference/functions.rst:123
 msgid "Content"
 msgstr "Inhalt"
 
-#: ../../reference/functions.rst:128
+#: ../../reference/functions.rst:125
 msgid "``cdec.SCL_CLASSES``, ``cdec.SCL_HINTS``, ``cdec.SCL_COLORS``"
 msgstr "``cdec.SCL_CLASSES``, ``cdec.SCL_HINTS``, ``cdec.SCL_COLORS``"
 
-#: ../../reference/functions.rst:129
+#: ../../reference/functions.rst:126
 msgid "the 12 SCL classes, a hint for each and their colours"
 msgstr "die 12 SCL-Klassen, ein Hinweis zu jeder und ihre Farben"
 
-#: ../../reference/functions.rst:131
+#: ../../reference/functions.rst:128
 msgid ""
 "``cdec.SCL_LAND``, ``cdec.SCL_LAND_AND_WATER``, "
 "``cdec.SCL_LAND_WATER_AND_SNOW``"
@@ -974,15 +918,15 @@ msgstr ""
 "``cdec.SCL_LAND``, ``cdec.SCL_LAND_AND_WATER``, "
 "``cdec.SCL_LAND_WATER_AND_SNOW``"
 
-#: ../../reference/functions.rst:132
+#: ../../reference/functions.rst:129
 msgid "ready-made selections ``(4, 5)``, ``(4, 5, 6)`` and ``(4, 5, 6, 11)``"
 msgstr "vorgefertigte Auswahlen ``(4, 5)``, ``(4, 5, 6)`` und ``(4, 5, 6, 11)``"
 
-#: ../../reference/functions.rst:134
+#: ../../reference/functions.rst:131
 msgid "``cdec.WORLDCOVER_CLASSES``, ``cdec.WORLDCOVER_COLORS``"
 msgstr "``cdec.WORLDCOVER_CLASSES``, ``cdec.WORLDCOVER_COLORS``"
 
-#: ../../reference/functions.rst:135
+#: ../../reference/functions.rst:132
 msgid "names and colours of the land cover classes"
 msgstr "Namen und Farben der Landbedeckungsklassen"
 
@@ -1134,19 +1078,6 @@ msgstr ""
 "Optionale Funktion, die den Pfad des heruntergeladenen GeoTIFF erhält und"
 " es an Ort und Stelle umschreibt (z. B. Farbverbesserung)."
 
-#: cdec.eo.util.download_raster_cube:16 of
-msgid ""
-"If ``True``, print a summary of the finished file (see "
-":func:`cdec.eo.summary.summarize_raster`)."
-msgstr ""
-"Wenn ``True``, wird eine Zusammenfassung der fertigen Datei ausgegeben "
-"(siehe :func:`cdec.eo.summary.summarize_raster`)."
-
-#: cdec.eo.util.download_raster_cube:18 cdec.eo.util.download_raster_cube:19
-#: cdec.eo.util.download_raster_cube:20 of
-msgid "Title, unit of the values and more lines for that summary."
-msgstr "Titel, Einheit der Werte und weitere Zeilen für diese Zusammenfassung."
-
 #: cdec.eo.util.BACKEND_URL:1 of
 msgid "Address of the Copernicus Data Space openEO backend."
 msgstr "Adresse des openEO-Backends des Copernicus Data Space."
@@ -1258,72 +1189,6 @@ msgstr ""
 "Die Download-Funktionen rufen dies auf, *bevor* sie sich mit dem Backend "
 "verbinden, damit ein Tippfehler sofort scheitert und nicht erst nach dem "
 "Login."
-
-#: cdec.eo.scl.describe_scl_classes:1 of
-msgid ""
-"Write a selection of SCL classes as text, e.g. ``4 Vegetation, 5 Not "
-"vegetated``."
-msgstr ""
-"Schreibt eine Auswahl von SCL-Klassen als Text, z. B. ``4 Vegetation, 5 "
-"Not vegetated``."
-
-#: cdec.eo.scl.describe_scl_classes:3 of
-msgid "Expects a selection that ``check_scl_classes`` has already accepted."
-msgstr "Erwartet eine Auswahl, die ``check_scl_classes`` bereits akzeptiert hat."
-
-#: ../../reference/internals.rst:27
-msgid "Summary helpers"
-msgstr "Hilfsfunktionen für die Zusammenfassung"
-
-#: cdec.eo.summary:1 of
-msgid ""
-"A short summary of a downloaded raster, printed by the ``download_*`` "
-"functions."
-msgstr ""
-"Eine kurze Zusammenfassung eines heruntergeladenen Rasters, ausgegeben "
-"von den ``download_*``-Funktionen."
-
-#: cdec.eo.summary:3 of
-msgid ""
-"The download functions print it when they are called with "
-"``verbose=True`` (the default). Everything about the raster itself "
-"(extent, grid, resolution, values, no data) is read from the finished "
-"file, so the summary shows what is really in it. The caller only adds a "
-"title, the unit of the values and a few lines about the request. The "
-"result looks like this::"
-msgstr ""
-"Die Download-Funktionen geben sie aus, wenn sie mit ``verbose=True`` "
-"aufgerufen werden (der Standard). Alles über das Raster selbst "
-"(Ausdehnung, Raster, Auflösung, Werte, keine Daten) wird aus der fertigen"
-" Datei gelesen, die Zusammenfassung zeigt also, was wirklich darin steht."
-" Der Aufrufer fügt nur einen Titel, die Einheit der Werte und ein paar "
-"Zeilen zur Anfrage hinzu. Das Ergebnis sieht so aus::"
-
-#: cdec.eo.summary:20 of
-msgid ""
-"The same function can describe any raster file, for example one that was "
-"downloaded earlier: "
-"``print(summarize_raster(\"data/ndvi_bremen.tif\"))``."
-msgstr ""
-"Dieselbe Funktion kann jede Rasterdatei beschreiben, zum Beispiel eine "
-"früher heruntergeladene: "
-"``print(summarize_raster(\"data/ndvi_bremen.tif\"))``."
-
-#: cdec.eo.summary.format_period:1 of
-msgid ""
-"Write a temporal extent as text, e.g. ``2024-06-01 to 2024-07-01 (end "
-"date not included)``."
-msgstr ""
-"Schreibt eine zeitliche Ausdehnung als Text, z. B. ``2024-06-01 to "
-"2024-07-01 (end date not included)``."
-
-#: cdec.eo.summary.sentinel2_details:1 of
-msgid ""
-"The lines about the request that the Sentinel-2 functions with SCL "
-"masking print."
-msgstr ""
-"Die Zeilen zur Anfrage, die die Sentinel-2-Funktionen mit SCL-Maskierung "
-"ausgeben."
 
 #: ../../reference/plotting.rst:2
 msgid "Plot functions"

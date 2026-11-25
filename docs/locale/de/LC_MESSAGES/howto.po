@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CDEC 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-23 17:15+0100\n"
+"POT-Creation-Date: 2026-11-25 14:12+0100\n"
 "PO-Revision-Date: 2026-11-23 16:30+0000\n"
 "Last-Translator: Soeren Sparmann\n"
 "Language: de\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Download the image without the enhancement:"
 msgstr "Lade das Bild ohne die Farbverbesserung herunter:"
 
-#: ../../howto/calculate-with-reflectance.rst:21
+#: ../../howto/calculate-with-reflectance.rst:23
 msgid ""
 "(for the false-colour composites the option is called "
 "``enhance_contrast=False``). The files now have three floating-point "
@@ -50,7 +50,7 @@ msgstr ""
 "``enhance_contrast=False``). Die Dateien haben jetzt drei Gleitkomma-"
 "Bänder in der Reihenfolge Rot, Grün, Blau. Lies sie mit ``rasterio``:"
 
-#: ../../howto/calculate-with-reflectance.rst:31
+#: ../../howto/calculate-with-reflectance.rst:33
 msgid ""
 "Both files have the same area, so they have the same grid and the arrays "
 "fit together."
@@ -58,11 +58,11 @@ msgstr ""
 "Beide Dateien haben dasselbe Gebiet, also dasselbe Raster, und die Arrays"
 " passen zusammen."
 
-#: ../../howto/calculate-with-reflectance.rst:34
+#: ../../howto/calculate-with-reflectance.rst:36
 msgid "Good to know"
 msgstr "Gut zu wissen"
 
-#: ../../howto/calculate-with-reflectance.rst:36
+#: ../../howto/calculate-with-reflectance.rst:38
 msgid ""
 "Reflectance is not strictly limited to 0 ... 1. A few pixels are slightly"
 " below 0 or above 1 (bright clouds or snow that were not masked)."
@@ -71,7 +71,7 @@ msgstr ""
 " leicht unter 0 oder über 1 (helle Wolken oder Schnee, die nicht maskiert"
 " wurden)."
 
-#: ../../howto/calculate-with-reflectance.rst:38
+#: ../../howto/calculate-with-reflectance.rst:40
 msgid ""
 "You can still look at such a file: :func:`~cdec.plot_true_color_image` "
 "applies the colour enhancement **for the picture only** and leaves the "
@@ -82,7 +82,7 @@ msgstr ""
 " das Bild** an und lässt die Datei unverändert (:doc:`/explanation"
 "/colours-and-values`)."
 
-#: ../../howto/calculate-with-reflectance.rst:40
+#: ../../howto/calculate-with-reflectance.rst:42
 msgid ""
 "The index data types (NDVI, EVI, NDWI, NDMI, NDSI) are always numbers; "
 "they have no picture version."
@@ -96,40 +96,31 @@ msgstr "Eine heruntergeladene Datei prüfen"
 
 #: ../../howto/check-a-file.rst:4
 msgid ""
-"After a download the function prints a summary of the file it wrote "
-"(unless you pass ``verbose=False``). To get the same summary for a file "
-"you downloaded earlier, use :func:`~cdec.eo.summary.summarize_raster`:"
+"A download function returns the path of the file it wrote. What the file "
+"*should* contain is written in the documentation of the function: "
+"``help(download_ndvi)``, or the page of the data type "
+"(:doc:`/data/index`). To see what is *really* in a file, open it with "
+"``rasterio``:"
 msgstr ""
-"Nach einem Download gibt die Funktion eine Zusammenfassung der "
-"geschriebenen Datei aus (außer du übergibst ``verbose=False``). Die "
-"gleiche Zusammenfassung für eine früher heruntergeladene Datei bekommst "
-"du mit :func:`~cdec.eo.summary.summarize_raster`:"
+"Eine Download-Funktion gibt den Pfad der Datei zurück, die sie "
+"geschrieben hat. Was die Datei enthalten *sollte*, steht in der "
+"Dokumentation der Funktion: ``help(download_ndvi)``, oder auf der Seite "
+"des Datentyps (:doc:`/data/index`). Um zu sehen, was *wirklich* in einer "
+"Datei steht, öffne sie mit ``rasterio``:"
 
-#: ../../howto/check-a-file.rst:13
-msgid ""
-"The summary is read from the file itself, so it shows what is really in "
-"it: extent, grid and resolution, the smallest, largest and mean value, "
-"and the share of pixels without data. For a file that was not written by "
-"a ``download_*`` function the title, the unit and the lines about period "
-"and clouds are simply missing; you can pass your own with "
-"``description=``, ``unit=`` and ``details=``."
-msgstr ""
-"Die Zusammenfassung wird aus der Datei selbst gelesen und zeigt daher, "
-"was wirklich darin steht: Ausdehnung, Raster und Auflösung, kleinster, "
-"größter und mittlerer Wert und den Anteil der Pixel ohne Daten. Bei einer"
-" Datei, die nicht von einer ``download_*``-Funktion geschrieben wurde, "
-"fehlen Titel, Einheit und die Zeilen zu Zeitraum und Wolken einfach; du "
-"kannst eigene mit ``description=``, ``unit=`` und ``details=`` übergeben."
+#: ../../howto/check-a-file.rst:20
+msgid "For the NDVI of Bremen in June 2024 this prints something like:"
+msgstr "Für den NDVI von Bremen im Juni 2024 gibt das etwa Folgendes aus:"
 
-#: ../../howto/check-a-file.rst:19
+#: ../../howto/check-a-file.rst:30
 msgid "What to look at"
 msgstr "Worauf du achten solltest"
 
-#: ../../howto/check-a-file.rst:21
+#: ../../howto/check-a-file.rst:32
 msgid "**The no data share.**"
 msgstr "**Der Anteil ohne Daten.**"
 
-#: ../../howto/check-a-file.rst:22
+#: ../../howto/check-a-file.rst:33
 msgid ""
 "A large share is normal for Sentinel-2 data of a short period (clouds). "
 "If it is very large, use a longer period or relax the filters (:doc"
@@ -139,35 +130,36 @@ msgstr ""
 "(Wolken). Ist er sehr groß, nimm einen längeren Zeitraum oder lockere die"
 " Filter (:doc:`filter-clouds`)."
 
-#: ../../howto/check-a-file.rst:25
+#: ../../howto/check-a-file.rst:36
 msgid "**The value range.**"
 msgstr "**Der Wertebereich.**"
 
-#: ../../howto/check-a-file.rst:26
+#: ../../howto/check-a-file.rst:37
 msgid ""
-"Compare it with the data type page. NDVI should be between -1 and 1 "
-"(:doc:`/data/ndvi`); temperature in Kelvin should be around 250 to 320 "
-"(:doc:`/data/land-surface-temperature`)."
+"Compare it with the data type page. NDVI should be between -1 and 1, "
+"apart from a few dark pixels (:doc:`/data/ndvi`); temperature in Kelvin "
+"should be around 250 to 320 (:doc:`/data/land-surface-temperature`)."
 msgstr ""
 "Vergleiche ihn mit der Seite des Datentyps. Der NDVI sollte zwischen -1 "
-"und 1 liegen (:doc:`/data/ndvi`); die Temperatur in Kelvin sollte etwa "
-"bei 250 bis 320 liegen (:doc:`/data/land-surface-temperature`)."
+"und 1 liegen, abgesehen von einigen dunklen Pixeln (:doc:`/data/ndvi`); "
+"die Temperatur in Kelvin sollte etwa bei 250 bis 320 liegen (:doc:`/data"
+"/land-surface-temperature`)."
 
-#: ../../howto/check-a-file.rst:29
+#: ../../howto/check-a-file.rst:40
 msgid "**The grid.**"
 msgstr "**Das Raster.**"
 
-#: ../../howto/check-a-file.rst:30
+#: ../../howto/check-a-file.rst:41
 msgid ""
 "The pixel size should be the one of the data type (10 m, 30 m or 1 km), "
-"and the extent should be your area."
+"and the extent should be your area. The edges can differ a little from "
+"your box, because the data has its own grid (:doc:`/explanation/grids-"
+"and-time`)."
 msgstr ""
 "Die Pixelgröße sollte die des Datentyps sein (10 m, 30 m oder 1 km), und "
-"die Ausdehnung sollte dein Gebiet sein."
-
-#: ../../howto/check-a-file.rst:33
-msgid "Look at the file with rasterio"
-msgstr "Die Datei mit rasterio ansehen"
+"die Ausdehnung sollte dein Gebiet sein. Die Ränder können ein wenig von "
+"deinem Rechteck abweichen, weil die Daten ihr eigenes Raster haben "
+"(:doc:`/explanation/grids-and-time`)."
 
 #: ../../howto/check-a-file.rst:44
 msgid "And draw it: :doc:`plot-and-save`."
@@ -346,12 +338,13 @@ msgstr ""
 #: ../../howto/choose-area.rst:80
 msgid ""
 "The downloaded file is clipped to the area but it has the grid of the "
-"data, so its edges can differ a little from your box (see the ``extent`` "
-"line of the summary)."
+"data, so its edges can differ a little from your box (compare "
+"``src.bounds`` of the file, :doc:`check-a-file`)."
 msgstr ""
 "Die heruntergeladene Datei ist auf das Gebiet zugeschnitten, hat aber das"
 " Raster der Daten, deshalb können ihre Ränder ein wenig von deinem "
-"Rechteck abweichen (siehe die Zeile ``extent`` der Zusammenfassung)."
+"Rechteck abweichen (vergleiche ``src.bounds`` der Datei, "
+":doc:`check-a-file`)."
 
 #: ../../howto/choose-area.rst:82
 msgid ""
@@ -423,19 +416,20 @@ msgstr ""
 #: ../../howto/choose-period.rst:24
 msgid ""
 "**Landsat NDVI:** the mosaics cover two months each and run from 1997 to "
-"2024 (:doc:`/data/landsat-ndvi`)."
+"2025 (:doc:`/data/landsat-ndvi`)."
 msgstr ""
 "**Landsat-NDVI:** Die Mosaike umfassen je zwei Monate und reichen von "
-"1997 bis 2024 (:doc:`/data/landsat-ndvi`)."
+"1997 bis 2025 (:doc:`/data/landsat-ndvi`)."
 
 #: ../../howto/choose-period.rst:26
 msgid ""
-"**Soil water index:** version 2 of the data starts on 2025-07-13. Earlier"
-" periods may find no data (:doc:`/data/soil-water-index`)."
+"**Soil water index:** the collection (version 2 of the data) starts on "
+"2025-07-12 at 12:00 UTC. Earlier periods may find no data (:doc:`/data"
+"/soil-water-index`)."
 msgstr ""
-"**Bodenwasserindex:** Version 2 der Daten beginnt am 2025-07-13. Frühere "
-"Zeiträume finden möglicherweise keine Daten (:doc:`/data/soil-water-"
-"index`)."
+"**Bodenwasserindex:** Die Collection (Version 2 der Daten) beginnt am "
+"2025-07-12 um 12:00 UTC. Frühere Zeiträume finden möglicherweise keine "
+"Daten (:doc:`/data/soil-water-index`)."
 
 #: ../../howto/choose-period.rst:30
 msgid "Data that does not change"
@@ -625,11 +619,11 @@ msgstr ""
 "``(4, 5)`` für NDVI, EVI und NDMI; ``(4, 5, 6)`` für NDWI, Echtfarben und"
 " die Falschfarbenbilder; ``(4, 5, 6, 11)`` für NDSI"
 
-#: ../../howto/filter-clouds.rst:33
+#: ../../howto/filter-clouds.rst:37
 msgid "Fill white holes in the map"
 msgstr "Weiße Löcher in der Karte füllen"
 
-#: ../../howto/filter-clouds.rst:35
+#: ../../howto/filter-clouds.rst:39
 msgid ""
 "A pixel is empty only if *every* observation of the period was removed. "
 "Two things help:"
@@ -637,11 +631,11 @@ msgstr ""
 "Ein Pixel ist nur leer, wenn *jede* Beobachtung des Zeitraums entfernt "
 "wurde. Zwei Dinge helfen:"
 
-#: ../../howto/filter-clouds.rst:37
+#: ../../howto/filter-clouds.rst:41
 msgid "a **longer period**, so that more observations are available;"
 msgstr "ein **längerer Zeitraum**, damit mehr Beobachtungen zur Verfügung stehen;"
 
-#: ../../howto/filter-clouds.rst:38
+#: ../../howto/filter-clouds.rst:42
 msgid ""
 "a **higher** ``max_cloud_cover`` (for example 50), so that more scenes "
 "are used. The pixel mask still removes the clouds of those scenes."
@@ -650,11 +644,11 @@ msgstr ""
 "verwendet werden. Die Pixelmaske entfernt trotzdem die Wolken dieser "
 "Szenen."
 
-#: ../../howto/filter-clouds.rst:42
+#: ../../howto/filter-clouds.rst:46
 msgid "Keep water"
 msgstr "Wasser behalten"
 
-#: ../../howto/filter-clouds.rst:44
+#: ../../howto/filter-clouds.rst:48
 msgid ""
 "NDVI, EVI and NDMI drop water by default (class 6 is not in ``(4, 5)``), "
 "so rivers and lakes are empty. To keep them use "
@@ -664,11 +658,11 @@ msgstr ""
 " ``(4, 5)``), Flüsse und Seen sind also leer. Um sie zu behalten, "
 "verwende ``scl_classes=cdec.SCL_LAND_AND_WATER``."
 
-#: ../../howto/filter-clouds.rst:48
+#: ../../howto/filter-clouds.rst:52
 msgid "Keep snow"
 msgstr "Schnee behalten"
 
-#: ../../howto/filter-clouds.rst:50
+#: ../../howto/filter-clouds.rst:54
 msgid ""
 "Snow and ice are class 11. Only :doc:`/data/ndsi` keeps them by default. "
 "For the other data types add the class: "
@@ -682,11 +676,11 @@ msgstr ""
 "stuft Schnee manchmal als Wolke ein, sodass ein verschneites Gebiet leer "
 "bleiben kann; ``scl_classes=None`` zeigt, was da ist."
 
-#: ../../howto/filter-clouds.rst:55
+#: ../../howto/filter-clouds.rst:59
 msgid "See why pixels are missing"
 msgstr "Sehen, warum Pixel fehlen"
 
-#: ../../howto/filter-clouds.rst:57
+#: ../../howto/filter-clouds.rst:61
 msgid ""
 "If a pixel is empty, the :doc:`/data/scene-classification` tells you "
 "which class it has. That is the class to add to ``scl_classes``, or the "
@@ -697,11 +691,11 @@ msgstr ""
 "hinzufügen musst, oder die Wolken, für die du einen längeren Zeitraum "
 "brauchst."
 
-#: ../../howto/filter-clouds.rst:61
+#: ../../howto/filter-clouds.rst:65
 msgid "Choose the classes"
 msgstr "Die Klassen wählen"
 
-#: ../../howto/filter-clouds.rst:63
+#: ../../howto/filter-clouds.rst:67
 msgid ""
 "``scl_classes`` is the list of the classes you want to **keep**. Look at "
 "them with:"
@@ -709,7 +703,7 @@ msgstr ""
 "``scl_classes`` ist die Liste der Klassen, die du **behalten** willst. "
 "Sieh sie dir an mit:"
 
-#: ../../howto/filter-clouds.rst:70
+#: ../../howto/filter-clouds.rst:74
 msgid ""
 "The table is also in the reference: :doc:`/reference/scl`. An invalid "
 "class number is reported before the login, not after."
@@ -717,11 +711,11 @@ msgstr ""
 "Die Tabelle steht auch in der Referenz: :doc:`/reference/scl`. Eine "
 "ungültige Klassennummer wird vor dem Login gemeldet, nicht danach."
 
-#: ../../howto/filter-clouds.rst:74
+#: ../../howto/filter-clouds.rst:78
 msgid "The other data types"
 msgstr "Die anderen Datentypen"
 
-#: ../../howto/filter-clouds.rst:76
+#: ../../howto/filter-clouds.rst:80
 msgid ""
 ":doc:`/data/landsat-ndvi` is already free of clouds. :doc:`/data/land-"
 "surface-temperature` has no cloud filter at all; see its page. The "
@@ -807,18 +801,10 @@ msgstr ""
 "Mitteln von Klassennummern keinen Sinn ergibt."
 
 #: ../../howto/output-file.rst:20
-msgid "**No printed summary.**"
-msgstr "**Keine ausgegebene Zusammenfassung.**"
-
-#: ../../howto/output-file.rst:21
-msgid "``verbose=False`` switches the summary off."
-msgstr "``verbose=False`` schaltet die Zusammenfassung aus."
-
-#: ../../howto/output-file.rst:23
 msgid "**A failed download does no harm.**"
 msgstr "**Ein fehlgeschlagener Download richtet keinen Schaden an.**"
 
-#: ../../howto/output-file.rst:24
+#: ../../howto/output-file.rst:21
 msgid ""
 "The data is first written to a hidden temporary folder next to the target"
 " file. Only when everything succeeded (download, colour enhancement, COG "

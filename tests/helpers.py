@@ -35,11 +35,12 @@ def write_test_raster(
     ``"EPSG:4326"`` the pixels are 0.001 degrees large, near Bremen.
     """
     rng = np.random.default_rng(seed=42)
+    values: np.ndarray
     if class_ids:
-        data = rng.choice([10, 30, 50, 80], size=(count, height, width))
+        values = rng.choice([10, 30, 50, 80], size=(count, height, width))
     else:
-        data = rng.uniform(0.02, 0.3, size=(count, height, width))
-    data = data.astype(dtype)
+        values = rng.uniform(0.02, 0.3, size=(count, height, width))
+    data = values.astype(dtype)
     data[:, :, :empty_columns] = np.nan if np.dtype(dtype).kind == "f" else 0
 
     if rasterio.crs.CRS.from_string(crs).is_geographic:

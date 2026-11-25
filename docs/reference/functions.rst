@@ -108,9 +108,6 @@ Other functions
    * - :func:`~cdec.show_scl_classes`
      - prints the Sentinel-2 SCL classes with a hint for each
      - :doc:`scl`
-   * - :func:`~cdec.eo.summary.summarize_raster`
-     - describes a GeoTIFF as text
-     - :doc:`files`
    * - :func:`~cdec.eo.postprocessing.enhance_color`, :func:`~cdec.eo.postprocessing.enhance_contrast`
      - turn reflectance into colours
      - :doc:`files`

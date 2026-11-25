@@ -3,6 +3,7 @@
 import importlib
 import inspect
 import pkgutil
+import re
 
 import pytest
 
@@ -99,11 +100,21 @@ def test_every_download_function_is_in_the_alias_table():
 # The options students see
 # ----------------------------------------------------------------------------
 def test_technical_options_must_be_passed_by_keyword():
-    """``create_cog``, ``overview_resampling`` and ``verbose`` cannot be mixed up with the options before them."""
+    """``create_cog`` and ``overview_resampling`` cannot be mixed up with the options before them."""
     for name, function in download_functions_in_the_package().items():
         parameters = inspect.signature(function).parameters
-        for option in ("create_cog", "overview_resampling", "verbose"):
+        for option in ("create_cog", "overview_resampling"):
             assert parameters[option].kind is inspect.Parameter.KEYWORD_ONLY, f"{name}: {option}"
+
+
+def test_every_download_function_describes_the_file_it_writes():
+    """``help(download_xxx)`` is the place to learn what is in the result: there is no printed summary."""
+    for name, function in download_functions_in_the_package().items():
+        returns = " ".join(inspect.getdoc(function).split("Returns\n-------")[1].split())  # one line
+        assert "Absolute path of the GeoTIFF" in returns, name
+        assert re.search(r"pixel size", returns), f"{name}: the Returns section does not give the pixel size"
+        assert re.search(r"no[- ]data|without data", returns), f"{name}: the Returns section does not say how no data is stored"
+        assert re.search(r"float32|uint8", returns), f"{name}: the Returns section does not give the data type"
 
 
 SENTINEL2_FUNCTIONS = {

@@ -53,9 +53,9 @@ Source = "https://github.com/soespa/cdec-python"
 path = "src/cdec/__about__.py"
 
 [tool.hatch.envs.default]
+features = ["test", "docs"]  # with Sphinx installed, `hatch run test` also runs the tests of the documentation
 dependencies = [
   "coverage[toml]>=6.5",
-  "pytest",
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
@@ -79,11 +79,15 @@ build = "python docs/_scripts/build_docs.py"
 python = ["3.10", "3.11", "3.12", "3.13"]
 
 [tool.hatch.envs.types]
+features = ["test", "docs"]  # the tests import pytest and babel (a dependency of Sphinx)
 dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/cdec tests}"
+
+[tool.mypy]
+ignore_missing_imports = true  # rasterio and rio-cogeo ship no type information
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

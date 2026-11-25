@@ -1,0 +1,42 @@
+# Run the tests on every Python version that cdec supports (3.10 to 3.13).
+#
+# Only the tests that work offline run here. Tests that download real data need a Copernicus login and are run
+# by hand: hatch run test-live. The tests of the documentation are included: they check the data pages, the
+# README and the German translation.
+#
+# The versions below are the ones of the test matrix in pyproject.toml ([[tool.hatch.envs.all.matrix]]).
+# Add a new Python version in both places.
+
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install Hatch
+        run: pip install hatch
+
+      - name: Run the tests
+        run: hatch run all.py${{ matrix.python-version }}:test

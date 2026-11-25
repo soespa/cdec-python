@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CDEC 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-24 11:51+0100\n"
+"POT-Creation-Date: 2026-11-25 14:12+0100\n"
 "PO-Revision-Date: 2026-11-23 16:30+0000\n"
 "Last-Translator: Soeren Sparmann\n"
 "Language: de\n"
@@ -235,7 +235,7 @@ msgstr "Die Datei verwendet Länge und Breite (EPSG:4326)."
 #: ../../data/false-color-infrared.rst:64 ../../data/false-color-swir.rst:66
 #: ../../data/false-color-urban.rst:62 ../../data/land-cover.rst:85
 #: ../../data/land-surface-temperature.rst:60 ../../data/landsat-ndvi.rst:60
-#: ../../data/ndmi.rst:66 ../../data/ndsi.rst:71 ../../data/ndvi.rst:65
+#: ../../data/ndmi.rst:67 ../../data/ndsi.rst:71 ../../data/ndvi.rst:65
 #: ../../data/ndwi.rst:66 ../../data/scene-classification.rst:68
 #: ../../data/soil-water-index.rst:61 ../../data/true-color.rst:66
 msgid "See also"
@@ -249,7 +249,7 @@ msgstr ":doc:`land-cover`, :doc:`/howto/plot-and-save`"
 #: ../../data/false-color-infrared.rst:70 ../../data/false-color-swir.rst:72
 #: ../../data/false-color-urban.rst:67 ../../data/land-cover.rst:90
 #: ../../data/land-surface-temperature.rst:65 ../../data/landsat-ndvi.rst:65
-#: ../../data/ndmi.rst:71 ../../data/ndsi.rst:76 ../../data/ndvi.rst:70
+#: ../../data/ndmi.rst:72 ../../data/ndsi.rst:76 ../../data/ndvi.rst:70
 #: ../../data/ndwi.rst:71 ../../data/scene-classification.rst:73
 #: ../../data/soil-water-index.rst:66 ../../data/true-color.rst:71
 msgid "Download"
@@ -289,7 +289,7 @@ msgstr "Parameter"
 #: cdec.eo.evi.download_enhanced_vegetation_index:15
 #: cdec.eo.landsat.download_landsat_ndvi:10
 #: cdec.eo.lst.download_land_surface_temperature:11
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:18
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:19
 #: cdec.eo.ndsi.download_normalized_difference_snow_index:16
 #: cdec.eo.ndvi.download_normalized_difference_vegetation_index:12
 #: cdec.eo.ndwi.download_normalized_difference_water_index:18
@@ -310,7 +310,7 @@ msgstr ""
 #: cdec.eo.false_color_urban.download_false_color_urban:12
 #: cdec.eo.landsat.download_landsat_ndvi:12
 #: cdec.eo.lst.download_land_surface_temperature:13
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:20
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:21
 #: cdec.eo.ndsi.download_normalized_difference_snow_index:18
 #: cdec.eo.ndvi.download_normalized_difference_vegetation_index:14
 #: cdec.eo.ndwi.download_normalized_difference_water_index:20
@@ -362,30 +362,6 @@ msgstr ""
 "``\"average\"`` ist ein passender Standard für kontinuierliche "
 "Höhendaten."
 
-#: cdec.eo.dem.download_digital_elevation_model:23
-#: cdec.eo.evi.download_enhanced_vegetation_index:35
-#: cdec.eo.false_color_infrared.download_false_color_infrared:37
-#: cdec.eo.false_color_swir.download_false_color_swir:37
-#: cdec.eo.false_color_urban.download_false_color_urban:37
-#: cdec.eo.landsat.download_landsat_ndvi:20
-#: cdec.eo.lst.download_land_surface_temperature:23
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:38
-#: cdec.eo.ndsi.download_normalized_difference_snow_index:37
-#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:32
-#: cdec.eo.ndwi.download_normalized_difference_water_index:39
-#: cdec.eo.scene_classification.download_scene_classification_map:26
-#: cdec.eo.soil_water_index.download_soil_water_index:30
-#: cdec.eo.tci.download_true_color_image:33
-#: cdec.eo.worldcover.download_land_cover:18 of
-msgid ""
-"If ``True`` (the default), print a short summary of the downloaded file: "
-"extent, grid and resolution, value range and the share of pixels without "
-"data."
-msgstr ""
-"Wenn ``True`` (der Standard), wird eine kurze Zusammenfassung der "
-"heruntergeladenen Datei ausgegeben: Ausdehnung, Raster und Auflösung, "
-"Wertebereich und Anteil der Pixel ohne Daten."
-
 #: ../../data/elevation.rst ../../data/evi.rst
 #: ../../data/false-color-infrared.rst ../../data/false-color-swir.rst
 #: ../../data/false-color-urban.rst ../../data/land-cover.rst
@@ -396,10 +372,19 @@ msgstr ""
 msgid "Returns"
 msgstr "Rückgabe"
 
-#: cdec.eo.dem.download_digital_elevation_model:27
-#: cdec.eo.lst.download_land_surface_temperature:27 of
-msgid "Absolute path to the downloaded raster file."
-msgstr "Absoluter Pfad zur heruntergeladenen Rasterdatei."
+#: cdec.eo.dem.download_digital_elevation_model:24 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the elevation in metres. Pixels "
+"without data are NaN, which the file declares as its no-data value. The "
+"coordinate system is geographic (EPSG:4326, degrees); the pixel size is "
+"0.00042 x 0.00028 degrees (east-west x north-south), about 30 m."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): die Höhe in Metern. Pixel "
+"ohne Daten sind NaN; die Datei deklariert NaN als ihren No-Data-Wert. Das"
+" Koordinatensystem ist geografisch (EPSG:4326, Grad); die Pixelgröße "
+"beträgt 0,00042 x 0,00028 Grad (Ost-West x Nord-Süd), etwa 30 m."
 
 #: ../../data/elevation.rst ../../data/evi.rst
 #: ../../data/false-color-infrared.rst ../../data/false-color-swir.rst
@@ -415,7 +400,7 @@ msgstr "Rückgabetyp"
 #: ../../data/false-color-infrared.rst:75 ../../data/false-color-swir.rst:77
 #: ../../data/false-color-urban.rst:72 ../../data/land-cover.rst:95
 #: ../../data/land-surface-temperature.rst:70 ../../data/landsat-ndvi.rst:70
-#: ../../data/ndmi.rst:76 ../../data/ndsi.rst:81 ../../data/ndvi.rst:75
+#: ../../data/ndmi.rst:77 ../../data/ndsi.rst:81 ../../data/ndvi.rst:75
 #: ../../data/ndwi.rst:76 ../../data/scene-classification.rst:78
 #: ../../data/soil-water-index.rst:71 ../../data/true-color.rst:76
 msgid "Plot"
@@ -600,8 +585,9 @@ msgstr ""
 
 #: ../../data/evi.rst:19 ../../data/false-color-infrared.rst:21
 #: ../../data/index.rst:31 ../../data/index.rst:36 ../../data/index.rst:59
-#: ../../data/index.rst:69 ../../data/index.rst:87 ../../data/index.rst:92
-#: ../../data/index.rst:97 ../../data/index.rst:102 ../../data/index.rst:148
+#: ../../data/index.rst:64 ../../data/index.rst:69 ../../data/index.rst:87
+#: ../../data/index.rst:92 ../../data/index.rst:97 ../../data/index.rst:102
+#: ../../data/index.rst:148 ../../data/index.rst:153
 #: ../../data/land-cover.rst:18 ../../data/ndvi.rst:20 ../../data/ndwi.rst:19
 #: ../../data/true-color.rst:19
 msgid "10 m"
@@ -730,7 +716,7 @@ msgstr ""
 #: cdec.eo.false_color_infrared.download_false_color_infrared:15
 #: cdec.eo.false_color_swir.download_false_color_swir:15
 #: cdec.eo.false_color_urban.download_false_color_urban:15
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:23
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:24
 #: cdec.eo.ndsi.download_normalized_difference_snow_index:21
 #: cdec.eo.ndvi.download_normalized_difference_vegetation_index:17
 #: cdec.eo.ndwi.download_normalized_difference_water_index:23
@@ -749,7 +735,7 @@ msgstr ""
 #: cdec.eo.false_color_infrared.download_false_color_infrared:18
 #: cdec.eo.false_color_swir.download_false_color_swir:18
 #: cdec.eo.false_color_urban.download_false_color_urban:18
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:26
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:27
 #: cdec.eo.ndsi.download_normalized_difference_snow_index:24
 #: cdec.eo.ndvi.download_normalized_difference_vegetation_index:20
 #: cdec.eo.ndwi.download_normalized_difference_water_index:26
@@ -764,7 +750,7 @@ msgstr ""
 "das einzelne Pixel entfernt."
 
 #: cdec.eo.evi.download_enhanced_vegetation_index:26
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:29
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:30
 #: cdec.eo.ndvi.download_normalized_difference_vegetation_index:23 of
 msgid ""
 "Scene Classification Layer (SCL) classes to **keep**, as a tuple of class"
@@ -789,7 +775,7 @@ msgstr ""
 #: cdec.eo.false_color_swir.download_false_color_swir:35
 #: cdec.eo.false_color_urban.download_false_color_urban:35
 #: cdec.eo.landsat.download_landsat_ndvi:18
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:36
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:37
 #: cdec.eo.ndsi.download_normalized_difference_snow_index:35
 #: cdec.eo.ndvi.download_normalized_difference_vegetation_index:30
 #: cdec.eo.ndwi.download_normalized_difference_water_index:37
@@ -803,7 +789,7 @@ msgstr "Wenn ``True``, wird ein Cloud Optimized GeoTIFF geschrieben."
 #: cdec.eo.false_color_swir.download_false_color_swir:36
 #: cdec.eo.false_color_urban.download_false_color_urban:36
 #: cdec.eo.landsat.download_landsat_ndvi:19
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:37
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:38
 #: cdec.eo.ndsi.download_normalized_difference_snow_index:36
 #: cdec.eo.ndvi.download_normalized_difference_vegetation_index:31
 #: cdec.eo.ndwi.download_normalized_difference_water_index:38
@@ -811,9 +797,20 @@ msgstr "Wenn ``True``, wird ein Cloud Optimized GeoTIFF geschrieben."
 msgid "Resampling method used to build COG overview levels."
 msgstr "Resampling-Methode zum Erzeugen der Übersichtsstufen des COG."
 
-#: cdec.eo.evi.download_enhanced_vegetation_index:39 of
-msgid "Absolute path to the downloaded EVI raster."
-msgstr "Absoluter Pfad zum heruntergeladenen EVI-Raster."
+#: cdec.eo.evi.download_enhanced_vegetation_index:36 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the EVI, a number without unit that"
+" is typically between 0 and 1 over vegetation. Pixels without data are "
+"NaN, which the file declares as its no-data value. The pixel size is 10 "
+"m, in the UTM zone of the area (EPSG:32632 for Bremen)."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): den EVI, eine Zahl ohne "
+"Einheit, die über Vegetation typischerweise zwischen 0 und 1 liegt. Pixel"
+" ohne Daten sind NaN; die Datei deklariert NaN als ihren No-Data-Wert. "
+"Die Pixelgröße beträgt 10 m, im UTM-Streifen des Gebiets (EPSG:32632 für "
+"Bremen)."
 
 #: cdec.plot.products.plot_enhanced_vegetation_index:1 of
 msgid "*Short alias:* ``plot_evi``"
@@ -1075,9 +1072,27 @@ msgstr ""
 "Bänder als Gleitkomma-Reflektanzwerte erhalten (für Berechnungen "
 "verwenden)."
 
-#: cdec.eo.false_color_infrared.download_false_color_infrared:41 of
-msgid "Absolute path to the downloaded infrared composite."
-msgstr "Absoluter Pfad zum heruntergeladenen Infrarotkomposit."
+#: cdec.eo.false_color_infrared.download_false_color_infrared:38 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. By default "
+"(``enhance_contrast=True``) it is a colour picture: three bands of 8-bit "
+"integers from 0 to 255, in the order red, green, blue (B08, B04, B03). "
+"Pixels without data are 0 in all bands; the file marks them with a mask, "
+"so GIS programs and ``rasterio`` treat them as empty. With "
+"``enhance_contrast=False`` the file holds the measurement instead: three "
+"``float32`` bands of reflectance (0 = black, about 1 = white), with NaN "
+"where there is no data. The pixel size is 10 m, in the UTM zone of the "
+"area (EPSG:32632 for Bremen)."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Standardmäßig "
+"(``enhance_contrast=True``) ist sie ein Farbbild: drei Bänder mit 8-Bit-"
+"Ganzzahlen von 0 bis 255, in der Reihenfolge Rot, Grün, Blau (B08, B04, "
+"B03). Pixel ohne Daten sind in allen Bändern 0; die Datei kennzeichnet "
+"sie mit einer Maske, sodass GIS-Programme und ``rasterio`` sie als leer "
+"behandeln. Mit ``enhance_contrast=False`` enthält die Datei stattdessen "
+"die Messung: drei ``float32``-Bänder mit Reflektanz (0 = schwarz, etwa 1 "
+"= weiß), mit NaN, wo keine Daten vorliegen. Die Pixelgröße beträgt 10 m, "
+"im UTM-Streifen des Gebiets (EPSG:32632 für Bremen)."
 
 #: cdec.plot.products.plot_false_color_infrared:1 of
 msgid "*Short alias:* ``plot_infrared``"
@@ -1261,9 +1276,28 @@ msgstr ""
 "und Komprimierung der Lichter verbessert. Das Ausgaberaster ist 10 m; "
 "B12, B8A und SCL behalten ihre native Detailgenauigkeit von 20 m."
 
-#: cdec.eo.false_color_swir.download_false_color_swir:41 of
-msgid "Absolute path to the downloaded SWIR composite."
-msgstr "Absoluter Pfad zum heruntergeladenen SWIR-Komposit."
+#: cdec.eo.false_color_swir.download_false_color_swir:38 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. By default "
+"(``enhance_contrast=True``) it is a colour picture: three bands of 8-bit "
+"integers from 0 to 255, in the order red, green, blue (B12, B8A, B04). "
+"Pixels without data are 0 in all bands; the file marks them with a mask, "
+"so GIS programs and ``rasterio`` treat them as empty. With "
+"``enhance_contrast=False`` the file holds the measurement instead: three "
+"``float32`` bands of reflectance (0 = black, about 1 = white), with NaN "
+"where there is no data. The pixel size is 10 m, in the UTM zone of the "
+"area (EPSG:32632 for Bremen). B12 and B8A have only 20 m detail."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Standardmäßig "
+"(``enhance_contrast=True``) ist sie ein Farbbild: drei Bänder mit 8-Bit-"
+"Ganzzahlen von 0 bis 255, in der Reihenfolge Rot, Grün, Blau (B12, B8A, "
+"B04). Pixel ohne Daten sind in allen Bändern 0; die Datei kennzeichnet "
+"sie mit einer Maske, sodass GIS-Programme und ``rasterio`` sie als leer "
+"behandeln. Mit ``enhance_contrast=False`` enthält die Datei stattdessen "
+"die Messung: drei ``float32``-Bänder mit Reflektanz (0 = schwarz, etwa 1 "
+"= weiß), mit NaN, wo keine Daten vorliegen. Die Pixelgröße beträgt 10 m, "
+"im UTM-Streifen des Gebiets (EPSG:32632 für Bremen). B12 und B8A haben "
+"nur 20 m Detailgenauigkeit."
 
 #: cdec.plot.products.plot_false_color_swir:1 of
 msgid "*Short alias:* ``plot_swir``"
@@ -1419,9 +1453,28 @@ msgstr ""
 "und Komprimierung der Lichter verbessert. Das Ausgaberaster ist 10 m; "
 "B11, B12 und SCL behalten ihre native Detailgenauigkeit von 20 m."
 
-#: cdec.eo.false_color_urban.download_false_color_urban:41 of
-msgid "Absolute path to the downloaded urban composite."
-msgstr "Absoluter Pfad zum heruntergeladenen Stadtkomposit."
+#: cdec.eo.false_color_urban.download_false_color_urban:38 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. By default "
+"(``enhance_contrast=True``) it is a colour picture: three bands of 8-bit "
+"integers from 0 to 255, in the order red, green, blue (B12, B11, B04). "
+"Pixels without data are 0 in all bands; the file marks them with a mask, "
+"so GIS programs and ``rasterio`` treat them as empty. With "
+"``enhance_contrast=False`` the file holds the measurement instead: three "
+"``float32`` bands of reflectance (0 = black, about 1 = white), with NaN "
+"where there is no data. The pixel size is 10 m, in the UTM zone of the "
+"area (EPSG:32632 for Bremen). B11 and B12 have only 20 m detail."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Standardmäßig "
+"(``enhance_contrast=True``) ist sie ein Farbbild: drei Bänder mit 8-Bit-"
+"Ganzzahlen von 0 bis 255, in der Reihenfolge Rot, Grün, Blau (B12, B11, "
+"B04). Pixel ohne Daten sind in allen Bändern 0; die Datei kennzeichnet "
+"sie mit einer Maske, sodass GIS-Programme und ``rasterio`` sie als leer "
+"behandeln. Mit ``enhance_contrast=False`` enthält die Datei stattdessen "
+"die Messung: drei ``float32``-Bänder mit Reflektanz (0 = schwarz, etwa 1 "
+"= weiß), mit NaN, wo keine Daten vorliegen. Die Pixelgröße beträgt 10 m, "
+"im UTM-Streifen des Gebiets (EPSG:32632 für Bremen). B11 und B12 haben "
+"nur 20 m Detailgenauigkeit."
 
 #: cdec.plot.products.plot_false_color_urban:1 of
 msgid "*Short alias:* ``plot_urban``"
@@ -1540,8 +1593,8 @@ msgstr "Sentinel-2"
 
 #: ../../data/index.rst:32 ../../data/index.rst:42 ../../data/index.rst:60
 #: ../../data/index.rst:65 ../../data/index.rst:70
-msgid "number, about -1 ... 1"
-msgstr "Zahl, etwa -1 ... 1"
+msgid "number, -1 ... 1"
+msgstr "Zahl, -1 ... 1"
 
 #: ../../data/index.rst:33
 msgid ":doc:`evi`"
@@ -1564,8 +1617,8 @@ msgid "``download_landsat``, ``plot_landsat``"
 msgstr "``download_landsat``, ``plot_landsat``"
 
 #: ../../data/index.rst:40
-msgid "Landsat mosaic, 1997-2024"
-msgstr "Landsat-Mosaik, 1997-2024"
+msgid "Landsat mosaic, 1997-2025"
+msgstr "Landsat-Mosaik, 1997-2025"
 
 #: ../../data/index.rst:45
 msgid "Water, moisture and snow"
@@ -1586,11 +1639,6 @@ msgstr ":doc:`ndmi`"
 #: ../../data/index.rst:62
 msgid "``download_ndmi``, ``plot_ndmi``"
 msgstr "``download_ndmi``, ``plot_ndmi``"
-
-#: ../../data/index.rst:64 ../../data/index.rst:153 ../../data/ndmi.rst:20
-#: ../../data/scene-classification.rst:20
-msgid "20 m"
-msgstr "20 m"
 
 #: ../../data/index.rst:66
 msgid ":doc:`ndsi`"
@@ -2043,9 +2091,22 @@ msgstr ""
 "``\"nearest\"`` bewahrt kategoriale Klassen-IDs und sollte normalerweise "
 "nicht geändert werden."
 
-#: cdec.eo.worldcover.download_land_cover:22 of
-msgid "Absolute path to the downloaded land-cover raster."
-msgstr "Absoluter Pfad zum heruntergeladenen Landbedeckungsraster."
+#: cdec.eo.worldcover.download_land_cover:19 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"8-bit integers (``uint8``): the WorldCover class of every pixel (10, 20, "
+"... 100; ``cdec.WORLDCOVER_CLASSES`` has the names). 0 means no data and "
+"is declared as the no-data value. The colours of the classes are stored "
+"in the file as a colour table. The coordinate system is geographic "
+"(EPSG:4326, degrees); the pixel size is 0.000083 degrees, about 10 m."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit 8-Bit-Ganzzahlen (``uint8``): die WorldCover-Klasse jedes "
+"Pixels (10, 20, ... 100; ``cdec.WORLDCOVER_CLASSES`` enthält die Namen). "
+"0 bedeutet keine Daten und ist als No-Data-Wert deklariert. Die Farben "
+"der Klassen sind in der Datei als Farbtabelle gespeichert. Das "
+"Koordinatensystem ist geografisch (EPSG:4326, Grad); die Pixelgröße "
+"beträgt 0,000083 Grad, etwa 10 m."
 
 #: cdec.plot.products.plot_land_cover:1 of
 msgid "Draw the classes of ``download_land_cover``."
@@ -2243,6 +2304,22 @@ msgstr ""
 "``\"average\"`` ist ein passender Standard für kontinuierliche "
 "Temperaturdaten."
 
+#: cdec.eo.lst.download_land_surface_temperature:24 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the land surface temperature in "
+"Kelvin (subtract 273.15 for degrees Celsius). Pixels without data are "
+"NaN, which the file declares as its no-data value. The coordinate system "
+"is geographic (EPSG:4326, degrees); the pixel size is 0.0089 degrees, "
+"about 1 km."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): die "
+"Landoberflächentemperatur in Kelvin (ziehe 273,15 ab für Grad Celsius). "
+"Pixel ohne Daten sind NaN; die Datei deklariert NaN als ihren No-Data-"
+"Wert. Das Koordinatensystem ist geografisch (EPSG:4326, Grad); die "
+"Pixelgröße beträgt 0,0089 Grad, etwa 1 km."
+
 #: cdec.plot.products.plot_land_surface_temperature:1 of
 msgid "*Short alias:* ``plot_lst``"
 msgstr "*Kurzer Alias:* ``plot_lst``"
@@ -2294,13 +2371,13 @@ msgstr "NDVI (Landsat)"
 #: ../../data/landsat-ndvi.rst:4
 msgid ""
 "The same vegetation index as :doc:`ndvi`, calculated from the Landsat bi-"
-"monthly mosaics. They run from 1997 to 2024, so this is the data type for"
+"monthly mosaics. They run from 1997 to 2025, so this is the data type for"
 " questions about **change over decades**: how did the vegetation of an "
 "area develop since 1997? The price is a coarser pixel (30 m instead of 10"
 " m)."
 msgstr ""
 "Derselbe Vegetationsindex wie :doc:`ndvi`, berechnet aus den "
-"zweimonatlichen Landsat-Mosaiken. Sie reichen von 1997 bis 2024, daher "
+"zweimonatlichen Landsat-Mosaiken. Sie reichen von 1997 bis 2025, daher "
 "ist dies der Datentyp für Fragen zur **Veränderung über Jahrzehnte**: Wie"
 " hat sich die Vegetation eines Gebiets seit 1997 entwickelt? Der Preis "
 "ist ein gröberes Pixel (30 m statt 10 m)."
@@ -2321,7 +2398,8 @@ msgstr ""
 "Landsat-Mosaik, zweimonatlich (Collection ``LANDSAT_BIMONTHLY_MOSAIC``), "
 "Bänder B03 (rot) und B04 (nahes Infrarot)"
 
-#: ../../data/landsat-ndvi.rst:21
+#: ../../data/landsat-ndvi.rst:21 ../../data/ndmi.rst:22 ../../data/ndsi.rst:22
+#: ../../data/ndvi.rst:22 ../../data/ndwi.rst:21
 msgid "one band of floating-point numbers, no unit, -1 ... 1"
 msgstr "ein Band aus Gleitkommazahlen, keine Einheit, -1 ... 1"
 
@@ -2334,8 +2412,8 @@ msgstr ""
 " Optionen ``max_cloud_cover`` und ``scl_classes``."
 
 #: ../../data/landsat-ndvi.rst:26
-msgid "1997 to 2024; mean of the mosaics inside ``temporal_extent``"
-msgstr "1997 bis 2024; Mittelwert der Mosaike innerhalb von ``temporal_extent``"
+msgid "1997 to 2025; mean of the mosaics inside ``temporal_extent``"
+msgstr "1997 bis 2025; Mittelwert der Mosaike innerhalb von ``temporal_extent``"
 
 #: ../../data/landsat-ndvi.rst:41
 msgid ""
@@ -2409,13 +2487,13 @@ msgstr "Lädt ein NDVI-Raster aus dem zweimonatlichen Landsat-Mosaik herunter."
 #: cdec.eo.landsat.download_landsat_ndvi:5 of
 msgid ""
 "The source collection provides reconstructed, cloud-free Landsat mosaics "
-"at 30 metre resolution from 1997 through 2024. Red and near-infrared "
+"at 30 metre resolution from 1997 through 2025. Red and near-infrared "
 "bands are averaged over the requested period before calculating NDVI. The"
 " mosaics are already cloud-free, so there is no cloud-cover or SCL "
 "masking here."
 msgstr ""
 "Die Quell-Collection liefert rekonstruierte, wolkenfreie Landsat-Mosaike "
-"mit 30 Metern Auflösung von 1997 bis 2024. Rote und nahinfrarote Bänder "
+"mit 30 Metern Auflösung von 1997 bis 2025. Rote und nahinfrarote Bänder "
 "werden über den angeforderten Zeitraum gemittelt, bevor der NDVI "
 "berechnet wird. Die Mosaike sind bereits wolkenfrei, daher gibt es hier "
 "keine Wolkenbedeckungs- oder SCL-Maskierung."
@@ -2430,10 +2508,20 @@ msgstr ""
 "\"2024-07-01\"]``. Das Enddatum selbst ist *nicht* enthalten. Die Mosaike"
 " enden am 2024-12-31, spätere Daten finden keine Daten."
 
-#: cdec.eo.landsat.download_landsat_ndvi:24
-#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:36 of
-msgid "Absolute path to the downloaded NDVI raster."
-msgstr "Absoluter Pfad zum heruntergeladenen NDVI-Raster."
+#: cdec.eo.landsat.download_landsat_ndvi:21 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the NDVI, a number without unit "
+"between -1 and 1. Pixels without data are NaN, which the file declares as"
+" its no-data value. The coordinate system is geographic (EPSG:4326, "
+"degrees); the pixel size is 0.00025 degrees, about 30 m."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): den NDVI, eine Zahl ohne "
+"Einheit zwischen -1 und 1. Pixel ohne Daten sind NaN; die Datei "
+"deklariert NaN als ihren No-Data-Wert. Das Koordinatensystem ist "
+"geografisch (EPSG:4326, Grad); die Pixelgröße beträgt 0,00025 Grad, etwa "
+"30 m."
 
 #: cdec.plot.products.plot_landsat_ndvi:1 of
 msgid "*Short alias:* ``plot_landsat``"
@@ -2507,10 +2595,9 @@ msgstr ""
 "Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Bänder B8A (nahes "
 "Infrarot) und B11 (kurzwelliges Infrarot)"
 
-#: ../../data/ndmi.rst:22 ../../data/ndsi.rst:22 ../../data/ndvi.rst:22
-#: ../../data/ndwi.rst:21
-msgid "one band of floating-point numbers, no unit, about -1 ... 1"
-msgstr "ein Band aus Gleitkommazahlen, keine Einheit, etwa -1 ... 1"
+#: ../../data/ndmi.rst:20
+msgid "10 m (both bands have 20 m detail)"
+msgstr "10 m (beide Bänder haben 20 m Detailgenauigkeit)"
 
 #: ../../data/ndmi.rst:42
 msgid ""
@@ -2530,13 +2617,16 @@ msgstr ""
 
 #: ../../data/ndmi.rst:51
 msgid ""
-"**Both bands have 20 m pixels**, so the file has 20 m pixels, not 10 m "
-"like the :doc:`ndvi`."
+"**20 m detail.** Both bands have 20 m pixels. The backend puts them on "
+"the 10 m grid of Sentinel-2, so the file has 10 m pixels like the "
+":doc:`ndvi`, but no finer detail than 20 m."
 msgstr ""
-"**Beide Bänder haben 20-m-Pixel**, die Datei hat also 20-m-Pixel und "
-"nicht 10 m wie beim :doc:`ndvi`."
+"**20 m Detailgenauigkeit.** Beide Bänder haben 20-m-Pixel. Das Backend "
+"legt sie auf das 10-m-Raster von Sentinel-2, die Datei hat also "
+"10-m-Pixel wie der :doc:`ndvi`, aber keine feinere Detailgenauigkeit als "
+"20 m."
 
-#: ../../data/ndmi.rst:52
+#: ../../data/ndmi.rst:53
 msgid ""
 "**Moisture of the plants, not of the soil.** The index describes the "
 "leaves. For the water in the soil use the :doc:`soil-water-index`, which "
@@ -2546,7 +2636,7 @@ msgstr ""
 "Blätter. Für das Wasser im Boden nimm den :doc:`soil-water-index`, der "
 "viel gröber ist (1 km)."
 
-#: ../../data/ndmi.rst:54
+#: ../../data/ndmi.rst:55
 msgid ""
 "**Compare the same kind of vegetation.** A meadow and a forest have "
 "different values even when both are healthy. The index is most useful for"
@@ -2559,7 +2649,7 @@ msgstr ""
 "Beispiel einen trockenen und einen nassen Sommer (:doc:`/howto/compare-"
 "images`)."
 
-#: ../../data/ndmi.rst:57
+#: ../../data/ndmi.rst:58
 msgid ""
 "**Water is empty by default.** The default ``scl_classes`` is ``(4, 5)``."
 " Water has no meaningful moisture value here; use "
@@ -2570,7 +2660,7 @@ msgstr ""
 "``scl_classes=cdec.SCL_LAND_AND_WATER``, wenn du es trotzdem sehen "
 "willst."
 
-#: ../../data/ndmi.rst:59
+#: ../../data/ndmi.rst:60
 msgid ""
 "**The name.** The same formula is called NDWI in some books (Gao's "
 "index). In this package :doc:`ndwi` is the index of McFeeters, made to "
@@ -2580,7 +2670,7 @@ msgstr ""
 "von Gao). In diesem Paket ist :doc:`ndwi` der Index von McFeeters, der "
 "offenes Wasser finden soll."
 
-#: ../../data/ndmi.rst:61 ../../data/ndsi.rst:67 ../../data/ndwi.rst:61
+#: ../../data/ndmi.rst:62 ../../data/ndsi.rst:67 ../../data/ndwi.rst:61
 msgid ""
 "**The index is calculated from the mean reflectance** of the period, not "
 "as the mean of the index of every date."
@@ -2588,7 +2678,7 @@ msgstr ""
 "**Der Index wird aus der mittleren Reflektanz** des Zeitraums berechnet, "
 "nicht als Mittelwert des Index jedes Tages."
 
-#: ../../data/ndmi.rst:62
+#: ../../data/ndmi.rst:63
 msgid ""
 "**The plot** uses brown-white-blue-green colours and a fixed range of -1 "
 "to 1: brown for dry, blue-green for moist."
@@ -2596,7 +2686,7 @@ msgstr ""
 "**Der Plot** verwendet Braun-Weiß-Blaugrün-Farben und einen festen "
 "Bereich von -1 bis 1: Braun für trocken, Blaugrün für feucht."
 
-#: ../../data/ndmi.rst:68
+#: ../../data/ndmi.rst:69
 msgid ""
 ":doc:`ndvi`, :doc:`ndwi`, :doc:`soil-water-index`, :doc:`/howto/filter-"
 "clouds`"
@@ -2631,22 +2721,36 @@ msgstr "``NDMI = (NIR - SWIR) / (NIR + SWIR)``"
 #: cdec.eo.ndmi.download_normalized_difference_moisture_index:12 of
 msgid ""
 "It is high for vegetation that holds much water and low for dry "
-"vegetation and bare ground. Both bands have a pixel size of 20 m, so the "
-"output grid is 20 m. As with "
+"vegetation and bare ground. Both bands have a pixel size of 20 m; the "
+"backend delivers them on the 10 m grid of Sentinel-2, so the file has 10 "
+"m pixels with 20 m detail. As with "
 ":func:`cdec.download_normalized_difference_vegetation_index`, the index "
 "is calculated from mean reflectance, rather than averaging indices from "
 "individual dates."
 msgstr ""
 "Er ist hoch für Vegetation, die viel Wasser enthält, und niedrig für "
 "trockene Vegetation und nackten Boden. Beide Bänder haben eine Pixelgröße"
-" von 20 m, daher ist das Ausgaberaster 20 m groß. Wie bei "
+" von 20 m; das Backend liefert sie auf dem 10-m-Raster von Sentinel-2, "
+"die Datei hat also 10-m-Pixel mit 20 m Detailgenauigkeit. Wie bei "
 ":func:`cdec.download_normalized_difference_vegetation_index` wird der "
-"Index aus der mittleren Reflektanz berechnet und nicht als Mittelwert der"
-" Indizes einzelner Tage."
+"Index aus der mittleren Reflektanz berechnet und nicht aus den Indizes "
+"der einzelnen Zeitpunkte gemittelt."
 
-#: cdec.eo.ndmi.download_normalized_difference_moisture_index:42 of
-msgid "Absolute path to the downloaded NDMI raster."
-msgstr "Absoluter Pfad zum heruntergeladenen NDMI-Raster."
+#: cdec.eo.ndmi.download_normalized_difference_moisture_index:40 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the NDMI, a number without unit "
+"between -1 and 1 (high for plants that hold much water). Pixels without "
+"data are NaN, which the file declares as its no-data value. The pixel "
+"size is 10 m, in the UTM zone of the area (EPSG:32632 for Bremen); both "
+"bands have only 20 m detail."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): den NDMI, eine Zahl ohne "
+"Einheit zwischen -1 und 1 (hoch bei Pflanzen, die viel Wasser enthalten)."
+" Pixel ohne Daten sind NaN; die Datei deklariert NaN als ihren No-Data-"
+"Wert. Die Pixelgröße beträgt 10 m, im UTM-Streifen des Gebiets "
+"(EPSG:32632 für Bremen); beide Bänder haben nur 20 m Detailgenauigkeit."
 
 #: cdec.plot.products.plot_normalized_difference_moisture_index:1 of
 msgid "*Short alias:* ``plot_ndmi``"
@@ -2805,21 +2909,6 @@ msgstr ""
 "Oberflächen können hohe Werte erreichen. Sieh dir zur Kontrolle das :doc"
 ":`true-color` oder das :doc:`false-color-swir` desselben Gebiets an."
 
-#: ../../data/ndsi.rst:63
-msgid ""
-"**Values outside -1 ... 1.** A few pixels can lie outside, in the very "
-"dark ones (shadows), where one of the reflectances is below zero and the "
-"sum in the denominator is close to zero. The example file ranges from -6 "
-"to 10.3, but only 21 of its about 438,000 pixels are outside -1 ... 1. "
-"Treat them as noise or clip them with ``numpy.clip(ndsi, -1, 1)``."
-msgstr ""
-"**Werte außerhalb von -1 ... 1.** Einige Pixel können außerhalb liegen, "
-"nämlich die sehr dunklen (Schatten), bei denen eine der Reflektanzen "
-"unter null liegt und die Summe im Nenner nahe null ist. Die Beispieldatei"
-" reicht von -6 bis 10,3, aber nur 21 ihrer rund 438.000 Pixel liegen "
-"außerhalb von -1 ... 1. Behandle sie als Rauschen oder beschneide sie mit"
-" ``numpy.clip(ndsi, -1, 1)``."
-
 #: ../../data/ndsi.rst:68
 msgid ""
 "**The plot** uses white-blue colours and a fixed range of -1 to 1: the "
@@ -2891,9 +2980,21 @@ msgstr ""
 "sehen, was jede Klasse bedeutet. Pixel ohne eine einzige behaltene "
 "Beobachtung bleiben ohne Daten."
 
-#: cdec.eo.ndsi.download_normalized_difference_snow_index:41 of
-msgid "Absolute path to the downloaded NDSI raster."
-msgstr "Absoluter Pfad zum heruntergeladenen NDSI-Raster."
+#: cdec.eo.ndsi.download_normalized_difference_snow_index:38 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the NDSI, a number without unit "
+"between -1 and 1 (snow and ice are above about 0.4). Pixels without data "
+"are NaN, which the file declares as its no-data value. The pixel size is "
+"10 m, in the UTM zone of the area (EPSG:32632 for Bremen); B11 has only "
+"20 m detail."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): den NDSI, eine Zahl ohne "
+"Einheit zwischen -1 und 1 (Schnee und Eis liegen über etwa 0,4). Pixel "
+"ohne Daten sind NaN; die Datei deklariert NaN als ihren No-Data-Wert. Die"
+" Pixelgröße beträgt 10 m, im UTM-Streifen des Gebiets (EPSG:32632 für "
+"Bremen); B11 hat nur 20 m Detailgenauigkeit."
 
 #: cdec.plot.products.plot_normalized_difference_snow_index:1 of
 msgid "*Short alias:* ``plot_ndsi``"
@@ -3013,12 +3114,14 @@ msgid ""
 "**Values outside -1 ... 1.** A few pixels can lie slightly outside, for "
 "example when the red reflectance is close to zero. The example file "
 "ranges from -0.66 to 1.26. Treat them as noise or clip them with "
-"``numpy.clip(ndvi, -1, 1)``."
+"``numpy.clip(ndvi, -1, 1)``. The other indices (EVI, NDWI, NDMI, NDSI) "
+"can do the same."
 msgstr ""
 "**Werte außerhalb von -1 ... 1.** Einige Pixel können leicht außerhalb "
 "liegen, zum Beispiel wenn die rote Reflektanz nahe null ist. Die "
 "Beispieldatei reicht von -0,66 bis 1,26. Behandle sie als Rauschen oder "
-"beschneide sie mit ``numpy.clip(ndvi, -1, 1)``."
+"beschneide sie mit ``numpy.clip(ndvi, -1, 1)``. Die anderen Indizes (EVI,"
+" NDWI, NDMI, NDSI) können dasselbe zeigen."
 
 #: ../../data/ndvi.rst:60
 msgid ""
@@ -3032,10 +3135,10 @@ msgstr ""
 
 #: ../../data/ndvi.rst:62
 msgid ""
-"For a longer time series (1997-2024) at a coarser resolution use :doc"
+"For a longer time series (1997-2025) at a coarser resolution use :doc"
 ":`landsat-ndvi`."
 msgstr ""
-"Für eine längere Zeitreihe (1997-2024) mit gröberer Auflösung verwende "
+"Für eine längere Zeitreihe (1997-2025) mit gröberer Auflösung verwende "
 ":doc:`landsat-ndvi`."
 
 #: ../../data/ndvi.rst:67
@@ -3069,6 +3172,21 @@ msgstr ""
 ":func:`cdec.download_landsat_ndvi` für das historische Landsat-Mosaik. "
 "Die Ausgabe behält das 10-m-Reflektanzraster; die Detailgenauigkeit der "
 "SCL-Klassifikation bleibt 20 m."
+
+#: cdec.eo.ndvi.download_normalized_difference_vegetation_index:33 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the NDVI, a number without unit "
+"between -1 and 1 (dense green vegetation is close to 1). Pixels without "
+"data are NaN, which the file declares as its no-data value. The pixel "
+"size is 10 m, in the UTM zone of the area (EPSG:32632 for Bremen)."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): den NDVI, eine Zahl ohne "
+"Einheit zwischen -1 und 1 (dichte grüne Vegetation liegt nahe bei 1). "
+"Pixel ohne Daten sind NaN; die Datei deklariert NaN als ihren No-Data-"
+"Wert. Die Pixelgröße beträgt 10 m, im UTM-Streifen des Gebiets "
+"(EPSG:32632 für Bremen)."
 
 #: cdec.plot.products.plot_normalized_difference_vegetation_index:1 of
 msgid "*Short alias:* ``plot_ndvi``"
@@ -3194,20 +3312,6 @@ msgstr ""
 "(Klasse 6, :doc:`scene-classification`) oder der "
 ":doc:`Landbedeckungskarte <land-cover>`."
 
-#: ../../data/ndwi.rst:58
-msgid ""
-"**Values outside -1 ... 1.** A few pixels can lie slightly outside, in "
-"the very dark ones (shadows, deep water), where one of the reflectances "
-"is below zero. The example file ranges from -1.22 to 0.67; two of its "
-"about 930,000 pixels are below -1. Treat them as noise or clip them with "
-"``numpy.clip(ndwi, -1, 1)``."
-msgstr ""
-"**Werte außerhalb von -1 ... 1.** Einige Pixel können leicht außerhalb "
-"liegen, nämlich die sehr dunklen (Schatten, tiefes Wasser), bei denen "
-"eine der Reflektanzen unter null liegt. Die Beispieldatei reicht von "
-"-1,22 bis 0,67; zwei ihrer rund 930.000 Pixel liegen unter -1. Behandle "
-"sie als Rauschen oder beschneide sie mit ``numpy.clip(ndwi, -1, 1)``."
-
 #: ../../data/ndwi.rst:62
 msgid ""
 "**The plot** uses red-white-blue colours and a fixed range of -1 to 1: "
@@ -3287,9 +3391,20 @@ msgstr ""
 "bedeutet. Pixel ohne eine einzige behaltene Beobachtung bleiben ohne "
 "Daten."
 
-#: cdec.eo.ndwi.download_normalized_difference_water_index:43 of
-msgid "Absolute path to the downloaded NDWI raster."
-msgstr "Absoluter Pfad zum heruntergeladenen NDWI-Raster."
+#: cdec.eo.ndwi.download_normalized_difference_water_index:40 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the NDWI, a number without unit "
+"between -1 and 1 (open water is above 0, land below). Pixels without data"
+" are NaN, which the file declares as its no-data value. The pixel size is"
+" 10 m, in the UTM zone of the area (EPSG:32632 for Bremen)."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): den NDWI, eine Zahl ohne "
+"Einheit zwischen -1 und 1 (offenes Wasser liegt über 0, Land darunter). "
+"Pixel ohne Daten sind NaN; die Datei deklariert NaN als ihren No-Data-"
+"Wert. Die Pixelgröße beträgt 10 m, im UTM-Streifen des Gebiets "
+"(EPSG:32632 für Bremen)."
 
 #: cdec.plot.products.plot_normalized_difference_water_index:1 of
 msgid "*Short alias:* ``plot_ndwi``"
@@ -3353,6 +3468,10 @@ msgstr ":func:`~cdec.plot_scene_classification_map`, kurz ``plot_scl``"
 #: ../../data/scene-classification.rst:18
 msgid "Sentinel-2 Level-2A (collection ``SENTINEL2_L2A``), band SCL"
 msgstr "Sentinel-2 Level-2A (Collection ``SENTINEL2_L2A``), Band SCL"
+
+#: ../../data/scene-classification.rst:20
+msgid "10 m (the classes have 20 m detail)"
+msgstr "10 m (die Klassen haben 20 m Detailgenauigkeit)"
 
 #: ../../data/scene-classification.rst:22
 msgid ""
@@ -3514,9 +3633,23 @@ msgstr ""
 "``\"nearest\"`` bewahrt die Klassen-IDs und sollte normalerweise nicht "
 "geändert werden."
 
-#: cdec.eo.scene_classification.download_scene_classification_map:30 of
-msgid "Absolute path to the downloaded scene classification raster."
-msgstr "Absoluter Pfad zum heruntergeladenen Szenenklassifikationsraster."
+#: cdec.eo.scene_classification.download_scene_classification_map:27 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"8-bit integers (``uint8``): the SCL class of every pixel, 1 to 11. 0 "
+"means no data and is declared as the no-data value. The colours of the "
+"classes are stored in the file as a colour table, and "
+"``cdec.show_scl_classes()`` explains the numbers. The pixel size is 10 m,"
+" in the UTM zone of the area (EPSG:32632 for Bremen); the classes "
+"themselves have 20 m detail."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit 8-Bit-Ganzzahlen (``uint8``): die SCL-Klasse jedes Pixels, 1"
+" bis 11. 0 bedeutet keine Daten und ist als No-Data-Wert deklariert. Die "
+"Farben der Klassen sind in der Datei als Farbtabelle gespeichert, und "
+"``cdec.show_scl_classes()`` erklärt die Nummern. Die Pixelgröße beträgt "
+"10 m, im UTM-Streifen des Gebiets (EPSG:32632 für Bremen); die Klassen "
+"selbst haben 20 m Detailgenauigkeit."
 
 #: cdec.plot.products.plot_scene_classification_map:1 of
 msgid "*Short alias:* ``plot_scl``"
@@ -3610,11 +3743,11 @@ msgstr "nicht betroffen (es ist ein modelliertes Produkt)"
 
 #: ../../data/soil-water-index.rst:25
 msgid ""
-"mean of all days of ``temporal_extent``. **Version 2 starts on "
-"2025-07-13.**"
+"mean of all days of ``temporal_extent``. **The collection (version 2) "
+"starts on 2025-07-12 at 12:00 UTC.**"
 msgstr ""
-"Mittelwert aller Tage von ``temporal_extent``. **Version 2 beginnt am "
-"2025-07-13.**"
+"Mittelwert aller Tage von ``temporal_extent``. **Die Collection (Version "
+"2) beginnt am 2025-07-12 um 12:00 UTC.**"
 
 #: ../../data/soil-water-index.rst:40
 msgid ""
@@ -3634,16 +3767,17 @@ msgstr ""
 
 #: ../../data/soil-water-index.rst:49
 msgid ""
-"**Check the dates first.** CLMS publishes version 2 of the 1 km SWI from "
-"2025-07-13 onwards; version 1 covers 2015 up to 2025-07-12. An earlier "
-"period (such as June 2024) may find no data in this collection. The "
-"Copernicus Data Space also labels its CLMS collections as experimental."
+"**Check the dates first.** The collection holds version 2 of the 1 km SWI"
+" and starts on 2025-07-12 at 12:00 UTC; version 1 covers 2015 up to "
+"2025-07-12. An earlier period (such as June 2024) may find no data in "
+"this collection. The Copernicus Data Space also labels its CLMS "
+"collections as experimental."
 msgstr ""
-"**Prüfe zuerst die Daten.** CLMS veröffentlicht Version 2 des 1-km-SWI ab"
-" dem 2025-07-13; Version 1 deckt 2015 bis zum 2025-07-12 ab. Ein früherer"
-" Zeitraum (etwa Juni 2024) findet in dieser Collection möglicherweise "
-"keine Daten. Der Copernicus Data Space kennzeichnet seine CLMS-"
-"Collections außerdem als experimentell."
+"**Prüfe zuerst die Daten.** Die Collection enthält Version 2 des 1-km-SWI"
+" und beginnt am 2025-07-12 um 12:00 UTC; Version 1 deckt 2015 bis zum "
+"2025-07-12 ab. Ein früherer Zeitraum (etwa Juni 2024) findet in dieser "
+"Collection möglicherweise keine Daten. Der Copernicus Data Space "
+"kennzeichnet seine CLMS-Collections außerdem als experimentell."
 
 #: ../../data/soil-water-index.rst:52
 msgid ""
@@ -3700,16 +3834,17 @@ msgstr ""
 
 #: cdec.eo.soil_water_index.download_soil_water_index:10 of
 msgid ""
-"Check the dates before you use this function: CLMS publishes *version 2* "
-"of the 1 km SWI from 2025-07-13 onwards, while version 1 covers 2015 up "
-"to 2025-07-12. Earlier periods may therefore find no data in this "
-"collection. CDSE also labels its openEO CLMS collections as experimental."
+"Check the dates before you use this function: the collection holds "
+"*version 2* of the 1 km SWI and starts on 2025-07-12 at 12:00 UTC, while "
+"version 1 covers 2015 up to 2025-07-12. Earlier periods may therefore "
+"find no data in this collection. CDSE also labels its openEO CLMS "
+"collections as experimental."
 msgstr ""
-"Prüfe die Daten, bevor du diese Funktion verwendest: Das CLMS "
-"veröffentlicht *Version 2* des 1-km-SWI ab dem 2025-07-13, während "
-"Version 1 2015 bis zum 2025-07-12 abdeckt. Frühere Zeiträume finden in "
-"dieser Collection daher möglicherweise keine Daten. CDSE kennzeichnet "
-"seine openEO-CLMS-Collections außerdem als experimentell."
+"Prüfe die Daten, bevor du diese Funktion verwendest: Die Collection "
+"enthält *Version 2* des 1-km-SWI und beginnt am 2025-07-12 um 12:00 UTC, "
+"während Version 1 2015 bis zum 2025-07-12 abdeckt. Frühere Zeiträume "
+"finden in dieser Collection daher möglicherweise keine Daten. CDSE "
+"kennzeichnet seine openEO-CLMS-Collections außerdem als experimentell."
 
 #: cdec.eo.soil_water_index.download_soil_water_index:20 of
 msgid ""
@@ -3739,11 +3874,22 @@ msgstr ""
 "Resampling-Methode zum Erzeugen der Übersichtsstufen des COG. "
 "``\"average\"`` ist ein passender Standard für kontinuierliche Daten."
 
-#: cdec.eo.soil_water_index.download_soil_water_index:34 of
-msgid "Absolute path to the downloaded SWI raster."
-msgstr "Absoluter Pfad zum heruntergeladenen SWI-Raster."
+#: cdec.eo.soil_water_index.download_soil_water_index:31 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. The file has one band of "
+"floating-point numbers (``float32``): the soil water index in percent, "
+"from 0 (dry) to 100 (saturated). Pixels without data are NaN, which the "
+"file declares as its no-data value. The coordinate system is geographic "
+"(EPSG:4326, degrees); the pixel size is 0.0089 degrees, about 1 km."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Die Datei hat "
+"ein Band mit Gleitkommazahlen (``float32``): der Bodenwasserindex in "
+"Prozent, von 0 (trocken) bis 100 (gesättigt). Pixel ohne Daten sind NaN; "
+"die Datei deklariert NaN als ihren No-Data-Wert. Das Koordinatensystem "
+"ist geografisch (EPSG:4326, Grad); die Pixelgröße beträgt 0,0089 Grad, "
+"etwa 1 km."
 
-#: cdec.eo.soil_water_index.download_soil_water_index:37 of
+#: cdec.eo.soil_water_index.download_soil_water_index:38 of
 msgid ""
 "If ``depth`` is not one of the available values. This is checked     "
 "before connecting to the backend."
@@ -3950,9 +4096,27 @@ msgstr ""
 "Wenn ``False``, bleiben die drei Bänder als Gleitkomma-Reflektanzwerte "
 "erhalten (für Berechnungen verwenden)."
 
-#: cdec.eo.tci.download_true_color_image:37 of
-msgid "Absolute path to the downloaded RGB raster."
-msgstr "Absoluter Pfad zum heruntergeladenen RGB-Raster."
+#: cdec.eo.tci.download_true_color_image:34 of
+msgid ""
+"Absolute path of the GeoTIFF that was written. By default "
+"(``enhance_color=True``) it is a colour picture: three bands of 8-bit "
+"integers from 0 to 255, in the order red, green, blue (B04, B03, B02). "
+"Pixels without data are 0 in all bands; the file marks them with a mask, "
+"so GIS programs and ``rasterio`` treat them as empty. With "
+"``enhance_color=False`` the file holds the measurement instead: three "
+"``float32`` bands of reflectance (0 = black, about 1 = white), with NaN "
+"where there is no data. The pixel size is 10 m, in the UTM zone of the "
+"area (EPSG:32632 for Bremen)."
+msgstr ""
+"Absoluter Pfad der GeoTIFF-Datei, die geschrieben wurde. Standardmäßig "
+"(``enhance_color=True``) ist sie ein Farbbild: drei Bänder mit 8-Bit-"
+"Ganzzahlen von 0 bis 255, in der Reihenfolge Rot, Grün, Blau (B04, B03, "
+"B02). Pixel ohne Daten sind in allen Bändern 0; die Datei kennzeichnet "
+"sie mit einer Maske, sodass GIS-Programme und ``rasterio`` sie als leer "
+"behandeln. Mit ``enhance_color=False`` enthält die Datei stattdessen die "
+"Messung: drei ``float32``-Bänder mit Reflektanz (0 = schwarz, etwa 1 = "
+"weiß), mit NaN, wo keine Daten vorliegen. Die Pixelgröße beträgt 10 m, im"
+" UTM-Streifen des Gebiets (EPSG:32632 für Bremen)."
 
 #: cdec.plot.products.plot_true_color_image:1 of
 msgid "*Short alias:* ``plot_tci``"

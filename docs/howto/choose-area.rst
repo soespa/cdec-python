@@ -78,5 +78,5 @@ Tips
 * Start small. A few kilometres and one month are quick to download; make the area and the period
   larger when everything works.
 * The downloaded file is clipped to the area but it has the grid of the data, so its edges can differ
-  a little from your box (see the ``extent`` line of the summary).
+  a little from your box (compare ``src.bounds`` of the file, :doc:`check-a-file`).
 * The area must lie inside the coverage of the data type. :doc:`/data/soil-water-index` covers Europe only.

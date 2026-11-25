@@ -7,7 +7,6 @@ from openeo.processes import array_contains, not_
 
 from .postprocessing import enhance_contrast_raster
 from .scl import SCL_LAND_AND_WATER, check_scl_classes
-from .summary import sentinel2_details
 from .util import (
     OverviewResampling,
     SpatialExtent,
@@ -28,7 +27,6 @@ def download_false_color_urban(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "average",
-    verbose: bool = True,
 ) -> Path:
     """Download a Sentinel-2 false-colour urban composite.
 
@@ -74,15 +72,20 @@ def download_false_color_urban(
         If ``True``, write a Cloud Optimized GeoTIFF.
     overview_resampling:
         Resampling method used to build COG overview levels.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded urban composite.
+        Absolute path of the GeoTIFF that was written. By default
+        (``enhance_contrast=True``) it is a colour picture: three bands of
+        8-bit integers from 0 to 255, in the order red, green, blue (B12, B11,
+        B04). Pixels without data are 0 in all bands; the file marks them with
+        a mask, so GIS programs and ``rasterio`` treat them as empty. With
+        ``enhance_contrast=False`` the file holds the measurement instead:
+        three ``float32`` bands of reflectance (0 = black, about 1 = white),
+        with NaN where there is no data. The pixel size is 10 m, in the UTM
+        zone of the area (EPSG:32632 for Bremen). B11 and B12 have only 20 m
+        detail.
     """
     # Check the class IDs before connecting to the backend.
     scl_classes = check_scl_classes(scl_classes)
@@ -124,14 +127,6 @@ def download_false_color_urban(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="False-colour urban composite from Sentinel-2 L2A (B12, B11, B04 as red, green, blue)",
-        unit=(
-            "8-bit colour image (0-255), fixed contrast stretch"
-            if enhance_contrast
-            else "reflectance (0 = black, 1 = white)"
-        ),
-        details=sentinel2_details(temporal_extent, max_cloud_cover, scl_classes),
         postprocess=enhance_contrast_raster if enhance_contrast else None,
     )
 

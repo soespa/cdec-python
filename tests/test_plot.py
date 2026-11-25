@@ -647,7 +647,7 @@ def test_the_file_of_every_download_function_can_be_plotted(
     fake_openeo.result_bands = bands
     fake_openeo.result_class_ids = download in (download_land_cover, download_scl)
     path = tmp_path / "result.tif"
-    download(path, spatial_extent, temporal_extent, verbose=False)
+    download(path, spatial_extent, temporal_extent)
 
     ax = plot(path, show=False)
 
@@ -670,7 +670,7 @@ def test_pictures_from_the_download_keep_their_empty_pixels_transparent(
     """The mask survives the conversion to a Cloud Optimized GeoTIFF."""
     fake_openeo.result_bands = 3
     path = tmp_path / "result.tif"
-    download(path, spatial_extent, temporal_extent, verbose=False)
+    download(path, spatial_extent, temporal_extent)
 
     picture = picture_of(plot(path, show=False))
 
@@ -694,8 +694,8 @@ def test_reflectance_from_the_download_looks_like_the_finished_picture(
     fake_openeo.result_bands = 3
     finished = tmp_path / "finished.tif"
     reflectance = tmp_path / "reflectance.tif"
-    download(finished, spatial_extent, temporal_extent, verbose=False)
-    download(reflectance, spatial_extent, temporal_extent, verbose=False, **{option: False})
+    download(finished, spatial_extent, temporal_extent)
+    download(reflectance, spatial_extent, temporal_extent, **{option: False})
 
     with rasterio.open(reflectance) as src:
         assert src.dtypes[0] == "float32"

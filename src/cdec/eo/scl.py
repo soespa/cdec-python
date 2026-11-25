@@ -147,13 +147,3 @@ def check_scl_classes(scl_classes: Sequence[int] | None) -> list[int] | None:
         raise ValueError(error_message)
 
     return [int(value) for value in scl_classes]
-
-
-def describe_scl_classes(scl_classes: Sequence[int] | None) -> str:
-    """Write a selection of SCL classes as text, e.g. ``4 Vegetation, 5 Not vegetated``.
-
-    Expects a selection that ``check_scl_classes`` has already accepted.
-    """
-    if scl_classes is None:
-        return "none, SCL masking is switched off"
-    return ", ".join(f"{class_id} {SCL_CLASSES[class_id]}" for class_id in scl_classes)

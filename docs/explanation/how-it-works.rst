@@ -42,8 +42,8 @@ The file
 The function first writes the download into a hidden temporary folder next to the target. Then it applies the
 colour enhancement if you asked for one, converts the file to a Cloud Optimized GeoTIFF, and only then moves it
 to the name you gave. If something fails on the way, the target file is untouched
-(:doc:`/howto/output-file`). At the end the function reads the finished file and prints a summary, so that the
-numbers you see are the numbers in the file.
+(:doc:`/howto/output-file`). At the end the function returns the path of the finished file. What is in the file
+is described in the docstring of the function (``help(download_ndvi)``) and on the page of the data type.
 
 Where to read on
 ----------------

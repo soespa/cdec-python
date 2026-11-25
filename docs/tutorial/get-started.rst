@@ -47,25 +47,12 @@ The NDVI says how green the plants are. Download it:
     path = download_ndvi("data/ndvi_bremen.tif", spatial_extent, temporal_extent)
 
 The first call opens the login. Then the download runs. The function creates the folder ``data``
-if it does not exist, writes the file, and returns its path. It also prints what is in the file
-(this is the output of a real download):
+if it does not exist, writes the file, and returns its path.
 
-.. code-block:: text
-
-    NDVI from Sentinel-2 L2A (mean of the period)
-      file      /home/me/data/ndvi_bremen.tif (3.9 MB)
-      extent    west 8.7211, south 53.0247, east 8.9047, north 53.1153 (WGS 84), about 12.3 x 10.1 km
-      grid      1228 x 1005 pixels of 10 m (EPSG:32632)
-      values    -0.6602 to 1.264, mean 0.5496
-      unit      no unit (index from -1 to 1)
-      no data   26.5 % of the pixels
-      period    2024-06-01 to 2024-07-01 (end date not included)
-      clouds    scenes with more than 20 % cloud cover are not used
-      SCL kept  4 Vegetation, 5 Not vegetated
-
-Read it from top to bottom: a map of 1228 by 1005 pixels, each pixel 10 m wide; the NDVI has a
-mean of 0.55; and a quarter of the pixels have no data. Where this comes from is explained in
-:doc:`/explanation/clouds-and-masking`.
+What is in the file is written in the documentation of the function. ``help(download_ndvi)`` tells you that it is
+one band of numbers without unit, between -1 and 1, with 10 m pixels, and that pixels without data are NaN.
+Where the pixels without data come from is explained in :doc:`/explanation/clouds-and-masking`; how to look into the
+file is shown in :doc:`/howto/check-a-file`.
 
 Step 5: Look at it
 ------------------

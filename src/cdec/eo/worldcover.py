@@ -84,7 +84,6 @@ def download_land_cover(
     *,
     create_cog: bool = True,
     overview_resampling: OverviewResampling = "nearest",
-    verbose: bool = True,
 ) -> Path:
     """Download the ESA WorldCover 2021 land-cover map at 10 m resolution.
 
@@ -110,15 +109,17 @@ def download_land_cover(
     overview_resampling:
         Resampling method used to build COG overview levels. ``"nearest"``
         preserves categorical class IDs and should normally not be changed.
-    verbose:
-        If ``True`` (the default), print a short summary of the downloaded
-        file: extent, grid and resolution, value range and the share of
-        pixels without data.
 
     Returns
     -------
     Path
-        Absolute path to the downloaded land-cover raster.
+        Absolute path of the GeoTIFF that was written. The file has one band of
+        8-bit integers (``uint8``): the WorldCover class of every pixel (10,
+        20, ... 100; ``cdec.WORLDCOVER_CLASSES`` has the names). 0 means no
+        data and is declared as the no-data value. The colours of the classes
+        are stored in the file as a colour table. The coordinate system is
+        geographic (EPSG:4326, degrees); the pixel size is 0.000083 degrees,
+        about 10 m.
     """
     connection = get_connection()
 
@@ -135,8 +136,5 @@ def download_land_cover(
         file_path=file_path,
         create_cog=create_cog,
         overview_resampling=overview_resampling,
-        verbose=verbose,
-        description="ESA WorldCover 2021 land cover (10 m)",
-        unit="land-cover class IDs (names and colours: cdec.WORLDCOVER_CLASSES)",
         postprocess=_apply_worldcover_colormap,
     )

@@ -13,7 +13,7 @@ The package is written for students who read the code. These decisions follow fr
 
 **The options worth changing come first.**
   ``max_cloud_cover`` and ``scl_classes`` follow directly after the three standard arguments. Technical options
-  (``create_cog``, ``overview_resampling``, ``verbose``) must be written with their names, so they cannot be
+  (``create_cog``, ``overview_resampling``) must be written with their names, so they cannot be
   confused with the others.
 
 **Functions return a file path.**
@@ -26,6 +26,7 @@ The package is written for students who read the code. These decisions follow fr
   interpretation, so each plot function writes these decisions down (``src/cdec/plot/products.py``: each function is a
   single short call). :func:`~cdec.plot_raster` is the one that only looks at the *format*, for data of your own.
 
-**A summary after every download.**
-  The numbers are read from the file, so what you see is what is in it, and a student learns the vocabulary
-  (extent, grid, values, no data) from the first download on.
+**The docstring says what is in the file.**
+  Nothing is printed behind your back. ``help(download_ndvi)`` describes the file that the function writes: the bands,
+  the data type, the unit, the no-data value and the pixel size. To see what is really in a file, open it with
+  ``rasterio`` (:doc:`/howto/check-a-file`).
